@@ -1,0 +1,64 @@
+name: Actualizar y publicar
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */6 * * *"
+  issues:
+    types: [opened, edited, closed, reopened, labeled]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: site
+  cancel-in-progress: false
+
+jobs:
+  update:
+    # En push solo se publica; los datos se refrescan por cron, a mano o cuando llega un reporte.
+    if: github.event_name != 'push' && (github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'reporte'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/test.mjs
+      - name: Actualizar datos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CREATE_RADAR_ISSUE: ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: node scripts/update.mjs
+      - name: Commit de datos
+        run: |
+          git config user.name "portal-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "datos: actualización automática $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+
+  deploy:
+    needs: update
+    if: always() && (needs.update.result == 'success' || github.event_name == 'push')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - name: Armar sitio
+        run: mkdir -p _site && cp -r index.html assets data _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,225 @@
+{
+  "generatedAt": "2026-10-21T22:00:00Z",
+  "seeded": true,
+  "items": [
+    {
+      "repo": "guichiapini/sotcport",
+      "url": "https://github.com/guichiapini/sotcport",
+      "description": "Shadow of the Colossus (PS4, CUSA08809) running natively on Windows — fork of the Bloodborne PC port (bbport) runtime and its shadPS4-based Vulkan renderer",
+      "stars": 4,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-14T00:00:00Z",
+      "pushedAt": "2026-10-19T00:00:00Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 13,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+3 \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 \\bvulkan\\b"
+      ],
+      "cusa": [
+        "CUSA08809"
+      ],
+      "game": "shadow-of-the-colossus",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T22:00:00Z"
+    },
+    {
+      "repo": "BetterCodeGoblin/bloodborne_pc_windows_port",
+      "url": "https://github.com/BetterCodeGoblin/bloodborne_pc_windows_port",
+      "description": "Native Windows port of Bloodborne (bbport fork): 120 FPS pacing fix, 21:9 ultrawide, one-step Windows setup. No game files included - bring your own CUSA03173 v1.09 dump.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "pushedAt": "2026-10-09T00:00:00Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+3 \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own "
+      ],
+      "cusa": [
+        "CUSA03173"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "120 FPS"
+      ],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T22:00:00Z"
+    },
+    {
+      "repo": "heyzerr/ShadowOfTheColossus-PC",
+      "url": "https://github.com/heyzerr/ShadowOfTheColossus-PC",
+      "description": "AVX2 FIX Native Windows port of Shadow of the Colossus (PS4, CUSA08809) - Port nativo para PC.",
+      "stars": 3,
+      "forks": 0,
+      "language": null,
+      "createdAt": "2026-10-16T00:00:00Z",
+      "pushedAt": "2026-10-20T00:00:00Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+3 \\bCUSA\\d{5}\\b"
+      ],
+      "cusa": [
+        "CUSA08809"
+      ],
+      "game": "shadow-of-the-colossus",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T22:00:00Z"
+    },
+    {
+      "repo": "Astrr00/BloodbornePC",
+      "url": "https://github.com/Astrr00/BloodbornePC",
+      "description": "Native, open-source PC port of Bloodborne (PS4, v1.09 + The Old Hunters) for Windows and Linux.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-07T00:00:00Z",
+      "pushedAt": "2026-10-12T00:00:00Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 7,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo "
+      ],
+      "cusa": [],
+      "game": "bloodborne",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T22:00:00Z"
+    },
+    {
+      "repo": "yerasuu/psport",
+      "url": "https://github.com/yerasuu/psport",
+      "description": "psport is a fork of bloodborne_pc(bbport), the native Linux port of Bloodborne, taken past one game.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-10T00:00:00Z",
+      "pushedAt": "2026-10-17T00:00:00Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 7,
+      "reasons": [
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 bbport|bloodborne_pc|gow"
+      ],
+      "cusa": [],
+      "game": "bloodborne",
+      "platforms": [
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T22:00:00Z"
+    },
+    {
+      "repo": "qnfn/Driveclub-Port",
+      "url": "https://github.com/qnfn/Driveclub-Port",
+      "description": "Driveclub PS4 PC Port",
+      "stars": 11,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-17T00:00:00Z",
+      "pushedAt": "2026-10-21T00:00:00Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+3 pc[- ]port|port (nativo "
+      ],
+      "cusa": [],
+      "game": "driveclub",
+      "platforms": [],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T22:00:00Z"
+    },
+    {
+      "repo": "Alonessam/bloodborne-w11-port",
+      "url": "https://github.com/Alonessam/bloodborne-w11-port",
+      "description": "Native Windows 11/10 port & Vulkan 1.3 translation layer for Bloodborne (PS4) featuring NVIDIA DLSS, AMD FSR 4.1 Neural, and unlocked frame rates.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "pushedAt": "2026-10-09T00:00:00Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+1 \\bvulkan\\b"
+      ],
+      "cusa": [],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T22:00:00Z"
+    },
+    {
+      "repo": "skuza-oss/bloodborne_pc",
+      "url": "https://github.com/skuza-oss/bloodborne_pc",
+      "description": "Bloodborne PC (bbport) for Windows: deadinside28's latest upstream engine built natively for Windows on top of Supermedo's port. GPL-2.0.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-19T00:00:00Z",
+      "pushedAt": "2026-10-21T00:00:00Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 4,
+      "reasons": [
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 bbport|bloodborne_pc|gow"
+      ],
+      "cusa": [],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T22:00:00Z"
+    }
+  ]
+}

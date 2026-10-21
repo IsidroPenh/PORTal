@@ -1,0 +1,34 @@
+name: Sugerir un port
+description: Proponé un port de PS4 a PC que falte en el catálogo (o confirmá uno del radar).
+title: "[Port] "
+labels: ["nuevo-port"]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repositorio
+      placeholder: https://github.com/usuario/repo
+    validations:
+      required: true
+  - type: input
+    id: juego
+    attributes:
+      label: Juego
+    validations:
+      required: true
+  - type: dropdown
+    id: estado
+    attributes:
+      label: Estado según tu prueba o el README
+      options:
+        - Completo (de principio a fin)
+        - Jugable
+        - Jugable con fallos
+        - Arranca pero no se puede jugar
+        - No arranca
+        - No lo sé
+  - type: textarea
+    id: notas
+    attributes:
+      label: Notas
+      description: Rendimiento, fallos, en qué se basa (bbport, gow3_pc, shadPS4…)

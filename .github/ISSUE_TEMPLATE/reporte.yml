@@ -1,0 +1,76 @@
+name: Reporte de rendimiento
+description: Contá cómo te anda un port en tu PC. Aparece en la ficha del juego en el sitio.
+title: "[Reporte] "
+labels: ["reporte"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar. **No pegues links a descargas de juegos**: los reportes con eso se cierran.
+  - type: input
+    id: juego
+    attributes:
+      label: Juego
+      placeholder: Bloodborne
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Repositorio del port
+      description: URL de GitHub del port que probaste
+      placeholder: https://github.com/usuario/repo
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versión del port
+      placeholder: v0.4 / commit abc123
+  - type: dropdown
+    id: estado
+    attributes:
+      label: Estado
+      options:
+        - Completo (de principio a fin)
+        - Jugable
+        - Jugable con fallos
+        - Arranca pero no se puede jugar
+        - No arranca
+    validations:
+      required: true
+  - type: input
+    id: fps
+    attributes:
+      label: FPS promedio
+      placeholder: "60 estables / 40-55"
+  - type: input
+    id: ajustes
+    attributes:
+      label: Resolución y ajustes
+      placeholder: 1440p, FSR 3.1 Quality, límite 60
+  - type: input
+    id: cpu
+    attributes:
+      label: CPU
+      placeholder: Ryzen 5 5600
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU
+      placeholder: RTX 3060 12 GB (driver 580.xx)
+  - type: dropdown
+    id: os
+    attributes:
+      label: Sistema operativo
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux
+        - Steam Deck
+        - macOS
+  - type: textarea
+    id: fallos
+    attributes:
+      label: Fallos encontrados
+      description: Crashes, glitches gráficos, audio, dónde pasó…
