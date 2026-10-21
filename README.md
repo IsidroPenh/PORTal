@@ -33,16 +33,15 @@ data/ignore.json       ← repos que el radar no debe volver a proponer
    - extrae CUSA, plataformas, cifras de FPS y una pista de estado ("playable", "start to finish"…), y adivina el juego.
 3. Cuando aparecen candidatos nuevos **abre un issue** "Radar: N ports nuevos" para revisarlos. Confirmar uno = moverlo a `catalog.json`.
 4. Lee los issues con label `reporte` (formulario `.github/ISSUE_TEMPLATE/reporte.yml`) y los muestra en la ficha del port.
-5. Hace commit de `data/` y publica el sitio en GitHub Pages.
+5. Hace commit de `data/` y publica el sitio en la rama `gh-pages` (GitHub Pages).
 
 El sitio es HTML/CSS/JS estático, sin dependencias ni build (`index.html`, `assets/`).
 
-## Puesta en marcha
+## Publicación
 
-1. Mergear esta rama a `main`.
-2. En GitHub: **Settings → Pages → Source: GitHub Actions**.
-3. **Actions → "Actualizar y publicar" → Run workflow** para la primera actualización (los datos iniciales vienen precargados de la investigación del 21/10/2026).
-4. El sitio queda en `https://<usuario>.github.io/PORTal/`.
+Ya está andando: el sitio se publica en **https://isidropenh.github.io/PORTal/** desde la rama `gh-pages`,
+que el workflow regenera en cada actualización. No hace falta tocar Settings.
+Para forzar una actualización: **Actions → "Actualizar y publicar" → Run workflow**.
 
 ## Desarrollo local
 
