@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
   classify, extractCusa, extractFps, extractPlatforms, extractStatus,
-  guessGame, parseIssueForm, repoFromText, reportFromIssue,
+  guessGame, parseIssueForm, dedupeCandidates, repoFromText, reportFromIssue,
 } from './lib.mjs';
 
 const catalog = JSON.parse(fs.readFileSync(new URL('../data/catalog.json', import.meta.url), 'utf8'));
@@ -21,12 +21,27 @@ const cases = [
   ['spam', { name: 'god-of-war-3-remastered-PC-CUSA01623-extracted-ready-to-play-T.ME-SUP232-torrent-download', description: 'T.ME/SUP232' }],
   ['tool', { name: 'gow3_pclauncher', description: 'Launcher for God Of War 3 PC on Linux and Windows' }],
   ['tool', { name: 'bbport-wiki', description: 'Fan wiki for the bbport - the unofficial Bloodborne PC port: install guides, FPS, online play and shadPS4 comparison.' }],
+  ['mobile', { name: 'gow3_android', description: 'Native Android port of God of War III Remastered (PS4).' }],
+  ['tool', { name: 'recompiled-games-list', description: 'Open list of fan projects that turn console games into native PC programs' }],
+  ['tool', { name: 'Gatito-Ports', description: 'Catálogo de ports (ARM + PC), ferramentas e docs — BYO data, sem jogos' }],
+  ['port', { name: 'ratchet-clank-pc', description: 'Ratchet & Clank (PS4, 2016) running natively on Linux. Playable, experimental. Built on bbport' }],
   ['other-console', { name: 'wet-recomp', description: 'Fan PC port of WET (Xbox 360) using ReXGlue. Does not include game files.' }],
 ];
 for (const [kind, repo] of cases) {
   t(`classify ${repo.name} → ${kind}`, () => assert.equal(classify(repo).kind, kind, JSON.stringify(classify(repo))));
 }
 
+t('dedupeCandidates', () => {
+  const mk = (repo, stars, description) => ({ repo, stars, description, createdAt: '2026-10-01' });
+  const out = dedupeCandidates([
+    mk('a/copy1', 0, 'Native Windows port of Shadow of the Colossus (PS4) - bring your own dump'),
+    mk('b/new', 3, 'Ratchet & Clank (PS4) running natively on Linux'),
+    mk('c/new-copy', 9, 'Ratchet & Clank (PS4) running natively on Linux'),
+    mk('d/nodesc', 0, ''),
+    mk('e/nodesc-popular', 5, ''),
+  ], ['Native Windows port of Shadow of the Colossus (PS4) - bring your own dump']);
+  assert.deepEqual(out.map(c => [c.repo, c.copies]).sort(), [['c/new-copy', 1], ['e/nodesc-popular', 0]]);
+});
 t('extractCusa', () => assert.deepEqual(extractCusa('needs cusa03173 and CUSA00900, CUSA03173'), ['CUSA03173', 'CUSA00900']));
 t('extractFps', () => assert.deepEqual(extractFps('About 90 FPS at 4K, 42–60 fps in races, ~60fps'), ['90 FPS', '42–60 FPS', '60 FPS']));
 t('extractPlatforms', () => assert.deepEqual(extractPlatforms('Windows 10/11 and a Linux AppImage; macOS planned'), ['windows', 'linux', 'macos']));

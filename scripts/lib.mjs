@@ -31,7 +31,9 @@ export const BASE_REPOS = [
 const SPAM = /torrent|\bcrack(ed)?\b|repack|free[- ]download|download[- ]free|t\.me\/|telegram|mega\.nz|mediafire|full[- ]game|ready[- ]to[- ]play/i;
 // Ports HACIA PS4 (homebrew), no desde PS4. Se evalúa solo sobre nombre + descripción.
 const TO_PS4 = /goldhen|native ps4 port|ps4 port of|openorbis|jailbroken ps4|jailbroken playstation|for ps4\b|on ps4\b|to ps4\b|para ps4\b|ps4 homebrew|fake ?pkg|\bfpkg\b|orbis homebrew/i;
-const TOOL = /\blauncher\b|\bwiki\b|translation(?! layer)|tradu[cç]|localization|mod ?pack|\bmods?\b for|patch for|ultrawide patch|death counter|trainer|cheats?\b|roadmap|catalog|radar|tracker|directory|research commons/i;
+const TOOL = /\blauncher\b|\bwiki\b|translation(?! layer)|tradu[cç]|localization|mod ?pack|\bmods?\b for|patch for|ultrawide patch|death counter|trainer|cheats?\b|roadmap|cat[aá]log|radar|tracker|directory|research commons|\blist of\b|open list|recompiled[- ]games[- ]list/i;
+// Ports a móviles: no son PC.
+const MOBILE = /\bandroid\b|\bios\b|iphone|\bipad\b/i;
 const OTHER_CONSOLE = /\b(ps5|ps3|psp|vita|xbox ?360|xbox|switch|wii ?u?|gamecube|n64|nes|snes|dreamcast|saturn|ps2|ps1|psx)\b/i;
 
 const POSITIVE = [
@@ -95,6 +97,7 @@ export function classify({ name = '', description = '', topics = [], readme = ''
   if (TO_PS4.test(head) && !/\bto (pc|windows|linux)|para (pc|windows|linux)|\bon (windows|linux)\b/i.test(head)) {
     return { kind: 'to-ps4', score: score - 10, reasons: [...reasons, 'port hacia PS4 (homebrew)'] };
   }
+  if (MOBILE.test(head)) return { kind: 'mobile', score: score - 6, reasons: [...reasons, 'port a móvil'] };
   if (TOOL.test(head)) return { kind: 'tool', score: score - 4, reasons: [...reasons, 'herramienta/mod/launcher'] };
 
   const other = head.match(OTHER_CONSOLE);
@@ -103,6 +106,27 @@ export function classify({ name = '', description = '', topics = [], readme = ''
   }
   if (!mentionsPc && !/natively|nativo|native/i.test(head)) score -= 2;
   return { kind: score >= 7 ? 'port' : 'weak', score, reasons };
+}
+
+// Agrupa copias: repos con la misma descripción que un port del catálogo se descartan
+// (son forks/copias sin cambios) y entre candidatos idénticos queda el de más estrellas.
+export function dedupeCandidates(items, knownDescriptions) {
+  const key = c => norm(c.description || '');
+  const known = new Set([...knownDescriptions].map(d => norm(d || '')).filter(d => d.length >= 15));
+  const groups = new Map();
+  for (const c of items) {
+    const k = key(c);
+    if (k.length >= 15 && known.has(k)) continue;
+    // Sin descripción y sin estrellas casi siempre es una copia personal; no hay nada que mostrar.
+    if (!k && (c.stars || 0) < 3) continue;
+    const g = k.length >= 15 ? k : `repo:${c.repo}`;
+    if (!groups.has(g)) groups.set(g, []);
+    groups.get(g).push(c);
+  }
+  return [...groups.values()].map(arr => {
+    arr.sort((a, b) => b.stars - a.stars || String(a.createdAt).localeCompare(String(b.createdAt)));
+    return { ...arr[0], copies: arr.length - 1 };
+  });
 }
 
 // Intenta adivinar el juego: primero por CUSA conocido, luego por título en nombre/descripción.

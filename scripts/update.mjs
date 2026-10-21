@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   SEARCH_QUERIES, BASE_REPOS, classify, extractCusa, extractPlatforms, extractFps,
-  extractStatus, guessGame, reportFromIssue,
+  extractStatus, guessGame, reportFromIssue, dedupeCandidates,
 } from './lib.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -112,14 +112,16 @@ async function refreshRepo(repo, prev, since) {
 }
 
 // ---------- 2. radar ----------
-async function discover(catalog, prevCandidates, ignore) {
+async function discover(catalog, prevCandidates, ignore, repoMeta) {
   const known = new Set(catalog.games.flatMap(g => g.ports.map(p => p.repo.toLowerCase())));
   for (const r of ignore.repos || []) known.add(r.toLowerCase());
+  known.add(SELF.toLowerCase());
   const since = new Date(Date.now() - DISCOVERY_DAYS * 864e5).toISOString().slice(0, 10);
   const seen = new Map();
 
   for (const q of SEARCH_QUERIES) {
-    const query = encodeURIComponent(`${q} pushed:>=${since} fork:true`);
+    // Sin fork:true: la búsqueda devuelve solo repos originales; los forks se revisan aparte.
+    const query = encodeURIComponent(`${q} pushed:>=${since}`);
     const { data } = await gh(`/search/repositories?q=${query}&sort=updated&per_page=50`);
     for (const it of data?.items || []) seen.set(it.full_name.toLowerCase(), it);
     await sleep(2500); // la API de búsqueda permite ~30 req/min
@@ -173,11 +175,16 @@ async function discover(catalog, prevCandidates, ignore) {
   // Lo que ya estaba en el radar se mantiene mientras siga activo, aunque esta vez la búsqueda no lo devuelva.
   for (const [key, old] of prev) {
     if (seen.has(key) || known.has(key)) continue;
-    if (old.pushedAt && old.pushedAt.slice(0, 10) >= since) items.push(old);
+    if (!old.pushedAt || old.pushedAt.slice(0, 10) < since) continue;
+    // Se reclasifica por si cambiaron las reglas del clasificador.
+    const kind = classify({ name: old.repo.split('/')[1], description: old.description || '' }).kind;
+    if (!['spam', 'to-ps4', 'tool', 'mobile', 'other-console'].includes(kind)) items.push(old);
   }
-  items.sort((a, b) => (b.kind === 'port') - (a.kind === 'port') || b.score - a.score || b.stars - a.stars);
-  const fresh = items.filter(c => !prev.has(c.repo.toLowerCase()) && c.kind === 'port');
-  return { items, fresh };
+  const knownDesc = Object.values(repoMeta).map(r => r.description).filter(Boolean);
+  const result = dedupeCandidates(items, knownDesc).filter(c => ['port', 'weak'].includes(c.kind));
+  result.sort((a, b) => (b.kind === 'port') - (a.kind === 'port') || b.score - a.score || b.stars - a.stars);
+  const fresh = result.filter(c => !prev.has(c.repo.toLowerCase()) && c.kind === 'port');
+  return { items: result, fresh };
 }
 
 async function openRadarIssue(fresh) {
@@ -222,7 +229,7 @@ async function main() {
   // Si una etapa falla, las demás igual se guardan; el error se reporta al final.
   let failed = false;
   try {
-    const { items, fresh } = await discover(catalog, prevCandidates, ignore);
+    const { items, fresh } = await discover(catalog, prevCandidates, ignore, repos);
     writeJson('candidates.json', { generatedAt: new Date().toISOString(), items });
     console.log(`radar: ${items.length} candidatos (${fresh.length} nuevos)`);
     await openRadarIssue(fresh);
