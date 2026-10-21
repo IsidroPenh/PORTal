@@ -23,8 +23,8 @@ jobs:
     if: github.event_name != 'push' && (github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'reporte'))
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
       - run: node scripts/test.mjs
@@ -34,6 +34,8 @@ jobs:
           CREATE_RADAR_ISSUE: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: node scripts/update.mjs
       - name: Commit de datos
+        # También si una etapa del script falló: lo que sí se actualizó se guarda igual.
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "portal-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -44,10 +46,10 @@ jobs:
   deploy:
     needs: update
     # Solo se publica desde la rama por defecto, para que una rama de prueba no pise el sitio.
-    if: always() && github.ref_name == github.event.repository.default_branch && (needs.update.result == 'success' || github.event_name == 'push')
+    if: always() && github.ref_name == github.event.repository.default_branch && (contains(fromJSON('["success","failure"]'), needs.update.result) || github.event_name == 'push')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: ${{ github.ref_name }}
       - run: node scripts/test.mjs

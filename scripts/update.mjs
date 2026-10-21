@@ -39,7 +39,8 @@ async function gh(p, { accept = 'application/vnd.github+json', method = 'GET', b
       },
       body: body ? JSON.stringify(body) : undefined,
     });
-    if (res.status === 404 || res.status === 451) return { status: res.status, data: null };
+    // 404 borrado, 409 repo vacío, 451 bloqueado por DMCA, 422 búsqueda inválida: no son errores del script.
+    if ([404, 409, 410, 422, 451].includes(res.status)) return { status: res.status, data: null };
     if (res.status === 403 || res.status === 429) {
       const reset = Number(res.headers.get('x-ratelimit-reset') || 0) * 1000;
       const wait = Math.min(Math.max(reset - Date.now(), 2000 * 2 ** attempt), 65000);
@@ -69,35 +70,45 @@ async function refreshCatalog(catalog, prev) {
   const since = new Date(Date.now() - 7 * 864e5).toISOString();
   const out = {};
   for (const repo of repos) {
-    const r = await gh(`/repos/${repo}`);
-    if (!r.data) {
-      // Conservamos lo último conocido y marcamos que el repo desapareció (DMCA, borrado, privado).
-      out[repo] = { ...(prev[repo] || {}), missing: true, checkedAt: new Date().toISOString() };
-      console.warn(`✗ ${repo} no disponible (${r.status})`);
-      continue;
+    try {
+      out[repo] = await refreshRepo(repo, prev[repo], since);
+    } catch (e) {
+      // Un repo con problemas no frena al resto: se conservan sus últimos datos.
+      console.warn(`! ${repo}: ${e.message}`);
+      out[repo] = { ...(prev[repo] || {}), checkedAt: new Date().toISOString() };
     }
-    const d = r.data;
-    const rel = (await gh(`/repos/${d.full_name}/releases?per_page=1`)).data?.[0];
-    const commits = (await gh(`/repos/${d.full_name}/commits?since=${since}&per_page=100`)).data;
-    out[repo] = {
-      fullName: d.full_name,
-      description: d.description,
-      stars: d.stargazers_count,
-      forks: d.forks_count,
-      openIssues: d.open_issues_count,
-      createdAt: d.created_at,
-      pushedAt: d.pushed_at,
-      archived: d.archived,
-      license: d.license?.spdx_id || null,
-      topics: d.topics || [],
-      release: rel ? { tag: rel.tag_name, name: rel.name, publishedAt: rel.published_at, prerelease: rel.prerelease, url: rel.html_url } : null,
-      commits7d: Array.isArray(commits) ? commits.length : null,
-      missing: false,
-      checkedAt: new Date().toISOString(),
-    };
-    console.log(`✓ ${repo} ★${d.stargazers_count}`);
   }
   return out;
+}
+
+async function refreshRepo(repo, prev, since) {
+  const r = await gh(`/repos/${repo}`);
+  if (!r.data) {
+    // Conservamos lo último conocido y marcamos que el repo desapareció (DMCA, borrado, privado).
+    console.warn(`✗ ${repo} no disponible (${r.status})`);
+    return { ...(prev || {}), missing: true, checkedAt: new Date().toISOString() };
+  }
+  const d = r.data;
+  const rel = (await gh(`/repos/${d.full_name}/releases?per_page=1`)).data?.[0];
+  const commits = (await gh(`/repos/${d.full_name}/commits?since=${since}&per_page=100`)).data;
+  const result = {
+    fullName: d.full_name,
+    description: d.description,
+    stars: d.stargazers_count,
+    forks: d.forks_count,
+    openIssues: d.open_issues_count,
+    createdAt: d.created_at,
+    pushedAt: d.pushed_at,
+    archived: d.archived,
+    license: d.license?.spdx_id || null,
+    topics: d.topics || [],
+    release: rel ? { tag: rel.tag_name, name: rel.name, publishedAt: rel.published_at, prerelease: rel.prerelease, url: rel.html_url } : null,
+    commits7d: Array.isArray(commits) ? commits.length : null,
+    missing: false,
+    checkedAt: new Date().toISOString(),
+  };
+  console.log(`✓ ${repo} ★${d.stargazers_count}`);
+  return result;
 }
 
 // ---------- 2. radar ----------
@@ -130,7 +141,7 @@ async function discover(catalog, prevCandidates, ignore) {
     if (known.has(key)) continue;
     const old = prev.get(key);
     // No volvemos a bajar el README si no hubo pushes desde la última vez.
-    const text = old && old.pushedAt === it.pushed_at && old._readmeHash ? null : await readme(it.full_name);
+    const text = old && old.pushedAt === it.pushed_at && old._readmeHash ? null : await readme(it.full_name).catch(() => '');
     const base = { name: it.name, description: it.description || '', topics: it.topics || [] };
     const cls = text === null ? { kind: old.kind, score: old.score, reasons: old.reasons } : classify({ ...base, readme: text });
     if (!['port', 'weak'].includes(cls.kind)) continue;
@@ -208,14 +219,21 @@ async function main() {
   const repos = await refreshCatalog(catalog, prevGithub.repos || {});
   writeJson('github.json', { generatedAt: new Date().toISOString(), repos });
 
-  const { items, fresh } = await discover(catalog, prevCandidates, ignore);
-  writeJson('candidates.json', { generatedAt: new Date().toISOString(), items });
-  console.log(`radar: ${items.length} candidatos (${fresh.length} nuevos)`);
-  await openRadarIssue(fresh);
+  // Si una etapa falla, las demás igual se guardan; el error se reporta al final.
+  let failed = false;
+  try {
+    const { items, fresh } = await discover(catalog, prevCandidates, ignore);
+    writeJson('candidates.json', { generatedAt: new Date().toISOString(), items });
+    console.log(`radar: ${items.length} candidatos (${fresh.length} nuevos)`);
+    await openRadarIssue(fresh);
+  } catch (e) { failed = true; console.error('radar:', e); }
 
-  const reports = await fetchReports(catalog);
-  writeJson('reports.json', { generatedAt: new Date().toISOString(), items: reports });
-  console.log(`reportes: ${reports.length}`);
+  try {
+    const reports = await fetchReports(catalog);
+    writeJson('reports.json', { generatedAt: new Date().toISOString(), items: reports });
+    console.log(`reportes: ${reports.length}`);
+  } catch (e) { failed = true; console.error('reportes:', e); }
+  if (failed) process.exitCode = 1;
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
