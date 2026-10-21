@@ -145,7 +145,14 @@ async function discover(catalog, prevCandidates, ignore, repoMeta) {
     // No volvemos a bajar el README si no hubo pushes desde la última vez.
     const text = old && old.pushedAt === it.pushed_at && old._readmeHash ? null : await readme(it.full_name).catch(() => '');
     const base = { name: it.name, description: it.description || '', topics: it.topics || [] };
-    const cls = text === null ? { kind: old.kind, score: old.score, reasons: old.reasons } : classify({ ...base, readme: text });
+    // Con el README sin cambios se reutiliza el puntaje, pero las reglas de descarte se aplican siempre.
+    let cls;
+    if (text === null) {
+      const quick = classify(base);
+      cls = ['port', 'weak'].includes(quick.kind) ? { kind: old.kind, score: old.score, reasons: old.reasons } : quick;
+    } else {
+      cls = classify({ ...base, readme: text });
+    }
     if (!['port', 'weak'].includes(cls.kind)) continue;
     if (cls.kind === 'weak' && cls.score < 4) continue;
     const blob = `${it.description || ''}\n${text ?? ''}`;

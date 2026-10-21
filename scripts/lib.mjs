@@ -31,7 +31,7 @@ export const BASE_REPOS = [
 const SPAM = /torrent|\bcrack(ed)?\b|repack|free[- ]download|download[- ]free|t\.me\/|telegram|mega\.nz|mediafire|full[- ]game|ready[- ]to[- ]play/i;
 // Ports HACIA PS4 (homebrew), no desde PS4. Se evalúa solo sobre nombre + descripción.
 const TO_PS4 = /goldhen|native ps4 port|ps4 port of|openorbis|jailbroken ps4|jailbroken playstation|for ps4\b|on ps4\b|to ps4\b|para ps4\b|ps4 homebrew|fake ?pkg|\bfpkg\b|orbis homebrew/i;
-const TOOL = /\blauncher\b|\bwiki\b|translation(?! layer)|tradu[cç]|localization|mod ?pack|\bmods?\b for|patch for|ultrawide patch|death counter|trainer|cheats?\b|roadmap|cat[aá]log|radar|tracker|directory|research commons|\blist of\b|open list|recompiled[- ]games[- ]list/i;
+const TOOL = /\blauncher\b|\bwiki\b|translation(?! layer)|tradu[cç]|localization|mod ?pack|\bmods?\b for|patch for|ultrawide patch|death counter|trainer|cheats?\b|roadmap|cat[aá]log|radar|tracker|directory|research commons|\blist of\b|open list|recompiled[- ]games[- ]list|rich presence|\ba (shadps4 )?mod\b|5\.1 sound|corre[cç][aã]o/i;
 // Ports a móviles: no son PC.
 const MOBILE = /\bandroid\b|\bios\b|iphone|\bipad\b/i;
 const OTHER_CONSOLE = /\b(ps5|ps3|psp|vita|xbox ?360|xbox|switch|wii ?u?|gamecube|n64|nes|snes|dreamcast|saturn|ps2|ps1|psx)\b/i;

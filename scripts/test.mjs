@@ -25,6 +25,9 @@ const cases = [
   ['tool', { name: 'recompiled-games-list', description: 'Open list of fan projects that turn console games into native PC programs' }],
   ['tool', { name: 'Gatito-Ports', description: 'Catálogo de ports (ARM + PC), ferramentas e docs — BYO data, sem jogos' }],
   ['port', { name: 'ratchet-clank-pc', description: 'Ratchet & Clank (PS4, 2016) running natively on Linux. Playable, experimental. Built on bbport' }],
+  ['tool', { name: 'BBSC', description: 'Bloodborne Seamless Co-op: a shadPS4 mod that keeps co-op alive' }],
+  ['tool', { name: 'bloodborne-rpc', description: 'A lightweight, standalone Discord Rich Presence companion for Bloodborne PC' }],
+  ['other-console', { name: 'peggle2-nx', description: 'Peggle 2 (Xbox Live Arcade) running natively on Nintendo Switch: static recompilation' }],
   ['other-console', { name: 'wet-recomp', description: 'Fan PC port of WET (Xbox 360) using ReXGlue. Does not include game files.' }],
 ];
 for (const [kind, repo] of cases) {

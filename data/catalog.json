@@ -320,6 +320,31 @@
             "Discord Rich Presence"
           ],
           "aiAssisted": true
+        },
+        {
+          "repo": "maulanaikya99/gow3-mac",
+          "name": "gow3-mac",
+          "type": "wrapper",
+          "status": "playable",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "CUSA01623 v01.00",
+          "base": [
+            "SpartanPort",
+            "Wine",
+            "KosmicKrisp (Vulkan)"
+          ],
+          "summary": "Instalador para Mac con Apple Silicon: baja SpartanPort, Wine y el driver Vulkan KosmicKrisp, y aplica 4 arreglos para macOS. Jugable.",
+          "performance": [
+            "Probado en M4 con 16 GB (macOS 27); stutter los primeros minutos mientras compila shaders"
+          ],
+          "issues": [
+            "Multisampling desactivado",
+            "No usar \"Buscar actualizaciones\" del launcher: pisa un parche necesario"
+          ],
+          "features": [],
+          "aiAssisted": false
         }
       ]
     },
@@ -1438,6 +1463,34 @@
             "Velocidad independiente de FPS"
           ],
           "aiAssisted": true
+        },
+        {
+          "repo": "shipa-2/Wipeport",
+          "name": "Wipeport (con VR)",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA05670 + update 1.07",
+          "base": [
+            "bloodborne_pc",
+            "shadPS4"
+          ],
+          "summary": "Experimental: arranca y se juegan carreras con sonido y mando. Lo destacado es el soporte de realidad virtual vía OpenXR/SteamVR.",
+          "performance": [
+            "VR hasta 120 FPS con head tracking (Quest 2); en pantalla FPS sin límite (RX 6800 XT, RADV)"
+          ],
+          "issues": [
+            "Sin 4K nativo",
+            "Modo PS4 Pro distorsionado",
+            "Sin online",
+            "Upscalers sin adaptar"
+          ],
+          "features": [
+            "Realidad virtual (OpenXR)"
+          ],
+          "aiAssisted": false
         }
       ]
     },
@@ -2094,6 +2147,38 @@
             "60 FPS",
             "Versus local 2 jugadores"
           ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "persona-3-dancing",
+      "title": "Persona 3: Dancing in Moonlight",
+      "developer": "Atlus",
+      "year": 2018,
+      "cusa": [
+        "CUSA12636"
+      ],
+      "ports": [
+        {
+          "repo": "Piscacho/Persona-3-Dancing-in-Moonlight-Pc",
+          "name": "Persona 3 Dancing in Moonlight PC",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA12636",
+          "base": [
+            "gow3_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Port experimental para Windows del mismo autor que el de Persona 4 Dancing. No declara si es jugable.",
+          "performance": [],
+          "issues": [
+            "Estado de jugabilidad no declarado"
+          ],
+          "features": [],
           "aiAssisted": false
         }
       ]
