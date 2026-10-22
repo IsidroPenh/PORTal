@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T04:42:49.262Z",
+  "generatedAt": "2026-10-22T11:51:07.469Z",
   "items": [
     {
       "repo": "abiason/ShadowOfTheColossus-PC-FIXED",
@@ -93,7 +93,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-10T14:36:23Z",
-      "pushedAt": "2026-10-21T14:36:46Z",
+      "pushedAt": "2026-10-22T09:30:27Z",
       "forkOf": null,
       "kind": "port",
       "score": 15,
@@ -132,7 +132,45 @@
       "fps": [],
       "statusHint": "playable",
       "firstSeen": "2026-10-21T22:00:00Z",
-      "_readmeHash": "15774",
+      "_readmeHash": "17724",
+      "copies": 0
+    },
+    {
+      "repo": "ioritree/kyoei_toshi_pc",
+      "url": "https://github.com/ioritree/kyoei_toshi_pc",
+      "description": "Native Windows port of the PS4 version of City Shrouded in Shadow (巨影都市), built on hachi23/unicorn_overlord_pc. No game files included.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-22T07:02:14Z",
+      "pushedAt": "2026-10-22T07:02:56Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 15,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03562"
+      ],
+      "game": "unicorn-overlord",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-22T11:50:55.079Z",
+      "_readmeHash": "7421",
       "copies": 0
     },
     {
@@ -1065,7 +1103,7 @@
       "repo": "Fleurat/SpartanPort-macOS",
       "url": "https://github.com/Fleurat/SpartanPort-macOS",
       "description": "Unofficial fan project: macOS (Apple Silicon) work on SpartanPort, contributed upstream to FelipePrado0/SpartanPort. Bring your own legally dumped copy of the game; no game files included. Not affiliated with or endorsed by Sony Interactive Entertainment.",
-      "stars": 9,
+      "stars": 8,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-19T20:53:53Z",
@@ -1108,7 +1146,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-21T10:44:09Z",
+      "pushedAt": "2026-10-22T11:16:21Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1230,7 +1268,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-21T17:24:18Z",
-      "pushedAt": "2026-10-22T04:38:53Z",
+      "pushedAt": "2026-10-22T05:25:29Z",
       "forkOf": "FelipePrado0/SpartanPort",
       "kind": "port",
       "score": 9,
@@ -1301,6 +1339,41 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T22:59:40.023Z",
       "_readmeHash": "12007",
+      "copies": 0
+    },
+    {
+      "repo": "Heliasyu/helias-dream",
+      "url": "https://github.com/Heliasyu/helias-dream",
+      "description": "Bloodborne on Linux: FSR 4.1.1 upscaling, frame rate caps up to 120 fps, online play, and DualSense HD haptics and adaptive triggers.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-18T05:26:59Z",
+      "pushedAt": "2026-10-22T08:48:33Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 8,
+      "reasons": [
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 \\bvulkan\\b"
+      ],
+      "cusa": [
+        "CUSA03173"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "linux"
+      ],
+      "fps": [
+        "120 FPS",
+        "120–122 FPS"
+      ],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-22T11:50:49.091Z",
+      "_readmeHash": "3577",
       "copies": 0
     },
     {
@@ -1474,7 +1547,7 @@
       "repo": "HayatoG/tlou_pc",
       "url": "https://github.com/HayatoG/tlou_pc",
       "description": "",
-      "stars": 11,
+      "stars": 12,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-15T01:00:39Z",
@@ -1501,6 +1574,39 @@
       "statusHint": "early",
       "firstSeen": "2026-10-21T23:07:17.336Z",
       "_readmeHash": "24856",
+      "copies": 0
+    },
+    {
+      "repo": "HayatoG/ps4_core",
+      "url": "https://github.com/HayatoG/ps4_core",
+      "description": "",
+      "stars": 4,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-14T02:10:11Z",
+      "pushedAt": "2026-10-21T04:39:25Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 6,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-22T11:50:45.735Z",
+      "_readmeHash": "27026",
       "copies": 0
     },
     {
@@ -1798,6 +1904,36 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T23:07:10.830Z",
       "_readmeHash": "7302",
+      "copies": 0
+    },
+    {
+      "repo": "ytq77/TheHuntLauncher",
+      "url": "https://github.com/ytq77/TheHuntLauncher",
+      "description": "适用于 Bloodborne PC 移植版的 BBSC 无缝联机启动器，提供独立运行环境、中文文本、本机配置同步与自动构建。",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-10-20T06:52:11Z",
+      "pushedAt": "2026-10-21T15:42:03Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 4,
+      "reasons": [
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03173"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-22T11:50:53.664Z",
+      "_readmeHash": "3117",
       "copies": 0
     },
     {
