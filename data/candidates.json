@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T17:11:08.543Z",
+  "generatedAt": "2026-10-22T21:36:11.867Z",
   "items": [
     {
       "repo": "abiason/ShadowOfTheColossus-PC-FIXED",
@@ -378,6 +378,47 @@
       "copies": 0
     },
     {
+      "repo": "AbdelmoumenDeghbouche/knack_pc",
+      "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
+      "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-22T17:35:49Z",
+      "pushedAt": "2026-10-22T20:33:13Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA00006",
+        "CUSA00202",
+        "CUSA00068"
+      ],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "120 FPS",
+        "60 FPS",
+        "71–120 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-22T21:35:28.017Z",
+      "_readmeHash": "13622",
+      "copies": 0
+    },
+    {
       "repo": "Laitsberg/PS4-Native-Ports",
       "url": "https://github.com/Laitsberg/PS4-Native-Ports",
       "description": "  PS4 Native Ports — experimental native PC ports of PS4 games (inFAMOUS First Light, J-STARS Victory VS+, inFAMOUS Second Son), based on HayatoG's iss_pc. Your own game dump required; no game files included.",
@@ -464,7 +505,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-19T11:25:40Z",
-      "pushedAt": "2026-10-20T23:10:18Z",
+      "pushedAt": "2026-10-22T21:25:38Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -510,7 +551,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
-      "pushedAt": "2026-10-22T14:49:43Z",
+      "pushedAt": "2026-10-22T17:12:01Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -1146,7 +1187,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-22T17:08:06Z",
+      "pushedAt": "2026-10-22T21:19:47Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1349,7 +1390,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-18T05:26:59Z",
-      "pushedAt": "2026-10-22T08:48:33Z",
+      "pushedAt": "2026-10-22T21:31:30Z",
       "forkOf": null,
       "kind": "port",
       "score": 8,
@@ -1511,6 +1552,36 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T23:07:13.468Z",
       "_readmeHash": "13181",
+      "copies": 0
+    },
+    {
+      "repo": "gabrieelhm/PS4PKGTool-Linux",
+      "url": "https://github.com/gabrieelhm/PS4PKGTool-Linux",
+      "description": "Native Linux port (.NET 10 + GTK3/WebKit2GTK + AppImage) of pearlxcore/PS4PKGTool | Port nativo para Linux do PS4PKGTool (original por pearlxcore)",
+      "stars": 0,
+      "forks": 0,
+      "language": "C#",
+      "createdAt": "2026-10-22T21:13:02Z",
+      "pushedAt": "2026-10-22T21:13:54Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 7,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-22T21:35:51.219Z",
+      "_readmeHash": "13570",
       "copies": 0
     },
     {
