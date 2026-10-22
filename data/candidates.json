@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T23:11:20.290Z",
+  "generatedAt": "2026-10-22T04:42:49.262Z",
   "items": [
     {
       "repo": "abiason/ShadowOfTheColossus-PC-FIXED",
@@ -462,6 +462,82 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-21T22:00:00Z",
       "_readmeHash": "37353",
+      "copies": 0
+    },
+    {
+      "repo": "Liondarkz/issn_pc",
+      "url": "https://github.com/Liondarkz/issn_pc",
+      "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-15T03:14:12Z",
+      "pushedAt": "2026-10-22T04:03:25Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 13,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA00223",
+        "CUSA00004"
+      ],
+      "game": "infamous-second-son",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "90–105 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-22T04:42:31.802Z",
+      "_readmeHash": "4619",
+      "copies": 0
+    },
+    {
+      "repo": "GenryTheFox0/OrbisGlue",
+      "url": "https://github.com/GenryTheFox0/OrbisGlue",
+      "description": "PS4 recompilation project: your own PS4 game's code lifted to C (Mosaic) and played natively on Windows. Built on shadPS4.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-21T23:13:59Z",
+      "pushedAt": "2026-10-21T23:29:34Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 13,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03528"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "fps": [
+        "30 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-22T04:42:46.375Z",
+      "_readmeHash": "7911",
       "copies": 0
     },
     {
@@ -989,7 +1065,7 @@
       "repo": "Fleurat/SpartanPort-macOS",
       "url": "https://github.com/Fleurat/SpartanPort-macOS",
       "description": "Unofficial fan project: macOS (Apple Silicon) work on SpartanPort, contributed upstream to FelipePrado0/SpartanPort. Bring your own legally dumped copy of the game; no game files included. Not affiliated with or endorsed by Sony Interactive Entertainment.",
-      "stars": 5,
+      "stars": 9,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-19T20:53:53Z",
@@ -1154,7 +1230,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-21T17:24:18Z",
-      "pushedAt": "2026-10-21T22:32:32Z",
+      "pushedAt": "2026-10-22T04:38:53Z",
       "forkOf": "FelipePrado0/SpartanPort",
       "kind": "port",
       "score": 9,
@@ -1398,7 +1474,7 @@
       "repo": "HayatoG/tlou_pc",
       "url": "https://github.com/HayatoG/tlou_pc",
       "description": "",
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-15T01:00:39Z",
@@ -1425,6 +1501,41 @@
       "statusHint": "early",
       "firstSeen": "2026-10-21T23:07:17.336Z",
       "_readmeHash": "24856",
+      "copies": 0
+    },
+    {
+      "repo": "celaya-solutions/ds3-mac",
+      "url": "https://github.com/celaya-solutions/ds3-mac",
+      "description": "Dark Souls III on Mac: an early bbport compatibility experiment, import adapter, and three learning paths.",
+      "stars": 3,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-10-16T22:28:14Z",
+      "pushedAt": "2026-10-22T03:42:42Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 6,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow"
+      ],
+      "cusa": [
+        "CUSA03388"
+      ],
+      "game": null,
+      "platforms": [
+        "macos"
+      ],
+      "fps": [
+        "30 FPS",
+        "54 FPS",
+        "10 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-22T04:42:33.285Z",
+      "_readmeHash": "6351",
       "copies": 0
     },
     {
@@ -1687,36 +1798,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T23:07:10.830Z",
       "_readmeHash": "7302",
-      "copies": 0
-    },
-    {
-      "repo": "S983860/bloodborne-pc-zh",
-      "url": "https://github.com/S983860/bloodborne-pc-zh",
-      "description": "血源诅咒 PC 中文增强版：中文界面、直接启动、光追环境遮蔽与接触阴影、DLSS/FSR、键鼠与手柄适配、锯齿砍刀格挡。经作者测试，游戏流程稳定运行60帧。公开修改后的引擎源码，不含游戏本体。",
-      "stars": 0,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-20T09:46:12Z",
-      "pushedAt": "2026-10-21T01:18:57Z",
-      "forkOf": null,
-      "kind": "weak",
-      "score": 4,
-      "reasons": [
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b"
-      ],
-      "cusa": [
-        "CUSA03173"
-      ],
-      "game": "bloodborne",
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-21T23:07:22.044Z",
-      "_readmeHash": "2030",
       "copies": 0
     },
     {
