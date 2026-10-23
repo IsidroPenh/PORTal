@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T21:36:11.867Z",
+  "generatedAt": "2026-10-23T04:48:18.278Z",
   "items": [
     {
       "repo": "abiason/ShadowOfTheColossus-PC-FIXED",
@@ -381,11 +381,11 @@
       "repo": "AbdelmoumenDeghbouche/knack_pc",
       "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
       "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-22T17:35:49Z",
-      "pushedAt": "2026-10-22T20:33:13Z",
+      "pushedAt": "2026-10-23T04:18:13Z",
       "forkOf": null,
       "kind": "port",
       "score": 14,
@@ -400,22 +400,23 @@
         "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
       ],
       "cusa": [
+        "CUSA00068",
         "CUSA00006",
-        "CUSA00202",
-        "CUSA00068"
+        "CUSA00202"
       ],
       "game": null,
       "platforms": [
-        "windows"
+        "windows",
+        "linux"
       ],
       "fps": [
         "120 FPS",
         "60 FPS",
         "71–120 FPS"
       ],
-      "statusHint": "early",
+      "statusHint": "complete",
       "firstSeen": "2026-10-22T21:35:28.017Z",
-      "_readmeHash": "13622",
+      "_readmeHash": "16574",
       "copies": 0
     },
     {
@@ -505,7 +506,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-19T11:25:40Z",
-      "pushedAt": "2026-10-22T21:25:38Z",
+      "pushedAt": "2026-10-22T23:50:05Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -551,7 +552,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
-      "pushedAt": "2026-10-22T17:12:01Z",
+      "pushedAt": "2026-10-23T04:14:03Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -1024,6 +1025,40 @@
       "copies": 0
     },
     {
+      "repo": "LucaPazienza/gravityrush_pc",
+      "url": "https://github.com/LucaPazienza/gravityrush_pc",
+      "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
+      "stars": 27,
+      "forks": 1,
+      "language": "C++",
+      "createdAt": "2026-10-16T08:35:12Z",
+      "pushedAt": "2026-10-21T20:42:08Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 11,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA01113"
+      ],
+      "game": "gravity-rush-remastered",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-21T22:59:46.916Z",
+      "_readmeHash": "8612",
+      "copies": 0
+    },
+    {
       "repo": "MaouAnimus/persona-3-dancing-pc-port",
       "url": "https://github.com/MaouAnimus/persona-3-dancing-pc-port",
       "description": "",
@@ -1060,40 +1095,6 @@
       "statusHint": "early",
       "firstSeen": "2026-10-21T22:59:59.580Z",
       "_readmeHash": "7107",
-      "copies": 0
-    },
-    {
-      "repo": "LucaPazienza/gravityrush_pc",
-      "url": "https://github.com/LucaPazienza/gravityrush_pc",
-      "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 2,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-16T08:35:12Z",
-      "pushedAt": "2026-10-21T20:42:08Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 11,
-      "reasons": [
-        "+1 (readme) \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA01113"
-      ],
-      "game": "gravity-rush-remastered",
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-21T22:59:46.916Z",
-      "_readmeHash": "8612",
       "copies": 0
     },
     {
@@ -1187,7 +1188,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-22T21:19:47Z",
+      "pushedAt": "2026-10-23T00:22:21Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1213,6 +1214,39 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T23:07:21.189Z",
       "_readmeHash": "2706",
+      "copies": 0
+    },
+    {
+      "repo": "jpthebaby/GOW3-PS4-Remastered-Modding-Tool-Blender-Addon",
+      "url": "https://github.com/jpthebaby/GOW3-PS4-Remastered-Modding-Tool-Blender-Addon",
+      "description": "Blender add-on to put your own character into God of War III Remastered (PC port) as Kratos - by Gamer JP",
+      "stars": 0,
+      "forks": 0,
+      "language": null,
+      "createdAt": "2026-10-23T02:47:41Z",
+      "pushedAt": "2026-10-23T02:47:58Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA01715"
+      ],
+      "game": "god-of-war-3",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-23T04:47:43.056Z",
+      "_readmeHash": "29881",
       "copies": 0
     },
     {
@@ -1254,6 +1288,42 @@
       "statusHint": "early",
       "firstSeen": "2026-10-21T23:07:18.437Z",
       "_readmeHash": "13128",
+      "copies": 0
+    },
+    {
+      "repo": "aliveoutside/infamous-second-son-linux",
+      "url": "https://github.com/aliveoutside/infamous-second-son-linux",
+      "description": "",
+      "stars": 3,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-22T09:46:17Z",
+      "pushedAt": "2026-10-22T19:51:59Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 9,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b"
+      ],
+      "cusa": [
+        "CUSA00004",
+        "CUSA00223"
+      ],
+      "game": "infamous-second-son",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-23T04:48:15.051Z",
+      "_readmeHash": "2808",
       "copies": 0
     },
     {
@@ -1390,7 +1460,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-18T05:26:59Z",
-      "pushedAt": "2026-10-22T21:31:30Z",
+      "pushedAt": "2026-10-23T04:45:26Z",
       "forkOf": null,
       "kind": "port",
       "score": 8,
@@ -1651,7 +1721,7 @@
       "repo": "HayatoG/ps4_core",
       "url": "https://github.com/HayatoG/ps4_core",
       "description": "",
-      "stars": 4,
+      "stars": 5,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-14T02:10:11Z",
