@@ -1,6 +1,45 @@
 {
-  "generatedAt": "2026-10-23T04:48:18.278Z",
+  "generatedAt": "2026-10-23T11:37:21.119Z",
   "items": [
+    {
+      "repo": "johnnygentoo/gzport",
+      "url": "https://github.com/johnnygentoo/gzport",
+      "description": "GODZILLA (PS4, 2015) running natively on Linux: the game's own code on the CPU, its graphics on Vulkan. Built on bbport. Bring your own legal dump; no game files included.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-23T08:49:01Z",
+      "pushedAt": "2026-10-23T10:08:52Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 16,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA02046"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-23T11:36:55.394Z",
+      "_readmeHash": "11867",
+      "copies": 0
+    },
     {
       "repo": "abiason/ShadowOfTheColossus-PC-FIXED",
       "url": "https://github.com/abiason/ShadowOfTheColossus-PC-FIXED",
@@ -93,7 +132,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-10T14:36:23Z",
-      "pushedAt": "2026-10-22T09:30:27Z",
+      "pushedAt": "2026-10-23T06:49:30Z",
       "forkOf": null,
       "kind": "port",
       "score": 15,
@@ -132,7 +171,7 @@
       "fps": [],
       "statusHint": "playable",
       "firstSeen": "2026-10-21T22:00:00Z",
-      "_readmeHash": "17724",
+      "_readmeHash": "17862",
       "copies": 0
     },
     {
@@ -171,6 +210,89 @@
       "statusHint": "early",
       "firstSeen": "2026-10-22T11:50:55.079Z",
       "_readmeHash": "7421",
+      "copies": 0
+    },
+    {
+      "repo": "johnnygentoo/MaxiboostPort",
+      "url": "https://github.com/johnnygentoo/MaxiboostPort",
+      "description": "Native Linux port of MOBILE SUIT GUNDAM EXTREME VS. MAXIBOOST ON (PS4). Bring your own legal dump; no game files included.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-23T08:45:35Z",
+      "pushedAt": "2026-10-23T09:50:42Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 15,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA18758"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "60 FPS",
+        "58–60 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-23T11:36:55.613Z",
+      "_readmeHash": "12727",
+      "copies": 0
+    },
+    {
+      "repo": "johnnygentoo/gvport",
+      "url": "https://github.com/johnnygentoo/gvport",
+      "description": "Native Linux port of GUNDAM VERSUS (PS4), built on the Bloodborne port. Bring your own legal dump; no game files here.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-23T08:47:42Z",
+      "pushedAt": "2026-10-23T09:35:16Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 15,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA08790"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "60 FPS",
+        "55 FPS",
+        "30 FPS",
+        "59 FPS",
+        "48 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-23T11:36:55.797Z",
+      "_readmeHash": "12097",
       "copies": 0
     },
     {
@@ -461,6 +583,44 @@
       "copies": 0
     },
     {
+      "repo": "Liondarkz/issn_pc",
+      "url": "https://github.com/Liondarkz/issn_pc",
+      "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
+      "stars": 7,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-15T03:14:12Z",
+      "pushedAt": "2026-10-23T04:14:03Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 13,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA00223",
+        "CUSA00004"
+      ],
+      "game": "infamous-second-son",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "90–105 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-22T04:42:31.802Z",
+      "_readmeHash": "4619",
+      "copies": 0
+    },
+    {
       "repo": "Astrr00/BloodbornePC",
       "url": "https://github.com/Astrr00/BloodbornePC",
       "description": "Native, open-source PC port of Bloodborne (PS4, v1.09 + The Old Hunters) for Windows and Linux.",
@@ -542,44 +702,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-21T22:00:00Z",
       "_readmeHash": "37353",
-      "copies": 0
-    },
-    {
-      "repo": "Liondarkz/issn_pc",
-      "url": "https://github.com/Liondarkz/issn_pc",
-      "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
-      "stars": 1,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-15T03:14:12Z",
-      "pushedAt": "2026-10-23T04:14:03Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 13,
-      "reasons": [
-        "+1 (readme) \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+2 bring your own|your own ",
-        "+1 \\bvulkan\\b",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA00223",
-        "CUSA00004"
-      ],
-      "game": "infamous-second-son",
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "90–105 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-10-22T04:42:31.802Z",
-      "_readmeHash": "4619",
       "copies": 0
     },
     {
@@ -1028,8 +1150,8 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 27,
-      "forks": 1,
+      "stars": 48,
+      "forks": 2,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
       "pushedAt": "2026-10-21T20:42:08Z",
@@ -1291,6 +1413,42 @@
       "copies": 0
     },
     {
+      "repo": "yemrezin/Bloodborne.exe-Kurulum",
+      "url": "https://github.com/yemrezin/Bloodborne.exe-Kurulum",
+      "description": "Bloodborne PC Native Port - Emulator-Free Full Setup, Google Drive Links, AI Agent Prompt & Controller Guide",
+      "stars": 0,
+      "forks": 0,
+      "language": "Batchfile",
+      "createdAt": "2026-10-23T10:13:12Z",
+      "pushedAt": "2026-10-23T10:13:18Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03173"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-23T11:37:05.373Z",
+      "_readmeHash": "5312",
+      "copies": 0
+    },
+    {
       "repo": "aliveoutside/infamous-second-son-linux",
       "url": "https://github.com/aliveoutside/infamous-second-son-linux",
       "description": "",
@@ -1460,7 +1618,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-18T05:26:59Z",
-      "pushedAt": "2026-10-23T04:45:26Z",
+      "pushedAt": "2026-10-23T06:02:47Z",
       "forkOf": null,
       "kind": "port",
       "score": 8,
@@ -1934,6 +2092,37 @@
       "copies": 0
     },
     {
+      "repo": "ytq77/TheHuntLauncher",
+      "url": "https://github.com/ytq77/TheHuntLauncher",
+      "description": "适用于 Bloodborne PC 移植版的 BBSC 无缝联机启动器，提供独立运行环境、中文文本、本机配置同步与自动构建。",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-10-20T06:52:11Z",
+      "pushedAt": "2026-10-23T08:43:03Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03173"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-22T11:50:53.664Z",
+      "_readmeHash": "3481",
+      "copies": 0
+    },
+    {
       "repo": "aoho60372/Bloodborne-UI-Icon-4K",
       "url": "https://github.com/aoho60372/Bloodborne-UI-Icon-4K",
       "description": "Upscaled UI textures, inventory icons and improved 4K text rendering for Bloodborne bbport.",
@@ -2048,33 +2237,33 @@
       "copies": 0
     },
     {
-      "repo": "ytq77/TheHuntLauncher",
-      "url": "https://github.com/ytq77/TheHuntLauncher",
-      "description": "适用于 Bloodborne PC 移植版的 BBSC 无缝联机启动器，提供独立运行环境、中文文本、本机配置同步与自动构建。",
+      "repo": "JohnCarter2021/t2t-bevy",
+      "url": "https://github.com/JohnCarter2021/t2t-bevy",
+      "description": "Collected works: clean-room Prince of Persia T2T reimplementation in Rust/Bevy, IW4L 100-player battle royale, Urban Reign + God of War III DLSS-NR ports",
       "stars": 0,
       "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-10-20T06:52:11Z",
-      "pushedAt": "2026-10-21T15:42:03Z",
+      "language": "C++",
+      "createdAt": "2026-10-23T09:28:01Z",
+      "pushedAt": "2026-10-23T09:28:58Z",
       "forkOf": null,
       "kind": "weak",
       "score": 4,
       "reasons": [
-        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
         "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d"
       ],
-      "cusa": [
-        "CUSA03173"
-      ],
-      "game": "bloodborne",
+      "cusa": [],
+      "game": null,
       "platforms": [
         "windows"
       ],
       "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-22T11:50:53.664Z",
-      "_readmeHash": "3117",
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-23T11:37:11.429Z",
+      "_readmeHash": "1766",
       "copies": 0
     },
     {
