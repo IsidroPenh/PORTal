@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T17:07:03.598Z",
+  "generatedAt": "2026-10-23T21:24:56.034Z",
   "items": [
     {
       "repo": "johnnygentoo/gzport",
@@ -544,7 +544,7 @@
       "repo": "AbdelmoumenDeghbouche/knack_pc",
       "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
       "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-22T17:35:49Z",
@@ -627,7 +627,7 @@
       "repo": "Liondarkz/issn_pc",
       "url": "https://github.com/Liondarkz/issn_pc",
       "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
-      "stars": 10,
+      "stars": 16,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
@@ -906,6 +906,44 @@
       "copies": 0
     },
     {
+      "repo": "SuperCatElvis/UntilDawn_PC",
+      "url": "https://github.com/SuperCatElvis/UntilDawn_PC",
+      "description": "PC recompilation of the original Until Dawn (2015), running natively on Windows with a custom Vulkan renderer.",
+      "stars": 1,
+      "forks": 0,
+      "language": null,
+      "createdAt": "2026-10-23T20:27:30Z",
+      "pushedAt": "2026-10-23T20:51:04Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA02636"
+      ],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS",
+        "30–60 FPS"
+      ],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-23T21:24:32.816Z",
+      "_readmeHash": "13624",
+      "copies": 0
+    },
+    {
       "repo": "pearlxcore/KillzoneShadowFall-PC",
       "url": "https://github.com/pearlxcore/KillzoneShadowFall-PC",
       "description": "PC port of Killzone Shadow Fall (PlayStation 4) for Windows.",
@@ -941,6 +979,46 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T23:00:35.173Z",
       "_readmeHash": "9721",
+      "copies": 0
+    },
+    {
+      "repo": "kam0n4ik/inFAMOUS-Second-Son-PC-Edition",
+      "url": "https://github.com/kam0n4ik/inFAMOUS-Second-Son-PC-Edition",
+      "description": "inFAMOUS: Second Son on Windows: the PS4 game's own x86-64 code runs natively on the PC CPU (AVX), on our runtime, PM4 command processor, Vulkan 1.3 backend and GCN shader translator. DLSS / FSR 3.1, PC settings, keyboard and mouse.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-23T18:10:46Z",
+      "pushedAt": "2026-10-23T21:11:17Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA00004"
+      ],
+      "game": "infamous-second-son",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "46–51 FPS",
+        "36–53 FPS",
+        "47–49 FPS",
+        "40 FPS",
+        "36 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-23T21:24:24.558Z",
+      "_readmeHash": "40000",
       "copies": 0
     },
     {
@@ -1191,7 +1269,7 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 72,
+      "stars": 82,
       "forks": 2,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
@@ -1351,7 +1429,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-23T15:41:17Z",
+      "pushedAt": "2026-10-23T21:20:23Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1461,7 +1539,7 @@
       "forks": 0,
       "language": "Batchfile",
       "createdAt": "2026-10-23T10:13:12Z",
-      "pushedAt": "2026-10-23T10:13:18Z",
+      "pushedAt": "2026-10-23T20:59:55Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1659,7 +1737,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-18T05:26:59Z",
-      "pushedAt": "2026-10-23T16:57:42Z",
+      "pushedAt": "2026-10-23T20:28:23Z",
       "forkOf": null,
       "kind": "port",
       "score": 8,
@@ -1920,7 +1998,7 @@
       "repo": "HayatoG/ps4_core",
       "url": "https://github.com/HayatoG/ps4_core",
       "description": "",
-      "stars": 6,
+      "stars": 8,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-14T02:10:11Z",
@@ -2285,7 +2363,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-23T09:28:01Z",
-      "pushedAt": "2026-10-23T09:28:58Z",
+      "pushedAt": "2026-10-23T17:59:07Z",
       "forkOf": null,
       "kind": "weak",
       "score": 4,
@@ -2304,7 +2382,7 @@
       "fps": [],
       "statusHint": "unknown",
       "firstSeen": "2026-10-23T11:37:11.429Z",
-      "_readmeHash": "1766",
+      "_readmeHash": "2342",
       "copies": 0
     },
     {
