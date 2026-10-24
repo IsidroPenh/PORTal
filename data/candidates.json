@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T21:24:56.034Z",
+  "generatedAt": "2026-10-24T04:35:22.651Z",
   "items": [
     {
       "repo": "johnnygentoo/gzport",
@@ -125,6 +125,46 @@
       "copies": 0
     },
     {
+      "repo": "johnnygentoo/MaxiboostPort",
+      "url": "https://github.com/johnnygentoo/MaxiboostPort",
+      "description": "Native Linux port of MOBILE SUIT GUNDAM EXTREME VS. MAXIBOOST ON (PS4). Bring your own legal dump; no game files included.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-23T08:45:35Z",
+      "pushedAt": "2026-10-23T09:50:42Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 15,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA18758"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "60 FPS",
+        "58–60 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-23T11:36:55.613Z",
+      "_readmeHash": "12727",
+      "copies": 0
+    },
+    {
       "repo": "yerasuu/psport",
       "url": "https://github.com/yerasuu/psport",
       "description": "psport is a fork of bloodborne_pc(bbport), the native Linux port of Bloodborne, taken past one game.",
@@ -210,46 +250,6 @@
       "statusHint": "early",
       "firstSeen": "2026-10-22T11:50:55.079Z",
       "_readmeHash": "7421",
-      "copies": 0
-    },
-    {
-      "repo": "johnnygentoo/MaxiboostPort",
-      "url": "https://github.com/johnnygentoo/MaxiboostPort",
-      "description": "Native Linux port of MOBILE SUIT GUNDAM EXTREME VS. MAXIBOOST ON (PS4). Bring your own legal dump; no game files included.",
-      "stars": 0,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-23T08:45:35Z",
-      "pushedAt": "2026-10-23T09:50:42Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 15,
-      "reasons": [
-        "+2 \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+2 bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA18758"
-      ],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [
-        "60 FPS",
-        "58–60 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-10-23T11:36:55.613Z",
-      "_readmeHash": "12727",
       "copies": 0
     },
     {
@@ -627,11 +627,11 @@
       "repo": "Liondarkz/issn_pc",
       "url": "https://github.com/Liondarkz/issn_pc",
       "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
-      "stars": 16,
+      "stars": 18,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
-      "pushedAt": "2026-10-23T16:34:53Z",
+      "pushedAt": "2026-10-24T03:27:33Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -658,7 +658,7 @@
       ],
       "statusHint": "playable",
       "firstSeen": "2026-10-22T04:42:31.802Z",
-      "_readmeHash": "4619",
+      "_readmeHash": "5414",
       "copies": 0
     },
     {
@@ -707,7 +707,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-19T11:25:40Z",
-      "pushedAt": "2026-10-23T16:10:22Z",
+      "pushedAt": "2026-10-24T00:35:42Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -909,11 +909,11 @@
       "repo": "SuperCatElvis/UntilDawn_PC",
       "url": "https://github.com/SuperCatElvis/UntilDawn_PC",
       "description": "PC recompilation of the original Until Dawn (2015), running natively on Windows with a custom Vulkan renderer.",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
-      "language": null,
+      "language": "Batchfile",
       "createdAt": "2026-10-23T20:27:30Z",
-      "pushedAt": "2026-10-23T20:51:04Z",
+      "pushedAt": "2026-10-23T22:11:08Z",
       "forkOf": null,
       "kind": "port",
       "score": 12,
@@ -935,12 +935,57 @@
         "windows"
       ],
       "fps": [
+        "30 FPS",
         "60 FPS",
-        "30–60 FPS"
+        "30–60 FPS",
+        "10–20 FPS"
       ],
       "statusHint": "complete",
       "firstSeen": "2026-10-23T21:24:32.816Z",
-      "_readmeHash": "13624",
+      "_readmeHash": "16567",
+      "copies": 0
+    },
+    {
+      "repo": "d4rksp4rt4n/SpartanPort",
+      "url": "https://github.com/d4rksp4rt4n/SpartanPort",
+      "description": "SpartanPort (God of War III PC port) with NVIDIA DLSS - based on FelipePrado0/SpartanPort",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-23T21:42:16Z",
+      "pushedAt": "2026-10-23T21:59:52Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA01623",
+        "CUSA01715"
+      ],
+      "game": "god-of-war-3",
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "120 FPS",
+        "100 FPS",
+        "144 FPS",
+        "240 FPS"
+      ],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-24T04:35:16.489Z",
+      "_readmeHash": "32564",
       "copies": 0
     },
     {
@@ -989,7 +1034,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-23T18:10:46Z",
-      "pushedAt": "2026-10-23T21:11:17Z",
+      "pushedAt": "2026-10-24T04:11:39Z",
       "forkOf": null,
       "kind": "port",
       "score": 12,
@@ -1269,11 +1314,11 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 82,
-      "forks": 2,
+      "stars": 96,
+      "forks": 3,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
-      "pushedAt": "2026-10-21T20:42:08Z",
+      "pushedAt": "2026-10-23T22:54:10Z",
       "forkOf": null,
       "kind": "port",
       "score": 11,
@@ -1294,9 +1339,9 @@
         "windows"
       ],
       "fps": [],
-      "statusHint": "early",
+      "statusHint": "complete",
       "firstSeen": "2026-10-21T22:59:46.916Z",
-      "_readmeHash": "8612",
+      "_readmeHash": "8620",
       "copies": 0
     },
     {
@@ -1429,7 +1474,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-23T21:20:23Z",
+      "pushedAt": "2026-10-24T01:12:59Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
