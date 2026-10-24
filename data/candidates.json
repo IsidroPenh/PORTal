@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T04:35:22.651Z",
+  "generatedAt": "2026-10-24T10:58:06.333Z",
   "items": [
     {
       "repo": "johnnygentoo/gzport",
@@ -128,8 +128,8 @@
       "repo": "johnnygentoo/MaxiboostPort",
       "url": "https://github.com/johnnygentoo/MaxiboostPort",
       "description": "Native Linux port of MOBILE SUIT GUNDAM EXTREME VS. MAXIBOOST ON (PS4). Bring your own legal dump; no game files included.",
-      "stars": 1,
-      "forks": 0,
+      "stars": 3,
+      "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-23T08:45:35Z",
       "pushedAt": "2026-10-23T09:50:42Z",
@@ -172,7 +172,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-10T14:36:23Z",
-      "pushedAt": "2026-10-23T06:49:30Z",
+      "pushedAt": "2026-10-24T10:52:55Z",
       "forkOf": null,
       "kind": "port",
       "score": 15,
@@ -627,7 +627,7 @@
       "repo": "Liondarkz/issn_pc",
       "url": "https://github.com/Liondarkz/issn_pc",
       "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
-      "stars": 18,
+      "stars": 19,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
@@ -743,6 +743,46 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-21T22:00:00Z",
       "_readmeHash": "37353",
+      "copies": 0
+    },
+    {
+      "repo": "DateMasanaga/Driveclub-Port-AppleSilicon-zh-CN",
+      "url": "https://github.com/DateMasanaga/Driveclub-Port-AppleSilicon-zh-CN",
+      "description": "Driveclub (PS4, Simplified Chinese) native port running on Apple Silicon Macs under Rosetta 2 - fork of BlackLineInteractive/Driveclub-Port with GPU fixes and performance work",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-24T04:35:54Z",
+      "pushedAt": "2026-10-24T06:13:48Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 13,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA00879",
+        "CUSA00003"
+      ],
+      "game": "driveclub",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "fps": [
+        "26–28 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-24T10:57:34.617Z",
+      "_readmeHash": "10136",
       "copies": 0
     },
     {
@@ -909,11 +949,11 @@
       "repo": "SuperCatElvis/UntilDawn_PC",
       "url": "https://github.com/SuperCatElvis/UntilDawn_PC",
       "description": "PC recompilation of the original Until Dawn (2015), running natively on Windows with a custom Vulkan renderer.",
-      "stars": 2,
+      "stars": 4,
       "forks": 0,
       "language": "Batchfile",
       "createdAt": "2026-10-23T20:27:30Z",
-      "pushedAt": "2026-10-23T22:11:08Z",
+      "pushedAt": "2026-10-24T10:52:27Z",
       "forkOf": null,
       "kind": "port",
       "score": 12,
@@ -942,7 +982,51 @@
       ],
       "statusHint": "complete",
       "firstSeen": "2026-10-23T21:24:32.816Z",
-      "_readmeHash": "16567",
+      "_readmeHash": "18867",
+      "copies": 0
+    },
+    {
+      "repo": "Huax-1839/bloodborne-macos",
+      "url": "https://github.com/Huax-1839/bloodborne-macos",
+      "description": "Bloodborne on Apple silicon Macs: the game's x86-64 executable under Rosetta 2, graphics translated to Metal",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-15T18:11:38Z",
+      "pushedAt": "2026-10-19T15:17:10Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03173",
+        "CUSA00900"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "macos"
+      ],
+      "fps": [
+        "30 FPS",
+        "52 FPS",
+        "60 FPS",
+        "29–33 FPS",
+        "44 FPS",
+        "33 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-21T23:07:11.084Z",
+      "_readmeHash": "14246",
       "copies": 0
     },
     {
@@ -1064,50 +1148,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-23T21:24:24.558Z",
       "_readmeHash": "40000",
-      "copies": 0
-    },
-    {
-      "repo": "Huax-1839/bloodborne-macos",
-      "url": "https://github.com/Huax-1839/bloodborne-macos",
-      "description": "Bloodborne on Apple silicon Macs: the game's x86-64 executable under Rosetta 2, graphics translated to Metal",
-      "stars": 0,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-15T18:11:38Z",
-      "pushedAt": "2026-10-19T15:17:10Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps4\\b|playstation ?4|\\",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA03173",
-        "CUSA00900"
-      ],
-      "game": "bloodborne",
-      "platforms": [
-        "macos"
-      ],
-      "fps": [
-        "30 FPS",
-        "52 FPS",
-        "60 FPS",
-        "29–33 FPS",
-        "44 FPS",
-        "33 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-10-21T23:07:11.084Z",
-      "_readmeHash": "14246",
       "copies": 0
     },
     {
@@ -1314,7 +1354,7 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 96,
+      "stars": 102,
       "forks": 3,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
@@ -1464,6 +1504,45 @@
       "statusHint": "early",
       "firstSeen": "2026-10-21T23:00:53.892Z",
       "_readmeHash": "8674",
+      "copies": 0
+    },
+    {
+      "repo": "MaouAnimus/p3d-pc",
+      "url": "https://github.com/MaouAnimus/p3d-pc",
+      "description": "",
+      "stars": 4,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-18T03:35:42Z",
+      "pushedAt": "2026-10-20T23:09:35Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA12636"
+      ],
+      "game": "persona-3-dancing",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "240 FPS",
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-24T10:57:51.494Z",
+      "_readmeHash": "7107",
       "copies": 0
     },
     {
@@ -2401,6 +2480,33 @@
       "copies": 0
     },
     {
+      "repo": "indrasundanese/KamenRider-MoH-PC",
+      "url": "https://github.com/indrasundanese/KamenRider-MoH-PC",
+      "description": "Native port Kamen Rider Memory of Heroez (PS4) untuk PC — masih dalam tahap development (WIP).",
+      "stars": 0,
+      "forks": 0,
+      "language": null,
+      "createdAt": "2026-10-24T05:52:13Z",
+      "pushedAt": "2026-10-24T06:00:34Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 4,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-24T10:57:34.821Z",
+      "_readmeHash": "1287",
+      "copies": 0
+    },
+    {
       "repo": "JohnCarter2021/t2t-bevy",
       "url": "https://github.com/JohnCarter2021/t2t-bevy",
       "description": "Collected works: clean-room Prince of Persia T2T reimplementation in Rust/Bevy, IW4L 100-player battle royale, Urban Reign + God of War III DLSS-NR ports",
@@ -2408,7 +2514,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-23T09:28:01Z",
-      "pushedAt": "2026-10-23T17:59:07Z",
+      "pushedAt": "2026-10-24T07:46:35Z",
       "forkOf": null,
       "kind": "weak",
       "score": 4,
