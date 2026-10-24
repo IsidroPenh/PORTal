@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T15:57:56.591Z",
+  "generatedAt": "2026-10-24T20:47:56.412Z",
   "items": [
     {
       "repo": "johnnygentoo/gzport",
@@ -172,7 +172,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-10T14:36:23Z",
-      "pushedAt": "2026-10-24T15:29:37Z",
+      "pushedAt": "2026-10-24T20:18:39Z",
       "forkOf": null,
       "kind": "port",
       "score": 15,
@@ -501,6 +501,48 @@
       "copies": 0
     },
     {
+      "repo": "AbdelmoumenDeghbouche/knack_pc",
+      "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
+      "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
+      "stars": 4,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-22T17:35:49Z",
+      "pushedAt": "2026-10-23T04:18:13Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA00068",
+        "CUSA00006",
+        "CUSA00202"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "120 FPS",
+        "60 FPS",
+        "71–120 FPS"
+      ],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-22T21:35:28.017Z",
+      "_readmeHash": "16574",
+      "copies": 0
+    },
+    {
       "repo": "heyzerr/ShadowOfTheColossus-PC",
       "url": "https://github.com/heyzerr/ShadowOfTheColossus-PC",
       "description": "AVX2 FIX Native Windows port of Shadow of the Colossus (PS4, CUSA08809) - Port nativo para PC.",
@@ -538,48 +580,6 @@
       "statusHint": "early",
       "firstSeen": "2026-10-21T22:00:00Z",
       "_readmeHash": "13128",
-      "copies": 0
-    },
-    {
-      "repo": "AbdelmoumenDeghbouche/knack_pc",
-      "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
-      "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
-      "stars": 2,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-22T17:35:49Z",
-      "pushedAt": "2026-10-23T04:18:13Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 14,
-      "reasons": [
-        "+2 \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 \\bvulkan\\b",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA00068",
-        "CUSA00006",
-        "CUSA00202"
-      ],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [
-        "120 FPS",
-        "60 FPS",
-        "71–120 FPS"
-      ],
-      "statusHint": "complete",
-      "firstSeen": "2026-10-22T21:35:28.017Z",
-      "_readmeHash": "16574",
       "copies": 0
     },
     {
@@ -627,7 +627,7 @@
       "repo": "Liondarkz/issn_pc",
       "url": "https://github.com/Liondarkz/issn_pc",
       "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
-      "stars": 24,
+      "stars": 28,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
@@ -707,7 +707,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-19T11:25:40Z",
-      "pushedAt": "2026-10-24T00:35:42Z",
+      "pushedAt": "2026-10-24T19:32:52Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -1118,7 +1118,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-23T18:10:46Z",
-      "pushedAt": "2026-10-24T04:11:39Z",
+      "pushedAt": "2026-10-24T19:21:52Z",
       "forkOf": null,
       "kind": "port",
       "score": 12,
@@ -1141,9 +1141,7 @@
       "fps": [
         "46–51 FPS",
         "36–53 FPS",
-        "47–49 FPS",
-        "40 FPS",
-        "36 FPS"
+        "47–49 FPS"
       ],
       "statusHint": "playable",
       "firstSeen": "2026-10-23T21:24:24.558Z",
@@ -1354,7 +1352,7 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 153,
+      "stars": 177,
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
@@ -1599,7 +1597,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-24T15:50:46Z",
+      "pushedAt": "2026-10-24T16:12:44Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1661,6 +1659,43 @@
       "copies": 0
     },
     {
+      "repo": "indrasundanese/KamenRider-MoH-PC",
+      "url": "https://github.com/indrasundanese/KamenRider-MoH-PC",
+      "description": "Native port Kamen Rider Memory of Heroez (PS4) untuk PC — masih dalam tahap development (test).",
+      "stars": 0,
+      "forks": 0,
+      "language": null,
+      "createdAt": "2026-10-24T05:52:13Z",
+      "pushedAt": "2026-10-24T18:40:13Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA17374"
+      ],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "30 FPS",
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-24T10:57:34.821Z",
+      "_readmeHash": "4407",
+      "copies": 0
+    },
+    {
       "repo": "yazuc/sotc-pt-fixes",
       "url": "https://github.com/yazuc/sotc-pt-fixes",
       "description": "branch port linux com build ajustado.",
@@ -1699,6 +1734,48 @@
       "statusHint": "early",
       "firstSeen": "2026-10-21T23:07:18.437Z",
       "_readmeHash": "13128",
+      "copies": 0
+    },
+    {
+      "repo": "wheat32/bbpc",
+      "url": "https://github.com/wheat32/bbpc",
+      "description": "Bloodborne for PC",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-24T14:36:22Z",
+      "pushedAt": "2026-10-24T20:00:24Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03173",
+        "CUSA00900",
+        "CUSA03023"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "90 FPS",
+        "30 FPS",
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-24T20:47:44.457Z",
+      "_readmeHash": "20388",
       "copies": 0
     },
     {
@@ -1777,7 +1854,7 @@
       "repo": "sniperking1234/SpartanPort",
       "url": "https://github.com/sniperking1234/SpartanPort",
       "description": "Nightly auto-mirror of FelipePrado0/SpartanPort (branches, tags, releases)",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-24T13:28:17Z",
@@ -2598,33 +2675,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T23:07:10.830Z",
       "_readmeHash": "7302",
-      "copies": 0
-    },
-    {
-      "repo": "indrasundanese/KamenRider-MoH-PC",
-      "url": "https://github.com/indrasundanese/KamenRider-MoH-PC",
-      "description": "Native port Kamen Rider Memory of Heroez (PS4) untuk PC — masih dalam tahap development (WIP).",
-      "stars": 0,
-      "forks": 0,
-      "language": null,
-      "createdAt": "2026-10-24T05:52:13Z",
-      "pushedAt": "2026-10-24T06:00:34Z",
-      "forkOf": null,
-      "kind": "weak",
-      "score": 4,
-      "reasons": [
-        "+2 \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-24T10:57:34.821Z",
-      "_readmeHash": "1287",
       "copies": 0
     },
     {
