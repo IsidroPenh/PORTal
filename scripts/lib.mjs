@@ -213,6 +213,8 @@ const PERF_STRONG = [
 const PERF_WEAK = /\bfaster\b|speed ?up|performance|rendimiento|desempenho|optimi[sz]|stutter|travad|tir[oó]n|frame ?(time|pacing)|hitch|smoother|m[aá]s fluido/i;
 const FPS_JUMP = /(\d{2,3})\s?(?:fps\s?)?(?:→|->|=>|to|a|para)\s?(\d{2,3})\s?fps/i;
 const FIX = /\bfix(e[sd])?\b|crash|corrig|arregl|corre[cç][aã]o|leak|vazamento|fuga de memoria|bug/i;
+const FEATURE_SECTION = /feature|added|\bnew\b|what'?s new|highlights|novedad|nuev[oa]s?|novidade|novo|adicionad|agregad/i;
+const FIX_SECTION = /fix|bug|correc|corre[cç]|arregl|known issues|problemas/i;
 const FEATURE_LINE = /^(added?|adds|new|novo|nova|nuevo|nueva|agregad[oa]|añadid[oa]|adicionad[oa]|now supports?|support for|soporte (para|de)|suporte (a|para)|introduc|implement)/i;
 export const FEATURE_TOKENS = [
   ['FSR 4', /fsr ?4/i], ['FSR 3', /fsr ?3/i], ['DLSS', /\bdlss\b/i], ['XeSS', /\bxess\b/i],
@@ -224,7 +226,7 @@ export const FEATURE_TOKENS = [
   ['Launcher', /launcher/i], ['HDR', /\bhdr\b/i], ['VR', /\bvr\b|openxr/i],
   ['Logros', /achievement|troph|conquista|logro/i], ['Ray tracing', /ray ?trac|\brt\b/i],
   ['Linux / Steam Deck', /\blinux\b|steam ?deck|appimage/i], ['macOS', /mac ?os|apple silicon/i],
-  ['Nueva región / versión', /cusa\d{5}|european|europe[ao]|region/i],
+  ['Nueva región / versión', /european (edition|version|release)|eu (edition|version|release)|new region|nueva regi[oó]n|nova regi[aã]o/i],
 ];
 
 export function versionJump(prevTag, tag) {
@@ -263,11 +265,23 @@ export function analyzeRelease({ name = '', body = '', tag = '', prevTag = '', p
     lines.filter(l => PERF_WEAK.test(l)).slice(0, 1).forEach(push);
   }
 
-  // Funciones nuevas: tokens conocidos en el título/primer tramo + viñetas que empiezan con "Added/Nuevo/…".
-  const head = `${name}\n${body.slice(0, 2500)}`;
-  const allFeatures = FEATURE_TOKENS.filter(([, re]) => re.test(head)).map(([label]) => label);
+  // Funciones nuevas: solo cuentan el título, las viñetas tipo "Added/Nuevo…" y lo que esté bajo un
+  // encabezado de novedades. Una línea de arreglo ("Fixed mouse crash") no suma funciones.
+  const featureLines = [];
+  let section = '';
+  for (const raw of text.split('\n').slice(1)) {
+    const isHeading = /^\s*(#{1,6}\s|\*\*[^*]+\*\*\s*:?\s*$)/.test(raw);
+    const l = raw.replace(/^[\s>*\-+•#\d.)]+/, '').replace(/\*\*/g, '').trim();
+    if (isHeading) {
+      section = FEATURE_SECTION.test(l) ? 'features' : FIX_SECTION.test(l) ? 'fixes' : '';
+      continue;
+    }
+    if (l.length <= 3 || l.length >= 400) continue;
+    if ((section === 'features' || FEATURE_LINE.test(l)) && !(section === 'fixes' || (FIX.test(l) && !FEATURE_LINE.test(l)))) featureLines.push(l);
+  }
+  const featureText = [name, ...featureLines].join('\n');
+  const allFeatures = FEATURE_TOKENS.filter(([, re]) => re.test(featureText)).map(([label]) => label);
   const features = allFeatures.filter(f => !prevFeatures.includes(f));
-  const featureLines = lines.filter(l => FEATURE_LINE.test(l));
   if (features.length || featureLines.length) tags.add('funciones');
   featureLines.slice(0, 2).forEach(push);
 

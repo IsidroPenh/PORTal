@@ -91,6 +91,15 @@ t('release: funciones que ya tenía no cuentan', () => {
 t('release: hito de principio a fin es grande', () => assert.equal(rel('0.60.3', 'The game can now be finished from start to end.', '0.60.3', '0.60.2').level, 'big'));
 t('release: solo arreglos es normal', () => assert.equal(rel('1.2.1', '- Fix crash on AMD\n- Fix typo', '1.2.1', '1.2.0').level, 'normal'));
 t('release: salto de FPS 30 → 60', () => assert.equal(rel('0.3', 'Gameplay now runs 30 → 60 fps on most GPUs', '0.3.1', '0.3.0').level, 'big'));
+t('release: arreglos que nombran funciones no son funciones nuevas', () => {
+  const body = '### Fixes\n- Fixed overexposed SDR races (HDR off)\n- Fixed mouse input in the launcher\n- Fixed Linux build\n- Fixed a crash on Windows\n- CUSA05670 is now marked as tested';
+  const r = rel('WipEout Omega Collection PC — v0.2.2', body, 'windows-v0.2.2', 'windows-v0.2.1', []);
+  assert.equal(r.level, 'normal', JSON.stringify(r)); assert.deepEqual(r.features, []);
+});
+t('release: viñetas bajo "New features" cuentan', () => {
+  const r = rel('v1.1', '## New features\n- Online races\n- HDR output\n- 21:9 ultrawide\n## Fixes\n- Fixed crash', 'v1.1', 'v1.0', []);
+  assert.equal(r.level, 'big'); assert.deepEqual(r.features.sort(), ['HDR', 'Online', 'Ultrawide']);
+});
 t('versionJump', () => {
   assert.equal(versionJump('v0.3', 'v0.4'), 'major');
   assert.equal(versionJump('1.2.0', '1.3.0'), 'minor');
