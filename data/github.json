@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-25T11:23:48.180Z",
+  "generatedAt": "2026-10-25T16:15:16.883Z",
   "repos": {
     "deadinside28/bloodborne_pc": {
       "fullName": "deadinside28/bloodborne_pc",
       "description": null,
-      "stars": 3604,
-      "forks": 1004,
-      "openIssues": 158,
+      "stars": 3609,
+      "forks": 1010,
+      "openIssues": 160,
       "createdAt": "2026-10-01T05:50:31Z",
       "pushedAt": "2026-10-19T06:31:22Z",
       "archived": false,
@@ -28,12 +28,12 @@
       "readmeStatus": "playable",
       "commits7d": 1,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:48.959Z"
+      "checkedAt": "2026-10-25T16:14:03.424Z"
     },
     "Supermedo/bloodborne_pc": {
       "fullName": "Supermedo/bloodborne_pc",
       "description": "Bloodborne running natively on Windows 10/11: launcher in 13 languages, DLSS, FSR 3.1/4, unlocked FPS, cheats, mods, one-click updates.",
-      "stars": 4577,
+      "stars": 4596,
       "forks": 287,
       "openIssues": 59,
       "createdAt": "2026-10-06T17:54:56Z",
@@ -54,9 +54,9 @@
         ]
       },
       "readmeStatus": "early",
-      "commits7d": 100,
+      "commits7d": 99,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:50.158Z"
+      "checkedAt": "2026-10-25T16:14:04.598Z"
     },
     "bloodborne-native/bloodborne-recomp": {
       "fullName": "bloodborne-native/bloodborne-recomp",
@@ -73,12 +73,12 @@
       "readmeStatus": "early",
       "commits7d": 30,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:51.121Z"
+      "checkedAt": "2026-10-25T16:14:05.654Z"
     },
     "Yharnam-Hunters/Paleblood": {
       "fullName": "Yharnam-Hunters/Paleblood",
       "description": "A decompilation of Bloodborne (CUSA03173 v1.09) with its own runtime: the game's code rewritten as readable C++, one verified function at a time. The game doesn't run on it yet; 21 functions verified. No game files included.",
-      "stars": 140,
+      "stars": 142,
       "forks": 15,
       "openIssues": 42,
       "createdAt": "2026-10-07T04:45:21Z",
@@ -96,14 +96,14 @@
       "readmeStatus": "early",
       "commits7d": 13,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:52.101Z"
+      "checkedAt": "2026-10-25T16:14:06.591Z"
     },
     "droogie/bbhost": {
       "fullName": "droogie/bbhost",
       "description": "Definitive Bloodborne PC Experience",
-      "stars": 684,
-      "forks": 48,
-      "openIssues": 86,
+      "stars": 686,
+      "forks": 49,
+      "openIssues": 87,
       "createdAt": "2026-10-07T14:22:17Z",
       "pushedAt": "2026-10-25T05:42:25Z",
       "archived": false,
@@ -123,16 +123,16 @@
       "readmeStatus": "playable",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:53.037Z"
+      "checkedAt": "2026-10-25T16:14:07.571Z"
     },
     "Mrsuss60/bloodborne_pc_windows_port": {
       "fullName": "Mrsuss60/bloodborne_pc_windows_port",
       "description": "Native x86-64 Windows loader for Bloodborne (CUSA03173) with native CPU execution, Win32 runtime, and shadPS4-based Vulkan GPU rendering. Based on deadinside28's bbport.",
-      "stars": 528,
+      "stars": 529,
       "forks": 44,
-      "openIssues": 43,
+      "openIssues": 44,
       "createdAt": "2026-10-06T23:03:40Z",
-      "pushedAt": "2026-10-24T20:10:01Z",
+      "pushedAt": "2026-10-25T15:23:45Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [],
@@ -152,20 +152,20 @@
         ]
       },
       "readmeStatus": "playable",
-      "commits7d": 42,
+      "commits7d": 44,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:53.998Z"
+      "checkedAt": "2026-10-25T16:14:08.630Z"
     },
     "ayozetr/bloodborne_linux": {
       "fullName": "ayozetr/bloodborne_linux",
       "description": "Bloodborne running natively on Linux and the Steam Deck, built on bbport: online play and Seamless Co-op, unlocked FPS, ultrawide, FSR and DLSS, any controller, trophies, Add to Steam and a self-updating AppImage. Requires your own legally dumped copy of the game.",
-      "stars": 98,
+      "stars": 99,
       "forks": 0,
-      "openIssues": 9,
+      "openIssues": 8,
       "createdAt": "2026-10-09T15:15:10Z",
-      "pushedAt": "2026-10-25T02:45:16Z",
+      "pushedAt": "2026-10-25T15:42:26Z",
       "archived": false,
-      "license": "GPL-2.0",
+      "license": "GPL-3.0",
       "topics": [
         "appimage",
         "bloodborne",
@@ -184,29 +184,28 @@
         "vulkan"
       ],
       "release": {
-        "tag": "test-issue25-1",
-        "name": "Test build: vertex inputs checked on every draw (#25)",
-        "publishedAt": "2026-10-23T20:44:20Z",
-        "prerelease": true,
-        "url": "https://github.com/ayozetr/bloodborne_linux/releases/tag/test-issue25-1",
+        "tag": "0.51-linux.17",
+        "name": "bbport Linux 0.51-linux.17",
+        "publishedAt": "2026-10-25T15:42:26Z",
+        "prerelease": false,
+        "url": "https://github.com/ayozetr/bloodborne_linux/releases/tag/0.51-linux.17",
         "features": [
-          "Launcher",
           "Linux / Steam Deck"
         ]
       },
       "readmeStatus": "early",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:54.946Z"
+      "checkedAt": "2026-10-25T16:14:09.758Z"
     },
     "Wooloomooloo2/bloodborne_mac_port": {
       "fullName": "Wooloomooloo2/bloodborne_mac_port",
       "description": "Bloodborne on Apple Silicon Macs: the PS4 game's own code under Rosetta 2, rendered natively with Metal (MetalFX, FSR 3.1). Work in progress.",
-      "stars": 161,
+      "stars": 166,
       "forks": 11,
-      "openIssues": 29,
+      "openIssues": 32,
       "createdAt": "2026-10-11T14:47:05Z",
-      "pushedAt": "2026-10-25T11:12:10Z",
+      "pushedAt": "2026-10-25T14:45:22Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [
@@ -217,27 +216,24 @@
         "ps4"
       ],
       "release": {
-        "tag": "mac-v0.5.5",
-        "name": "mac-v0.5.5: red flash fix, lifts, memmove crash, sharper upscaling",
-        "publishedAt": "2026-10-24T15:33:48Z",
+        "tag": "mac-v0.5.7",
+        "name": "mac-v0.5.7: mouse look, Stop button, keyboard fixes",
+        "publishedAt": "2026-10-25T14:10:21Z",
         "prerelease": false,
-        "url": "https://github.com/Wooloomooloo2/bloodborne_mac_port/releases/tag/mac-v0.5.5",
+        "url": "https://github.com/Wooloomooloo2/bloodborne_mac_port/releases/tag/mac-v0.5.7",
         "features": [
-          "FSR 3",
-          "60+ FPS",
-          "Launcher",
-          "macOS"
+          "Teclado y mouse"
         ]
       },
       "readmeStatus": "playable",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:56.012Z"
+      "checkedAt": "2026-10-25T16:14:10.995Z"
     },
     "bloodborne-native/bloodborne-mac": {
       "fullName": "bloodborne-native/bloodborne-mac",
       "description": "Bloodborne running natively on Apple Silicon: the macOS app. Built on bbport and shadPS4.",
-      "stars": 44,
+      "stars": 45,
       "forks": 3,
       "openIssues": 2,
       "createdAt": "2026-10-10T23:37:15Z",
@@ -263,16 +259,16 @@
       "readmeStatus": "playable",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:57.181Z"
+      "checkedAt": "2026-10-25T16:14:12.205Z"
     },
     "FelipePrado0/SpartanPort": {
       "fullName": "FelipePrado0/SpartanPort",
       "description": "SpartanPort: unofficial PC port of God of War III Remastered (PS4) for Windows and Linux (AppImage). Original x86-64 code runs directly on the CPU with a custom runtime; graphics use shadPS4's Vulkan video core. Launcher, in-game menu, controller icons and up to 240 FPS. Requires your own game dump. No game files included.",
-      "stars": 4111,
-      "forks": 270,
-      "openIssues": 191,
+      "stars": 4133,
+      "forks": 273,
+      "openIssues": 194,
       "createdAt": "2026-10-08T01:55:21Z",
-      "pushedAt": "2026-10-25T07:25:57Z",
+      "pushedAt": "2026-10-25T15:24:34Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [
@@ -302,7 +298,7 @@
       "readmeStatus": "complete",
       "commits7d": 49,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:58.144Z"
+      "checkedAt": "2026-10-25T16:14:13.261Z"
     },
     "maulanaikya99/gow3-mac": {
       "fullName": "maulanaikya99/gow3-mac",
@@ -319,12 +315,12 @@
       "readmeStatus": "early",
       "commits7d": 1,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:59.117Z"
+      "checkedAt": "2026-10-25T16:14:14.207Z"
     },
     "LoreanXavier/pt-pc": {
       "fullName": "LoreanXavier/pt-pc",
       "description": "Native PC port of P.T. (runs from your own PS4 game files)",
-      "stars": 2167,
+      "stars": 2173,
       "forks": 138,
       "openIssues": 0,
       "createdAt": "2026-10-07T09:33:31Z",
@@ -347,14 +343,14 @@
       "readmeStatus": "early",
       "commits7d": 8,
       "missing": false,
-      "checkedAt": "2026-10-25T11:22:59.844Z"
+      "checkedAt": "2026-10-25T16:14:15.137Z"
     },
     "Supermedo/uncharted_pc": {
       "fullName": "Supermedo/uncharted_pc",
       "description": "Uncharted: The Nathan Drake Collection running natively on Windows - by SuperMedo",
-      "stars": 1945,
-      "forks": 113,
-      "openIssues": 358,
+      "stars": 1955,
+      "forks": 114,
+      "openIssues": 362,
       "createdAt": "2026-10-15T00:17:23Z",
       "pushedAt": "2026-10-24T18:47:25Z",
       "archived": false,
@@ -375,14 +371,14 @@
       "readmeStatus": "early",
       "commits7d": 70,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:00.645Z"
+      "checkedAt": "2026-10-25T16:14:16.127Z"
     },
     "bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port": {
       "fullName": "bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port",
       "description": "Uncharted: The Nathan Drake Collection PC port (no game files)",
-      "stars": 528,
-      "forks": 17,
-      "openIssues": 86,
+      "stars": 534,
+      "forks": 18,
+      "openIssues": 93,
       "createdAt": "2026-10-14T21:04:05Z",
       "pushedAt": "2026-10-25T08:07:24Z",
       "archived": false,
@@ -400,44 +396,42 @@
         ]
       },
       "readmeStatus": "playable",
-      "commits7d": 32,
+      "commits7d": 31,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:01.650Z"
+      "checkedAt": "2026-10-25T16:14:17.072Z"
     },
     "spacepepperoni/uncharted_Linux": {
       "fullName": "spacepepperoni/uncharted_Linux",
       "description": "Fork of uncharted_pc for Linux and Steam Deck. Runs the PS4 versions of Uncharted 1-3",
-      "stars": 66,
+      "stars": 68,
       "forks": 5,
-      "openIssues": 4,
+      "openIssues": 5,
       "createdAt": "2026-10-15T16:16:27Z",
-      "pushedAt": "2026-10-24T20:55:13Z",
+      "pushedAt": "2026-10-25T13:25:23Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [],
       "release": {
-        "tag": "v0.3.6-linux.115",
-        "name": "v0.3.6-linux.115",
-        "publishedAt": "2026-10-23T18:11:31Z",
+        "tag": "v0.3.8-linux.131",
+        "name": "v0.3.8-linux.131",
+        "publishedAt": "2026-10-25T13:25:24Z",
         "prerelease": false,
-        "url": "https://github.com/spacepepperoni/uncharted_Linux/releases/tag/v0.3.6-linux.115",
+        "url": "https://github.com/spacepepperoni/uncharted_Linux/releases/tag/v0.3.8-linux.131",
         "features": [
-          "DLSS",
-          "Launcher",
           "Linux / Steam Deck"
         ]
       },
       "readmeStatus": "early",
-      "commits7d": 56,
+      "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:02.678Z"
+      "checkedAt": "2026-10-25T16:14:18.209Z"
     },
     "AjncSystem/ShadowOfTheColossus-PC": {
       "fullName": "AjncSystem/ShadowOfTheColossus-PC",
       "description": "Native Windows port of Shadow of the Colossus (PS4, CUSA08809) - bring your own game dump. Port nativo para PC.",
-      "stars": 1470,
-      "forks": 82,
-      "openIssues": 162,
+      "stars": 1483,
+      "forks": 83,
+      "openIssues": 163,
       "createdAt": "2026-10-12T13:11:53Z",
       "pushedAt": "2026-10-22T16:44:30Z",
       "archived": false,
@@ -456,7 +450,7 @@
       "readmeStatus": "complete",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:03.690Z"
+      "checkedAt": "2026-10-25T16:14:19.315Z"
     },
     "nakaionyt/ShadowOfTheColossus-PC-FrameGen": {
       "fullName": "nakaionyt/ShadowOfTheColossus-PC-FrameGen",
@@ -507,7 +501,7 @@
       "readmeStatus": "playable",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:04.597Z"
+      "checkedAt": "2026-10-25T16:14:20.145Z"
     },
     "luizgustavs/Pink-shadPS4": {
       "fullName": "luizgustavs/Pink-shadPS4",
@@ -533,7 +527,7 @@
       "readmeStatus": "early",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:05.470Z"
+      "checkedAt": "2026-10-25T16:14:21.184Z"
     },
     "braito4/sotc-mac": {
       "fullName": "braito4/sotc-mac",
@@ -550,14 +544,14 @@
       "readmeStatus": "research",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:06.605Z"
+      "checkedAt": "2026-10-25T16:14:22.386Z"
     },
     "HayatoG/iss_pc": {
       "fullName": "HayatoG/iss_pc",
       "description": "Native PC port (Linux/Windows) of inFAMOUS Second Son (PS4, CUSA00223) — in development, playable; runs your own game dump; no game or firmware files included. Motion sensor emulation. | Port nativo para PC de inFAMOUS Second Son (em desenvolvimento) — usa o seu próprio dump.",
-      "stars": 884,
-      "forks": 60,
-      "openIssues": 314,
+      "stars": 892,
+      "forks": 61,
+      "openIssues": 316,
       "createdAt": "2026-10-13T21:48:17Z",
       "pushedAt": "2026-10-25T02:57:05Z",
       "archived": false,
@@ -592,12 +586,12 @@
       "readmeStatus": "playable",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:07.679Z"
+      "checkedAt": "2026-10-25T16:14:23.513Z"
     },
     "Castlesea/infamous-second-son-pc-port": {
       "fullName": "Castlesea/infamous-second-son-pc-port",
       "description": "Native Windows port of inFAMOUS Second Son (PS4): custom runtime + Vulkan renderer derived from shadPS4. Bring your own game.",
-      "stars": 132,
+      "stars": 135,
       "forks": 13,
       "openIssues": 32,
       "createdAt": "2026-10-19T20:22:29Z",
@@ -620,16 +614,16 @@
       "readmeStatus": "playable",
       "commits7d": 28,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:08.552Z"
+      "checkedAt": "2026-10-25T16:14:24.408Z"
     },
     "VantageEX/infamous-first-light-pc": {
       "fullName": "VantageEX/infamous-first-light-pc",
       "description": "Unofficial native PC port of inFAMOUS First Light (PS4). Bring your own game dump - no game files included.",
-      "stars": 35,
+      "stars": 50,
       "forks": 0,
-      "openIssues": 8,
+      "openIssues": 12,
       "createdAt": "2026-10-21T08:41:06Z",
-      "pushedAt": "2026-10-25T04:57:17Z",
+      "pushedAt": "2026-10-25T11:48:33Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [
@@ -657,14 +651,14 @@
       "readmeStatus": "playable",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:09.682Z"
+      "checkedAt": "2026-10-25T16:14:25.564Z"
     },
     "OverkillLabs3/driveclub-recomp": {
       "fullName": "OverkillLabs3/driveclub-recomp",
       "description": "DriveClub (PS4, version 1.28) running natively on Windows",
-      "stars": 696,
-      "forks": 35,
-      "openIssues": 52,
+      "stars": 710,
+      "forks": 36,
+      "openIssues": 57,
       "createdAt": "2026-10-16T20:43:28Z",
       "pushedAt": "2026-10-24T22:16:44Z",
       "archived": false,
@@ -687,7 +681,7 @@
       "readmeStatus": "playable",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:10.685Z"
+      "checkedAt": "2026-10-25T16:14:26.591Z"
     },
     "BlackLineInteractive/Driveclub-Port": {
       "fullName": "BlackLineInteractive/Driveclub-Port",
@@ -718,9 +712,9 @@
       ],
       "release": null,
       "readmeStatus": "early",
-      "commits7d": 7,
+      "commits7d": 2,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:11.442Z"
+      "checkedAt": "2026-10-25T16:14:27.381Z"
     },
     "ondrejeder/Driveclub-pc-wrapper": {
       "fullName": "ondrejeder/Driveclub-pc-wrapper",
@@ -749,12 +743,12 @@
       "readmeStatus": "early",
       "commits7d": 11,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:12.401Z"
+      "checkedAt": "2026-10-25T16:14:28.363Z"
     },
     "fladnaG86/Driveclub-Port-AppleSilicon": {
       "fullName": "fladnaG86/Driveclub-Port-AppleSilicon",
       "description": "Driveclub (PS4) native port running on Apple Silicon Macs under Rosetta 2 - fork of BlackLineInteractive/Driveclub-Port with GPU fixes and performance work",
-      "stars": 22,
+      "stars": 23,
       "forks": 2,
       "openIssues": 6,
       "createdAt": "2026-10-18T18:33:30Z",
@@ -774,16 +768,16 @@
         ]
       },
       "readmeStatus": "playable",
-      "commits7d": 68,
+      "commits7d": 61,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:13.403Z"
+      "checkedAt": "2026-10-25T16:14:29.422Z"
     },
     "mlgprorektm8/RyGT": {
       "fullName": "mlgprorektm8/RyGT",
       "description": "A work in progress Gran Turismo Sport (PS4) as a native Windows program, built on Ryty and shadGT's Vulkan renderer",
-      "stars": 532,
+      "stars": 536,
       "forks": 25,
-      "openIssues": 34,
+      "openIssues": 35,
       "createdAt": "2026-10-10T19:44:10Z",
       "pushedAt": "2026-10-25T01:18:31Z",
       "archived": false,
@@ -808,14 +802,14 @@
       "readmeStatus": "early",
       "commits7d": 100,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:14.280Z"
+      "checkedAt": "2026-10-25T16:14:30.448Z"
     },
     "HayatoG/tlg_pc": {
       "fullName": "HayatoG/tlg_pc",
       "description": "Native PC port (Linux/Windows) of The Last Guardian (PS4, CUSA03627) — runs your own game dump; no game or firmware files included. Mouse/keyboard, optional 60 FPS, SMAA/CAS filters. | Port nativo para PC de The Last Guardian — usa o seu próprio dump.",
-      "stars": 428,
+      "stars": 434,
       "forks": 19,
-      "openIssues": 85,
+      "openIssues": 86,
       "createdAt": "2026-10-13T02:46:25Z",
       "pushedAt": "2026-10-24T03:00:35Z",
       "archived": false,
@@ -849,12 +843,12 @@
       "readmeStatus": "early",
       "commits7d": 29,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:15.091Z"
+      "checkedAt": "2026-10-25T16:14:31.402Z"
     },
     "HayatoG/gr2_pc": {
       "fullName": "HayatoG/gr2_pc",
       "description": "Native PC port (Linux/Windows) of Gravity Rush 2 (PS4, CUSA03694) — runs your own game dump; no game or firmware files included. Bilingual launcher (English/Portuguese). | Port nativo para PC de Gravity Rush 2 — usa o seu próprio dump.",
-      "stars": 105,
+      "stars": 107,
       "forks": 8,
       "openIssues": 16,
       "createdAt": "2026-10-13T14:25:52Z",
@@ -889,7 +883,7 @@
       "readmeStatus": "complete",
       "commits7d": 50,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:16.258Z"
+      "checkedAt": "2026-10-25T16:14:32.338Z"
     },
     "Prathewsh/gravityrush_pc": {
       "fullName": "Prathewsh/gravityrush_pc",
@@ -915,7 +909,7 @@
       "readmeStatus": "early",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:17.150Z"
+      "checkedAt": "2026-10-25T16:14:33.115Z"
     },
     "FrancescoGrazioso/gr-port": {
       "fullName": "FrancescoGrazioso/gr-port",
@@ -930,16 +924,16 @@
       "topics": [],
       "release": null,
       "readmeStatus": "playable",
-      "commits7d": 14,
+      "commits7d": 11,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:18.037Z"
+      "checkedAt": "2026-10-25T16:14:34.151Z"
     },
     "IgorAugustoHH/The-Order-1886-PC-Port": {
       "fullName": "IgorAugustoHH/The-Order-1886-PC-Port",
       "description": "The Order: 1886 rodando nativo no Windows 10/11: câmera cinematográfica original do PS4, NVIDIA DLSS, até 120 FPS, 23 idiomas e um launcher próprio.",
       "stars": 42,
       "forks": 3,
-      "openIssues": 4,
+      "openIssues": 5,
       "createdAt": "2026-10-07T10:25:37Z",
       "pushedAt": "2026-10-25T06:19:11Z",
       "archived": false,
@@ -967,16 +961,16 @@
       "readmeStatus": "early",
       "commits7d": 5,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:18.941Z"
+      "checkedAt": "2026-10-25T16:14:35.061Z"
     },
     "mateussmeneses/theorder1886-port": {
       "fullName": "mateussmeneses/theorder1886-port",
       "description": null,
-      "stars": 325,
+      "stars": 326,
       "forks": 16,
-      "openIssues": 29,
+      "openIssues": 28,
       "createdAt": "2026-10-14T18:09:43Z",
-      "pushedAt": "2026-10-24T17:25:38Z",
+      "pushedAt": "2026-10-25T14:14:47Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [],
@@ -994,9 +988,9 @@
         ]
       },
       "readmeStatus": "early",
-      "commits7d": 72,
+      "commits7d": 66,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:19.849Z"
+      "checkedAt": "2026-10-25T16:14:35.985Z"
     },
     "lxnis/Order1886-PC": {
       "fullName": "lxnis/Order1886-PC",
@@ -1029,14 +1023,14 @@
       "readmeStatus": "early",
       "commits7d": 2,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:20.656Z"
+      "checkedAt": "2026-10-25T16:14:36.931Z"
     },
     "lesca-191204/killzone-shadowfall-pc": {
       "fullName": "lesca-191204/killzone-shadowfall-pc",
       "description": null,
-      "stars": 275,
+      "stars": 280,
       "forks": 9,
-      "openIssues": 43,
+      "openIssues": 44,
       "createdAt": "2026-10-16T15:32:27Z",
       "pushedAt": "2026-10-24T00:04:48Z",
       "archived": false,
@@ -1059,12 +1053,12 @@
       "readmeStatus": "complete",
       "commits7d": 26,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:21.389Z"
+      "checkedAt": "2026-10-25T16:14:37.922Z"
     },
     "saulob/dragons-crown-pro-pc": {
       "fullName": "saulob/dragons-crown-pro-pc",
       "description": "Dragon's Crown Pro native PC port for Windows, with direct PS4 PKG installation, TRG launcher and modern graphics options",
-      "stars": 218,
+      "stars": 220,
       "forks": 8,
       "openIssues": 21,
       "createdAt": "2026-10-14T11:32:56Z",
@@ -1090,7 +1084,7 @@
       "readmeStatus": "early",
       "commits7d": 27,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:22.194Z"
+      "checkedAt": "2026-10-25T16:14:38.754Z"
     },
     "GNSB/UFC-3-PS4-PORT-LINUX-WINDOWS": {
       "fullName": "GNSB/UFC-3-PS4-PORT-LINUX-WINDOWS",
@@ -1118,13 +1112,13 @@
       "readmeStatus": "playable",
       "commits7d": 97,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:23.089Z"
+      "checkedAt": "2026-10-25T16:14:39.702Z"
     },
     "schans-arg/UFC4-PC-Port": {
       "fullName": "schans-arg/UFC4-PC-Port",
       "description": "Experimental PS4-to-PC port of EA SPORTS UFC 4. Community source project; game files are not included.",
-      "stars": 13,
-      "forks": 2,
+      "stars": 14,
+      "forks": 3,
       "openIssues": 2,
       "createdAt": "2026-10-17T21:06:26Z",
       "pushedAt": "2026-10-17T21:39:58Z",
@@ -1144,7 +1138,7 @@
       "readmeStatus": "early",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:23.900Z"
+      "checkedAt": "2026-10-25T16:14:40.521Z"
     },
     "ClaudioGodoi/UFC-4-PS4-PORT-LINUX": {
       "fullName": "ClaudioGodoi/UFC-4-PS4-PORT-LINUX",
@@ -1161,12 +1155,12 @@
       "readmeStatus": "unknown",
       "commits7d": null,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:24.589Z"
+      "checkedAt": "2026-10-25T16:14:41.258Z"
     },
     "bc160201983/medievil_2019_pc_port": {
       "fullName": "bc160201983/medievil_2019_pc_port",
       "description": "MediEvil (PS4, CUSA11227) native PC port on the gow3_pc runtime: PKG install, up to 4K, launcher. No game files included.",
-      "stars": 166,
+      "stars": 170,
       "forks": 5,
       "openIssues": 37,
       "createdAt": "2026-10-12T20:55:12Z",
@@ -1191,12 +1185,12 @@
       "readmeStatus": "early",
       "commits7d": 18,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:25.330Z"
+      "checkedAt": "2026-10-25T16:14:42.169Z"
     },
     "hachi23/unicorn_overlord_pc": {
       "fullName": "hachi23/unicorn_overlord_pc",
       "description": "Unicorn Overlord (PS4) native PC port",
-      "stars": 131,
+      "stars": 134,
       "forks": 7,
       "openIssues": 7,
       "createdAt": "2026-10-13T10:25:36Z",
@@ -1215,16 +1209,16 @@
       "readmeStatus": "early",
       "commits7d": 44,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:26.276Z"
+      "checkedAt": "2026-10-25T16:14:43.139Z"
     },
     "AbdelmoumenDeghbouche/wipeout_pc": {
       "fullName": "AbdelmoumenDeghbouche/wipeout_pc",
-      "description": "WipEout Omega Collection (PS4) native PC port for Windows: original x86-64 code on the CPU, PS4 runtime, shadPS4 Vulkan video core. Early development. No game files included.",
-      "stars": 94,
-      "forks": 9,
-      "openIssues": 14,
+      "description": "WipEout Omega Collection (PS4) native PC port for Windows: the game's own x86-64 code on the CPU, a PS4 runtime and the shadPS4 Vulkan video core. Playable, in active development. No game files included. ⭐ Star it if you like it; bug reports and requests are welcome in Issues!",
+      "stars": 100,
+      "forks": 10,
+      "openIssues": 18,
       "createdAt": "2026-10-18T03:18:45Z",
-      "pushedAt": "2026-10-25T11:20:48Z",
+      "pushedAt": "2026-10-25T13:13:49Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [
@@ -1236,17 +1230,17 @@
         "wipeout"
       ],
       "release": {
-        "tag": "windows-v0.2.6",
-        "name": "WipEout Windows v0.2.6",
-        "publishedAt": "2026-10-25T11:20:48Z",
+        "tag": "windows-v0.2.7",
+        "name": "WipEout PC v0.2.7",
+        "publishedAt": "2026-10-25T13:13:49Z",
         "prerelease": false,
-        "url": "https://github.com/AbdelmoumenDeghbouche/wipeout_pc/releases/tag/windows-v0.2.6",
+        "url": "https://github.com/AbdelmoumenDeghbouche/wipeout_pc/releases/tag/windows-v0.2.7",
         "features": []
       },
       "readmeStatus": "playable",
-      "commits7d": 47,
+      "commits7d": 49,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:27.117Z"
+      "checkedAt": "2026-10-25T16:14:44.013Z"
     },
     "shipa-2/Wipeport": {
       "fullName": "shipa-2/Wipeport",
@@ -1261,18 +1255,18 @@
       "topics": [],
       "release": null,
       "readmeStatus": "early",
-      "commits7d": 16,
+      "commits7d": 14,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:27.978Z"
+      "checkedAt": "2026-10-25T16:14:44.933Z"
     },
     "guzuold/CTRNativePorted": {
       "fullName": "guzuold/CTRNativePorted",
       "description": "Native Windows runtime and progressive C++ engine reconstruction for Crash Team Racing Nitro-Fueled (PS4)",
       "stars": 4,
       "forks": 0,
-      "openIssues": 3,
+      "openIssues": 2,
       "createdAt": "2026-10-13T00:41:54Z",
-      "pushedAt": "2026-10-21T19:47:30Z",
+      "pushedAt": "2026-10-25T14:44:48Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [
@@ -1283,26 +1277,24 @@
         "vulkan"
       ],
       "release": {
-        "tag": "v0.5.9",
-        "name": "v0.5.9 — uscita dal matchmaking",
-        "publishedAt": "2026-10-21T19:47:46Z",
+        "tag": "v0.6.0",
+        "name": "v0.6.0 — impostazioni PC nel gioco",
+        "publishedAt": "2026-10-25T11:34:38Z",
         "prerelease": true,
-        "url": "https://github.com/guzuold/CTRNativePorted/releases/tag/v0.5.9",
-        "features": [
-          "Mods"
-        ]
+        "url": "https://github.com/guzuold/CTRNativePorted/releases/tag/v0.6.0",
+        "features": []
       },
       "readmeStatus": "complete",
-      "commits7d": 39,
+      "commits7d": 42,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:28.903Z"
+      "checkedAt": "2026-10-25T16:14:45.845Z"
     },
     "GetLostIn/CTR-NitroFueled-PC": {
       "fullName": "GetLostIn/CTR-NitroFueled-PC",
       "description": "Crash Team Racing: Nitro-Fueled (PS4) running natively on Windows 10/11. Windows fork of SacredFire, built on bbport and shadPS4. No game files included.",
       "stars": 633,
-      "forks": 68,
-      "openIssues": 76,
+      "forks": 69,
+      "openIssues": 77,
       "createdAt": "2026-10-12T15:24:23Z",
       "pushedAt": "2026-10-19T04:57:14Z",
       "archived": false,
@@ -1335,7 +1327,7 @@
       "readmeStatus": "playable",
       "commits7d": 25,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:29.727Z"
+      "checkedAt": "2026-10-25T16:14:46.740Z"
     },
     "FrankHUN88453/CTR-NitroFueled-PC": {
       "fullName": "FrankHUN88453/CTR-NitroFueled-PC",
@@ -1364,14 +1356,14 @@
       "readmeStatus": "playable",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:30.507Z"
+      "checkedAt": "2026-10-25T16:14:47.644Z"
     },
     "Ryu7w7/OCTR-NitroFueled-PC": {
       "fullName": "Ryu7w7/OCTR-NitroFueled-PC",
       "description": "Experimental Online Crash Team Racing: Nitro-Fueled (PS4) running natively on Windows 10/11. Windows fork of SacredFire, built on bbport and shadPS4. No game files included.",
-      "stars": 495,
-      "forks": 31,
-      "openIssues": 56,
+      "stars": 499,
+      "forks": 32,
+      "openIssues": 57,
       "createdAt": "2026-10-13T18:48:46Z",
       "pushedAt": "2026-10-23T20:56:14Z",
       "archived": false,
@@ -1394,7 +1386,7 @@
       "readmeStatus": "playable",
       "commits7d": 52,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:31.350Z"
+      "checkedAt": "2026-10-25T16:14:48.589Z"
     },
     "dvilelaf/SacredFire": {
       "fullName": "dvilelaf/SacredFire",
@@ -1411,7 +1403,7 @@
       "readmeStatus": "playable",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:32.356Z"
+      "checkedAt": "2026-10-25T16:14:49.598Z"
     },
     "HekamiAeon/Star-Ocean-Integrity-and-Faithlessness-PS4RT": {
       "fullName": "HekamiAeon/Star-Ocean-Integrity-and-Faithlessness-PS4RT",
@@ -1442,7 +1434,7 @@
       "readmeStatus": "playable",
       "commits7d": 11,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:33.234Z"
+      "checkedAt": "2026-10-25T16:14:50.505Z"
     },
     "HekamiAeon/valkyria-revolution-ps4rt": {
       "fullName": "HekamiAeon/valkyria-revolution-ps4rt",
@@ -1473,7 +1465,7 @@
       "readmeStatus": "playable",
       "commits7d": 7,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:34.132Z"
+      "checkedAt": "2026-10-25T16:14:51.438Z"
     },
     "petrishevgeorgii-debug/prototype-pc-slop": {
       "fullName": "petrishevgeorgii-debug/prototype-pc-slop",
@@ -1505,9 +1497,9 @@
         ]
       },
       "readmeStatus": "playable",
-      "commits7d": 100,
+      "commits7d": 95,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:35.266Z"
+      "checkedAt": "2026-10-25T16:14:52.717Z"
     },
     "ItalianKuze/port-ga-gotoku": {
       "fullName": "ItalianKuze/port-ga-gotoku",
@@ -1543,7 +1535,7 @@
       "readmeStatus": "playable",
       "commits7d": 43,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:36.086Z"
+      "checkedAt": "2026-10-25T16:14:53.859Z"
     },
     "vascon-es/lego-dimensions-pc": {
       "fullName": "vascon-es/lego-dimensions-pc",
@@ -1575,7 +1567,7 @@
       "readmeStatus": "playable",
       "commits7d": 20,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:37.071Z"
+      "checkedAt": "2026-10-25T16:14:54.688Z"
     },
     "drakenabarion/virtualon_pc": {
       "fullName": "drakenabarion/virtualon_pc",
@@ -1608,14 +1600,14 @@
       "readmeStatus": "early",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:37.975Z"
+      "checkedAt": "2026-10-25T16:14:55.555Z"
     },
     "btsouth/lbp3-pc": {
       "fullName": "btsouth/lbp3-pc",
       "description": "LittleBigPlanet 3 (PS4) running natively on Linux. Early work in progress, built on bbport and shadPS4.",
       "stars": 4,
       "forks": 0,
-      "openIssues": 1,
+      "openIssues": 0,
       "createdAt": "2026-10-18T18:57:22Z",
       "pushedAt": "2026-10-20T23:51:34Z",
       "archived": false,
@@ -1637,7 +1629,7 @@
       "readmeStatus": "early",
       "commits7d": 45,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:38.878Z"
+      "checkedAt": "2026-10-25T16:14:56.617Z"
     },
     "TheNIKITO/LittleBigPlanet-3---PC": {
       "fullName": "TheNIKITO/LittleBigPlanet-3---PC",
@@ -1652,9 +1644,9 @@
       "topics": [],
       "release": null,
       "readmeStatus": "playable",
-      "commits7d": 1,
+      "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:39.705Z"
+      "checkedAt": "2026-10-25T16:14:57.509Z"
     },
     "MafraLP/lbp3-native-windows": {
       "fullName": "MafraLP/lbp3-native-windows",
@@ -1671,12 +1663,12 @@
       "readmeStatus": "playable",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:40.539Z"
+      "checkedAt": "2026-10-25T16:14:58.459Z"
     },
     "HajDEO/nhl24pc": {
       "fullName": "HajDEO/nhl24pc",
       "description": null,
-      "stars": 61,
+      "stars": 62,
       "forks": 11,
       "openIssues": 11,
       "createdAt": "2026-10-12T12:38:48Z",
@@ -1688,7 +1680,7 @@
       "readmeStatus": "early",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:41.269Z"
+      "checkedAt": "2026-10-25T16:14:59.324Z"
     },
     "schans-arg/NHL24-PC-Port": {
       "fullName": "schans-arg/NHL24-PC-Port",
@@ -1714,14 +1706,14 @@
       "readmeStatus": "playable",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:42.144Z"
+      "checkedAt": "2026-10-25T16:15:00.252Z"
     },
     "btsouth/ratchet-clank-pc": {
       "fullName": "btsouth/ratchet-clank-pc",
       "description": "Ratchet & Clank (PS4, 2016) running natively on Linux. Playable, experimental. Built on bbport and shadPS4.",
       "stars": 3,
       "forks": 1,
-      "openIssues": 2,
+      "openIssues": 1,
       "createdAt": "2026-10-18T19:00:01Z",
       "pushedAt": "2026-10-22T01:45:05Z",
       "archived": false,
@@ -1745,16 +1737,16 @@
       "readmeStatus": "early",
       "commits7d": 44,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:43.433Z"
+      "checkedAt": "2026-10-25T16:15:11.613Z"
     },
     "shehab4546/RatchetPort": {
       "fullName": "shehab4546/RatchetPort",
       "description": "RatchetPort: unofficial Ratchet & Clank (2016) PS4 PC port project for Windows. Pre-Alpha (CUSA01047 USA v1.00). Requires your own original-disc dump; no game files included.",
-      "stars": 71,
+      "stars": 82,
       "forks": 0,
-      "openIssues": 10,
+      "openIssues": 14,
       "createdAt": "2026-10-21T10:56:00Z",
-      "pushedAt": "2026-10-25T08:00:16Z",
+      "pushedAt": "2026-10-25T12:43:46Z",
       "archived": false,
       "license": "GPL-2.0",
       "topics": [
@@ -1778,7 +1770,7 @@
       "readmeStatus": "playable",
       "commits7d": 63,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:44.455Z"
+      "checkedAt": "2026-10-25T16:15:12.830Z"
     },
     "lxnis/DmC-PC": {
       "fullName": "lxnis/DmC-PC",
@@ -1806,7 +1798,7 @@
       "readmeStatus": "early",
       "commits7d": 0,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:45.361Z"
+      "checkedAt": "2026-10-25T16:15:13.765Z"
     },
     "Piscacho/Persona-4-Dancing-All-Night-PC": {
       "fullName": "Piscacho/Persona-4-Dancing-All-Night-PC",
@@ -1835,12 +1827,12 @@
       "readmeStatus": "early",
       "commits7d": 2,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:46.397Z"
+      "checkedAt": "2026-10-25T16:15:14.943Z"
     },
     "krixsan/J-Stars-Victory-VS-PC": {
       "fullName": "krixsan/J-Stars-Victory-VS-PC",
       "description": null,
-      "stars": 4,
+      "stars": 5,
       "forks": 1,
       "openIssues": 0,
       "createdAt": "2026-10-21T07:24:55Z",
@@ -1864,7 +1856,7 @@
       "readmeStatus": "early",
       "commits7d": 9,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:47.231Z"
+      "checkedAt": "2026-10-25T16:15:15.850Z"
     },
     "Piscacho/Persona-3-Dancing-in-Moonlight-Pc": {
       "fullName": "Piscacho/Persona-3-Dancing-in-Moonlight-Pc",
@@ -1893,7 +1885,7 @@
       "readmeStatus": "early",
       "commits7d": 3,
       "missing": false,
-      "checkedAt": "2026-10-25T11:23:48.180Z"
+      "checkedAt": "2026-10-25T16:15:16.883Z"
     }
   }
 }
