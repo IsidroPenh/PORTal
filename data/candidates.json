@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:16:45.224Z",
+  "generatedAt": "2026-10-25T20:50:55.049Z",
   "items": [
     {
       "repo": "johnnygentoo/gzport",
@@ -462,11 +462,11 @@
       "repo": "AbdelmoumenDeghbouche/knack_pc",
       "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
       "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
-      "stars": 16,
+      "stars": 17,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-22T17:35:49Z",
-      "pushedAt": "2026-10-25T06:53:35Z",
+      "pushedAt": "2026-10-25T18:06:38Z",
       "forkOf": null,
       "kind": "port",
       "score": 14,
@@ -590,7 +590,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-24T20:22:20Z",
-      "pushedAt": "2026-10-25T15:58:25Z",
+      "pushedAt": "2026-10-25T17:30:51Z",
       "forkOf": null,
       "kind": "port",
       "score": 14,
@@ -621,7 +621,7 @@
       ],
       "statusHint": "early",
       "firstSeen": "2026-10-25T04:39:46.287Z",
-      "_readmeHash": "11949",
+      "_readmeHash": "12510",
       "copies": 0
     },
     {
@@ -669,7 +669,7 @@
       "repo": "Liondarkz/issn_pc",
       "url": "https://github.com/Liondarkz/issn_pc",
       "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
-      "stars": 33,
+      "stars": 32,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
@@ -912,7 +912,7 @@
       "repo": "SuperCatElvis/UntilDawn_PC",
       "url": "https://github.com/SuperCatElvis/UntilDawn_PC",
       "description": "PC recompilation of the original Until Dawn (2015), running natively on Windows with a custom Vulkan renderer.",
-      "stars": 13,
+      "stars": 23,
       "forks": 0,
       "language": "Batchfile",
       "createdAt": "2026-10-23T20:27:30Z",
@@ -1160,7 +1160,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-23T18:10:46Z",
-      "pushedAt": "2026-10-24T19:21:52Z",
+      "pushedAt": "2026-10-25T16:30:55Z",
       "forkOf": null,
       "kind": "port",
       "score": 12,
@@ -1394,8 +1394,8 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 222,
-      "forks": 7,
+      "stars": 226,
+      "forks": 8,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
       "pushedAt": "2026-10-23T22:54:10Z",
@@ -1639,7 +1639,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-25T04:32:37Z",
+      "pushedAt": "2026-10-25T18:29:44Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1738,41 +1738,6 @@
       "copies": 0
     },
     {
-      "repo": "CRT-TV605/gravityrush-linux-build",
-      "url": "https://github.com/CRT-TV605/gravityrush-linux-build",
-      "description": "CI that builds the Gravity Rush PC port (gravityrush_pc) for Linux — AMD/Bazzite-ready tarball",
-      "stars": 0,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-25T03:59:32Z",
-      "pushedAt": "2026-10-25T06:02:09Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 10,
-      "reasons": [
-        "+1 (readme) \\bps4\\b|playstation ?4|\\",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA01113"
-      ],
-      "game": "gravity-rush-remastered",
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [],
-      "statusHint": "complete",
-      "firstSeen": "2026-10-25T04:39:38.813Z",
-      "_readmeHash": "8620",
-      "copies": 0
-    },
-    {
       "repo": "yazuc/sotc-pt-fixes",
       "url": "https://github.com/yazuc/sotc-pt-fixes",
       "description": "branch port linux com build ajustado.",
@@ -1856,6 +1821,41 @@
       "copies": 0
     },
     {
+      "repo": "CRT-TV605/gravityrush-linux-build",
+      "url": "https://github.com/CRT-TV605/gravityrush-linux-build",
+      "description": "CI that builds the Gravity Rush PC port (gravityrush_pc) for Linux — AMD/Bazzite-ready tarball",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-25T03:59:32Z",
+      "pushedAt": "2026-10-25T06:02:09Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA01113"
+      ],
+      "game": "gravity-rush-remastered",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-25T04:39:38.813Z",
+      "_readmeHash": "8620",
+      "copies": 0
+    },
+    {
       "repo": "yemrezin/Bloodborne.exe-Kurulum",
       "url": "https://github.com/yemrezin/Bloodborne.exe-Kurulum",
       "description": "Bloodborne PC Native Port - Emulator-Free Full Setup, Google Drive Links, AI Agent Prompt & Controller Guide",
@@ -1934,7 +1934,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-22T09:46:17Z",
-      "pushedAt": "2026-10-22T19:51:59Z",
+      "pushedAt": "2026-10-25T18:47:23Z",
       "forkOf": null,
       "kind": "port",
       "score": 9,
@@ -2135,11 +2135,11 @@
       "repo": "gminustwo/minustwo",
       "url": "https://github.com/gminustwo/minustwo",
       "description": "",
-      "stars": 3,
+      "stars": 5,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-25T00:09:48Z",
-      "pushedAt": "2026-10-25T03:52:01Z",
+      "pushedAt": "2026-10-25T16:42:20Z",
       "forkOf": null,
       "kind": "port",
       "score": 8,
@@ -2159,7 +2159,8 @@
       "game": null,
       "platforms": [
         "windows",
-        "linux"
+        "linux",
+        "macos"
       ],
       "fps": [
         "30 FPS",
@@ -2167,7 +2168,7 @@
       ],
       "statusHint": "early",
       "firstSeen": "2026-10-25T16:16:42.790Z",
-      "_readmeHash": "15465",
+      "_readmeHash": "16367",
       "copies": 0
     },
     {
@@ -2716,6 +2717,37 @@
       "copies": 0
     },
     {
+      "repo": "ytq77/TheHuntLauncher",
+      "url": "https://github.com/ytq77/TheHuntLauncher",
+      "description": "适用于 Bloodborne PC 移植版的 BBSC 无缝联机启动器，提供独立运行环境、中文文本、本机配置同步与自动构建。",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-10-20T06:52:11Z",
+      "pushedAt": "2026-10-25T16:51:00Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03173"
+      ],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-22T11:50:53.664Z",
+      "_readmeHash": "3481",
+      "copies": 0
+    },
+    {
       "repo": "serjaum/bloodborne-copilot",
       "url": "https://github.com/serjaum/bloodborne-copilot",
       "description": "Second-screen AI companion for Bloodborne on Windows (bbport)",
@@ -2768,37 +2800,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-25T00:55:56.639Z",
       "_readmeHash": "16240",
-      "copies": 0
-    },
-    {
-      "repo": "ytq77/TheHuntLauncher",
-      "url": "https://github.com/ytq77/TheHuntLauncher",
-      "description": "适用于 Bloodborne PC 移植版的 BBSC 无缝联机启动器，提供独立运行环境、中文文本、本机配置同步与自动构建。",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-10-20T06:52:11Z",
-      "pushedAt": "2026-10-23T14:18:54Z",
-      "forkOf": null,
-      "kind": "weak",
-      "score": 5,
-      "reasons": [
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA03173"
-      ],
-      "game": "bloodborne",
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-22T11:50:53.664Z",
-      "_readmeHash": "3481",
       "copies": 0
     },
     {
