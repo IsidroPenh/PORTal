@@ -3,6 +3,8 @@
 //  1. Métricas de cada repo del catálogo (estrellas, actividad, última release, si fue borrado).
 //  2. Radar: busca repos nuevos que parezcan ports PS4 → PC y los clasifica.
 //  3. Reportes de la comunidad (issues con la etiqueta "reporte" de este repo).
+//  4. Actualizaciones importantes (releases con +FPS, funciones nuevas, hitos, repos borrados):
+//     se guardan en data/updates.json + data/feed.xml y se avisan comentando los issues "seguir".
 // Uso: GITHUB_TOKEN=... node scripts/update.mjs   (en Actions el token viene solo)
 import fs from 'node:fs';
 import path from 'node:path';
@@ -10,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 import {
   SEARCH_QUERIES, BASE_REPOS, classify, extractCusa, extractPlatforms, extractFps,
   extractStatus, guessGame, reportFromIssue, dedupeCandidates,
+  analyzeRelease, buildAtom, parseIssueForm, repoFromText,
 } from './lib.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -18,6 +21,9 @@ const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 const SELF = process.env.GITHUB_REPOSITORY || 'isidropenh/portal';
 const DISCOVERY_DAYS = Number(process.env.DISCOVERY_DAYS || 45);
 const CREATE_ISSUE = process.env.CREATE_RADAR_ISSUE === '1';
+const NOTIFY = process.env.NOTIFY_UPDATES === '1';
+const SITE_URL = process.env.SITE_URL || 'https://isidropenh.github.io/PORTal/';
+const MAX_COMMENTS_PER_RUN = 25;
 
 const readJson = (f, fallback) => {
   try { return JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8')); } catch { return fallback; }
@@ -65,13 +71,22 @@ async function readme(repo) {
 }
 
 // ---------- 1. métricas del catálogo ----------
-async function refreshCatalog(catalog, prev) {
-  const repos = [...new Set(catalog.games.flatMap(g => g.ports.map(p => p.repo)))];
+function portIndex(catalog) {
+  const idx = new Map();
+  for (const g of catalog.games) for (const p of g.ports) {
+    if (!idx.has(p.repo)) idx.set(p.repo, { gameId: g.id, gameTitle: g.title, portName: p.name });
+  }
+  return idx;
+}
+
+async function refreshCatalog(catalog, prev, events) {
+  const idx = portIndex(catalog);
+  const repos = [...idx.keys()];
   const since = new Date(Date.now() - 7 * 864e5).toISOString();
   const out = {};
   for (const repo of repos) {
     try {
-      out[repo] = await refreshRepo(repo, prev[repo], since);
+      out[repo] = await refreshRepo(repo, prev[repo], since, idx.get(repo), events);
     } catch (e) {
       // Un repo con problemas no frena al resto: se conservan sus últimos datos.
       console.warn(`! ${repo}: ${e.message}`);
@@ -81,16 +96,58 @@ async function refreshCatalog(catalog, prev) {
   return out;
 }
 
-async function refreshRepo(repo, prev, since) {
+function event(info, repo, fields) {
+  const date = fields.date || new Date().toISOString();
+  return {
+    id: `${repo}:${fields.type}:${fields.tag || date.slice(0, 10)}`,
+    repo, game: info.gameId, gameTitle: info.gameTitle, port: info.portName, date, ...fields,
+  };
+}
+
+async function refreshRepo(repo, prev, since, info, events) {
+  // Solo se comparan datos reales de una corrida anterior; la primera vez es la línea de base.
+  const baseline = prev && prev.checkedAt && !prev.seeded;
   const r = await gh(`/repos/${repo}`);
   if (!r.data) {
     // Conservamos lo último conocido y marcamos que el repo desapareció (DMCA, borrado, privado).
     console.warn(`✗ ${repo} no disponible (${r.status})`);
+    if (baseline && !prev.missing) {
+      events.push(event(info, repo, { type: 'removed', level: 'big', title: `${info.portName}: el repositorio ya no está disponible`,
+        highlights: ['Puede haber sido borrado, hecho privado o bajado por DMCA.'], tags: ['eliminado'], url: `https://github.com/${repo}` }));
+    }
     return { ...(prev || {}), missing: true, checkedAt: new Date().toISOString() };
   }
   const d = r.data;
   const rel = (await gh(`/repos/${d.full_name}/releases?per_page=1`)).data?.[0];
   const commits = (await gh(`/repos/${d.full_name}/commits?since=${since}&per_page=100`)).data;
+  const readmeStatus = extractStatus(await readme(d.full_name).catch(() => ''));
+
+  let analysis = null;
+  if (rel) {
+    analysis = rel.tag_name === prev?.release?.tag && prev?.release?.features
+      ? null
+      : analyzeRelease({ name: rel.name || rel.tag_name, body: rel.body || '', tag: rel.tag_name,
+          prevTag: prev?.release?.tag, prevFeatures: prev?.release?.features || [] });
+  }
+  if (baseline && rel && rel.tag_name !== prev.release?.tag && analysis) {
+    const first = !prev.release;
+    events.push(event(info, repo, {
+      type: 'release', tag: rel.tag_name, date: rel.published_at || new Date().toISOString(),
+      level: first ? 'big' : analysis.level,
+      title: `${info.portName} ${rel.tag_name}${first ? ': primera release' : ''}`,
+      highlights: analysis.highlights, tags: analysis.tags, features: analysis.features, url: rel.html_url,
+    }));
+  }
+  // Hito sin release: el README pasa a decir que se puede terminar de principio a fin.
+  if (baseline && prev.readmeStatus && prev.readmeStatus !== 'complete' && readmeStatus === 'complete') {
+    events.push(event(info, repo, { type: 'milestone', level: 'big', title: `${info.portName}: ahora se puede terminar de principio a fin`,
+      highlights: ['El README ahora indica que el juego se completa de principio a fin.'], tags: ['milestone'], url: `https://github.com/${repo}` }));
+  }
+  if (baseline && prev.missing) {
+    events.push(event(info, repo, { type: 'restored', level: 'normal', title: `${info.portName}: el repositorio volvió a estar disponible`,
+      highlights: [], tags: [], url: `https://github.com/${repo}` }));
+  }
+
   const result = {
     fullName: d.full_name,
     description: d.description,
@@ -102,7 +159,11 @@ async function refreshRepo(repo, prev, since) {
     archived: d.archived,
     license: d.license?.spdx_id || null,
     topics: d.topics || [],
-    release: rel ? { tag: rel.tag_name, name: rel.name, publishedAt: rel.published_at, prerelease: rel.prerelease, url: rel.html_url } : null,
+    release: rel ? {
+      tag: rel.tag_name, name: rel.name, publishedAt: rel.published_at, prerelease: rel.prerelease, url: rel.html_url,
+      features: analysis ? analysis.allFeatures : prev?.release?.features || [],
+    } : null,
+    readmeStatus,
     commits7d: Array.isArray(commits) ? commits.length : null,
     missing: false,
     checkedAt: new Date().toISOString(),
@@ -223,6 +284,74 @@ async function fetchReports(catalog) {
   return out;
 }
 
+// ---------- 4. actualizaciones importantes y avisos ----------
+async function listIssues(label) {
+  const out = [];
+  for (let page = 1; page <= 5; page++) {
+    const { data } = await gh(`/repos/${SELF}/issues?labels=${label}&state=open&per_page=100&page=${page}`);
+    if (!data?.length) break;
+    out.push(...data.filter(i => !i.pull_request));
+    if (data.length < 100) break;
+  }
+  return out;
+}
+
+// Issues "seguir": uno por port; quien se suscribe recibe mail y notificación de GitHub.
+async function loadFollows(catalog) {
+  const known = new Map(catalog.games.flatMap(g => g.ports.map(p => [p.repo.toLowerCase(), p.repo])));
+  const items = {};
+  for (const issue of await listIssues('seguir')) {
+    const f = parseIssueForm(issue.body || '');
+    const raw = repoFromText(f['Repositorio del port'] || '') || repoFromText(issue.title.replace(/^\[seguir\]\s*/i, ''));
+    const repo = raw && known.get(raw.toLowerCase());
+    if (!repo) continue;
+    // Si hay duplicados queda el más viejo, que es el que tiene más suscriptores.
+    if (!items[repo] || issue.number < items[repo].issue) items[repo] = { issue: issue.number, url: issue.html_url, comments: issue.comments };
+  }
+  const global = (await listIssues('avisos'))[0];
+  return { items, global: global ? { issue: global.number, url: global.html_url } : null };
+}
+
+function commentFor(e) {
+  const lines = [`### ${e.level === 'big' ? '🚀' : 'ℹ️'} ${e.title}`, ''];
+  if (e.gameTitle) lines.push(`**Juego:** ${e.gameTitle}`);
+  if (e.features?.length) lines.push(`**Funciones nuevas:** ${e.features.join(', ')}`);
+  // El texto viene de notas de terceros: sin HTML y sin @menciones que notifiquen a otra gente.
+  if (e.highlights?.length) lines.push('', ...e.highlights.map(h => `- ${h.replace(/[<>]/g, '').replace(/@/g, '@\u200b')}`));
+  lines.push('', `[Ver la release](${e.url}) · [Ficha en PORTal](${SITE_URL}#juego/${e.game})`, '', '_Aviso automático de PORTal_');
+  return lines.join('\n');
+}
+
+// El issue global se crea apenas se activan los avisos, así el sitio siempre tiene a dónde mandar.
+async function ensureGlobalIssue(follows) {
+  if (follows.global || !NOTIFY || !TOKEN) return;
+  const { data } = await gh(`/repos/${SELF}/issues`, { method: 'POST', body: {
+    title: '📣 Avisos: actualizaciones importantes de todos los ports',
+    labels: ['avisos'],
+    body: 'Suscribite a este issue (botón **Subscribe** a la derecha) para recibir un aviso por mail y en la app de GitHub ' +
+      'cada vez que un port saca una actualización importante: mejoras de FPS, funciones nuevas, hitos o repos eliminados.\n\n' +
+      `Para seguir un solo port, usá el botón "Avisarme" en su ficha de ${SITE_URL}.`,
+  } });
+  if (data) follows.global = { issue: data.number, url: data.html_url };
+}
+
+async function notify(fresh, follows) {
+  if (!NOTIFY || !TOKEN) return;
+  const big = fresh.filter(e => e.level === 'big');
+  if (!big.length) return;
+  let budget = MAX_COMMENTS_PER_RUN;
+  for (const e of big) {
+    const f = follows.items[e.repo];
+    if (f && budget-- > 0) await gh(`/repos/${SELF}/issues/${f.issue}/comments`, { method: 'POST', body: { body: commentFor(e) } });
+  }
+  // Issue global: un solo comentario por corrida con todas las novedades grandes.
+  const global = follows.global;
+  if (global) {
+    const body = `## ${big.length} actualización(es) importante(s)\n\n` + big.map(commentFor).join('\n\n---\n\n');
+    await gh(`/repos/${SELF}/issues/${global.issue}/comments`, { method: 'POST', body: { body: body.slice(0, 60000) } });
+  }
+}
+
 async function main() {
   if (!TOKEN) console.warn('Sin GITHUB_TOKEN: la API limita a 60 req/h, probablemente no alcance.');
   const catalog = readJson('catalog.json');
@@ -230,8 +359,18 @@ async function main() {
   const prevCandidates = readJson('candidates.json', { items: [] });
   const ignore = readJson('ignore.json', { repos: [] });
 
-  const repos = await refreshCatalog(catalog, prevGithub.repos || {});
+  const events = [];
+  const repos = await refreshCatalog(catalog, prevGithub.repos || {}, events);
   writeJson('github.json', { generatedAt: new Date().toISOString(), repos });
+
+  // Novedades: se acumulan sin duplicar y se guardan las 300 más recientes.
+  const prevUpdates = readJson('updates.json', { items: [] });
+  const seenIds = new Set(prevUpdates.items.map(e => e.id));
+  const fresh = events.filter(e => !seenIds.has(e.id));
+  const updates = [...fresh, ...prevUpdates.items].sort((a, b) => String(b.date).localeCompare(String(a.date))).slice(0, 300);
+  writeJson('updates.json', { generatedAt: new Date().toISOString(), items: updates });
+  fs.writeFileSync(path.join(DATA, 'feed.xml'), buildAtom(updates, SITE_URL));
+  console.log(`novedades: ${fresh.length} nuevas (${fresh.filter(e => e.level === 'big').length} grandes)`);
 
   // Si una etapa falla, las demás igual se guardan; el error se reporta al final.
   let failed = false;
@@ -247,6 +386,12 @@ async function main() {
     writeJson('reports.json', { generatedAt: new Date().toISOString(), items: reports });
     console.log(`reportes: ${reports.length}`);
   } catch (e) { failed = true; console.error('reportes:', e); }
+  try {
+    const follows = await loadFollows(catalog);
+    await ensureGlobalIssue(follows);
+    await notify(fresh, follows);
+    writeJson('follows.json', { generatedAt: new Date().toISOString(), ...follows });
+  } catch (e) { failed = true; console.error('avisos:', e); }
   if (failed) process.exitCode = 1;
 }
 

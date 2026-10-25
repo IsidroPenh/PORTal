@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
   classify, extractCusa, extractFps, extractPlatforms, extractStatus,
-  guessGame, parseIssueForm, dedupeCandidates, repoFromText, reportFromIssue,
+  guessGame, parseIssueForm, dedupeCandidates, analyzeRelease, versionJump, buildAtom, repoFromText, reportFromIssue,
 } from './lib.mjs';
 
 const catalog = JSON.parse(fs.readFileSync(new URL('../data/catalog.json', import.meta.url), 'utf8'));
@@ -49,6 +49,7 @@ t('extractCusa', () => assert.deepEqual(extractCusa('needs cusa03173 and CUSA009
 t('extractFps', () => assert.deepEqual(extractFps('About 90 FPS at 4K, 42–60 fps in races, ~60fps'), ['90 FPS', '42–60 FPS', '60 FPS']));
 t('extractPlatforms', () => assert.deepEqual(extractPlatforms('Windows 10/11 and a Linux AppImage; macOS planned'), ['windows', 'linux', 'macos']));
 t('extractStatus complete', () => assert.equal(extractStatus('Tested and playable from start to finish'), 'complete'));
+t('extractStatus negado no es completo', () => assert.equal(extractStatus('Playable, but not yet verified from start to finish.'), 'playable'));
 t('extractStatus research', () => assert.equal(extractStatus("The game doesn't run on it yet"), 'research'));
 t('extractStatus playable', () => assert.equal(extractStatus('Experimental, playable through chapter 4'), 'playable'));
 t('guessGame por CUSA', () => assert.equal(guessGame(catalog, { cusa: ['CUSA08809'] }), 'shadow-of-the-colossus'));
@@ -71,6 +72,34 @@ t('reportFromIssue normaliza repo', () => {
   assert.equal(r.repo, 'HayatoG/iss_pc');
   assert.equal(r.status, 'partial');
   assert.equal(r.gpu, 'RX 6700 XT');
+});
+
+// Notas de release reales (portugués, inglés) y casos sintéticos
+const rel = (name, body, tag, prevTag, prevFeatures) => analyzeRelease({ name, body, tag, prevTag, prevFeatures });
+t('release: +FPS en portugués es grande', () => {
+  const r = rel('v0.60.5 — Seletor de texturas, menu F1, +FPS, vazamento de memória', '- +12% FPS em áreas abertas', 'v0.60.5', 'v0.60.4');
+  assert.equal(r.level, 'big'); assert.ok(r.tags.includes('fps'));
+});
+t('release: varias funciones nuevas es grande', () => {
+  const r = rel('v0.4 - new launcher with Controls and Achievements, European edition, FSR 4, frame generation and ultrawide', '', 'v0.4', 'v0.3');
+  assert.equal(r.level, 'big'); assert.ok(r.features.includes('FSR 4') && r.features.includes('Ultrawide'));
+});
+t('release: funciones que ya tenía no cuentan', () => {
+  const r = rel('v0.5', 'Supports FSR 4, frame generation and ultrawide. Fixed a crash.', 'v0.5', 'v0.4', ['FSR 4', 'Frame generation', 'Ultrawide']);
+  assert.equal(r.level, 'normal'); assert.deepEqual(r.features, []);
+});
+t('release: hito de principio a fin es grande', () => assert.equal(rel('0.60.3', 'The game can now be finished from start to end.', '0.60.3', '0.60.2').level, 'big'));
+t('release: solo arreglos es normal', () => assert.equal(rel('1.2.1', '- Fix crash on AMD\n- Fix typo', '1.2.1', '1.2.0').level, 'normal'));
+t('release: salto de FPS 30 → 60', () => assert.equal(rel('0.3', 'Gameplay now runs 30 → 60 fps on most GPUs', '0.3.1', '0.3.0').level, 'big'));
+t('versionJump', () => {
+  assert.equal(versionJump('v0.3', 'v0.4'), 'major');
+  assert.equal(versionJump('1.2.0', '1.3.0'), 'minor');
+  assert.equal(versionJump('v0.60.4', 'v0.60.5'), 'patch');
+  assert.equal(versionJump(null, 'v1'), null);
+});
+t('buildAtom escapa y solo incluye grandes', () => {
+  const x = buildAtom([{ id: 'a', level: 'big', title: 'A <b>&', date: '2026-10-25T00:00:00Z', url: 'u' }, { id: 'b', level: 'normal', title: 'B', date: '2026-10-24T00:00:00Z' }], 'https://s/');
+  assert.ok(x.includes('A &lt;b&gt;&amp;')); assert.ok(!x.includes('<title>B</title>'));
 });
 
 t('catálogo: estados, tipos y plataformas válidos', () => {

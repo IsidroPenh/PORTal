@@ -1,0 +1,20 @@
+name: Avisarme de un port
+description: Recibí un aviso (mail + app de GitHub) cuando este port saque una actualización importante.
+title: "[Seguir] "
+labels: ["seguir"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Al crear este issue quedás suscripto. Cada vez que el port saque una actualización importante
+        (más FPS, funciones nuevas, un hito como "jugable de principio a fin", o si el repo se borra)
+        el bot de PORTal comenta acá y GitHub te avisa por mail y en la app.
+
+        Si ya existe un issue para este port, mejor suscribite a ese (botón **Subscribe**): el sitio te lleva directo.
+  - type: input
+    id: repo
+    attributes:
+      label: Repositorio del port
+      placeholder: https://github.com/usuario/repo
+    validations:
+      required: true

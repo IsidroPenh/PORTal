@@ -73,7 +73,11 @@ export function extractFps(text = '') {
 
 export function extractStatus(text = '') {
   const t = text.toLowerCase();
-  if (/start to finish|beginning to end|from start to end|de principio a fin|completed? (the|a) (full )?playthrough|can be finished|whole campaign is playable/.test(t)) return 'complete';
+  const COMPLETE = /start to finish|beginning to end|from start to end|de principio a fin|completed? (the|a) (full )?playthrough|can (now )?be finished|whole campaign is playable/;
+  // Solo cuenta si la frase no está negada ("not yet playable from start to finish", "sin verificar…").
+  const NEGATED = /\b(not|no|never|yet|unverified|untested|todav[ií]a|sin verificar|ainda n[aã]o|n[aã]o)\b/;
+  const sentences = t.split(/(?<=[.!?\n])\s*/);
+  if (sentences.some(x => COMPLETE.test(x) && !NEGATED.test(x))) return 'complete';
   if (/not playable|doesn'?t run (on it )?yet|does not run yet|no jugable|não jog[aá]vel|research only/.test(t)) return 'research';
   if (/\bplayable\b|\bjugable\b|\bjog[aá]vel\b/.test(t)) return 'playable';
   if (/boots?\b|title screen|menus? work|early (development|alpha)|work in progress|\bwip\b/.test(t)) return 'early';
@@ -195,4 +199,106 @@ export function reportFromIssue(issue, repoIndex) {
     os: f['Sistema operativo'] || '',
     notes: (f['Fallos encontrados'] || '').slice(0, 600),
   };
+}
+
+// ---------- detector de actualizaciones importantes ----------
+// Las notas de release vienen en inglés, español y portugués; las reglas cubren los tres.
+
+const MILESTONE = /start to (finish|end)|beginning to end|full playthrough|whole (game|campaign|story)|ending and credits|can (now )?be (finished|completed|beaten)|de principio a fin|del principio al final|do in[ií]cio ao fim|zerad[oa]|now (fully )?playable|ahora (es )?jugable|agora (é )?jog[aá]vel|first playable/i;
+const PERF_STRONG = [
+  /\+\s?\d{1,3}\s?%/,
+  /\d{1,3}\s?%\s*(more|faster|higher|better|boost|gain|fps|mais|m[aá]s|mejor|maior)/i,
+  /\+\s?fps|more fps|higher fps|mais fps|m[aá]s fps|fps (boost|gain|increase)|double[sd]? (the )?fps|2x (fps|faster)/i,
+];
+const PERF_WEAK = /\bfaster\b|speed ?up|performance|rendimiento|desempenho|optimi[sz]|stutter|travad|tir[oó]n|frame ?(time|pacing)|hitch|smoother|m[aá]s fluido/i;
+const FPS_JUMP = /(\d{2,3})\s?(?:fps\s?)?(?:→|->|=>|to|a|para)\s?(\d{2,3})\s?fps/i;
+const FIX = /\bfix(e[sd])?\b|crash|corrig|arregl|corre[cç][aã]o|leak|vazamento|fuga de memoria|bug/i;
+const FEATURE_LINE = /^(added?|adds|new|novo|nova|nuevo|nueva|agregad[oa]|añadid[oa]|adicionad[oa]|now supports?|support for|soporte (para|de)|suporte (a|para)|introduc|implement)/i;
+export const FEATURE_TOKENS = [
+  ['FSR 4', /fsr ?4/i], ['FSR 3', /fsr ?3/i], ['DLSS', /\bdlss\b/i], ['XeSS', /\bxess\b/i],
+  ['Frame generation', /frame ?gen|gera[cç][aã]o de quadros|generaci[oó]n de (fotogramas|cuadros)|\bfg\b/i],
+  ['Ultrawide', /ultra-?wide|21:9|32:9/i], ['4K', /\b4k\b|2160p/i],
+  ['60+ FPS', /\b(60|90|120|144|240)\s?fps|unlocked (fps|frame ?rate)|fps (libres|desbloquead)/i],
+  ['Online', /\bonline\b|multiplayer|multijugador|multijogador/i], ['Co-op', /co-?op/i],
+  ['Teclado y mouse', /keyboard|mouse|teclado|rat[oó]n/i], ['Mods', /\bmods?\b|modding/i],
+  ['Launcher', /launcher/i], ['HDR', /\bhdr\b/i], ['VR', /\bvr\b|openxr/i],
+  ['Logros', /achievement|troph|conquista|logro/i], ['Ray tracing', /ray ?trac|\brt\b/i],
+  ['Linux / Steam Deck', /\blinux\b|steam ?deck|appimage/i], ['macOS', /mac ?os|apple silicon/i],
+  ['Nueva región / versión', /cusa\d{5}|european|europe[ao]|region/i],
+];
+
+export function versionJump(prevTag, tag) {
+  const parse = t => (String(t || '').match(/(\d+)\.(\d+)(?:\.(\d+))?/) || []).slice(1).map(n => Number(n || 0));
+  const a = parse(prevTag), b = parse(tag);
+  if (!a.length || !b.length) return null;
+  if (b[0] > a[0]) return 'major';
+  // En proyectos 0.x, subir el segundo número (0.2 → 0.3) suele ser una versión grande.
+  if (b[0] === a[0] && b[1] > a[1]) return a[0] === 0 ? 'major' : 'minor';
+  if (b[0] === a[0] && b[1] === a[1] && b[2] > a[2]) return 'patch';
+  return null;
+}
+
+// prevFeatures: funciones que ya mencionaba la release anterior; no cuentan como nuevas.
+export function analyzeRelease({ name = '', body = '', tag = '', prevTag = '', prevFeatures = [] }) {
+  const text = `${name}\n${body}`.slice(0, 30000);
+  const lines = text.split('\n')
+    .map(l => l.replace(/^[\s>*\-+•#\d.)]+/, '').replace(/\*\*/g, '').trim())
+    .filter(l => l.length > 3 && l.length < 400);
+
+  const tags = new Set();
+  const highlights = [];
+  const push = l => { const s = l.length > 140 ? l.slice(0, 137) + '…' : l; if (!highlights.includes(s) && highlights.length < 5) highlights.push(s); };
+
+  const milestone = lines.filter(l => MILESTONE.test(l));
+  if (milestone.length) { tags.add('milestone'); milestone.slice(0, 1).forEach(push); }
+
+  let perfStrong = false;
+  for (const l of lines) {
+    const jump = l.match(FPS_JUMP);
+    const strong = PERF_STRONG.some(re => re.test(l)) || (jump && Number(jump[2]) >= Number(jump[1]) * 1.2);
+    if (strong) { perfStrong = true; tags.add('fps'); push(l); }
+  }
+  if (!perfStrong && lines.some(l => PERF_WEAK.test(l))) {
+    tags.add('rendimiento');
+    lines.filter(l => PERF_WEAK.test(l)).slice(0, 1).forEach(push);
+  }
+
+  // Funciones nuevas: tokens conocidos en el título/primer tramo + viñetas que empiezan con "Added/Nuevo/…".
+  const head = `${name}\n${body.slice(0, 2500)}`;
+  const allFeatures = FEATURE_TOKENS.filter(([, re]) => re.test(head)).map(([label]) => label);
+  const features = allFeatures.filter(f => !prevFeatures.includes(f));
+  const featureLines = lines.filter(l => FEATURE_LINE.test(l));
+  if (features.length || featureLines.length) tags.add('funciones');
+  featureLines.slice(0, 2).forEach(push);
+
+  const fixes = lines.filter(l => FIX.test(l)).length;
+  if (fixes) tags.add('arreglos');
+  if (!highlights.length && name) push(name);
+
+  const jump = versionJump(prevTag, tag);
+  const big = milestone.length > 0 || perfStrong || features.length >= 3 || featureLines.length >= 3 ||
+    (jump === 'major' && (features.length >= 1 || featureLines.length >= 1 || tags.has('rendimiento')));
+  return { level: big ? 'big' : 'normal', tags: [...tags], features, allFeatures, fixes, versionJump: jump, highlights };
+}
+
+const xml = s => String(s ?? '').replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' }[c]));
+export function buildAtom(events, siteUrl) {
+  const items = events.filter(e => e.level === 'big').slice(0, 50);
+  const updated = items[0]?.date || new Date().toISOString();
+  return `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>PORTal: actualizaciones importantes de ports PS4 → PC</title>
+  <link href="${xml(siteUrl)}"/>
+  <link rel="self" href="${xml(siteUrl)}data/feed.xml"/>
+  <id>${xml(siteUrl)}</id>
+  <updated>${xml(updated)}</updated>
+${items.map(e => `  <entry>
+    <title>${xml(e.title)}</title>
+    <link href="${xml(e.url || siteUrl)}"/>
+    <id>${xml(siteUrl)}#${xml(e.id)}</id>
+    <updated>${xml(e.date)}</updated>
+    <summary>${xml([e.gameTitle, ...(e.highlights || [])].filter(Boolean).join(' · '))}</summary>
+  </entry>`).join('\n')}
+</feed>
+`;
 }

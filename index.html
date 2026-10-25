@@ -7,6 +7,7 @@
   <meta name="description" content="Directorio actualizado de ports nativos no oficiales de juegos de PS4 a PC: estado, rendimiento, fallos conocidos y nuevos proyectos detectados automáticamente.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f6bff'/%3E%3Cpath d='M9 23V9h8a5 5 0 0 1 0 10h-4v4z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="alternate" type="application/atom+xml" title="PORTal: actualizaciones importantes" href="data/feed.xml">
 </head>
 <body>
   <header class="site-header">
@@ -15,7 +16,10 @@
         <span class="brand-mark" aria-hidden="true">P</span>
         <span><strong>PORT</strong>al<small>Ports nativos de PS4 a PC</small></span>
       </a>
-      <div class="stats" id="stats" aria-live="polite"></div>
+      <div class="header-right">
+        <a href="#novedades" class="bell" id="bell" hidden>🔔 <span></span></a>
+        <div class="stats" id="stats" aria-live="polite"></div>
+      </div>
     </div>
     <nav class="wrap tabs" role="tablist">
       <a href="#juegos" data-tab="juegos" role="tab">Juegos</a>
@@ -39,6 +43,7 @@
         </select>
       </div>
       <div class="filters">
+        <div class="chip-group" id="f-fav" aria-label="Favoritos"></div>
         <div class="chip-group" id="f-status" aria-label="Estado"></div>
         <div class="chip-group" id="f-platform" aria-label="Plataforma"></div>
         <div class="chip-group" id="f-type" aria-label="Tipo"></div>
@@ -48,6 +53,14 @@
     </section>
 
     <section id="tab-novedades" class="tab-panel" hidden>
+      <div class="updates-head">
+        <h2>Actualizaciones importantes</h2>
+        <div class="chip-group" id="upd-filters"></div>
+      </div>
+      <p class="muted">Releases con más FPS, funciones nuevas o hitos ("jugable de principio a fin"), y repos eliminados.
+        Se detectan solas cada 6 horas leyendo las notas de cada release.</p>
+      <div class="notify-box" id="notify-box"></div>
+      <ol class="updates" id="updates"></ol>
       <div class="two-col">
         <div>
           <h2>Ports más recientes</h2>
@@ -99,6 +112,8 @@
         <li><strong>Métricas automáticas</strong>: estrellas, commits de la semana, última release y si el repo fue borrado (por ejemplo por DMCA), refrescadas por GitHub Actions.</li>
         <li><strong>Radar</strong>: búsqueda periódica en GitHub + forks de los proyectos base, con un clasificador que puntúa cada repo.</li>
         <li><strong>Reportes de rendimiento</strong>: cualquiera puede contar cómo le anda un port en su PC con un formulario; aparecen en la ficha del juego.</li>
+        <li><strong>Actualizaciones importantes</strong>: cada release nueva se analiza (más FPS, funciones nuevas, hitos como "de principio a fin") y,
+          si es grande, avisa por GitHub (mail + app) a quien siga ese port, al feed RSS y en el sitio a quien lo tenga en favoritos.</li>
       </ul>
       <p><a class="btn" id="btn-new-port" target="_blank" rel="noopener">Sugerir un port</a>
          <a class="btn ghost" id="btn-report" target="_blank" rel="noopener">Reportar rendimiento</a></p>

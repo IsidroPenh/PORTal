@@ -19,8 +19,10 @@ concurrency:
 
 jobs:
   update:
-    # En push solo se publica; los datos se refrescan por cron, a mano o cuando llega un reporte.
-    if: github.event_name != 'push' && (github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'reporte'))
+    # En push solo se publica; los datos se refrescan por cron, a mano o cuando llega un reporte o un pedido de seguimiento.
+    if: >-
+      github.event_name != 'push' && (github.event_name != 'issues' ||
+      contains(github.event.issue.labels.*.name, 'reporte') || contains(github.event.issue.labels.*.name, 'seguir'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -32,6 +34,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CREATE_RADAR_ISSUE: ${{ github.event_name == 'schedule' && '1' || '0' }}
+          # Los avisos salen en las corridas programadas y manuales (no al abrir issues, para no duplicar).
+          NOTIFY_UPDATES: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && '1' || '0' }}
         run: node scripts/update.mjs
       - name: Commit de datos
         # También si una etapa del script falló: lo que sí se actualizó se guarda igual.

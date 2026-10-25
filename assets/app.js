@@ -20,8 +20,20 @@ const PLATFORMS = { windows: 'Windows', linux: 'Linux', macos: 'macOS' };
 const state = {
   q: '', sort: 'status',
   status: new Set(), platform: new Set(), type: new Set(),
+  favOnly: false, updFav: false, updAll: false,
   data: null,
 };
+
+// Favoritos y "visto hasta" viven solo en este navegador; si el almacenamiento falla, el sitio sigue andando.
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(`portal:${k}`); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(`portal:${k}`, JSON.stringify(v)); } catch { /* sin almacenamiento */ } },
+};
+const favs = new Set(store.get('favs', []));
+const isFav = repo => favs.has(repo);
+const UPD_TAGS = { fps: '⚡ +FPS', rendimiento: '⚡ Rendimiento', funciones: '✨ Funciones', milestone: '🏁 Hito', arreglos: '🛠 Arreglos', eliminado: '⚠ Eliminado' };
+const starBtn = (repo, label = true) =>
+  `<button type="button" class="star" data-fav="${esc(repo)}" aria-pressed="${isFav(repo)}" title="${isFav(repo) ? 'Quitar de favoritos' : 'Agregar a favoritos'}">${isFav(repo) ? '★' : '☆'}${label ? ' <span>Favorito</span>' : ''}</button>`;
 
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -111,6 +123,17 @@ function buildFilters() {
   for (const [k, s] of Object.entries(STATUS)) if (k !== 'unknown') $('#f-status').append(chip('status', k, s.label, s.color));
   for (const [k, l] of Object.entries(PLATFORMS)) $('#f-platform').append(chip('platform', k, l));
   for (const [k, l] of Object.entries(TYPES)) $('#f-type').append(chip('type', k, l));
+  const fav = document.createElement('button');
+  fav.className = 'chip';
+  fav.type = 'button';
+  fav.setAttribute('aria-pressed', 'false');
+  fav.innerHTML = '<span class="fav-mark">★</span> Mis favoritos';
+  fav.addEventListener('click', () => {
+    state.favOnly = !state.favOnly;
+    fav.setAttribute('aria-pressed', String(state.favOnly));
+    renderGrid();
+  });
+  $('#f-fav').append(fav);
   $('#q').addEventListener('input', e => { state.q = norm(e.target.value.trim()); renderGrid(); });
   $('#sort').addEventListener('change', e => { state.sort = e.target.value; renderGrid(); });
 }
@@ -125,7 +148,8 @@ function portMatches(p) {
 function renderGrid() {
   const games = state.data.games
     .filter(g => !state.q || g.haystack.includes(state.q))
-    .filter(g => g.ports.some(portMatches));
+    .filter(g => g.ports.some(portMatches))
+    .filter(g => !state.favOnly || g.ports.some(p => isFav(p.repo)));
   const sorters = {
     status: (a, b) => STATUS[b.bestStatus].rank - STATUS[a.bestStatus].rank || b.stars - a.stars,
     stars: (a, b) => b.stars - a.stars,
@@ -137,7 +161,10 @@ function renderGrid() {
   games.sort(sorters[state.sort]);
   const portsShown = games.reduce((n, g) => n + g.ports.filter(portMatches).length, 0);
   $('#result-line').textContent = `${games.length} juego${games.length === 1 ? '' : 's'} · ${portsShown} port${portsShown === 1 ? '' : 's'}`;
-  $('#grid').innerHTML = games.length ? games.map(cardHtml).join('') : `<p class="empty">Nada coincide con esos filtros.</p>`;
+  const empty = state.favOnly && !favs.size
+    ? 'Todavía no marcaste favoritos: abrí un juego y tocá ☆ en el port que te interese.'
+    : 'Nada coincide con esos filtros.';
+  $('#grid').innerHTML = games.length ? games.map(cardHtml).join('') : `<p class="empty">${empty}</p>`;
 }
 
 function cardHtml(g) {
@@ -148,7 +175,7 @@ function cardHtml(g) {
     `<span><span class="dot" style="color:${STATUS[p.status].color}"></span>${esc(p.name)}${p.gh.missing ? ' <span class="badge warn">eliminado</span>' : ''}</span>`).join('');
   const more = ports.length > 3 ? `<span class="muted">+${ports.length - 3} más</span>` : '';
   return `<button class="card" style="--status-color:${color}" data-game="${esc(g.id)}">
-    <div><h3>${esc(g.title)}</h3><div class="sub">${esc(g.developer)} · ${g.year}</div></div>
+    <div><h3>${g.ports.some(p => isFav(p.repo)) ? '<span class="fav-mark" title="Tenés ports favoritos en este juego">★</span> ' : ''}${esc(g.title)}</h3><div class="sub">${esc(g.developer)} · ${g.year}</div></div>
     <div class="row" style="justify-content:flex-start">${badge(top.status)}<span class="muted" style="font-size:.8rem">${g.ports.length} port${g.ports.length === 1 ? '' : 's'}</span></div>
     <p class="summary">${esc(top.summary)}</p>
     <div class="portlist">${list}${more}</div>
@@ -165,8 +192,9 @@ function openGame(id, push = true) {
   if (!g) return;
   const many = g.ports.length > 1;
   const compare = many ? `<div class="compare table-scroll"><table>
-      <thead><tr><th>Port</th><th>Estado</th><th>Tipo</th><th>Plataformas</th><th>★</th><th>Commits 7d</th><th>Último push</th><th>Release</th></tr></thead>
+      <thead><tr><th></th><th>Port</th><th>Estado</th><th>Tipo</th><th>Plataformas</th><th>★</th><th>Commits 7d</th><th>Último push</th><th>Release</th></tr></thead>
       <tbody>${g.ports.map(p => `<tr>
+        <td>${starBtn(p.repo, false)}</td>
         <td><a href="#port-${esc(p.repo)}" data-scroll>${esc(p.name)}</a></td>
         <td>${badge(p.status)}</td><td>${TYPES[p.type]}</td><td>${plats(p.platforms)}</td>
         <td>${fmtNum(p.gh.stars)}</td><td>${p.gh.commits7d ?? '—'}</td><td>${ago(p.gh.pushedAt)}</td><td>${esc(p.gh.release?.tag || '—')}</td>
@@ -208,7 +236,7 @@ function portHtml(g, p) {
   return `<article class="port" id="port-${esc(p.repo)}" style="--status-color:${s.color}">
     <div class="port-head">
       <h3><a href="${ghUrl(p.repo)}" target="_blank" rel="noopener">${esc(p.name)}</a> <span class="muted" style="font-weight:400;font-size:.85rem">${esc(p.repo)}</span></h3>
-      ${badge(p.status)}
+      <span class="head-actions">${starBtn(p.repo)}${badge(p.status)}</span>
     </div>
     <div class="tags"><span class="badge type">${TYPES[p.type]}</span>${plats(p.platforms)}${ai}${warn}${archived}</div>
     <p>${esc(p.summary)}</p>
@@ -227,12 +255,118 @@ function portHtml(g, p) {
     ${p.features.length ? `<div class="features">${p.features.map(f => `<span>${esc(f)}</span>`).join('')}</div>` : ''}
     ${p.base?.length ? `<p class="muted" style="font-size:.82rem;margin:.8rem 0 0">Basado en: ${p.base.map(esc).join(' · ')}</p>` : ''}
     ${reports}
+    ${portUpdatesHtml(p)}
     <div class="port-actions">
       <a class="btn" href="${ghUrl(p.repo)}" target="_blank" rel="noopener">Ver en GitHub</a>
       <a class="btn ghost" href="${ghUrl(p.repo)}/issues" target="_blank" rel="noopener">Issues del port</a>
+      <a class="btn ghost" href="${followUrl(p.repo)}" target="_blank" rel="noopener" title="GitHub te avisa por mail y en la app cuando este port saca una actualización importante">🔔 Avisarme</a>
       <a class="btn ghost" href="${issueUrl('reporte.yml', { title: `[Reporte] ${g.title} — ${p.name}`, juego: g.title, repo: ghUrl(p.repo) })}" target="_blank" rel="noopener">Reportar cómo me anda</a>
     </div>
   </article>`;
+}
+
+function followUrl(repo) {
+  const f = state.data.follows.items?.[repo];
+  return f ? f.url : issueUrl('seguir.yml', { title: `[Seguir] ${repo}`, repo: ghUrl(repo) });
+}
+
+function portUpdatesHtml(p) {
+  const ev = state.data.updates.filter(e => e.repo === p.repo).slice(0, 3);
+  if (!ev.length) return '';
+  return `<div class="port-updates"><h4 class="muted">Últimas novedades</h4><ul>${ev.map(e =>
+    `<li><span class="lvl ${e.level}">${e.level === 'big' ? 'Grande' : 'Menor'}</span> <a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a> <span class="muted">${ago(e.date)}</span></li>`).join('')}</ul></div>`;
+}
+
+function toggleFav(repo) {
+  favs.has(repo) ? favs.delete(repo) : favs.add(repo);
+  store.set('favs', [...favs]);
+  document.querySelectorAll(`[data-fav="${CSS.escape(repo)}"]`).forEach(b => { b.outerHTML = starBtn(repo, b.querySelector('span') != null); });
+  renderGrid();
+  renderUpdates();
+  renderBell();
+}
+
+// ---------- actualizaciones importantes ----------
+const unseen = () => {
+  const since = store.get('seen', null);
+  return state.data.updates.filter(e => e.level === 'big' && isFav(e.repo) && (!since || e.date > since));
+};
+
+function renderBell() {
+  const n = unseen().length;
+  const bell = $('#bell');
+  bell.hidden = n === 0;
+  bell.querySelector('span').textContent = n;
+  bell.title = `${n} actualización${n === 1 ? '' : 'es'} importante${n === 1 ? '' : 's'} en tus favoritos`;
+}
+
+function updateChip(key, label) {
+  return `<button type="button" class="chip" data-upd="${key}" aria-pressed="${state[key]}">${label}</button>`;
+}
+
+function renderUpdates() {
+  const since = store.get('seen', null);
+  $('#upd-filters').innerHTML = updateChip('updFav', '<span class="fav-mark">★</span> Solo favoritos') + updateChip('updAll', 'Incluir menores');
+  const items = state.data.updates
+    .filter(e => state.updAll || e.level === 'big')
+    .filter(e => !state.updFav || isFav(e.repo))
+    .slice(0, 60);
+  const empty = state.updFav && !favs.size
+    ? 'Marcá ports como favoritos (☆ en la ficha de cada juego) para ver acá solo sus novedades.'
+    : state.data.updates.length
+      ? 'No hay novedades con estos filtros.'
+      : 'Todavía no hay novedades registradas: el detector empezó a mirar las releases y va a ir llenando esta lista.';
+  $('#updates').innerHTML = items.length ? items.map(e => `<li class="upd ${isFav(e.repo) && (!since || e.date > since) && e.level === 'big' ? 'new' : ''}">
+      <time>${fmtDate(e.date)}</time>
+      <div>
+        <div class="upd-head">
+          <span class="lvl ${e.level}">${e.level === 'big' ? 'Grande' : 'Menor'}</span>
+          <a class="t-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a>
+          ${state.data.games.some(g => g.ports.some(p => p.repo === e.repo)) ? starBtn(e.repo, false) : ''}
+        </div>
+        <div class="t-sub">${e.game ? `<button class="linklike" data-game="${esc(e.game)}">${esc(e.gameTitle)}</button> · ` : ''}${esc(e.repo)}</div>
+        ${(e.tags || []).length || (e.features || []).length ? `<div class="features">${(e.tags || []).filter(t => UPD_TAGS[t]).map(t => `<span>${UPD_TAGS[t]}</span>`).join('')}${(e.features || []).map(f => `<span>${esc(f)}</span>`).join('')}</div>` : ''}
+        ${(e.highlights || []).length ? `<ul class="hl">${e.highlights.map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
+      </div></li>`).join('') : `<li class="muted empty-li">${empty}</li>`;
+}
+
+function renderNotifyBox() {
+  const global = state.data.follows.global;
+  const perm = 'Notification' in window ? Notification.permission : 'unsupported';
+  const browserState = perm === 'granted' ? '<span class="ok">Activadas</span>'
+    : perm === 'denied' ? '<span class="muted">Bloqueadas en el navegador</span>'
+    : perm === 'unsupported' ? '<span class="muted">No disponible en este navegador</span>'
+    : '<button type="button" class="btn" id="enable-notif">Activar</button>';
+  $('#notify-box').innerHTML = `
+    <div><h4>✉️ Por mail y en el celular</h4>
+      <p class="muted">Vía GitHub (necesitás cuenta). Te llega un mail y una notificación en la app de GitHub.</p>
+      <p><a class="btn" href="${global ? esc(global.url) : `https://github.com/${SITE_REPO}/issues?q=label%3Aavisos`}" target="_blank" rel="noopener">Todas las novedades</a>
+         <span class="muted">o tocá <b>🔔 Avisarme</b> en la ficha de un port.</span></p></div>
+    <div><h4>🔔 En este navegador</h4>
+      <p class="muted">Al abrir PORTal te avisa si hubo novedades grandes en tus favoritos.</p>
+      <p>${browserState}</p></div>
+    <div><h4>📰 RSS / Atom</h4>
+      <p class="muted">Para lectores de feeds, IFTTT o Zapier.</p>
+      <p><a class="btn ghost" href="data/feed.xml" target="_blank" rel="noopener">feed.xml</a></p></div>`;
+  $('#enable-notif')?.addEventListener('click', async () => {
+    try { await Notification.requestPermission(); } catch { /* el usuario cerró el diálogo */ }
+    renderNotifyBox();
+  });
+}
+
+// Aviso del sistema al abrir el sitio, una sola vez por cada tanda de novedades.
+function notifyBrowser() {
+  if (!('Notification' in window) || Notification.permission !== 'granted') return;
+  const list = unseen();
+  if (!list.length || store.get('notifiedUpTo', '') >= list[0].date) return;
+  try {
+    const n = new Notification(`PORTal: ${list.length} novedad${list.length === 1 ? '' : 'es'} en tus favoritos`, {
+      body: list.slice(0, 4).map(e => e.title).join('\n'),
+      tag: 'portal-updates',
+    });
+    n.onclick = () => { window.focus(); location.hash = 'novedades'; };
+    store.set('notifiedUpTo', list[0].date);
+  } catch { /* algunos navegadores móviles solo permiten avisos desde un service worker */ }
 }
 
 // ---------- novedades ----------
@@ -308,25 +442,40 @@ function route() {
 }
 function showTab(tab) {
   document.querySelectorAll('.tab-panel').forEach(p => { p.hidden = p.id !== `tab-${tab}`; });
+  if (tab === 'novedades') {
+    // Se marca como visto después de mostrar los resaltados de esta visita.
+    const newest = state.data.updates[0]?.date;
+    if (newest) setTimeout(() => { store.set('seen', newest); renderBell(); }, 4000);
+  }
   document.querySelectorAll('.tabs a').forEach(a => a.setAttribute('aria-selected', String(a.dataset.tab === tab)));
 }
 
 async function init() {
-  const [catalog, github, candidates, reports] = await Promise.all([
+  const [catalog, github, candidates, reports, updates, follows] = await Promise.all([
     load('catalog.json', { games: [] }),
     load('github.json', { repos: {} }),
     load('candidates.json', { items: [] }),
     load('reports.json', { items: [] }),
+    load('updates.json', { items: [] }),
+    load('follows.json', { items: {}, global: null }),
   ]);
-  state.data = { games: enrich(catalog, github, reports), candidates };
+  state.data = { games: enrich(catalog, github, reports), candidates, updates: updates.items || [], follows };
   buildFilters();
   renderStats(github.generatedAt);
   renderGrid();
   renderNews();
+  renderUpdates();
+  renderNotifyBox();
+  renderBell();
+  notifyBrowser();
   renderRadar();
   renderAbout(catalog);
 
   document.addEventListener('click', e => {
+    const star = e.target.closest('[data-fav]');
+    if (star) { e.preventDefault(); e.stopPropagation(); toggleFav(star.dataset.fav); return; }
+    const upd = e.target.closest('[data-upd]');
+    if (upd) { state[upd.dataset.upd] = !state[upd.dataset.upd]; renderUpdates(); return; }
     const el = e.target.closest('[data-game]');
     if (el) { e.preventDefault(); openGame(el.dataset.game); }
   });

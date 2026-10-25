@@ -33,7 +33,23 @@ data/ignore.json       ← repos que el radar no debe volver a proponer
    - extrae CUSA, plataformas, cifras de FPS y una pista de estado ("playable", "start to finish"…), y adivina el juego.
 3. Cuando aparecen candidatos nuevos **abre un issue** "Radar: N ports nuevos" para revisarlos. Confirmar uno = moverlo a `catalog.json`.
 4. Lee los issues con label `reporte` (formulario `.github/ISSUE_TEMPLATE/reporte.yml`) y los muestra en la ficha del port.
-5. Hace commit de `data/` y publica el sitio en la rama `gh-pages` (GitHub Pages).
+5. **Detecta actualizaciones importantes** (`analyzeRelease` en `scripts/lib.mjs`): lee las notas de cada release nueva
+   (en inglés, español o portugués) y la marca como **grande** si trae mejoras de FPS ("+25% FPS", "30 → 60 fps", "+FPS"),
+   3 o más funciones nuevas (FSR 4, DLSS, frame generation, online, ultrawide…; solo cuentan las que no estaban en la release anterior),
+   un hito ("start to finish", "de principio a fin") o un salto de versión con novedades. También avisa si un repo desaparece.
+   Todo queda en `data/updates.json` y en el feed `data/feed.xml`.
+6. **Avisos**: comenta en el issue "seguir" de cada port (formulario `seguir.yml`, botón 🔔 Avisarme en la ficha) y en el issue
+   global con label `avisos`. Quien esté suscripto recibe mail y notificación en la app de GitHub.
+7. Hace commit de `data/` y publica el sitio en la rama `gh-pages` (GitHub Pages).
+
+### Favoritos y notificaciones
+
+- **★ Favorito** en la ficha de cada port: se guarda en tu navegador. Hay un filtro "Mis favoritos" y la campana 🔔
+  del encabezado cuenta las novedades grandes de tus favoritos desde tu última visita.
+- **🔔 Avisarme**: abre (o crea) el issue de seguimiento de ese port en GitHub → mail + push en la app de GitHub.
+- **Todas las novedades**: suscribirse al issue `avisos`.
+- **Notificación del navegador**: se activa en la pestaña Novedades; avisa al abrir el sitio.
+- **RSS/Atom**: `https://isidropenh.github.io/PORTal/data/feed.xml`.
 
 El sitio es HTML/CSS/JS estático, sin dependencias ni build (`index.html`, `assets/`).
 
