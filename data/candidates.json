@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T00:56:12.287Z",
+  "generatedAt": "2026-10-25T04:39:58.343Z",
   "items": [
     {
       "repo": "johnnygentoo/gzport",
@@ -583,6 +583,48 @@
       "copies": 0
     },
     {
+      "repo": "momochan32/ctr-on-mac",
+      "url": "https://github.com/momochan32/ctr-on-mac",
+      "description": "Unofficial macOS (Apple Silicon) port of OCTR — Crash Team Racing Nitro-Fueled native on Mac with RyuNET online. Bring your own game dump.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-24T20:22:20Z",
+      "pushedAt": "2026-10-25T04:08:41Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA13795",
+        "CUSA14876"
+      ],
+      "game": "ctr-nitro-fueled",
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "66 FPS",
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-25T04:39:46.287Z",
+      "_readmeHash": "11803",
+      "copies": 0
+    },
+    {
       "repo": "Laitsberg/PS4-Native-Ports",
       "url": "https://github.com/Laitsberg/PS4-Native-Ports",
       "description": "  PS4 Native Ports — experimental native PC ports of PS4 games (inFAMOUS First Light, J-STARS Victory VS+, inFAMOUS Second Son), based on HayatoG's iss_pc. Your own game dump required; no game files included.",
@@ -627,11 +669,11 @@
       "repo": "Liondarkz/issn_pc",
       "url": "https://github.com/Liondarkz/issn_pc",
       "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
-      "stars": 30,
+      "stars": 31,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
-      "pushedAt": "2026-10-24T23:56:14Z",
+      "pushedAt": "2026-10-25T01:38:53Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -953,7 +995,7 @@
       "forks": 0,
       "language": "Batchfile",
       "createdAt": "2026-10-23T20:27:30Z",
-      "pushedAt": "2026-10-24T22:32:31Z",
+      "pushedAt": "2026-10-25T03:44:03Z",
       "forkOf": null,
       "kind": "port",
       "score": 12,
@@ -982,7 +1024,50 @@
       ],
       "statusHint": "complete",
       "firstSeen": "2026-10-23T21:24:32.816Z",
-      "_readmeHash": "18872",
+      "_readmeHash": "18999",
+      "copies": 0
+    },
+    {
+      "repo": "d4rksp4rt4n/SpartanPort",
+      "url": "https://github.com/d4rksp4rt4n/SpartanPort",
+      "description": "SpartanPort (God of War III PC port) with NVIDIA DLSS - based on FelipePrado0/SpartanPort",
+      "stars": 2,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-23T21:42:16Z",
+      "pushedAt": "2026-10-23T21:59:52Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA01623",
+        "CUSA01715"
+      ],
+      "game": "god-of-war-3",
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "120 FPS",
+        "100 FPS",
+        "144 FPS",
+        "240 FPS"
+      ],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-24T04:35:16.489Z",
+      "_readmeHash": "32564",
       "copies": 0
     },
     {
@@ -1027,49 +1112,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-21T23:07:11.084Z",
       "_readmeHash": "14246",
-      "copies": 0
-    },
-    {
-      "repo": "d4rksp4rt4n/SpartanPort",
-      "url": "https://github.com/d4rksp4rt4n/SpartanPort",
-      "description": "SpartanPort (God of War III PC port) with NVIDIA DLSS - based on FelipePrado0/SpartanPort",
-      "stars": 1,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-23T21:42:16Z",
-      "pushedAt": "2026-10-23T21:59:52Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+1 (readme) \\bps4\\b|playstation ?4|\\",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA01623",
-        "CUSA01715"
-      ],
-      "game": "god-of-war-3",
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [
-        "120 FPS",
-        "100 FPS",
-        "144 FPS",
-        "240 FPS"
-      ],
-      "statusHint": "complete",
-      "firstSeen": "2026-10-24T04:35:16.489Z",
-      "_readmeHash": "32564",
       "copies": 0
     },
     {
@@ -1352,7 +1394,7 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 196,
+      "stars": 207,
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
@@ -1429,7 +1471,7 @@
       "forks": 0,
       "language": null,
       "createdAt": "2026-10-24T13:49:31Z",
-      "pushedAt": "2026-10-24T14:44:00Z",
+      "pushedAt": "2026-10-25T01:47:01Z",
       "forkOf": "deadinside28/bloodborne_pc",
       "kind": "port",
       "score": 11,
@@ -1597,7 +1639,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-24T23:26:42Z",
+      "pushedAt": "2026-10-25T04:32:37Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1622,7 +1664,7 @@
       "fps": [],
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T23:07:21.189Z",
-      "_readmeHash": "3107",
+      "_readmeHash": "3116",
       "copies": 0
     },
     {
@@ -1696,6 +1738,41 @@
       "copies": 0
     },
     {
+      "repo": "CRT-TV605/gravityrush-linux-build",
+      "url": "https://github.com/CRT-TV605/gravityrush-linux-build",
+      "description": "CI that builds the Gravity Rush PC port (gravityrush_pc) for Linux — AMD/Bazzite-ready tarball",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-25T03:59:32Z",
+      "pushedAt": "2026-10-25T04:34:44Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA01113"
+      ],
+      "game": "gravity-rush-remastered",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-25T04:39:38.813Z",
+      "_readmeHash": "8620",
+      "copies": 0
+    },
+    {
       "repo": "yazuc/sotc-pt-fixes",
       "url": "https://github.com/yazuc/sotc-pt-fixes",
       "description": "branch port linux com build ajustado.",
@@ -1744,7 +1821,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-24T14:36:22Z",
-      "pushedAt": "2026-10-25T00:46:52Z",
+      "pushedAt": "2026-10-25T01:08:35Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -2017,6 +2094,41 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T22:59:40.023Z",
       "_readmeHash": "12007",
+      "copies": 0
+    },
+    {
+      "repo": "rubymatrix/xi-on-anything",
+      "url": "https://github.com/rubymatrix/xi-on-anything",
+      "description": "Static recompilation of FINAL FANTASY XI's FFXiMain.dll (and FFXi.dll) from 32-bit x86 to C, so the game runs natively on arm64 macOS without Wine or Rosetta",
+      "stars": 18,
+      "forks": 2,
+      "language": "C",
+      "createdAt": "2026-09-25T00:01:19Z",
+      "pushedAt": "2026-10-25T04:29:50Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 8,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-25T04:39:30.824Z",
+      "_readmeHash": "33822",
       "copies": 0
     },
     {
@@ -2572,7 +2684,7 @@
       "forks": 0,
       "language": "Python",
       "createdAt": "2026-10-24T22:50:37Z",
-      "pushedAt": "2026-10-25T00:40:17Z",
+      "pushedAt": "2026-10-25T01:10:42Z",
       "forkOf": null,
       "kind": "weak",
       "score": 5,
@@ -2588,7 +2700,7 @@
       "fps": [],
       "statusHint": "unknown",
       "firstSeen": "2026-10-25T00:55:56.480Z",
-      "_readmeHash": "2083",
+      "_readmeHash": "2106",
       "copies": 0
     },
     {
