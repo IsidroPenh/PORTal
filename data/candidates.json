@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T00:56:12.287Z",
+  "generatedAt": "2026-10-25T20:50:55.049Z",
   "items": [
     {
       "repo": "johnnygentoo/gzport",
@@ -172,7 +172,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-10T14:36:23Z",
-      "pushedAt": "2026-10-24T21:48:17Z",
+      "pushedAt": "2026-10-25T15:49:13Z",
       "forkOf": null,
       "kind": "port",
       "score": 15,
@@ -459,6 +459,48 @@
       "copies": 0
     },
     {
+      "repo": "AbdelmoumenDeghbouche/knack_pc",
+      "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
+      "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
+      "stars": 17,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-22T17:35:49Z",
+      "pushedAt": "2026-10-25T18:06:38Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA00068",
+        "CUSA00006",
+        "CUSA00202"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "120 FPS",
+        "60 FPS",
+        "71–120 FPS"
+      ],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-22T21:35:28.017Z",
+      "_readmeHash": "16736",
+      "copies": 0
+    },
+    {
       "repo": "Lucas-blip-png/ShadowOfTheColossus-PC",
       "url": "https://github.com/Lucas-blip-png/ShadowOfTheColossus-PC",
       "description": "Native PC port of Shadow of the Colossus (PS4): AjncSystem's 0.59 plus ~7% more FPS, textures on GTX 10xx cards, no blinking far shadows, 120 Hz fullscreen. Bring your own game dump.",
@@ -501,48 +543,6 @@
       "copies": 0
     },
     {
-      "repo": "AbdelmoumenDeghbouche/knack_pc",
-      "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
-      "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
-      "stars": 5,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-22T17:35:49Z",
-      "pushedAt": "2026-10-23T04:18:13Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 14,
-      "reasons": [
-        "+2 \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 \\bvulkan\\b",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA00068",
-        "CUSA00006",
-        "CUSA00202"
-      ],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [
-        "120 FPS",
-        "60 FPS",
-        "71–120 FPS"
-      ],
-      "statusHint": "complete",
-      "firstSeen": "2026-10-22T21:35:28.017Z",
-      "_readmeHash": "16574",
-      "copies": 0
-    },
-    {
       "repo": "heyzerr/ShadowOfTheColossus-PC",
       "url": "https://github.com/heyzerr/ShadowOfTheColossus-PC",
       "description": "AVX2 FIX Native Windows port of Shadow of the Colossus (PS4, CUSA08809) - Port nativo para PC.",
@@ -580,6 +580,48 @@
       "statusHint": "early",
       "firstSeen": "2026-10-21T22:00:00Z",
       "_readmeHash": "13128",
+      "copies": 0
+    },
+    {
+      "repo": "momochan32/ctr-on-mac",
+      "url": "https://github.com/momochan32/ctr-on-mac",
+      "description": "Unofficial macOS (Apple Silicon) port of OCTR — Crash Team Racing Nitro-Fueled native on Mac with RyuNET online. Bring your own game dump.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-24T20:22:20Z",
+      "pushedAt": "2026-10-25T17:30:51Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA13795",
+        "CUSA14876"
+      ],
+      "game": "ctr-nitro-fueled",
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "66 FPS",
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-25T04:39:46.287Z",
+      "_readmeHash": "12510",
       "copies": 0
     },
     {
@@ -627,11 +669,11 @@
       "repo": "Liondarkz/issn_pc",
       "url": "https://github.com/Liondarkz/issn_pc",
       "description": "Port nativo de inFAMOUS Second Son para PC (Windows, Vulkan), com FSR 4, DLSS, mouse 1:1 e suporte a controle. Não inclui arquivos do jogo: use seu próprio dump. / Native PC port of inFAMOUS Second Son (Windows, Vulkan). No game files included.",
-      "stars": 30,
+      "stars": 32,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
-      "pushedAt": "2026-10-24T23:56:14Z",
+      "pushedAt": "2026-10-25T01:38:53Z",
       "forkOf": null,
       "kind": "port",
       "score": 13,
@@ -746,6 +788,44 @@
       "copies": 0
     },
     {
+      "repo": "GenryTheFox0/OrbisGlue",
+      "url": "https://github.com/GenryTheFox0/OrbisGlue",
+      "description": "PS4 recompilation project: your own PS4 game's code lifted to C (Mosaic) and played natively on Windows. Built on shadPS4.",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-21T23:13:59Z",
+      "pushedAt": "2026-10-21T23:29:34Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 13,
+      "reasons": [
+        "+2 \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA03528"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "fps": [
+        "30 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-22T04:42:46.375Z",
+      "_readmeHash": "7911",
+      "copies": 0
+    },
+    {
       "repo": "DateMasanaga/Driveclub-Port-AppleSilicon-zh-CN",
       "url": "https://github.com/DateMasanaga/Driveclub-Port-AppleSilicon-zh-CN",
       "description": "Driveclub (PS4, Simplified Chinese) native port running on Apple Silicon Macs under Rosetta 2 - fork of BlackLineInteractive/Driveclub-Port with GPU fixes and performance work",
@@ -783,44 +863,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-24T10:57:34.617Z",
       "_readmeHash": "10136",
-      "copies": 0
-    },
-    {
-      "repo": "GenryTheFox0/OrbisGlue",
-      "url": "https://github.com/GenryTheFox0/OrbisGlue",
-      "description": "PS4 recompilation project: your own PS4 game's code lifted to C (Mosaic) and played natively on Windows. Built on shadPS4.",
-      "stars": 0,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-21T23:13:59Z",
-      "pushedAt": "2026-10-21T23:29:34Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 13,
-      "reasons": [
-        "+2 \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA03528"
-      ],
-      "game": null,
-      "platforms": [
-        "windows",
-        "macos"
-      ],
-      "fps": [
-        "30 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-10-22T04:42:46.375Z",
-      "_readmeHash": "7911",
       "copies": 0
     },
     {
@@ -864,6 +906,46 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-21T23:00:33.813Z",
       "_readmeHash": "15085",
+      "copies": 0
+    },
+    {
+      "repo": "SuperCatElvis/UntilDawn_PC",
+      "url": "https://github.com/SuperCatElvis/UntilDawn_PC",
+      "description": "PC recompilation of the original Until Dawn (2015), running natively on Windows with a custom Vulkan renderer.",
+      "stars": 23,
+      "forks": 0,
+      "language": "Batchfile",
+      "createdAt": "2026-10-23T20:27:30Z",
+      "pushedAt": "2026-10-25T10:03:52Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA02636"
+      ],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "30 FPS",
+        "60 FPS",
+        "35–45 FPS",
+        "21–25 FPS"
+      ],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-23T21:24:32.816Z",
+      "_readmeHash": "20286",
       "copies": 0
     },
     {
@@ -946,43 +1028,46 @@
       "copies": 0
     },
     {
-      "repo": "SuperCatElvis/UntilDawn_PC",
-      "url": "https://github.com/SuperCatElvis/UntilDawn_PC",
-      "description": "PC recompilation of the original Until Dawn (2015), running natively on Windows with a custom Vulkan renderer.",
-      "stars": 4,
+      "repo": "d4rksp4rt4n/SpartanPort",
+      "url": "https://github.com/d4rksp4rt4n/SpartanPort",
+      "description": "SpartanPort (God of War III PC port) with NVIDIA DLSS - based on FelipePrado0/SpartanPort",
+      "stars": 3,
       "forks": 0,
-      "language": "Batchfile",
-      "createdAt": "2026-10-23T20:27:30Z",
-      "pushedAt": "2026-10-24T22:32:31Z",
+      "language": "C++",
+      "createdAt": "2026-10-23T21:42:16Z",
+      "pushedAt": "2026-10-23T21:59:52Z",
       "forkOf": null,
       "kind": "port",
       "score": 12,
       "reasons": [
         "+1 (readme) \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
         "+3 pc[- ]port|port (nativo ",
         "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow",
         "+1 (readme) bring your own|your own ",
-        "+1 \\bvulkan\\b",
-        "+1 recomp|static recompil|d",
+        "+1 (readme) \\bvulkan\\b",
         "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
       ],
       "cusa": [
-        "CUSA02636"
+        "CUSA01623",
+        "CUSA01715"
       ],
-      "game": null,
+      "game": "god-of-war-3",
       "platforms": [
-        "windows"
+        "windows",
+        "linux",
+        "macos"
       ],
       "fps": [
-        "30 FPS",
-        "60 FPS",
-        "30–60 FPS",
-        "10–20 FPS"
+        "120 FPS",
+        "100 FPS",
+        "144 FPS",
+        "240 FPS"
       ],
       "statusHint": "complete",
-      "firstSeen": "2026-10-23T21:24:32.816Z",
-      "_readmeHash": "18872",
+      "firstSeen": "2026-10-24T04:35:16.489Z",
+      "_readmeHash": "32564",
       "copies": 0
     },
     {
@@ -1027,49 +1112,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-21T23:07:11.084Z",
       "_readmeHash": "14246",
-      "copies": 0
-    },
-    {
-      "repo": "d4rksp4rt4n/SpartanPort",
-      "url": "https://github.com/d4rksp4rt4n/SpartanPort",
-      "description": "SpartanPort (God of War III PC port) with NVIDIA DLSS - based on FelipePrado0/SpartanPort",
-      "stars": 1,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-23T21:42:16Z",
-      "pushedAt": "2026-10-23T21:59:52Z",
-      "forkOf": null,
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+1 (readme) \\bps4\\b|playstation ?4|\\",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
-      ],
-      "cusa": [
-        "CUSA01623",
-        "CUSA01715"
-      ],
-      "game": "god-of-war-3",
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [
-        "120 FPS",
-        "100 FPS",
-        "144 FPS",
-        "240 FPS"
-      ],
-      "statusHint": "complete",
-      "firstSeen": "2026-10-24T04:35:16.489Z",
-      "_readmeHash": "32564",
       "copies": 0
     },
     {
@@ -1118,7 +1160,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-23T18:10:46Z",
-      "pushedAt": "2026-10-24T19:21:52Z",
+      "pushedAt": "2026-10-25T16:30:55Z",
       "forkOf": null,
       "kind": "port",
       "score": 12,
@@ -1352,8 +1394,8 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 196,
-      "forks": 5,
+      "stars": 226,
+      "forks": 8,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
       "pushedAt": "2026-10-23T22:54:10Z",
@@ -1429,7 +1471,7 @@
       "forks": 0,
       "language": null,
       "createdAt": "2026-10-24T13:49:31Z",
-      "pushedAt": "2026-10-24T14:44:00Z",
+      "pushedAt": "2026-10-25T01:47:01Z",
       "forkOf": "deadinside28/bloodborne_pc",
       "kind": "port",
       "score": 11,
@@ -1597,7 +1639,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-10T23:37:11Z",
-      "pushedAt": "2026-10-24T23:26:42Z",
+      "pushedAt": "2026-10-25T18:29:44Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1622,14 +1664,14 @@
       "fps": [],
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T23:07:21.189Z",
-      "_readmeHash": "3107",
+      "_readmeHash": "3116",
       "copies": 0
     },
     {
       "repo": "jpthebaby/GOW3-PS4-Remastered-Modding-Tool-Blender-Addon",
       "url": "https://github.com/jpthebaby/GOW3-PS4-Remastered-Modding-Tool-Blender-Addon",
       "description": "Blender add-on to put your own character into God of War III Remastered (PC port) as Kratos - by Gamer JP",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "language": null,
       "createdAt": "2026-10-23T02:47:41Z",
@@ -1662,7 +1704,7 @@
       "repo": "indrasundanese/KamenRider-MoH-PC",
       "url": "https://github.com/indrasundanese/KamenRider-MoH-PC",
       "description": "Native port Kamen Rider Memory of Heroez (PS4) untuk PC — masih dalam tahap development (test).",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "language": null,
       "createdAt": "2026-10-24T05:52:13Z",
@@ -1744,7 +1786,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-24T14:36:22Z",
-      "pushedAt": "2026-10-25T00:46:52Z",
+      "pushedAt": "2026-10-25T14:27:46Z",
       "forkOf": null,
       "kind": "port",
       "score": 10,
@@ -1776,6 +1818,41 @@
       "statusHint": "early",
       "firstSeen": "2026-10-24T20:47:44.457Z",
       "_readmeHash": "20899",
+      "copies": 0
+    },
+    {
+      "repo": "CRT-TV605/gravityrush-linux-build",
+      "url": "https://github.com/CRT-TV605/gravityrush-linux-build",
+      "description": "CI that builds the Gravity Rush PC port (gravityrush_pc) for Linux — AMD/Bazzite-ready tarball",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-25T03:59:32Z",
+      "pushedAt": "2026-10-25T06:02:09Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA01113"
+      ],
+      "game": "gravity-rush-remastered",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-25T04:39:38.813Z",
+      "_readmeHash": "8620",
       "copies": 0
     },
     {
@@ -1815,6 +1892,41 @@
       "copies": 0
     },
     {
+      "repo": "rubymatrix/xi-on-anything",
+      "url": "https://github.com/rubymatrix/xi-on-anything",
+      "description": "Static recompilation of FINAL FANTASY XI's FFXiMain.dll (and FFXi.dll) from 32-bit x86 to C, so the game runs natively on arm64 macOS without Wine or Rosetta",
+      "stars": 18,
+      "forks": 2,
+      "language": "C",
+      "createdAt": "2026-09-25T00:01:19Z",
+      "pushedAt": "2026-10-25T14:28:47Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 9,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-25T04:39:30.824Z",
+      "_readmeHash": "7492",
+      "copies": 0
+    },
+    {
       "repo": "aliveoutside/infamous-second-son-linux",
       "url": "https://github.com/aliveoutside/infamous-second-son-linux",
       "description": "",
@@ -1822,7 +1934,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-22T09:46:17Z",
-      "pushedAt": "2026-10-22T19:51:59Z",
+      "pushedAt": "2026-10-25T18:47:23Z",
       "forkOf": null,
       "kind": "port",
       "score": 9,
@@ -2017,6 +2129,46 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-21T22:59:40.023Z",
       "_readmeHash": "12007",
+      "copies": 0
+    },
+    {
+      "repo": "gminustwo/minustwo",
+      "url": "https://github.com/gminustwo/minustwo",
+      "description": "",
+      "stars": 5,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-25T00:09:48Z",
+      "pushedAt": "2026-10-25T16:42:20Z",
+      "forkOf": null,
+      "kind": "port",
+      "score": 8,
+      "reasons": [
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.bin\\b|param\\.sf"
+      ],
+      "cusa": [
+        "CUSA02046"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "30 FPS",
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-10-25T16:16:42.790Z",
+      "_readmeHash": "16367",
       "copies": 0
     },
     {
@@ -2565,61 +2717,6 @@
       "copies": 0
     },
     {
-      "repo": "serjaum/bloodborne-copilot",
-      "url": "https://github.com/serjaum/bloodborne-copilot",
-      "description": "Second-screen AI companion for Bloodborne on Windows (bbport)",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-10-24T22:50:37Z",
-      "pushedAt": "2026-10-25T00:40:17Z",
-      "forkOf": null,
-      "kind": "weak",
-      "score": 5,
-      "reasons": [
-        "+3 pc[- ]port|port (nativo ",
-        "+2 bbport|bloodborne_pc|gow"
-      ],
-      "cusa": [],
-      "game": "bloodborne",
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-25T00:55:56.480Z",
-      "_readmeHash": "2083",
-      "copies": 0
-    },
-    {
-      "repo": "AjudanteMaciel/bloodborne-private-server",
-      "url": "https://github.com/AjudanteMaciel/bloodborne-private-server",
-      "description": "Experimental private multiplayer server toolkit for the Supermedo Bloodborne PC port, with Tailscale setup and Windows start/stop scripts.",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-10-24T23:43:42Z",
-      "pushedAt": "2026-10-25T00:18:06Z",
-      "forkOf": null,
-      "kind": "weak",
-      "score": 5,
-      "reasons": [
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+1 (readme) bbport|bloodborne_pc|gow"
-      ],
-      "cusa": [],
-      "game": "bloodborne",
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-25T00:55:56.639Z",
-      "_readmeHash": "14928",
-      "copies": 0
-    },
-    {
       "repo": "ytq77/TheHuntLauncher",
       "url": "https://github.com/ytq77/TheHuntLauncher",
       "description": "适用于 Bloodborne PC 移植版的 BBSC 无缝联机启动器，提供独立运行环境、中文文本、本机配置同步与自动构建。",
@@ -2627,7 +2724,7 @@
       "forks": 0,
       "language": "Python",
       "createdAt": "2026-10-20T06:52:11Z",
-      "pushedAt": "2026-10-23T14:18:54Z",
+      "pushedAt": "2026-10-25T16:51:00Z",
       "forkOf": null,
       "kind": "weak",
       "score": 5,
@@ -2648,6 +2745,61 @@
       "statusHint": "early",
       "firstSeen": "2026-10-22T11:50:53.664Z",
       "_readmeHash": "3481",
+      "copies": 0
+    },
+    {
+      "repo": "serjaum/bloodborne-copilot",
+      "url": "https://github.com/serjaum/bloodborne-copilot",
+      "description": "Second-screen AI companion for Bloodborne on Windows (bbport)",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-10-24T22:50:37Z",
+      "pushedAt": "2026-10-25T15:45:32Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+3 pc[- ]port|port (nativo ",
+        "+2 bbport|bloodborne_pc|gow"
+      ],
+      "cusa": [],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-25T00:55:56.480Z",
+      "_readmeHash": "2216",
+      "copies": 0
+    },
+    {
+      "repo": "AjudanteMaciel/bloodborne-private-server",
+      "url": "https://github.com/AjudanteMaciel/bloodborne-private-server",
+      "description": "Experimental private multiplayer server toolkit for the Supermedo Bloodborne PC port, with Tailscale setup and Windows start/stop scripts.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-10-24T23:43:42Z",
+      "pushedAt": "2026-10-25T06:40:48Z",
+      "forkOf": null,
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+1 (readme) bbport|bloodborne_pc|gow"
+      ],
+      "cusa": [],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-25T00:55:56.639Z",
+      "_readmeHash": "16240",
       "copies": 0
     },
     {
