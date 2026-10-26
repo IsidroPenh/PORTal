@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Actualiza los datos del sitio desde la API de GitHub:
 //  1. Métricas de cada repo del catálogo (estrellas, actividad, última release, si fue borrado).
-//  2. Radar: busca repos nuevos que parezcan ports PS4 → PC y los clasifica.
+//  2. Radar: busca repos nuevos que parezcan ports a PC de PS4, PS2, PS3 o Xbox 360 y los clasifica.
 //  3. Reportes de la comunidad (issues con la etiqueta "reporte" de este repo).
 //  4. Actualizaciones importantes (releases con +FPS, funciones nuevas, hitos, repos borrados):
 //     se guardan en data/updates.json + data/feed.xml y se avisan comentando los issues "seguir".
@@ -210,7 +210,9 @@ async function discover(catalog, prevCandidates, ignore, repoMeta) {
     let cls;
     if (text === null) {
       const quick = classify(base);
-      cls = ['port', 'weak'].includes(quick.kind) ? { kind: old.kind, score: old.score, reasons: old.reasons } : quick;
+      cls = ['port', 'weak'].includes(quick.kind)
+        ? { kind: old.kind, score: old.score, reasons: old.reasons, console: old.platform || quick.console }
+        : quick;
     } else {
       cls = classify({ ...base, readme: text });
     }
@@ -228,6 +230,7 @@ async function discover(catalog, prevCandidates, ignore, repoMeta) {
       createdAt: it.created_at,
       pushedAt: it.pushed_at,
       forkOf: it._forkOf || (it.fork ? 'fork' : null),
+      platform: cls.console || null,
       kind: cls.kind,
       score: cls.score,
       reasons: cls.reasons,
@@ -245,8 +248,8 @@ async function discover(catalog, prevCandidates, ignore, repoMeta) {
     if (seen.has(key) || known.has(key)) continue;
     if (!old.pushedAt || old.pushedAt.slice(0, 10) < since) continue;
     // Se reclasifica por si cambiaron las reglas del clasificador.
-    const kind = classify({ name: old.repo.split('/')[1], description: old.description || '' }).kind;
-    if (!['spam', 'to-ps4', 'tool', 'mobile', 'other-console'].includes(kind)) items.push(old);
+    const q = classify({ name: old.repo.split('/')[1], description: old.description || '' });
+    if (!['spam', 'to-ps4', 'tool', 'mobile', 'other-console'].includes(q.kind)) items.push({ ...old, platform: old.platform || q.console || null });
   }
   const knownDesc = Object.values(repoMeta).map(r => r.description).filter(Boolean);
   const result = dedupeCandidates(items, knownDesc).filter(c => ['port', 'weak'].includes(c.kind));

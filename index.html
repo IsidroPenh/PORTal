@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PORTal — Ports nativos de PS4 a PC</title>
-  <meta name="description" content="Directorio actualizado de ports nativos no oficiales de juegos de PS4 a PC: estado, rendimiento, fallos conocidos y nuevos proyectos detectados automáticamente.">
+  <title>PORTal — Ports nativos de consolas a PC</title>
+  <meta name="description" content="Directorio actualizado de ports nativos no oficiales a PC de juegos de PS4, PS2, PS3 y Xbox 360: estado, rendimiento, fallos conocidos y nuevos proyectos detectados automáticamente.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f6bff'/%3E%3Cpath d='M9 23V9h8a5 5 0 0 1 0 10h-4v4z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="alternate" type="application/atom+xml" title="PORTal: actualizaciones importantes" href="data/feed.xml">
@@ -14,13 +14,14 @@
     <div class="wrap header-row">
       <a class="brand" href="#">
         <span class="brand-mark" aria-hidden="true">P</span>
-        <span><strong>PORT</strong>al<small>Ports nativos de PS4 a PC</small></span>
+        <span><strong>PORT</strong>al<small>Ports nativos de consolas a PC</small></span>
       </a>
       <div class="header-right">
         <a href="#novedades" class="bell" id="bell" hidden>🔔 <span></span></a>
         <div class="stats" id="stats" aria-live="polite"></div>
       </div>
     </div>
+    <div class="wrap"><div class="cats" id="cats" role="group" aria-label="Consola"></div></div>
     <nav class="wrap tabs" role="tablist">
       <a href="#juegos" data-tab="juegos" role="tab">Juegos</a>
       <a href="#novedades" data-tab="novedades" role="tab">Novedades</a>
@@ -44,6 +45,7 @@
       </div>
       <div class="filters">
         <div class="chip-group" id="f-fav" aria-label="Favoritos"></div>
+        <div class="chip-group" id="f-console" aria-label="Consola" hidden></div>
         <div class="chip-group" id="f-status" aria-label="Estado"></div>
         <div class="chip-group" id="f-platform" aria-label="Plataforma"></div>
         <div class="chip-group" id="f-type" aria-label="Tipo"></div>
@@ -78,8 +80,9 @@
     <section id="tab-radar" class="tab-panel" hidden>
       <div class="callout">
         <strong>Detectados automáticamente, sin verificar.</strong>
-        Cada 6 horas un script busca en GitHub repos nuevos que parezcan ports de PS4 a PC, descarta spam, homebrew
-        <em>hacia</em> PS4 y herramientas, y lista acá el resto. Cuando alguien confirma uno, pasa al catálogo.
+        Cada 6 horas un script busca en GitHub repos nuevos que parezcan ports a PC de juegos de PS4, PS2, PS3 o Xbox 360,
+        detecta la consola de origen, descarta spam, homebrew <em>hacia</em> consolas, ports a celulares y herramientas, y lista acá el resto.
+        Cuando alguien confirma uno, pasa al catálogo.
       </div>
       <p class="result-line" id="radar-line"></p>
       <div class="grid" id="radar"></div>
@@ -101,6 +104,18 @@
         <li><strong>Decompilación</strong>: reescribir el código a fuente legible y verificada (ej. <code>Paleblood</code>). Mucho más lento, pero permite un source port total.</li>
         <li><strong>Motor reescrito</strong>: la lógica se rehace y solo se leen los assets (ej. <code>pt-pc</code>).</li>
         <li><strong>Fork de emulador</strong>: shadPS4 ajustado para un juego. No es nativo, pero lo listamos porque a veces rinde mejor.</li>
+      </ul>
+      <h2>¿Y PS2, PS3 y Xbox 360?</h2>
+      <p>Esas consolas no usan procesadores x86, así que el truco de PS4 no sirve: el código hay que <strong>traducirlo</strong>.
+        La técnica dominante es la <strong>recompilación estática</strong>: una herramienta lee el ejecutable original y genera código C/C++
+        equivalente que se compila para PC, junto con un runtime que reemplaza el hardware de la consola.</p>
+      <ul>
+        <li><strong>PS2</strong> (CPU MIPS R5900 + Graphics Synthesizer): <code>PS2Recomp</code> traduce el MIPS a C++. También hay
+          decompilaciones completas que terminan en ports, como <code>OpenGOAL</code> (Jak and Daxter) o Sly Cooper, y motores reescritos.</li>
+        <li><strong>PS3</strong> (Cell: PPU PowerPC + SPUs, GPU RSX): <code>ps3recomp</code> aporta el runtime para recompilar PPU y SPU.
+          Es la escena más nueva y la mayoría de los ports todavía son tempranos.</li>
+        <li><strong>Xbox 360</strong> (Xenon PowerPC, GPU Xenos): <code>XenonRecomp</code> + <code>XenosRecomp</code> nacieron con
+          Unleashed Recompiled, y el <code>ReXGlue SDK</code> hizo explotar la cantidad de ports en 2026.</li>
       </ul>
       <h3>Proyectos base del ecosistema</h3>
       <ul class="bases" id="bases"></ul>

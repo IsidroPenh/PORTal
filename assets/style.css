@@ -219,3 +219,24 @@ dialog::backdrop { background: rgba(5, 8, 15, .65); backdrop-filter: blur(3px); 
 @media (max-width: 720px) {
   .upd { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* categorías por consola */
+.cats { display: flex; gap: 6px; flex-wrap: wrap; padding: 2px 0 10px; }
+.cat {
+  border: 1px solid var(--line); background: var(--card); color: var(--muted); border-radius: 10px;
+  padding: 6px 14px; font: inherit; font-weight: 600; font-size: .88rem; cursor: pointer;
+}
+.cat span { font-weight: 500; font-size: .75rem; opacity: .8; margin-left: 2px; }
+.cat:hover { color: var(--text); }
+.cat[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.console {
+  display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .03em; border-radius: 5px; padding: 1px 6px;
+  color: #fff; background: #4a5470; vertical-align: 2px;
+}
+.console.c-ps4 { background: #2c5bd8; }
+.console.c-ps2 { background: #3d3f8f; }
+.console.c-ps3 { background: #1d1d1f; border: 1px solid #555; }
+.console.c-x360 { background: #2f8f2f; }
+
+/* El atributo hidden siempre gana sobre los display de los componentes. */
+[hidden] { display: none !important; }

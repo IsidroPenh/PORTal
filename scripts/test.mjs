@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
-  classify, extractCusa, extractFps, extractPlatforms, extractStatus,
+  classify, detectConsole, extractCusa, extractFps, extractPlatforms, extractStatus,
   guessGame, parseIssueForm, dedupeCandidates, analyzeRelease, versionJump, buildAtom, repoFromText, reportFromIssue,
 } from './lib.mjs';
 
@@ -27,9 +27,21 @@ const cases = [
   ['port', { name: 'ratchet-clank-pc', description: 'Ratchet & Clank (PS4, 2016) running natively on Linux. Playable, experimental. Built on bbport' }],
   ['tool', { name: 'BBSC', description: 'Bloodborne Seamless Co-op: a shadPS4 mod that keeps co-op alive' }],
   ['tool', { name: 'bloodborne-rpc', description: 'A lightweight, standalone Discord Rich Presence companion for Bloodborne PC' }],
-  ['other-console', { name: 'peggle2-nx', description: 'Peggle 2 (Xbox Live Arcade) running natively on Nintendo Switch: static recompilation' }],
-  ['other-console', { name: 'wet-recomp', description: 'Fan PC port of WET (Xbox 360) using ReXGlue. Does not include game files.' }],
+  ['mobile', { name: 'peggle2-nx', description: 'Peggle 2 (Xbox Live Arcade) running natively on Nintendo Switch: static recompilation' }],
+  ['port', { name: 'wet-recomp', description: 'Fan PC port of WET (Xbox 360) using ReXGlue. Does not include game files.' }],
+  ['port', { name: 'god-of-war-recomp', description: 'Native PC port of God of War (PS2, SCUS-97399) via PS2Recomp static recompilation for Windows' }],
+  ['port', { name: 'inFAMOUSreborn', description: 'Static recompilation of inFAMOUS (PS3) to native Windows using ps3recomp' }],
+  ['other-console', { name: 'OpenTricky', description: 'Unofficial PC port of SSX Tricky via static recompilation of the Xbox version' }],
+  ['other-console', { name: 'mario64-recomp', description: 'Super Mario 64 (N64) native PC port' }],
+  ['tool', { name: 'pcsx2-gow-patches', description: 'PCSX2 fork with widescreen patches for God of War PS2' }],
+  ['mobile', { name: 'gta4-ps5', description: 'Grand Theft Auto IV (Xbox 360) port that runs on jailbroken PS5' }],
 ];
+t('detectConsole', () => {
+  assert.equal(classify({ name: 'x', description: 'Sonic Unleashed (Xbox 360) recompiled for PC' }).console, 'x360');
+  assert.equal(classify({ name: 'x', description: 'Demon\'s Souls PS3 native PC port, BLUS30443' }).console, 'ps3');
+  assert.equal(classify({ name: 'x', description: 'Ratchet & Clank PS2 port to Rust, SCES-50916' }).console, 'ps2');
+  assert.equal(classify({ name: 'x', description: 'Bloodborne CUSA03173 native Windows port' }).console, 'ps4');
+});
 for (const [kind, repo] of cases) {
   t(`classify ${repo.name} → ${kind}`, () => assert.equal(classify(repo).kind, kind, JSON.stringify(classify(repo))));
 }
@@ -114,10 +126,12 @@ t('buildAtom escapa y solo incluye grandes', () => {
 t('catálogo: estados, tipos y plataformas válidos', () => {
   const S = ['complete', 'playable', 'partial', 'early', 'research'];
   const T = ['native', 'recomp', 'decomp', 'reimpl', 'wrapper'];
+  const C = ['ps4', 'ps2', 'ps3', 'x360'];
   const P = ['windows', 'linux', 'macos'];
   const ids = new Set();
   for (const g of catalog.games) {
     assert.ok(!ids.has(g.id), `id duplicado ${g.id}`); ids.add(g.id);
+    assert.ok(C.includes(g.platform), `${g.id} platform ${g.platform}`);
     for (const p of g.ports) {
       assert.ok(S.includes(p.status), `${p.repo} status ${p.status}`);
       assert.ok(T.includes(p.type), `${p.repo} type ${p.type}`);

@@ -1,7 +1,10 @@
-# PORTal: ports nativos de PS4 a PC
+# PORTal: ports nativos de consolas a PC
 
-Directorio de los ports **nativos y no oficiales** de juegos de PS4 a PC que están apareciendo en GitHub
-(Bloodborne, God of War III, Uncharted, Shadow of the Colossus, inFAMOUS, Driveclub, P.T., CTR…).
+Directorio de los ports **nativos y no oficiales** a PC que están apareciendo en GitHub, en tres categorías:
+
+- **PS4**: Bloodborne, God of War III, Uncharted, Shadow of the Colossus, inFAMOUS, Driveclub, P.T., CTR… (el código x86-64 corre directo + runtime propio).
+- **PS2**: Jak and Daxter (OpenGOAL), Ratchet & Clank, Sly Cooper, God of War, Ace Combat 5, ICO… (recompilación estática con PS2Recomp, decompilaciones, motores reescritos).
+- **PS3 / Xbox 360**: Sonic Unleashed, Skate 3, Fable II, Dead Rising 2, Saints Row, Demon's Souls, Drakengard 3, Tekken… (XenonRecomp, ReXGlue SDK, ps3recomp).
 Muestra para cada juego **todos los ports que existen** y para cada port:
 
 - **Estado**: completo / jugable / parcial / temprano / no jugable
@@ -26,10 +29,12 @@ data/ignore.json       ← repos que el radar no debe volver a proponer
 `scripts/update.mjs` corre en GitHub Actions **cada 6 horas** (`.github/workflows/site.yml`):
 
 1. **Refresca** cada repo del catálogo con la API de GitHub. Si un repo desaparece, lo marca como eliminado y conserva los últimos datos.
-2. **Radar**: hace ~16 búsquedas en GitHub (`"pc port" ps4`, `CUSA vulkan port`, `bbport`, `gow3_pc`, `SacredFire`, topics `pc-port`+`ps4`…)
+2. **Radar**: hace ~30 búsquedas en GitHub (`"pc port" ps4`, `CUSA vulkan port`, `bbport`, `ps2recomp`, `ps3recomp`, `rexglue`, `xenonrecomp`, `"xbox 360" recomp`…)
    y revisa los forks nuevos de los proyectos base (bbport, SpartanPort…). A cada repo le lee el README y lo clasifica (`scripts/lib.mjs`):
    - suma puntos por: PS4/CUSA, "native", "PC port", "bring your own dump", runtimes conocidos, Vulkan…
    - descarta: **spam/piratería** (torrent, t.me, repack…), **homebrew hacia PS4** (GoldHEN, OpenOrbis), **herramientas** (launchers, wikis, traducciones) y otras consolas.
+   - detecta la **consola de origen** (PS4, PS2, PS3 o Xbox 360) por nombre, descripción, códigos de producto (CUSA, SLUS/SCES, BLUS/NPUB, xex) y herramientas base.
+   - descarta también ports a celulares u otras consolas (Switch, PS5, Vita) y forks de emuladores (PCSX2, RPCS3, Xenia).
    - extrae CUSA, plataformas, cifras de FPS y una pista de estado ("playable", "start to finish"…), y adivina el juego.
 3. Cuando aparecen candidatos nuevos **abre un issue** "Radar: N ports nuevos" para revisarlos. Confirmar uno = moverlo a `catalog.json`.
 4. Lee los issues con label `reporte` (formulario `.github/ISSUE_TEMPLATE/reporte.yml`) y los muestra en la ficha del port.
@@ -73,6 +78,7 @@ Editar `data/catalog.json`. Campos de cada port:
 
 | campo | valores |
 |---|---|
+| `platform` (del juego) | `ps4`, `ps2`, `ps3`, `x360` |
 | `type` | `native` (x86-64 original + runtime), `recomp` (recompilación estática), `decomp`, `reimpl` (motor reescrito), `wrapper` (fork de emulador) |
 | `status` | `complete`, `playable`, `partial`, `early`, `research` |
 | `platforms` | `windows`, `linux`, `macos` |

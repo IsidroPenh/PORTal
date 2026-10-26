@@ -18,6 +18,22 @@ export const SEARCH_QUERIES = [
   'topic:pc-port topic:ps4',
   'topic:native-port topic:ps4',
   'ps4 recomp in:name,description',
+  // PS2
+  'ps2recomp in:name,description,readme',
+  'ps2 "static recompilation" in:name,description,readme',
+  'ps2 "pc port" in:name,description',
+  'ps2 "native port" in:name,description',
+  // PS3
+  'ps3recomp in:name,description,readme',
+  'ps3 "static recompilation" in:name,description,readme',
+  'ps3 "pc port" in:name,description',
+  // Xbox 360
+  'rexglue in:name,description,readme',
+  'xenonrecomp in:name,description,readme',
+  '"xbox 360" recomp in:name,description',
+  '"xbox 360" "pc port" in:name,description',
+  '"xbox 360" "native" port in:description',
+  'topic:static-recompilation',
 ];
 
 // Repos base: sus forks nuevos suelen ser ports de otros juegos.
@@ -34,18 +50,37 @@ const TO_PS4 = /goldhen|native ps4 port|ps4 port of|openorbis|jailbroken ps4|jai
 const TOOL = /\blauncher\b|\bwiki\b|translation(?! layer)|tradu[cç]|localization|mod ?pack|\bmods?\b for|patch for|ultrawide patch|death counter|trainer|cheats?\b|roadmap|cat[aá]log|radar|tracker|directory|research commons|\blist of\b|open list|recompiled[- ]games[- ]list|rich presence|\ba (shadps4 )?mod\b|5\.1 sound|corre[cç][aã]o/i;
 // Ports a móviles: no son PC.
 const MOBILE = /\bandroid\b|\bios\b|iphone|\bipad\b/i;
-const OTHER_CONSOLE = /\b(ps5|ps3|psp|vita|xbox ?360|xbox|switch|wii ?u?|gamecube|n64|nes|snes|dreamcast|saturn|ps2|ps1|psx)\b/i;
+// Consolas de origen que cubre el sitio. El orden importa: gana la primera que aparece en nombre/descripción.
+export const CONSOLES = [
+  ['ps4', /\bps4\b|playstation ?4|\borbis\b|\bcusa\d{5}\b|shadps4|bbport/i],
+  ['x360', /xbox ?360|\bx360\b|xenonrecomp|xenosrecomp|rexglue|\bxex\b|\bxbla\b|xbox live arcade/i],
+  ['ps3', /\bps3\b|playstation ?3|ps3recomp|\b(bl|bc|np)(us|es|jm|as|ua|ub|eb|jb)[-_ ]?\d{5}\b/i],
+  ['ps2', /\bps2\b|playstation ?2|ps2recomp|\b(slus|scus|sles|sces|slps|scps|slpm)[-_ ]?\d{3}\.?\d{2}\b/i],
+];
+// Otras consolas (fuera del alcance del sitio). "xbox" solo, sin 360/One/Series, es la Xbox original.
+const OTHER_CONSOLE = /\b(ps5|psp|vita|switch|wii ?u?|gamecube|n64|nes|snes|dreamcast|saturn|ps1|psx|3ds|nds|gba)\b|\bxbox\b(?! ?(360|one|series|live arcade))/i;
+// Ports que apuntan a otra consola o a celulares, aunque el juego de origen sea uno de los nuestros.
+const OTHER_TARGET = /\b(on|to|for|para|in) (the |a )?(nintendo )?switch\b|-nx\b|\b(on|to|for) (a )?(jailbroken )?ps5\b|ps ?vita|\bon (the )?wii ?u\b/i;
+const PC_WORDS = /\b(pc|windows|linux|mac ?os|steam ?deck|desktop|x64|x86-64|apple silicon)\b/i;
+// Emuladores: sus forks no son ports nativos (salvo los de PS4, que el sitio lista como "fork de emulador").
+const EMULATOR = /\b(pcsx2|rpcs3|xenia|aethersx2|nethersx2)\b/i;
+
+export function detectConsole(head = '', readme = '') {
+  for (const [id, re] of CONSOLES) if (re.test(head)) return id;
+  for (const [id, re] of CONSOLES) if (re.test(readme)) return id;
+  return null;
+}
 
 const POSITIVE = [
-  [/\bps4\b|playstation ?4|\borbis\b/i, 2],
+  [/\bps[234]\b|playstation ?[234]|\borbis\b|xbox ?360|\bxbla\b/i, 2],
   [/\bnative(ly)?\b|\bnativo\b/i, 2],
   [/pc[- ]port|port (nativo )?(para|for) (pc|windows|linux)|windows port|linux port|runs? natively|running natively|on windows|on linux/i, 3],
-  [/\bCUSA\d{5}\b/i, 3],
-  [/bbport|bloodborne_pc|gow3_pc|spartanport|sacredfire|ps4rt|\bryty\b|shadgt|video core/i, 2],
+  [/\bCUSA\d{5}\b|\b(slus|scus|sles|sces|slps|scps)[-_ ]?\d{3}\.?\d{2}\b|\b(bl|bc|np)(us|es|jm|ua|ub|eb)[-_ ]?\d{5}\b|\bxex\b/i, 3],
+  [/bbport|bloodborne_pc|gow3_pc|spartanport|sacredfire|ps4rt|\bryty\b|shadgt|video core|ps2recomp|ps3recomp|xenonrecomp|rexglue/i, 2],
   [/bring your own|your own (game |legally obtained )?dump|own dump|no game files|sin archivos del juego|seu pr[oó]prio dump|tu propio dump/i, 2],
   [/\bvulkan\b/i, 1],
   [/recomp|static recompil|decomp/i, 1],
-  [/\beboot\.bin\b|param\.sfo|sce_sys/i, 1],
+  [/\beboot\.(bin|elf)\b|param\.sfo|sce_sys|default\.xex/i, 1],
 ];
 
 export function extractCusa(text = '') {
@@ -84,12 +119,14 @@ export function extractStatus(text = '') {
   return 'unknown';
 }
 
-// Devuelve { kind, score, reasons } donde kind ∈ port | to-ps4 | tool | spam | other-console | weak
+// Devuelve { kind, score, reasons, console } donde kind ∈ port | to-ps4 | tool | spam | mobile | other-console | weak
+// y console ∈ ps4 | ps2 | ps3 | x360 | null (consola de origen del juego).
 export function classify({ name = '', description = '', topics = [], readme = '' }) {
   const head = `${name} ${description} ${topics.join(' ')}`;
   const all = `${head}\n${readme.slice(0, 20000)}`;
   const reasons = [];
-  if (SPAM.test(head)) return { kind: 'spam', score: -100, reasons: ['palabras de piratería/spam'] };
+  if (SPAM.test(head)) return { kind: 'spam', score: -100, reasons: ['palabras de piratería/spam'], console: null };
+  const consoleId = detectConsole(head, readme.slice(0, 20000));
 
   let score = 0;
   for (const [re, w] of POSITIVE) {
@@ -97,19 +134,23 @@ export function classify({ name = '', description = '', topics = [], readme = ''
     else if (re.test(all)) { score += Math.ceil(w / 2); reasons.push(`+${Math.ceil(w / 2)} (readme) ${re.source.slice(0, 24)}`); }
   }
 
-  const mentionsPc = /\b(pc|windows|linux|mac ?os)\b/i.test(head);
+  const out = (kind, delta, why) => ({ kind, score: score + delta, reasons: why ? [...reasons, why] : reasons, console: consoleId });
+  const mentionsPc = PC_WORDS.test(head);
   if (TO_PS4.test(head) && !/\bto (pc|windows|linux)|para (pc|windows|linux)|\bon (windows|linux)\b/i.test(head)) {
-    return { kind: 'to-ps4', score: score - 10, reasons: [...reasons, 'port hacia PS4 (homebrew)'] };
+    return out('to-ps4', -10, 'port hacia PS4 (homebrew)');
   }
-  if (MOBILE.test(head)) return { kind: 'mobile', score: score - 6, reasons: [...reasons, 'port a móvil'] };
-  if (TOOL.test(head)) return { kind: 'tool', score: score - 4, reasons: [...reasons, 'herramienta/mod/launcher'] };
+  if ((MOBILE.test(head) || OTHER_TARGET.test(head)) && !mentionsPc) return out('mobile', -6, 'port a móvil u otra consola');
+  if (TOOL.test(head)) return out('tool', -4, 'herramienta/mod/launcher');
+  if (EMULATOR.test(head) && consoleId !== 'ps4' && !/recomp|native port|port nativo/i.test(head)) return out('tool', -4, 'emulador');
 
   const other = head.match(OTHER_CONSOLE);
-  if (other && !/\bps4\b|playstation ?4/i.test(head)) {
-    return { kind: 'other-console', score: score - 6, reasons: [...reasons, `otra consola (${other[0]})`] };
+  if (!consoleId && other) return out('other-console', -6, `otra consola (${other[0]})`);
+  if (consoleId && other && !CONSOLES.find(([id]) => id === consoleId)[1].test(head)) {
+    // La consola nuestra salió solo del README y el nombre/descripción habla de otra.
+    return out('other-console', -6, `otra consola (${other[0]})`);
   }
   if (!mentionsPc && !/natively|nativo|native/i.test(head)) score -= 2;
-  return { kind: score >= 7 ? 'port' : 'weak', score, reasons };
+  return out(score >= 7 ? 'port' : 'weak', 0);
 }
 
 // Agrupa copias: repos con la misma descripción que un port del catálogo se descartan

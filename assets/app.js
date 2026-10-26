@@ -16,11 +16,20 @@ const TYPES = {
   wrapper: 'Fork de emulador',
 };
 const PLATFORMS = { windows: 'Windows', linux: 'Linux', macos: 'macOS' };
+// Consola de origen de cada juego y categorías del selector.
+const CONSOLES = { ps4: 'PS4', ps2: 'PS2', ps3: 'PS3', x360: 'Xbox 360' };
+const CATS = {
+  ps4: { label: 'PS4', consoles: ['ps4'] },
+  ps2: { label: 'PS2', consoles: ['ps2'] },
+  ps3x360: { label: 'PS3 / Xbox 360', consoles: ['ps3', 'x360'] },
+  all: { label: 'Todas', consoles: ['ps4', 'ps2', 'ps3', 'x360'] },
+};
 
 const state = {
   q: '', sort: 'status',
   status: new Set(), platform: new Set(), type: new Set(),
   favOnly: false, updFav: false, updAll: false,
+  cat: 'ps4', console: new Set(),
   data: null,
 };
 
@@ -30,6 +39,9 @@ const store = {
   set(k, v) { try { localStorage.setItem(`portal:${k}`, JSON.stringify(v)); } catch { /* sin almacenamiento */ } },
 };
 const favs = new Set(store.get('favs', []));
+state.cat = CATS[store.get('cat', 'ps4')] ? store.get('cat', 'ps4') : 'ps4';
+const inCat = platform => CATS[state.cat].consoles.includes(platform || 'ps4');
+const consoleTag = platform => `<span class="console c-${esc(platform)}">${CONSOLES[platform] || esc(platform)}</span>`;
 const isFav = repo => favs.has(repo);
 const UPD_TAGS = { fps: '⚡ +FPS', rendimiento: '⚡ Rendimiento', funciones: '✨ Funciones', milestone: '🏁 Hito', arreglos: '🛠 Arreglos', eliminado: '⚠ Eliminado' };
 const starBtn = (repo, label = true) =>
@@ -123,6 +135,11 @@ function buildFilters() {
   for (const [k, s] of Object.entries(STATUS)) if (k !== 'unknown') $('#f-status').append(chip('status', k, s.label, s.color));
   for (const [k, l] of Object.entries(PLATFORMS)) $('#f-platform').append(chip('platform', k, l));
   for (const [k, l] of Object.entries(TYPES)) $('#f-type').append(chip('type', k, l));
+  for (const [k, l] of Object.entries(CONSOLES)) {
+    const c = chip('console', k, l);
+    c.dataset.console = k;
+    $('#f-console').append(c);
+  }
   const fav = document.createElement('button');
   fav.className = 'chip';
   fav.type = 'button';
@@ -147,6 +164,7 @@ function portMatches(p) {
 
 function renderGrid() {
   const games = state.data.games
+    .filter(g => inCat(g.platform) && (!state.console.size || state.console.has(g.platform)))
     .filter(g => !state.q || g.haystack.includes(state.q))
     .filter(g => g.ports.some(portMatches))
     .filter(g => !state.favOnly || g.ports.some(p => isFav(p.repo)));
@@ -176,7 +194,7 @@ function cardHtml(g) {
   const more = ports.length > 3 ? `<span class="muted">+${ports.length - 3} más</span>` : '';
   return `<button class="card" style="--status-color:${color}" data-game="${esc(g.id)}">
     <div><h3>${g.ports.some(p => isFav(p.repo)) ? '<span class="fav-mark" title="Tenés ports favoritos en este juego">★</span> ' : ''}${esc(g.title)}</h3><div class="sub">${esc(g.developer)} · ${g.year}</div></div>
-    <div class="row" style="justify-content:flex-start">${badge(top.status)}<span class="muted" style="font-size:.8rem">${g.ports.length} port${g.ports.length === 1 ? '' : 's'}</span></div>
+    <div class="row" style="justify-content:flex-start">${CATS[state.cat].consoles.length > 1 ? consoleTag(g.platform) : ''}${badge(top.status)}<span class="muted" style="font-size:.8rem">${g.ports.length} port${g.ports.length === 1 ? '' : 's'}</span></div>
     <p class="summary">${esc(top.summary)}</p>
     <div class="portlist">${list}${more}</div>
     <div class="row">
@@ -203,7 +221,7 @@ function openGame(id, push = true) {
     <div class="dlg-head">
       <div>
         <h2 id="dlg-title">${esc(g.title)}</h2>
-        <div class="muted">${esc(g.developer)} · ${g.year}${g.cusa?.length ? ` · ${g.cusa.map(esc).join(', ')}` : ''}</div>
+        <div class="muted">${consoleTag(g.platform)} ${esc(g.developer)} · ${g.year}${g.cusa?.length ? ` · ${g.cusa.map(esc).join(', ')}` : ''}</div>
       </div>
       <button class="close" aria-label="Cerrar">✕</button>
     </div>
@@ -307,7 +325,9 @@ function updateChip(key, label) {
 function renderUpdates() {
   const since = store.get('seen', null);
   $('#upd-filters').innerHTML = updateChip('updFav', '<span class="fav-mark">★</span> Solo favoritos') + updateChip('updAll', 'Incluir menores');
+  const platformOf = id => state.data.games.find(g => g.id === id)?.platform;
   const items = state.data.updates
+    .filter(e => inCat(platformOf(e.game)))
     .filter(e => state.updAll || e.level === 'big')
     .filter(e => !state.updFav || isFav(e.repo))
     .slice(0, 60);
@@ -371,7 +391,7 @@ function notifyBrowser() {
 
 // ---------- novedades ----------
 function renderNews() {
-  const ports = state.data.games.flatMap(g => g.ports.map(p => ({ g, p })));
+  const ports = state.data.games.filter(g => inCat(g.platform)).flatMap(g => g.ports.map(p => ({ g, p })));
   const created = ports.filter(x => x.p.gh.createdAt).sort((a, b) => b.p.gh.createdAt.localeCompare(a.p.gh.createdAt)).slice(0, 25);
   $('#new-ports').innerHTML = created.map(({ g, p }) => `<li><time>${fmtDate(p.gh.createdAt)}</time><div>
       <button class="linklike" data-game="${esc(g.id)}">${esc(g.title)}</button> ${badge(p.status)}
@@ -385,14 +405,15 @@ function renderNews() {
 
 // ---------- radar ----------
 function renderRadar() {
-  const items = state.data.candidates.items || [];
+  // Los candidatos sin consola detectada solo se muestran en "Todas".
+  const items = (state.data.candidates.items || []).filter(c => c.platform ? inCat(c.platform) : state.cat === 'all');
   $('#radar-count').textContent = items.length || '';
   $('#radar-line').textContent = `${items.length} candidato${items.length === 1 ? '' : 's'} · actualizado ${ago(state.data.candidates.generatedAt)}`;
   const gameTitle = id => state.data.games.find(g => g.id === id)?.title;
   $('#radar').innerHTML = items.length ? items.map(c => {
     const gt = c.game && gameTitle(c.game);
     return `<article class="card cand" style="--status-color:${c.kind === 'port' ? 'var(--accent)' : 'var(--line)'}">
-      <div class="row"><h3><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.repo)}</a></h3>
+      <div class="row"><h3>${c.platform && CATS[state.cat].consoles.length > 1 ? consoleTag(c.platform) + ' ' : ''}<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.repo)}</a></h3>
         <span class="score" title="${esc((c.reasons || []).join('\n'))}">puntaje ${c.score}</span></div>
       <p class="summary">${esc(c.description || 'Sin descripción')}</p>
       <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap">
@@ -412,14 +433,14 @@ function renderRadar() {
 
 // ---------- cómo funciona ----------
 function renderAbout(catalog) {
-  $('#bases').innerHTML = (catalog.bases || []).map(b => `<li><strong>${b.repo ? `<a href="${ghUrl(b.repo)}" target="_blank" rel="noopener">${esc(b.name)}</a>` : esc(b.name)}</strong> — <span class="muted">${esc(b.role)}</span></li>`).join('');
+  $('#bases').innerHTML = (catalog.bases || []).map(b => `<li>${consoleTag(b.platform || 'ps4')} <strong>${b.repo ? `<a href="${ghUrl(b.repo)}" target="_blank" rel="noopener">${esc(b.name)}</a>` : esc(b.name)}</strong> — <span class="muted">${esc(b.role)}</span></li>`).join('');
   $('#legend').innerHTML = Object.entries(STATUS).filter(([k]) => k !== 'unknown').map(([, s]) => `<dt>${badge(Object.keys(STATUS).find(k => STATUS[k] === s))}</dt><dd>${esc(s.desc)}</dd>`).join('');
   $('#btn-new-port').href = issueUrl('nuevo-port.yml');
   $('#btn-report').href = issueUrl('reporte.yml');
 }
 
-function renderStats(meta) {
-  const games = state.data.games;
+function renderStats(meta = state.data.metaDate) {
+  const games = state.data.games.filter(g => inCat(g.platform));
   const ports = games.flatMap(g => g.ports);
   const playable = games.filter(g => STATUS[g.bestStatus].rank >= STATUS.playable.rank).length;
   $('#stats').innerHTML = `<span class="stat"><b>${games.length}</b> juegos</span>
@@ -427,6 +448,31 @@ function renderStats(meta) {
     <span class="stat"><b>${playable}</b> jugables</span>
     <span class="stat">act. <b>${ago(meta)}</b></span>`;
   $('#updated').textContent = `Métricas de GitHub actualizadas ${ago(meta)} (${fmtDate(meta)}).`;
+}
+
+// ---------- categorías ----------
+function renderCats() {
+  $('#cats').innerHTML = Object.entries(CATS).map(([k, c]) => {
+    const n = state.data.games.filter(g => c.consoles.includes(g.platform)).length;
+    return `<button type="button" class="cat" data-cat="${k}" aria-pressed="${state.cat === k}">${c.label} <span>${n}</span></button>`;
+  }).join('');
+  // El subfiltro de consola solo tiene sentido cuando la categoría mezcla varias.
+  const multi = CATS[state.cat].consoles;
+  document.querySelectorAll('#f-console [data-console]').forEach(b => { b.hidden = multi.length < 2 || !multi.includes(b.dataset.console); });
+  $('#f-console').hidden = multi.length < 2;
+}
+
+function setCat(cat) {
+  state.cat = cat;
+  store.set('cat', cat);
+  state.console.clear();
+  document.querySelectorAll('#f-console .chip').forEach(b => b.setAttribute('aria-pressed', 'false'));
+  renderCats();
+  renderStats();
+  renderGrid();
+  renderNews();
+  renderUpdates();
+  renderRadar();
 }
 
 // ---------- navegación ----------
@@ -459,8 +505,9 @@ async function init() {
     load('updates.json', { items: [] }),
     load('follows.json', { items: {}, global: null }),
   ]);
-  state.data = { games: enrich(catalog, github, reports), candidates, updates: updates.items || [], follows };
+  state.data = { games: enrich(catalog, github, reports), candidates, updates: updates.items || [], follows, metaDate: github.generatedAt };
   buildFilters();
+  renderCats();
   renderStats(github.generatedAt);
   renderGrid();
   renderNews();
@@ -474,6 +521,8 @@ async function init() {
   document.addEventListener('click', e => {
     const star = e.target.closest('[data-fav]');
     if (star) { e.preventDefault(); e.stopPropagation(); toggleFav(star.dataset.fav); return; }
+    const cat = e.target.closest('[data-cat]');
+    if (cat) { setCat(cat.dataset.cat); return; }
     const upd = e.target.closest('[data-upd]');
     if (upd) { state[upd.dataset.upd] = !state[upd.dataset.upd]; renderUpdates(); return; }
     const el = e.target.closest('[data-game]');
