@@ -177,6 +177,8 @@ async function discover(catalog, prevCandidates, ignore, repoMeta) {
   const known = new Set(catalog.games.flatMap(g => g.ports.map(p => p.repo.toLowerCase())));
   for (const r of ignore.repos || []) known.add(r.toLowerCase());
   known.add(SELF.toLowerCase());
+  // Las herramientas base (PS2Recomp, ps3recomp, ReXGlue…) se muestran en "Cómo funciona", no en el radar.
+  for (const b of catalog.bases || []) if (b.repo) known.add(b.repo.toLowerCase());
   const since = new Date(Date.now() - DISCOVERY_DAYS * 864e5).toISOString().slice(0, 10);
   const seen = new Map();
 
