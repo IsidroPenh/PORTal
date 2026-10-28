@@ -1,6 +1,157 @@
 {
-  "generatedAt": "2026-10-28T05:41:12.943Z",
+  "generatedAt": "2026-10-28T12:53:51.789Z",
   "items": [
+    {
+      "id": "PromethenDev/wwe2k14-recomp:release:v1.4.1",
+      "repo": "PromethenDev/wwe2k14-recomp",
+      "game": "wwe-2k14",
+      "gameTitle": "WWE 2K14",
+      "port": "WWE 2K14 Recomp",
+      "date": "2026-10-28T12:10:36Z",
+      "type": "release",
+      "tag": "v1.4.1",
+      "level": "normal",
+      "title": "WWE 2K14 Recomp v1.4.1",
+      "highlights": [
+        "WWE 2K14 Recomp v1.4.1"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/PromethenDev/wwe2k14-recomp/releases/tag/v1.4.1"
+    },
+    {
+      "id": "Masterllgod/naruto-storm-3-full-burst-port-nativo:release:v0.5.0",
+      "repo": "Masterllgod/naruto-storm-3-full-burst-port-nativo",
+      "game": "naruto-storm-3-fb",
+      "gameTitle": "Naruto Shippuden: Ultimate Ninja Storm 3 Full Burst",
+      "port": "Storm 3 Full Burst Port Nativo",
+      "date": "2026-10-28T11:22:41Z",
+      "type": "release",
+      "tag": "v0.5.0",
+      "level": "big",
+      "title": "Storm 3 Full Burst Port Nativo v0.5.0",
+      "highlights": [
+        "p muito mais leve: no POCO F3 a luta foi de 18 para 30 FPS (GPU de 55 para ~33 ms por quadro).",
+        "Nova resolução 900p (1600x900 por dentro): quase a nitidez do 1080p com bem menos peso. Num POCO F3 a luta roda a 30 FPS com folga na GPU."
+      ],
+      "tags": [
+        "fps",
+        "funciones"
+      ],
+      "features": [],
+      "url": "https://github.com/Masterllgod/naruto-storm-3-full-burst-port-nativo/releases/tag/v0.5.0"
+    },
+    {
+      "id": "daino-selvatico/rac1-native-game:release:v0.6.0",
+      "repo": "daino-selvatico/rac1-native-game",
+      "game": "ratchet-clank-ps2",
+      "gameTitle": "Ratchet & Clank (PS2)",
+      "port": "rac1-native-game",
+      "date": "2026-10-28T09:48:09Z",
+      "type": "release",
+      "tag": "v0.6.0",
+      "level": "big",
+      "title": "rac1-native-game v0.6.0",
+      "highlights": [
+        "rac1-native 0.6.0: the renderer draws the whole game, the disc extracted, new lighting, materials and ambient particles",
+        "Faster: a game frame about a fifth cheaper on the CPU (the game's update on a thread of its own), and less GPU time for the sun's shadows…",
+        "The renderer draws the whole game: the HUD, text, menus and fades are drawn natively with OpenGL or Vulkan, the same pictures as before, …",
+        "The whole disc extracted: the setup cuts the disc into its files under `assets/disc/`, each one checked against the image, and the game r…"
+      ],
+      "tags": [
+        "milestone",
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/RAC-Native/rac1-native-game/releases/tag/v0.6.0"
+    },
+    {
+      "id": "guzuold/CTRNativePorted:release:v0.9.1-u2",
+      "repo": "guzuold/CTRNativePorted",
+      "game": "ctr-nitro-fueled",
+      "gameTitle": "Crash Team Racing Nitro-Fueled",
+      "port": "CTRNativePorted",
+      "date": "2026-10-28T09:42:14Z",
+      "type": "release",
+      "tag": "v0.9.1-u2",
+      "level": "normal",
+      "title": "CTRNativePorted v0.9.1-u2",
+      "highlights": [
+        "CTRNativePorted v0.9.1"
+      ],
+      "tags": [],
+      "features": [],
+      "url": "https://github.com/guzuold/CTRNativePorted/releases/tag/v0.9.1-u2"
+    },
+    {
+      "id": "BigDaddyJRich/hctp-recomp:release:v0.3.4",
+      "repo": "BigDaddyJRich/hctp-recomp",
+      "game": "wwe-hctp",
+      "gameTitle": "WWE SmackDown! Here Comes the Pain",
+      "port": "hctp-recomp",
+      "date": "2026-10-28T08:39:47Z",
+      "type": "release",
+      "tag": "v0.3.4",
+      "level": "big",
+      "title": "hctp-recomp v0.3.4: primera release",
+      "highlights": [
+        "HCTP Recompiled 0.3.4"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/BigDaddyJRich/hctp-recomp/releases/tag/v0.3.4"
+    },
+    {
+      "id": "AbdelmoumenDeghbouche/wipeout_pc:release:windows-v0.2.42",
+      "repo": "AbdelmoumenDeghbouche/wipeout_pc",
+      "game": "wipeout-omega",
+      "gameTitle": "WipEout Omega Collection",
+      "port": "wipeout_pc",
+      "date": "2026-10-28T08:34:31Z",
+      "type": "release",
+      "tag": "windows-v0.2.42",
+      "level": "big",
+      "title": "wipeout_pc windows-v0.2.42",
+      "highlights": [
+        "Performance",
+        "Less video memory after a race (#16, #72). After a 2048 race, the big race textures left holes in shared memory blocks that the menu stil…",
+        "On a 4 GB card, also choose Graphics → Render resolution → 720p."
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/AbdelmoumenDeghbouche/wipeout_pc/releases/tag/windows-v0.2.42"
+    },
+    {
+      "id": "danielgomesvieira2000/burnout3-pc:release:v0.7.2-alpha",
+      "repo": "danielgomesvieira2000/burnout3-pc",
+      "game": "burnout-3",
+      "gameTitle": "Burnout 3: Takedown",
+      "port": "burnout3-pc",
+      "date": "2026-10-28T05:52:33Z",
+      "type": "release",
+      "tag": "v0.7.2-alpha",
+      "level": "normal",
+      "title": "burnout3-pc v0.7.2-alpha",
+      "highlights": [
+        "Smoother, lower latency, lower power"
+      ],
+      "tags": [
+        "rendimiento",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/danielgomesvieira2000/burnout3-pc/releases/tag/v0.7.2-alpha"
+    },
     {
       "id": "bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port:release:v0.7.1",
       "repo": "bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port",
