@@ -4,7 +4,42 @@
   <link href="https://isidropenh.github.io/PORTal/"/>
   <link rel="self" href="https://isidropenh.github.io/PORTal/data/feed.xml"/>
   <id>https://isidropenh.github.io/PORTal/</id>
-  <updated>2026-10-28T22:20:44Z</updated>
+  <updated>2026-10-29T01:36:03Z</updated>
+  <entry>
+    <title>Eternal Sonata Reprise v1.3.7</title>
+    <link href="https://github.com/birabittoh/EternalSonataReprise/releases/tag/v1.3.7"/>
+    <id>https://isidropenh.github.io/PORTal/#birabittoh/EternalSonataReprise:release:v1.3.7</id>
+    <updated>2026-10-29T01:36:03Z</updated>
+    <summary>Eternal Sonata · The game will now show a brief overview of the battleground before each battle with PS3 assets. · You can disable this in the game&apos;s settings.</summary>
+  </entry>
+  <entry>
+    <title>lego-dimensions-pc v1.8.3</title>
+    <link href="https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v1.8.3"/>
+    <id>https://isidropenh.github.io/PORTal/#vascon-es/lego-dimensions-pc:release:v1.8.3</id>
+    <updated>2026-10-29T01:35:59Z</updated>
+    <summary>LEGO Dimensions · This major release introduces the In-Game Video Settings Menu, Vulkan pipeline cache and prewarming to eliminate stutter during area tran… · In-Game Video Settings Menu (`F2` / `L3 + R3`): · Access graphic options directly in-game by pressing `F2` on the keyboard or clicking `L3 + R3` (both sticks) on the controller.</summary>
+  </entry>
+  <entry>
+    <title>Order1886-PC v0.2.2</title>
+    <link href="https://github.com/lxnis/Order1886-PC/releases/tag/v0.2.2"/>
+    <id>https://isidropenh.github.io/PORTal/#lxnis/Order1886-PC:release:v0.2.2</id>
+    <updated>2026-10-29T01:29:30Z</updated>
+    <summary>The Order: 1886 · Stutter the first time a scene&apos;s shaders are seen (cached for the next session). · No more black screen right after the window opens on some PCs. The game checks its add-ons · (DLC) under a second service label there; the port stopped on it (log: `STOP: nonzero AppContent</summary>
+  </entry>
+  <entry>
+    <title>bbport 0.7</title>
+    <link href="https://github.com/deadinside28/bloodborne_pc/releases/tag/0.7"/>
+    <id>https://isidropenh.github.io/PORTal/#deadinside28/bloodborne_pc:release:0.7</id>
+    <updated>2026-10-28T23:58:29Z</updated>
+    <summary>Bloodborne · Windows: one system call per draw removed (`std::jthread::joinable` → flag): +3 %. · GT-VBAO in place of the game&apos;s SSAO (no dark halos around thin objects, ~7 % FPS; port by · Windows: убран один системный вызов на каждую отрисовку (`std::jthread::joinable` → флаг): +3 %. · GT-VBAO вместо SSAO игры (без тёмных ореолов вокруг тонких предметов, ~7 % FPS; порт от · Anti-aliasing menu (launcher, game menu, overlay): *auto* (the game&apos;s AA only without an</summary>
+  </entry>
+  <entry>
+    <title>Bloodborne para Windows (SuperMedo) windows-v1.9.5</title>
+    <link href="https://github.com/Supermedo/bloodborne_pc/releases/tag/windows-v1.9.5"/>
+    <id>https://isidropenh.github.io/PORTal/#Supermedo/bloodborne_pc:release:windows-v1.9.5</id>
+    <updated>2026-10-28T22:45:47Z</updated>
+    <summary>Bloodborne · Installing: unpack it into a new, empty folder, or over 1.9.4 or a 1.9.5 beta. Your first start rebuilds the shader cache once, so it tak… · New options under All graphics → Frame rate, all off by default: · New shaders while playing, in the background: a new area doesn&apos;t stutter while its shaders compile.</summary>
+  </entry>
   <entry>
     <title>NFSMW Recompiled v1.0.2</title>
     <link href="https://github.com/madelrandel-blip/NFSMW-Recompiled/releases/tag/v1.0.2"/>
@@ -319,40 +354,5 @@
     <id>https://isidropenh.github.io/PORTal/#bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port:release:v0.7.0</id>
     <updated>2026-10-26T08:30:17Z</updated>
     <summary>Uncharted: The Nathan Drake Collection · Advanced -&gt; Uncharted 3 exposure: an optional setting to make Uncharted 3 darker if you still · find it too bright (-0.3, -0.6 or -1.0; &quot;Game&apos;s&quot; = unchanged). Based on pavlikdcx&apos;s patch (#199).</summary>
-  </entry>
-  <entry>
-    <title>Killzone Shadow Fall for PC v0.6.0</title>
-    <link href="https://github.com/lesca-191204/killzone-shadowfall-pc/releases/tag/v0.6.0"/>
-    <id>https://isidropenh.github.io/PORTal/#lesca-191204/killzone-shadowfall-pc:release:v0.6.0</id>
-    <updated>2026-10-25T22:16:55Z</updated>
-    <summary>Killzone Shadow Fall · | 🏔️ | Detail distance (LOD): less pop-in, or more FPS | · | 50% – 75% | Detail drops sooner: more FPS (up to +15-20 FPS in some areas on our PC) | · | 🏔️ | Distancia de detalle (LOD): menos aparición repentina de detalle, o más FPS | · | 50% – 75% | El detalle baja antes: más FPS (hasta +15-20 FPS en algunas zonas en nuestra PC) | · Launcher → Controls → Keyboard and mouse → In-game button icons · or Insert → Controls → Button prompts*</summary>
-  </entry>
-  <entry>
-    <title>theorder1886-port windows-v0.7.8</title>
-    <link href="https://github.com/mateussmeneses/theorder1886-port/releases/tag/windows-v0.7.8"/>
-    <id>https://isidropenh.github.io/PORTal/#mateussmeneses/theorder1886-port:release:windows-v0.7.8</id>
-    <updated>2026-10-25T21:58:39Z</updated>
-    <summary>The Order: 1886 · stutters and dialogue subtitles are not declared fixed. · scroll when mouse/controller prompts change. The right stick scrolls long · pages; the left stick supports navigation. Mouse-wheel position and inverted</summary>
-  </entry>
-  <entry>
-    <title>DriveClub Recomp v0.3.2</title>
-    <link href="https://github.com/OverkillLabs3/driveclub-recomp/releases/tag/v0.3.2"/>
-    <id>https://isidropenh.github.io/PORTal/#OverkillLabs3/driveclub-recomp:release:v0.3.2</id>
-    <updated>2026-10-25T21:08:53Z</updated>
-    <summary>Driveclub · Faster · New: high-FPS camera and replay workaround (#187), on by default, switch in Patches. Contributed by @HeyOkay. · New: Slow and Fast motion blur exposure (#216) and seamless native cube-map filtering for wet-road reflections (#213). Contributed by @He…</summary>
-  </entry>
-  <entry>
-    <title>RyGT: el repositorio ya no está disponible</title>
-    <link href="https://github.com/mlgprorektm8/RyGT"/>
-    <id>https://isidropenh.github.io/PORTal/#mlgprorektm8/RyGT:removed:2026-10-25</id>
-    <updated>2026-10-25T20:48:55.137Z</updated>
-    <summary>Gran Turismo Sport · Puede haber sido borrado, hecho privado o bajado por DMCA.</summary>
-  </entry>
-  <entry>
-    <title>bloodborne_linux 0.51-linux.17</title>
-    <link href="https://github.com/ayozetr/bloodborne_linux/releases/tag/0.51-linux.17"/>
-    <id>https://isidropenh.github.io/PORTal/#ayozetr/bloodborne_linux:release:0.51-linux.17</id>
-    <updated>2026-10-25T15:42:26Z</updated>
-    <summary>Bloodborne · Local co-op runs a whole game per player: on a mid-range GPU at 1440p, two players get about 30 to 40 FPS each. It has been tested with t… · Steam overlay (*Setup → Game*, under *Add to Steam*, off by default): Shift+Tab, Steam&apos;s FPS counter and F12 screenshots when the game is…</summary>
   </entry>
 </feed>
