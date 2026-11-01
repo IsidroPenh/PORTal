@@ -4,7 +4,35 @@
   <link href="https://isidropenh.github.io/PORTal/"/>
   <link rel="self" href="https://isidropenh.github.io/PORTal/data/feed.xml"/>
   <id>https://isidropenh.github.io/PORTal/</id>
-  <updated>2026-10-31T21:21:52Z</updated>
+  <updated>2026-11-01T04:23:56Z</updated>
+  <entry>
+    <title>dod3-recomp v0.5.0-alpha</title>
+    <link href="https://github.com/soyjxck/dod3-recomp/releases/tag/v0.5.0-alpha"/>
+    <id>https://isidropenh.github.io/PORTal/#soyjxck/dod3-recomp:release:v0.5.0-alpha</id>
+    <updated>2026-11-01T04:23:56Z</updated>
+    <summary>Drakengard 3 · Linux-only settings in `dod3.ini`: `DOD3_TIMERSLACK_NS` (default 1: about 4% more fps and half the hitches on the Deck; 0 restores the ke… · New: HDR (Settings &gt; Picture Settings, or `RSX_HDR = 1`) · New: Picture Settings and Post-Processing Quality ([issue #12](https://github.com/soyjxck/dod3-recomp/issues/12))</summary>
+  </entry>
+  <entry>
+    <title>SpartanPort (antes gow3_pc) windows-v3.0.0</title>
+    <link href="https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v3.0.0"/>
+    <id>https://isidropenh.github.io/PORTal/#FelipePrado0/SpartanPort:release:windows-v3.0.0</id>
+    <updated>2026-11-01T02:26:44Z</updated>
+    <summary>God of War III Remastered · Release candidate validated in game by the maintainer on Windows 11 with an RX 6700 XT. This is a scoped manual check, not a full playthr… · First start: the shader cache is rebuilt once and each area can stutter the first time you enter it. · ![Launcher home](https://raw.githubusercontent.com/FelipePrado0/SpartanPort/main/docs/images/releases/3.0.0/launcher-home.jpg) · One program, no Python (#959). Before: `SpartanPort.exe` was a PyInstaller bundle with an `_internal/` folder, and Play ran `run.py`. Now…</summary>
+  </entry>
+  <entry>
+    <title>SpeedBreaker v0.2.1</title>
+    <link href="https://github.com/SpeedBreakerProject/speedbreaker/releases/tag/v0.2.1"/>
+    <id>https://isidropenh.github.io/PORTal/#SpeedBreakerProject/speedbreaker:release:v0.2.1</id>
+    <updated>2026-10-31T23:38:04Z</updated>
+    <summary>Need for Speed: Most Wanted (2005) · Mac frame pacing was measured on a MacBook Pro (M1 Pro) with its 120 Hz ProMotion screen, in · HDR output (Settings &gt; Display, off by default). On a Mac with an HDR display, on SteamOS and · the Steam Deck OLED with HDR on, and on Linux and Windows PCs whose system is in HDR, the sun,</summary>
+  </entry>
+  <entry>
+    <title>bloodborne_linux 0.51-linux.20</title>
+    <link href="https://github.com/ayozetr/bloodborne_linux/releases/tag/0.51-linux.20"/>
+    <id>https://isidropenh.github.io/PORTal/#ayozetr/bloodborne_linux:release:0.51-linux.20</id>
+    <updated>2026-10-31T22:51:27Z</updated>
+    <summary>Bloodborne · Local co-op runs a whole game per player: on a mid-range GPU at 1440p, two players get about 30 to 40 FPS each. It has been tested with t… · Cloth as on the PS4 at any frame rate: capes and dresses no longer float and flare out at 60 and 120 FPS, and a stutter above 30 FPS no l… · Plants sway with the frame&apos;s time: the Hunter&apos;s Dream&apos;s flowers and Hemwick&apos;s lavender no longer sway faster at high frame rates. From Su…</summary>
+  </entry>
   <entry>
     <title>Killzone Shadow Fall for PC v0.8.1</title>
     <link href="https://github.com/lesca-191204/killzone-shadowfall-pc/releases/tag/v0.8.1"/>
@@ -326,33 +354,5 @@
     <id>https://isidropenh.github.io/PORTal/#jorjbarbosa/naruto-rise-recomp:release:v0.4.0-beta</id>
     <updated>2026-10-29T14:01:10Z</updated>
     <summary>Naruto: Rise of a Ninja · Faster busy scenes. The recompiled game code keeps more processor registers local, and the native renderer records draws with less work. … · No launcher, no installer. Download `naruto-rise-recomp-win-amd64.zip`, extract it to a writable folder and run `narutorise.exe`. On firs… · Startup menu and in-game menu. The game opens on a menu with the game, settings and DLC (it can be turned off in Settings → Advanced). Wh…</summary>
-  </entry>
-  <entry>
-    <title>Uncharted NDC PC port (bc160201983) v0.7.2</title>
-    <link href="https://github.com/bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port/releases/tag/v0.7.2"/>
-    <id>https://isidropenh.github.io/PORTal/#bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port:release:v0.7.2</id>
-    <updated>2026-10-29T10:57:19Z</updated>
-    <summary>Uncharted: The Nathan Drake Collection · More frames and fewer stutters on every CPU, sharp aiming again at high resolutions, a fix for an · Texture filtering (launcher -&gt; Advanced): Game / 4x / 8x / 16x for all three games, sharper · ground and walls at an angle, almost no frame-rate cost.</summary>
-  </entry>
-  <entry>
-    <title>wipeout_pc windows-v0.2.46</title>
-    <link href="https://github.com/AbdelmoumenDeghbouche/wipeout_pc/releases/tag/windows-v0.2.46"/>
-    <id>https://isidropenh.github.io/PORTal/#AbdelmoumenDeghbouche/wipeout_pc:release:windows-v0.2.46</id>
-    <updated>2026-10-29T09:23:03Z</updated>
-    <summary>WipEout Omega Collection · Upscaling (#51). New choice in Graphics → Anti-aliasing → Upscaling (and live in the game: Insert → Image): Off, Quality, Balanced or Per… · Upscaling: the race drawn at a lower resolution and scaled up by FSR 3.1 or DLSS (Quality, Balanced, Performance), for more FPS. The HUD … · Motion controls (#18). The game&apos;s own Options → Controls → Motion sensor function (Pitch, Pitch and steering) now works with a gamepad th…</summary>
-  </entry>
-  <entry>
-    <title>ico-pc v0.9.4</title>
-    <link href="https://github.com/nathanialf/ico-pc/releases/tag/v0.9.4"/>
-    <id>https://isidropenh.github.io/PORTal/#nathanialf/ico-pc:release:v0.9.4</id>
-    <updated>2026-10-29T07:28:58Z</updated>
-    <summary>ICO · Above the Original resolution, the soft edges of shadows use the game&apos;s own smoothing and look very slightly sharper. · At frame rates above Original, the in-between pictures reuse the glow of the picture before them. It can trail very slightly during a fas…</summary>
-  </entry>
-  <entry>
-    <title>Dragon&apos;s Crown Pro PC Port v0.8.0</title>
-    <link href="https://github.com/saulob/dragons-crown-pro-pc/releases/tag/v0.8.0"/>
-    <id>https://isidropenh.github.io/PORTal/#saulob/dragons-crown-pro-pc:release:v0.8.0</id>
-    <updated>2026-10-29T06:22:31Z</updated>
-    <summary>Dragon&apos;s Crown Pro · Allow overlay programs: new Windows option for compatibility with recording, chat, store and performance overlays such as PlayClaw · Added a Sponsor on GitHub button to the launcher</summary>
   </entry>
 </feed>
