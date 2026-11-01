@@ -1,6 +1,162 @@
 {
-  "generatedAt": "2026-11-01T13:21:13.334Z",
+  "generatedAt": "2026-11-01T22:02:55.731Z",
   "items": [
+    {
+      "id": "YuutaTsubasa/Free-Riders-Recompiled:release:v0.10.42",
+      "repo": "YuutaTsubasa/Free-Riders-Recompiled",
+      "game": "sonic-free-riders",
+      "gameTitle": "Sonic Free Riders",
+      "port": "Free Riders Recompiled",
+      "date": "2026-11-01T21:03:43Z",
+      "type": "release",
+      "tag": "v0.10.42",
+      "level": "normal",
+      "title": "Free Riders Recompiled v0.10.42",
+      "highlights": [
+        "v0.10.42 — Fixes for online play, Chinese folders and the Android stop page"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Online"
+      ],
+      "url": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled/releases/tag/v0.10.42"
+    },
+    {
+      "id": "TekRantGaming/king-kong-recompiled:release:v2.0.8",
+      "repo": "TekRantGaming/king-kong-recompiled",
+      "game": "king-kong",
+      "gameTitle": "Peter Jackson's King Kong",
+      "port": "King Kong Recompiled",
+      "date": "2026-11-01T18:16:19Z",
+      "type": "release",
+      "tag": "v2.0.8",
+      "level": "normal",
+      "title": "King Kong Recompiled v2.0.8",
+      "highlights": [
+        "v2.0.8"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/TekRantGaming/king-kong-recompiled/releases/tag/v2.0.8"
+    },
+    {
+      "id": "Mrsuss60/bloodborne_pc_windows_port:release:v0.8.0",
+      "repo": "Mrsuss60/bloodborne_pc_windows_port",
+      "game": "bloodborne",
+      "gameTitle": "Bloodborne",
+      "port": "Bloodborne Windows loader (Mrsuss60)",
+      "date": "2026-11-01T18:04:19Z",
+      "type": "release",
+      "tag": "v0.8.0",
+      "level": "big",
+      "title": "Bloodborne Windows loader (Mrsuss60) v0.8.0",
+      "highlights": [
+        "Uncapped the guest frame pacer ceiling from 60 FPS to 240 FPS so 90 FPS, 120 FPS, and Uncapped targets exceed 60 FPS under the dynamic cl…",
+        "Added layer memory management and residency models in preparation for direct host-memory imports and low-overhead allocation tracking.",
+        "Added constant ring buffer deduplication in the Vulkan rasterizer using XXH3 64-bit hashing and dynamic VRAM-budgeted ring sizing."
+      ],
+      "tags": [
+        "fps",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/Mrsuss60/bloodborne_pc_windows_port/releases/tag/v0.8.0"
+    },
+    {
+      "id": "jorjbarbosa/naruto-rise-recomp:release:v0.4.2-beta",
+      "repo": "jorjbarbosa/naruto-rise-recomp",
+      "game": "naruto-rise-of-a-ninja",
+      "gameTitle": "Naruto: Rise of a Ninja",
+      "port": "Naruto: Rise of a Ninja Recomp",
+      "date": "2026-11-01T17:38:30Z",
+      "type": "release",
+      "tag": "v0.4.2-beta",
+      "level": "normal",
+      "title": "Naruto: Rise of a Ninja Recomp v0.4.2-beta",
+      "highlights": [
+        "First run on Vulkan on AMD cards under Windows stutters more than Direct3D 12 for the first minute or two; later runs match it."
+      ],
+      "tags": [
+        "rendimiento",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/jorjbarbosa/naruto-rise-recomp/releases/tag/v0.4.2-beta"
+    },
+    {
+      "id": "droogie/bbhost:release:v0.2.23",
+      "repo": "droogie/bbhost",
+      "game": "bloodborne",
+      "gameTitle": "Bloodborne",
+      "port": "bbhost",
+      "date": "2026-11-01T17:06:20Z",
+      "type": "release",
+      "tag": "v0.2.23",
+      "level": "big",
+      "title": "bbhost v0.2.23",
+      "highlights": [
+        "Faster wherever the CPU is the limit. The release builds are now link-time optimized on every platform: about 3-4% more frames a second w…",
+        "Less memory on graphics cards with 8 GB or less. The GPU reads the game's memory through 16 MB windows, and its own buffer copies stay wi…",
+        "Faster on integrated graphics. A few full-screen copies the game makes are now left unmade where the image can be read directly, or swapp…"
+      ],
+      "tags": [
+        "fps",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/droogie/bbhost/releases/tag/v0.2.23"
+    },
+    {
+      "id": "spacepepperoni/uncharted_Linux:release:v0.3.11-linux.157",
+      "repo": "spacepepperoni/uncharted_Linux",
+      "game": "uncharted-ndc",
+      "gameTitle": "Uncharted: The Nathan Drake Collection",
+      "port": "uncharted_Linux",
+      "date": "2026-11-01T16:19:39Z",
+      "type": "release",
+      "tag": "v0.3.11-linux.157",
+      "level": "normal",
+      "title": "uncharted_Linux v0.3.11-linux.157",
+      "highlights": [
+        "New launcher look from upstream"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/spacepepperoni/uncharted_Linux/releases/tag/v0.3.11-linux.157"
+    },
+    {
+      "id": "shipa-2/Xerenge:release:v0.4.10",
+      "repo": "shipa-2/Xerenge",
+      "game": "burnout-revenge",
+      "gameTitle": "Burnout Revenge",
+      "port": "Xerenge",
+      "date": "2026-11-01T14:55:59Z",
+      "type": "release",
+      "tag": "v0.4.10",
+      "level": "big",
+      "title": "Xerenge v0.4.10",
+      "highlights": [
+        "Split screen: each player's view is drawn in its own half of the screen; before, the second player's scene covered the first (GitHub #60)…",
+        "Online across networks: players behind different routers, on mobile internet or behind a VPN join each other's games; the game looks at i…"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Teclado y mouse"
+      ],
+      "url": "https://github.com/shipa-2/Xerenge/releases/tag/v0.4.10"
+    },
     {
       "id": "aikatore/recvx-enhanced-port:release:v0.7.2",
       "repo": "aikatore/recvx-enhanced-port",

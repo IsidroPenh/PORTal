@@ -4,7 +4,28 @@
   <link href="https://isidropenh.github.io/PORTal/"/>
   <link rel="self" href="https://isidropenh.github.io/PORTal/data/feed.xml"/>
   <id>https://isidropenh.github.io/PORTal/</id>
-  <updated>2026-11-01T12:11:07Z</updated>
+  <updated>2026-11-01T18:04:19Z</updated>
+  <entry>
+    <title>Bloodborne Windows loader (Mrsuss60) v0.8.0</title>
+    <link href="https://github.com/Mrsuss60/bloodborne_pc_windows_port/releases/tag/v0.8.0"/>
+    <id>https://isidropenh.github.io/PORTal/#Mrsuss60/bloodborne_pc_windows_port:release:v0.8.0</id>
+    <updated>2026-11-01T18:04:19Z</updated>
+    <summary>Bloodborne · Uncapped the guest frame pacer ceiling from 60 FPS to 240 FPS so 90 FPS, 120 FPS, and Uncapped targets exceed 60 FPS under the dynamic cl… · Added layer memory management and residency models in preparation for direct host-memory imports and low-overhead allocation tracking. · Added constant ring buffer deduplication in the Vulkan rasterizer using XXH3 64-bit hashing and dynamic VRAM-budgeted ring sizing.</summary>
+  </entry>
+  <entry>
+    <title>bbhost v0.2.23</title>
+    <link href="https://github.com/droogie/bbhost/releases/tag/v0.2.23"/>
+    <id>https://isidropenh.github.io/PORTal/#droogie/bbhost:release:v0.2.23</id>
+    <updated>2026-11-01T17:06:20Z</updated>
+    <summary>Bloodborne · Faster wherever the CPU is the limit. The release builds are now link-time optimized on every platform: about 3-4% more frames a second w… · Less memory on graphics cards with 8 GB or less. The GPU reads the game&apos;s memory through 16 MB windows, and its own buffer copies stay wi… · Faster on integrated graphics. A few full-screen copies the game makes are now left unmade where the image can be read directly, or swapp…</summary>
+  </entry>
+  <entry>
+    <title>Xerenge v0.4.10</title>
+    <link href="https://github.com/shipa-2/Xerenge/releases/tag/v0.4.10"/>
+    <id>https://isidropenh.github.io/PORTal/#shipa-2/Xerenge:release:v0.4.10</id>
+    <updated>2026-11-01T14:55:59Z</updated>
+    <summary>Burnout Revenge · Split screen: each player&apos;s view is drawn in its own half of the screen; before, the second player&apos;s scene covered the first (GitHub #60)… · Online across networks: players behind different routers, on mobile internet or behind a VPN join each other&apos;s games; the game looks at i…</summary>
+  </entry>
   <entry>
     <title>recvx-enhanced-port v0.7.2</title>
     <link href="https://github.com/aikatore/recvx-enhanced-port/releases/tag/v0.7.2"/>
@@ -333,26 +354,5 @@
     <id>https://isidropenh.github.io/PORTal/#HekamiAeon/Star-Ocean-Integrity-and-Faithlessness-PS4RT:release:v1.2</id>
     <updated>2026-10-29T20:13:30Z</updated>
     <summary>Star Ocean: Integrity and Faithlessness · A complete playthrough and broad Linux compatibility have not been verified. Sync mode favors visual consistency; Async may reduce shader… · Standardized the player launcher as `Play-Game.sh`. · Added remembered game directory support. `--game` is needed for first-time setup, but can be omitted on subsequent launches.</summary>
-  </entry>
-  <entry>
-    <title>PS4RT: Valkyria Revolution v1.2</title>
-    <link href="https://github.com/HekamiAeon/valkyria-revolution-ps4rt/releases/tag/v1.2"/>
-    <id>https://isidropenh.github.io/PORTal/#HekamiAeon/valkyria-revolution-ps4rt:release:v1.2</id>
-    <updated>2026-10-29T17:24:44Z</updated>
-    <summary>Valkyria Revolution · Improved player launcher: Standardized the launcher as `Play-Game.sh` to match other PS4RT ports. Supply `--game` on the first launch; la… · Cleaner source and distribution: Removed obsolete Windows packaging infrastructure and unused launcher logic, including the Tkinter folde…</summary>
-  </entry>
-  <entry>
-    <title>War of the Monsters recomp v0.1.0: primera release</title>
-    <link href="https://github.com/yanm1103/War_of_the_Monsters_recomp/releases/tag/v0.1.0"/>
-    <id>https://isidropenh.github.io/PORTal/#yanm1103/War_of_the_Monsters_recomp:release:v0.1.0</id>
-    <updated>2026-10-29T17:06:18Z</updated>
-    <summary>War of the Monsters · v0.1.0</summary>
-  </entry>
-  <entry>
-    <title>ShadowOfTheColossus-PC v0.70</title>
-    <link href="https://github.com/AjncSystem/ShadowOfTheColossus-PC/releases/tag/v0.70"/>
-    <id>https://isidropenh.github.io/PORTal/#AjncSystem/ShadowOfTheColossus-PC:release:v0.70</id>
-    <updated>2026-10-29T16:42:41Z</updated>
-    <summary>Shadow of the Colossus (remake) · v0.70.0 — Performance Optimization: Reduced FPS drops during area transitions. • Bug Fixes: Resolved the critical crash error 0x49800. 💡…</summary>
   </entry>
 </feed>
