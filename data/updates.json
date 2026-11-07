@@ -1,6 +1,96 @@
 {
-  "generatedAt": "2026-11-07T05:57:49.081Z",
+  "generatedAt": "2026-11-07T12:59:16.258Z",
   "items": [
+    {
+      "id": "HayatoG/iss_pc:release:sunny-beta-2026.11.07",
+      "repo": "HayatoG/iss_pc",
+      "game": "infamous-second-son",
+      "gameTitle": "inFAMOUS Second Son",
+      "port": "iss_pc",
+      "date": "2026-11-07T12:13:36Z",
+      "type": "release",
+      "tag": "sunny-beta-2026.11.07",
+      "level": "big",
+      "title": "iss_pc sunny-beta-2026.11.07",
+      "highlights": [
+        "Tuned settings (`gpu_v2\\defaults.env`): about +9% FPS from following the game's own GPU sync",
+        "points, ~26% fewer slow frames, +4% FPS from steadier GPU submission, +7–9% FPS by not pinning the",
+        "NVIDIA's driver compiles far better (lighting pass 2.7 → 0.46 ms; about +27% FPS standing at",
+        "Configurações ajustadas (`gpu_v2\\defaults.env`): cerca de +9% de FPS seguindo os pontos de",
+        "sincronização da GPU do próprio jogo, ~26% menos frames lentos, +4% de FPS com envio mais regular"
+      ],
+      "tags": [
+        "fps",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/HayatoG/iss_pc/releases/tag/sunny-beta-2026.11.07"
+    },
+    {
+      "id": "Mava-b/folklore-decomp:release:v0.6",
+      "repo": "Mava-b/folklore-decomp",
+      "game": "folklore",
+      "gameTitle": "Folklore",
+      "port": "folklore-decomp",
+      "date": "2026-11-07T11:13:05Z",
+      "type": "release",
+      "tag": "v0.6",
+      "level": "big",
+      "title": "folklore-decomp v0.6",
+      "highlights": [
+        "Folklore keeps every save in its own slot (on a PS3 you pick one from a list). The PC port had no such list, so it always loaded and over…",
+        "See every save at a glance — each slot shows the picture of the area you saved in, the character and location, both Ellen's and Keats' ch…"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Launcher"
+      ],
+      "url": "https://github.com/Mava-b/folklore-decomp/releases/tag/v0.6"
+    },
+    {
+      "id": "Wooloomooloo2/bloodborne_mac_port:release:mac-v0.5.14",
+      "repo": "Wooloomooloo2/bloodborne_mac_port",
+      "game": "bloodborne",
+      "gameTitle": "Bloodborne",
+      "port": "Bloodborne para Mac (Rosetta 2)",
+      "date": "2026-11-07T09:41:46Z",
+      "type": "release",
+      "tag": "mac-v0.5.14",
+      "level": "normal",
+      "title": "Bloodborne para Mac (Rosetta 2) mac-v0.5.14",
+      "highlights": [
+        "0.5.14: long sessions no longer freeze"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/Wooloomooloo2/bloodborne_mac_port/releases/tag/mac-v0.5.14"
+    },
+    {
+      "id": "Ryu7w7/OCTR-NitroFueled-PC:release:v0.8.3",
+      "repo": "Ryu7w7/OCTR-NitroFueled-PC",
+      "game": "ctr-nitro-fueled",
+      "gameTitle": "Crash Team Racing Nitro-Fueled",
+      "port": "OCTR (online)",
+      "date": "2026-11-07T08:16:47Z",
+      "type": "release",
+      "tag": "v0.8.3",
+      "level": "normal",
+      "title": "OCTR (online) v0.8.3",
+      "highlights": [
+        "ONLINE CTR v0.8.3 - Crash fixes"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/Ryu7w7/OCTR-NitroFueled-PC/releases/tag/v0.8.3"
+    },
     {
       "id": "nathanialf/ico-pc:release:v0.10.5",
       "repo": "nathanialf/ico-pc",
@@ -6728,97 +6818,6 @@
         "Nueva región / versión"
       ],
       "url": "https://github.com/IgorAugustoHH/The-Order-1886-PC-Port/releases/tag/v0.1.6"
-    },
-    {
-      "id": "Wooloomooloo2/bloodborne_mac_port:release:mac-v0.5.10",
-      "repo": "Wooloomooloo2/bloodborne_mac_port",
-      "game": "bloodborne",
-      "gameTitle": "Bloodborne",
-      "port": "Bloodborne para Mac (Rosetta 2)",
-      "date": "2026-10-27T20:24:32Z",
-      "type": "release",
-      "tag": "mac-v0.5.10",
-      "level": "normal",
-      "title": "Bloodborne para Mac (Rosetta 2) mac-v0.5.10",
-      "highlights": [
-        "adds rebindable controls and fixes the GPU process crash in fights."
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/Wooloomooloo2/bloodborne_mac_port/releases/tag/mac-v0.5.10"
-    },
-    {
-      "id": "ayozetr/bloodborne_linux:release:0.51-linux.18",
-      "repo": "ayozetr/bloodborne_linux",
-      "game": "bloodborne",
-      "gameTitle": "Bloodborne",
-      "port": "bloodborne_linux",
-      "date": "2026-10-27T18:55:06Z",
-      "type": "release",
-      "tag": "0.51-linux.18",
-      "level": "big",
-      "title": "bloodborne_linux 0.51-linux.18",
-      "highlights": [
-        "Local co-op runs a whole game per player: on a mid-range GPU at 1440p, two players get about 30 to 40 FPS each. It has been tested with t…",
-        "Players' guide: [ayozetr.github.io/bloodborne_linux](https://ayozetr.github.io/bloodborne_linux/), with getting started, online play and …",
-        "Controller light bar colour (*Controls*, off by default): the colour of a DualShock 4 or DualSense light bar. Asked for in [discussion #2…"
-      ],
-      "tags": [
-        "milestone",
-        "fps",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Online",
-        "Co-op",
-        "Launcher",
-        "Linux / Steam Deck"
-      ],
-      "url": "https://github.com/ayozetr/bloodborne_linux/releases/tag/0.51-linux.18"
-    },
-    {
-      "id": "YuutaTsubasa/Free-Riders-Recompiled:release:v0.10.36",
-      "repo": "YuutaTsubasa/Free-Riders-Recompiled",
-      "game": "sonic-free-riders",
-      "gameTitle": "Sonic Free Riders",
-      "port": "Free Riders Recompiled",
-      "date": "2026-10-27T18:14:23Z",
-      "type": "release",
-      "tag": "v0.10.36",
-      "level": "normal",
-      "title": "Free Riders Recompiled v0.10.36",
-      "highlights": [
-        "Faster Android races (#176). The Android game is now built with *profile-guided optimisation*: the compiler first watched the game run on…"
-      ],
-      "tags": [
-        "rendimiento"
-      ],
-      "features": [],
-      "url": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled/releases/tag/v0.10.36"
-    },
-    {
-      "id": "zer0ducksgiven/Forza-Motorsport-2-ReGPU:release:v0.9.1",
-      "repo": "zer0ducksgiven/Forza-Motorsport-2-ReGPU",
-      "game": "forza-motorsport-2",
-      "gameTitle": "Forza Motorsport 2",
-      "port": "FM2 ReGPU",
-      "date": "2026-10-27T17:57:02Z",
-      "type": "release",
-      "tag": "v0.9.1",
-      "level": "normal",
-      "title": "FM2 ReGPU v0.9.1",
-      "highlights": [
-        "0.9.1"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/zer0ducksgiven/Forza-Motorsport-2-ReGPU/releases/tag/v0.9.1"
     }
   ]
 }
