@@ -4,7 +4,35 @@
   <link href="https://isidropenh.github.io/PORTal/"/>
   <link rel="self" href="https://isidropenh.github.io/PORTal/data/feed.xml"/>
   <id>https://isidropenh.github.io/PORTal/</id>
-  <updated>2026-11-09T20:50:01Z</updated>
+  <updated>2026-11-10T05:14:30Z</updated>
+  <entry>
+    <title>lego-dimensions-pc v2.0</title>
+    <link href="https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v2.0"/>
+    <id>https://isidropenh.github.io/PORTal/#vascon-es/lego-dimensions-pc:release:v2.0</id>
+    <updated>2026-11-10T05:14:30Z</updated>
+    <summary>LEGO Dimensions · Unlocked frame rate works again. The in-game F2 menu read an old launcher setting at start-up and switched the unlocked frame rate back o… · F2 video menu in English, with the options the port really has: resolution and frame rate (applied on the next start), display mode, anti…</summary>
+  </entry>
+  <entry>
+    <title>ShadowOfTheColossus-PC v0.74</title>
+    <link href="https://github.com/AjncSystem/ShadowOfTheColossus-PC/releases/tag/v0.74"/>
+    <id>https://isidropenh.github.io/PORTal/#AjncSystem/ShadowOfTheColossus-PC:release:v0.74</id>
+    <updated>2026-11-10T03:35:36Z</updated>
+    <summary>Shadow of the Colossus (remake) · Install the game on an SSD or NVMe drive for area changes without stutters.</summary>
+  </entry>
+  <entry>
+    <title>Eternal Sonata Reprise v1.3.9</title>
+    <link href="https://github.com/birabittoh/EternalSonataReprise/releases/tag/v1.3.9"/>
+    <id>https://isidropenh.github.io/PORTal/#birabittoh/EternalSonataReprise:release:v1.3.9</id>
+    <updated>2026-11-09T22:51:06Z</updated>
+    <summary>Eternal Sonata · All enemy positions will now be scattered around the battlefield in PS3 mode. · The game now provides the `--prepare-content` CLI argument, which enables support for RecompLauncher (by @Xarishark in https://github.com…</summary>
+  </entry>
+  <entry>
+    <title>Unicorn Overlord PC (vwport) v1.5.1</title>
+    <link href="https://github.com/hachi23/unicorn_overlord_pc/releases/tag/v1.5.1"/>
+    <id>https://isidropenh.github.io/PORTal/#hachi23/unicorn_overlord_pc:release:v1.5.1</id>
+    <updated>2026-11-09T22:44:41Z</updated>
+    <summary>Unicorn Overlord · Russian (Switch fan translation) (#84). Put its `Unicorn_US.CPK` in `data/mods/Russian/` and pick English as the text language. · The translation&apos;s own fonts are converted to the PS4 format, and the game is pointed at their Cyrillic letters.</summary>
+  </entry>
   <entry>
     <title>lego-dimensions-pc v1.9.3</title>
     <link href="https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v1.9.3"/>
@@ -326,33 +354,5 @@
     <id>https://isidropenh.github.io/PORTal/#TheWishin/T5DROnline:release:v1.2.1</id>
     <updated>2026-11-05T15:37:41Z</updated>
     <summary>Tekken 5: Dark Resurrection · A practice menu like in newer Tekken games, faster play on old PCs, an &quot;online feel&quot; for the input delay, a · New minimum requirements in the README: a processor with SSE4.1, a DirectX 12 (feature level 11_0) graphics card and · new recordings use replay format 8.</summary>
-  </entry>
-  <entry>
-    <title>lego-dimensions-pc v1.8.9</title>
-    <link href="https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v1.8.9"/>
-    <id>https://isidropenh.github.io/PORTal/#vascon-es/lego-dimensions-pc:release:v1.8.9</id>
-    <updated>2026-11-05T15:30:28Z</updated>
-    <summary>LEGO Dimensions · Preparar now really builds every known pipeline (shader + draw state) into the video driver&apos;s cache, about 16,000 in under a minute. Befo… · After a video driver update, the game notices and rebuilds all pipelines once on the loading screen. The launcher Tools menu also has &quot;Re…</summary>
-  </entry>
-  <entry>
-    <title>ico-pc v0.10.3</title>
-    <link href="https://github.com/nathanialf/ico-pc/releases/tag/v0.10.3"/>
-    <id>https://isidropenh.github.io/PORTal/#nathanialf/ico-pc:release:v0.10.3</id>
-    <updated>2026-11-05T14:40:53Z</updated>
-    <summary>ICO · Options &gt; Picture has four new rows: Gamma, Picture brightness, Contrast and Saturation. 50 is the game&apos;s own picture; they also work wit… · Options &gt; Extras has an Unused content page: two rooms the makers used for testing, the European disc&apos;s second attract film, and title-sc…</summary>
-  </entry>
-  <entry>
-    <title>Forza Horizon 1: ReImagined v0.2.7</title>
-    <link href="https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.2.7"/>
-    <id>https://isidropenh.github.io/PORTal/#Dyotson/ForzaHorizon1-ReImagined:release:v0.2.7</id>
-    <updated>2026-11-05T13:22:03Z</updated>
-    <summary>Forza Horizon · On Windows, the render thread now sleeps while it waits for the GPU instead of using a whole CPU core (#640): about 10% more fps in the b…</summary>
-  </entry>
-  <entry>
-    <title>King Kong Recompiled v2.1.0</title>
-    <link href="https://github.com/TekRantGaming/king-kong-recompiled/releases/tag/v2.1.0"/>
-    <id>https://isidropenh.github.io/PORTal/#TekRantGaming/king-kong-recompiled:release:v2.1.0</id>
-    <updated>2026-11-05T02:29:42Z</updated>
-    <summary>Peter Jackson&apos;s King Kong · Muzzle flash light: every shot lights what is around it for a moment: walls, the ground, enemies, your hands and gun. On in Remastered (G… · Skin shading: light softens and warms on skin, with a touch of red where light meets shadow, as light scattered under skin looks. On in R…</summary>
   </entry>
 </feed>
