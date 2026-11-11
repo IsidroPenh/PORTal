@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-11T06:17:47.625Z",
+  "generatedAt": "2026-11-11T14:26:49.377Z",
   "items": [
     {
       "repo": "timboat/demons-souls-recomp",
       "url": "https://github.com/timboat/demons-souls-recomp",
       "description": "Native Windows port of Demon's Souls (PS3, BLUS-30443) via ps3recomp static recompilation. Bring your own disc image; no game files included.",
-      "stars": 212,
+      "stars": 213,
       "forks": 5,
       "language": "Python",
       "createdAt": "2026-10-31T15:25:42Z",
-      "pushedAt": "2026-11-11T02:05:26Z",
+      "pushedAt": "2026-11-11T08:38:42Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -45,7 +45,7 @@
       "repo": "santiquiroz/gears-of-war-2-pc-port",
       "url": "https://github.com/santiquiroz/gears-of-war-2-pc-port",
       "description": "Gears of War 2 native PC port: the Xbox 360 game statically recompiled to x64 (not an emulator). 1440p/4K, FSR, 4K texture packs, keyboard & mouse, Android in progress. Bring your own copy.",
-      "stars": 170,
+      "stars": 172,
       "forks": 7,
       "language": "C++",
       "createdAt": "2026-10-14T03:21:18Z",
@@ -169,7 +169,7 @@
       "repo": "thefixinhixon/SplosionManRecomp",
       "url": "https://github.com/thefixinhixon/SplosionManRecomp",
       "description": "Native Linux & Windows ports of 'Splosion Man (Xbox 360 XBLA) — ReXGlue recomp with bespoke TP launchers. Bring your own game data.",
-      "stars": 12,
+      "stars": 13,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-03T03:29:54Z",
@@ -632,7 +632,7 @@
       "repo": "gamboozino/ng2recomp",
       "url": "https://github.com/gamboozino/ng2recomp",
       "description": "Ninja Gaiden II (Xbox 360, 2008) statically recompiled into native Linux and Windows builds, drawn by its own Vulkan renderer. A steady 60 fps, up to 8x render scale, widescreen and ultrawide, keyboard and mouse, mods, Steam Deck ready. Bring your own copy of the game.",
-      "stars": 211,
+      "stars": 215,
       "forks": 7,
       "language": "C++",
       "createdAt": "2026-10-30T00:03:18Z",
@@ -710,7 +710,7 @@
       "repo": "ThiagoFraga761/infamous2-pc",
       "url": "https://github.com/ThiagoFraga761/infamous2-pc",
       "description": "inFAMOUS 2 native PC port: PS3 static recompilation to Linux, Vulkan renderer, up to 4K, unlocked fps, no emulator. Bring your own disc.",
-      "stars": 44,
+      "stars": 45,
       "forks": 3,
       "language": "C",
       "createdAt": "2026-10-17T07:50:12Z",
@@ -836,7 +836,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-22T21:31:18Z",
-      "pushedAt": "2026-11-11T00:33:09Z",
+      "pushedAt": "2026-11-11T12:22:28Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -868,7 +868,7 @@
       "repo": "shaneomac1337/Top-Spin-4-Recomp",
       "url": "https://github.com/shaneomac1337/Top-Spin-4-Recomp",
       "description": "Unofficial PC port of Top Spin 4 (Xbox 360), statically recompiled to native x86-64 with a Vulkan renderer. Bring your own disc.",
-      "stars": 38,
+      "stars": 39,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-11-01T23:14:21Z",
@@ -907,7 +907,7 @@
       "repo": "saulob/el-chavo-kart-recompiled",
       "url": "https://github.com/saulob/el-chavo-kart-recompiled",
       "description": "Chaves Kart (El Chavo Kart) for Xbox 360, statically recompiled as a native PC port for Windows and Linux, with online multiplayer, modern graphics options and Steam Deck support",
-      "stars": 37,
+      "stars": 38,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-11-01T16:13:17Z",
@@ -1018,6 +1018,42 @@
       "copies": 0
     },
     {
+      "repo": "MormonFTP-hub/gt5-recomp",
+      "url": "https://github.com/MormonFTP-hub/gt5-recomp",
+      "description": "Unofficial PC port of Gran Turismo 5 on ps3recomp. Needs your own GT5 disc, EBOOT v1.00, no update: Europe BCES00569 (tested) or US BCUS98114 (untested). Code and tools only: no game files, keys or firmware.",
+      "stars": 21,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-11-09T22:32:41Z",
+      "pushedAt": "2026-11-10T22:26:50Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 15,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "45–58 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-11-10T07:19:38.380Z",
+      "_readmeHash": "26019",
+      "copies": 0
+    },
+    {
       "repo": "Newbie1337x/ProvingGroundRecomp",
       "url": "https://github.com/Newbie1337x/ProvingGroundRecomp",
       "description": "Native PC port of Tony Hawk's Proving Ground, statically recompiled from the Xbox 360 version (bring your own game)",
@@ -1056,46 +1092,10 @@
       "copies": 0
     },
     {
-      "repo": "MormonFTP-hub/gt5-recomp",
-      "url": "https://github.com/MormonFTP-hub/gt5-recomp",
-      "description": "Unofficial PC port of Gran Turismo 5 on ps3recomp. Needs your own GT5 disc, EBOOT v1.00, no update: Europe BCES00569 (tested) or US BCUS98114 (untested). Code and tools only: no game files, keys or firmware.",
-      "stars": 19,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-11-09T22:32:41Z",
-      "pushedAt": "2026-11-10T22:26:50Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "port",
-      "score": 15,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+2 bring your own|your own ",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "45–58 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-11-10T07:19:38.380Z",
-      "_readmeHash": "26019",
-      "copies": 0
-    },
-    {
       "repo": "Juansolo457/graw360-recomp",
       "url": "https://github.com/Juansolo457/graw360-recomp",
       "description": "Ghost Recon Advanced Warfighter (Xbox 360) statically recompiled to run natively on PC. Reaches the start screen. No game data included; bring your own disc.",
-      "stars": 18,
+      "stars": 19,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-24T03:30:42Z",
@@ -1311,7 +1311,7 @@
       "repo": "bc160201983/Captain-America-Super-Soldier-PC",
       "url": "https://github.com/bc160201983/Captain-America-Super-Soldier-PC",
       "description": "Captain America: Super Soldier (Xbox 360) native PC port via static recompilation (ReXGlue). Port by BilalReloaded. Bring your own game.",
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-30T19:20:35Z",
@@ -1538,6 +1538,42 @@
       "copies": 0
     },
     {
+      "repo": "ABadGame/nascar-inside-line-recomp",
+      "url": "https://github.com/ABadGame/nascar-inside-line-recomp",
+      "description": "Native Windows port of NASCAR The Game: Inside Line (Xbox 360) via ReXGlue static recompilation. Bring your own disc - no game content included.",
+      "stars": 3,
+      "forks": 0,
+      "language": "PowerShell",
+      "createdAt": "2026-11-09T02:31:16Z",
+      "pushedAt": "2026-11-09T17:51:42Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 15,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-09T06:26:46.692Z",
+      "_readmeHash": "9138",
+      "copies": 0
+    },
+    {
       "repo": "Broly1/freekstyle-native-port",
       "url": "https://github.com/Broly1/freekstyle-native-port",
       "description": "Unofficial native Linux port of Freekstyle (PS2) in Rust + Vulkan. No game data included; bring your own disc.",
@@ -1573,42 +1609,6 @@
       "statusHint": "early",
       "firstSeen": "2026-10-29T22:48:57.630Z",
       "_readmeHash": "24191",
-      "copies": 0
-    },
-    {
-      "repo": "ABadGame/nascar-inside-line-recomp",
-      "url": "https://github.com/ABadGame/nascar-inside-line-recomp",
-      "description": "Native Windows port of NASCAR The Game: Inside Line (Xbox 360) via ReXGlue static recompilation. Bring your own disc - no game content included.",
-      "stars": 2,
-      "forks": 0,
-      "language": "PowerShell",
-      "createdAt": "2026-11-09T02:31:16Z",
-      "pushedAt": "2026-11-09T17:51:42Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 15,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+2 bring your own|your own ",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-09T06:26:46.692Z",
-      "_readmeHash": "9138",
       "copies": 0
     },
     {
@@ -1898,6 +1898,45 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-23T11:36:55.797Z",
       "_readmeHash": "12097",
+      "copies": 0
+    },
+    {
+      "repo": "millennium-h4x0r/motorstorm-apocalypse-pc",
+      "url": "https://github.com/millennium-h4x0r/motorstorm-apocalypse-pc",
+      "description": "Native Linux port of PS3 Motorstorm Apocalypse. No game files included. ",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-11T10:46:00Z",
+      "pushedAt": "2026-11-11T13:11:29Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 15,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "60 FPS",
+        "34 FPS"
+      ],
+      "statusHint": "complete",
+      "firstSeen": "2026-11-11T14:25:57.279Z",
+      "_readmeHash": "9884",
       "copies": 0
     },
     {
@@ -2417,7 +2456,7 @@
       "forks": 2,
       "language": "Python",
       "createdAt": "2026-10-28T13:18:00Z",
-      "pushedAt": "2026-11-10T12:23:32Z",
+      "pushedAt": "2026-11-11T07:15:08Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -2520,6 +2559,75 @@
       "copies": 0
     },
     {
+      "repo": "rigaz29/Ascension-R",
+      "url": "https://github.com/rigaz29/Ascension-R",
+      "description": "A native Windows port of God of War: Ascension (PS3) by static recompilation on ps3recomp. No game files included.",
+      "stars": 56,
+      "forks": 0,
+      "language": "C",
+      "createdAt": "2026-10-26T16:03:59Z",
+      "pushedAt": "2026-11-11T11:35:53Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-11-11T14:25:59.088Z",
+      "_readmeHash": "9322",
+      "copies": 0
+    },
+    {
+      "repo": "CaiusCodes/Perfect-Dark-XBLA-PC-Recomp",
+      "url": "https://github.com/CaiusCodes/Perfect-Dark-XBLA-PC-Recomp",
+      "description": "Native Windows PC recompilation of the Perfect Dark Xbox 360/XBLA remaster using ReXGlue. Requires your own copy.",
+      "stars": 46,
+      "forks": 2,
+      "language": "C++",
+      "createdAt": "2026-10-28T01:25:41Z",
+      "pushedAt": "2026-11-11T12:32:18Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-28T05:43:55.027Z",
+      "_readmeHash": "10149",
+      "copies": 0
+    },
+    {
       "repo": "AbdelmoumenDeghbouche/knack_pc",
       "url": "https://github.com/AbdelmoumenDeghbouche/knack_pc",
       "description": "Native PC port of Knack (PS4): the game's own x86-64 code runs on the PC, with a PS4 runtime and the shadPS4 Vulkan video core. No emulator.",
@@ -2563,42 +2671,6 @@
       "copies": 0
     },
     {
-      "repo": "CaiusCodes/Perfect-Dark-XBLA-PC-Recomp",
-      "url": "https://github.com/CaiusCodes/Perfect-Dark-XBLA-PC-Recomp",
-      "description": "Native Windows PC recompilation of the Perfect Dark Xbox 360/XBLA remaster using ReXGlue. Requires your own copy.",
-      "stars": 37,
-      "forks": 2,
-      "language": "C++",
-      "createdAt": "2026-10-28T01:25:41Z",
-      "pushedAt": "2026-11-06T03:43:29Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 14,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS"
-      ],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-28T05:43:55.027Z",
-      "_readmeHash": "10149",
-      "copies": 0
-    },
-    {
       "repo": "theitsnschool/bloodborne-windows-native-loader",
       "url": "https://github.com/theitsnschool/bloodborne-windows-native-loader",
       "description": "Bloodborne PC Windows Port: Native x86-64 Loader with Vulkan Rendering for Modders",
@@ -2606,7 +2678,7 @@
       "forks": 0,
       "language": "JavaScript",
       "createdAt": "2026-11-03T21:19:00Z",
-      "pushedAt": "2026-11-11T01:08:47Z",
+      "pushedAt": "2026-11-11T09:04:35Z",
       "forkOf": null,
       "platform": "ps4",
       "kind": "port",
@@ -2862,6 +2934,47 @@
       "copies": 0
     },
     {
+      "repo": "CaduGimenes/SanctuaryPort",
+      "url": "https://github.com/CaduGimenes/SanctuaryPort",
+      "description": "Native PC port of Diablo III: Reaper of Souls – Ultimate Evil Edition (PS4). Local co-op for 4.",
+      "stars": 15,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-10T13:53:55Z",
+      "pushedAt": "2026-11-11T02:41:38Z",
+      "forkOf": null,
+      "platform": "ps4",
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [
+        "CUSA00243",
+        "CUSA00242"
+      ],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-11-11T06:15:45.273Z",
+      "_readmeHash": "8685",
+      "copies": 0
+    },
+    {
       "repo": "TheBozos/VP2S_Recomp",
       "url": "https://github.com/TheBozos/VP2S_Recomp",
       "description": "Native PC port of Valkyrie Profile 2: Silmeria (USA, SLUS-21452) by static recompilation with PS2Recomp: native renderer and audio, no GS/VU1/SPU2 emulation. No game data or keys included.",
@@ -2869,7 +2982,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-22T10:38:51Z",
-      "pushedAt": "2026-11-11T00:18:04Z",
+      "pushedAt": "2026-11-11T11:51:48Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -2975,6 +3088,45 @@
       "copies": 0
     },
     {
+      "repo": "AmarilloNL/ssx-recomp",
+      "url": "https://github.com/AmarilloNL/ssx-recomp",
+      "description": "Native PC port of SSX (2012) via Xbox 360 static recompilation. Bring your own ISO.",
+      "stars": 10,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-01T20:33:45Z",
+      "pushedAt": "2026-11-10T21:32:25Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "300 FPS",
+        "60 FPS",
+        "40 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-11-01T22:05:51.948Z",
+      "_readmeHash": "16611",
+      "copies": 0
+    },
+    {
       "repo": "tsapZ/SSARecomp",
       "url": "https://github.com/tsapZ/SSARecomp",
       "description": "Unofficial native Windows port of Skylanders: Spyro's Adventure (Xbox 360). Works with your real Portal of Power and figures, or without them. Recompiled with ReXGlue.",
@@ -3010,45 +3162,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-26T03:34:31.501Z",
       "_readmeHash": "11989",
-      "copies": 0
-    },
-    {
-      "repo": "AmarilloNL/ssx-recomp",
-      "url": "https://github.com/AmarilloNL/ssx-recomp",
-      "description": "Native PC port of SSX (2012) via Xbox 360 static recompilation. Bring your own ISO.",
-      "stars": 9,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-11-01T20:33:45Z",
-      "pushedAt": "2026-11-10T21:32:25Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 14,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+2 bring your own|your own ",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "300 FPS",
-        "60 FPS",
-        "40 FPS",
-        "30 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-11-01T22:05:51.948Z",
-      "_readmeHash": "16611",
       "copies": 0
     },
     {
@@ -3346,47 +3459,6 @@
       "copies": 0
     },
     {
-      "repo": "CaduGimenes/SanctuaryPort",
-      "url": "https://github.com/CaduGimenes/SanctuaryPort",
-      "description": "Native PC port of Diablo III: Reaper of Souls – Ultimate Evil Edition (PS4). Local co-op for 4.",
-      "stars": 5,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-11-10T13:53:55Z",
-      "pushedAt": "2026-11-11T02:41:38Z",
-      "forkOf": null,
-      "platform": "ps4",
-      "kind": "port",
-      "score": 14,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 \\bvulkan\\b",
-        "+1 (readme) recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [
-        "CUSA00243",
-        "CUSA00242"
-      ],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [
-        "60 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-11-11T06:15:45.273Z",
-      "_readmeHash": "8685",
-      "copies": 0
-    },
-    {
       "repo": "SamiEnazi/infamous2-port",
       "url": "https://github.com/SamiEnazi/infamous2-port",
       "description": "inFAMOUS 2 (PS3) as a native Windows program: Setup recompiles YOUR copy on your PC (ps3recomp, Vulkan). No game files included.",
@@ -3510,7 +3582,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-17T09:10:05Z",
-      "pushedAt": "2026-11-10T22:20:09Z",
+      "pushedAt": "2026-11-11T06:56:13Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -3534,7 +3606,7 @@
       "fps": [],
       "statusHint": "early",
       "firstSeen": "2026-10-26T03:33:38.949Z",
-      "_readmeHash": "6464",
+      "_readmeHash": "7895",
       "copies": 0
     },
     {
@@ -4013,6 +4085,47 @@
       "copies": 0
     },
     {
+      "repo": "thegh0sts/NHL-21-PS4-PORT",
+      "url": "https://github.com/thegh0sts/NHL-21-PS4-PORT",
+      "description": "EA SPORTS NHL 21 (PS4) native port for Windows — SacredFire/bbport runtime + shadPS4-derived Vulkan renderer",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-10T10:44:55Z",
+      "pushedAt": "2026-11-11T09:56:53Z",
+      "forkOf": null,
+      "platform": "ps4",
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [
+        "CUSA18182"
+      ],
+      "game": "nhl-24",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "58–60 FPS",
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-11T14:24:07.690Z",
+      "_readmeHash": "14625",
+      "copies": 0
+    },
+    {
       "repo": "momochan32/ctr-on-mac",
       "url": "https://github.com/momochan32/ctr-on-mac",
       "description": "Unofficial macOS (Apple Silicon) port of OCTR — Crash Team Racing Nitro-Fueled native on Mac with RyuNET online. Bring your own game dump.",
@@ -4053,6 +4166,78 @@
       "statusHint": "early",
       "firstSeen": "2026-10-25T04:39:46.287Z",
       "_readmeHash": "13834",
+      "copies": 0
+    },
+    {
+      "repo": "otavix010/god-of-war-2-pc",
+      "url": "https://github.com/otavix010/god-of-war-2-pc",
+      "description": "God of War II (PS2, NTSC-U SCUS-97481): port nativo para PC por recompilação estática (PS2Recomp). Gera a partir da sua ISO. Beta.",
+      "stars": 1,
+      "forks": 1,
+      "language": "PowerShell",
+      "createdAt": "2026-10-27T13:12:04Z",
+      "pushedAt": "2026-11-11T12:54:51Z",
+      "forkOf": null,
+      "platform": "ps2",
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-27T18:05:50.113Z",
+      "_readmeHash": "8481",
+      "copies": 0
+    },
+    {
+      "repo": "otavix010/god-of-war-pc",
+      "url": "https://github.com/otavix010/god-of-war-pc",
+      "description": "God of War (PS2, NTSC-U SCUS-97399): port nativo para PC por recompilação estática (PS2Recomp). Gera a partir da sua ISO. Beta.",
+      "stars": 1,
+      "forks": 0,
+      "language": "PowerShell",
+      "createdAt": "2026-10-27T13:10:40Z",
+      "pushedAt": "2026-11-11T12:54:49Z",
+      "forkOf": null,
+      "platform": "ps2",
+      "kind": "port",
+      "score": 14,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-27T18:05:50.368Z",
+      "_readmeHash": "8369",
       "copies": 0
     },
     {
@@ -4164,42 +4349,6 @@
       "statusHint": "complete",
       "firstSeen": "2026-11-02T06:03:30.923Z",
       "_readmeHash": "9139",
-      "copies": 0
-    },
-    {
-      "repo": "otavix010/god-of-war-2-pc",
-      "url": "https://github.com/otavix010/god-of-war-2-pc",
-      "description": "God of War II (PS2, NTSC-U SCUS-97481): port nativo para PC por recompilação estática (PS2Recomp). Gera a partir da sua ISO. Beta.",
-      "stars": 1,
-      "forks": 1,
-      "language": "PowerShell",
-      "createdAt": "2026-10-27T13:12:04Z",
-      "pushedAt": "2026-11-08T22:52:47Z",
-      "forkOf": null,
-      "platform": "ps2",
-      "kind": "port",
-      "score": 14,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS",
-        "30 FPS"
-      ],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-27T18:05:50.113Z",
-      "_readmeHash": "8481",
       "copies": 0
     },
     {
@@ -4448,42 +4597,6 @@
       "statusHint": "early",
       "firstSeen": "2026-11-01T06:04:40.751Z",
       "_readmeHash": "10431",
-      "copies": 0
-    },
-    {
-      "repo": "otavix010/god-of-war-pc",
-      "url": "https://github.com/otavix010/god-of-war-pc",
-      "description": "God of War (PS2, NTSC-U SCUS-97399): port nativo para PC por recompilação estática (PS2Recomp). Gera a partir da sua ISO. Beta.",
-      "stars": 0,
-      "forks": 0,
-      "language": "PowerShell",
-      "createdAt": "2026-10-27T13:10:40Z",
-      "pushedAt": "2026-11-08T22:52:44Z",
-      "forkOf": null,
-      "platform": "ps2",
-      "kind": "port",
-      "score": 14,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS",
-        "30 FPS"
-      ],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-27T18:05:50.368Z",
-      "_readmeHash": "8369",
       "copies": 0
     },
     {
@@ -4798,7 +4911,7 @@
       "repo": "OpenPortroid/ArmyOfTwoRecompilation",
       "url": "https://github.com/OpenPortroid/ArmyOfTwoRecompilation",
       "description": "Unofficial PC port of the Xbox 360 version of Army of Two (2008). Online co-op supported.",
-      "stars": 175,
+      "stars": 176,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-16T18:05:56Z",
@@ -4836,7 +4949,7 @@
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-15T03:14:12Z",
-      "pushedAt": "2026-11-07T02:31:38Z",
+      "pushedAt": "2026-11-11T13:15:22Z",
       "forkOf": null,
       "platform": "ps4",
       "kind": "port",
@@ -4874,7 +4987,7 @@
       "repo": "Re-TeRo17/ratchet-tod-recomp",
       "url": "https://github.com/Re-TeRo17/ratchet-tod-recomp",
       "description": "Ratchet & Clank: Tools of Destruction native PC port (PS3 static recompilation) – 4K, 60 fps, DualSense, Windows",
-      "stars": 150,
+      "stars": 154,
       "forks": 2,
       "language": "C++",
       "createdAt": "2026-11-01T23:50:30Z",
@@ -4954,11 +5067,11 @@
       "repo": "otavix010/gow-ascension-pc",
       "url": "https://github.com/otavix010/gow-ascension-pc",
       "description": "God of War: Ascension native PC port (static recompilation, bring your own disc)",
-      "stars": 80,
+      "stars": 81,
       "forks": 9,
       "language": "C",
       "createdAt": "2026-10-25T00:12:51Z",
-      "pushedAt": "2026-11-11T04:09:28Z",
+      "pushedAt": "2026-11-11T12:17:41Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -4975,7 +5088,8 @@
       "cusa": [],
       "game": null,
       "platforms": [
-        "windows"
+        "windows",
+        "linux"
       ],
       "fps": [
         "16–66 FPS",
@@ -4985,7 +5099,7 @@
       ],
       "statusHint": "early",
       "firstSeen": "2026-10-26T03:33:44.080Z",
-      "_readmeHash": "17583",
+      "_readmeHash": "18134",
       "copies": 0
     },
     {
@@ -4996,7 +5110,7 @@
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-11T20:00:59Z",
-      "pushedAt": "2026-11-11T01:50:58Z",
+      "pushedAt": "2026-11-11T12:12:10Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -5075,11 +5189,11 @@
       "repo": "kayliox/transformers-armada-recomp",
       "url": "https://github.com/kayliox/transformers-armada-recomp",
       "description": "Transformers (PS2, 2004) as a native PC game: static recompilation from your own disc, native Direct3D 12 renderer, up to 4K / 240 fps / ultrawide. Bring your own disc.",
-      "stars": 39,
+      "stars": 40,
       "forks": 3,
       "language": "C++",
       "createdAt": "2026-11-08T12:50:08Z",
-      "pushedAt": "2026-11-11T05:09:43Z",
+      "pushedAt": "2026-11-11T14:04:26Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -5143,6 +5257,46 @@
       "statusHint": "early",
       "firstSeen": "2026-10-30T22:21:13.425Z",
       "_readmeHash": "19871",
+      "copies": 0
+    },
+    {
+      "repo": "tabnul/the-last-guardian-definitive",
+      "url": "https://github.com/tabnul/the-last-guardian-definitive",
+      "description": "Native PC port (Windows/Linux) of The Last Guardian (PS4), unlocked unique features, tuned to look its best: DLSS and FSR Upscaling, DLAA, FSR AA, Framegen, any resolution and aspect ratio, AI-upscaled texture packs, extra graphics settings, mouse/keyboard, optional 60 or unlocked FPS. Runs your own game dump; no game or firmware files included.",
+      "stars": 23,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-19T12:35:39Z",
+      "pushedAt": "2026-11-11T14:19:59Z",
+      "forkOf": null,
+      "platform": "ps4",
+      "kind": "port",
+      "score": 13,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b"
+      ],
+      "cusa": [
+        "CUSA03627",
+        "CUSA03745"
+      ],
+      "game": "the-last-guardian",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "30 FPS",
+        "90–120 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-08T22:05:46.588Z",
+      "_readmeHash": "17378",
       "copies": 0
     },
     {
@@ -5220,45 +5374,6 @@
       "copies": 0
     },
     {
-      "repo": "tabnul/the-last-guardian-definitive",
-      "url": "https://github.com/tabnul/the-last-guardian-definitive",
-      "description": "Native PC port (Windows/Linux) of The Last Guardian (PS4), unlocked unique features, tuned to look its best: DLSS and FSR Upscaling, DLAA, FSR AA, Framegen, any resolution and aspect ratio, AI-upscaled texture packs, extra graphics settings, mouse/keyboard, optional 60 or unlocked FPS. Runs your own game dump; no game or firmware files included.",
-      "stars": 21,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-19T12:35:39Z",
-      "pushedAt": "2026-11-10T21:44:39Z",
-      "forkOf": null,
-      "platform": "ps4",
-      "kind": "port",
-      "score": 13,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+2 bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b"
-      ],
-      "cusa": [
-        "CUSA03627",
-        "CUSA03745"
-      ],
-      "game": "the-last-guardian",
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [
-        "90–120 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-08T22:05:46.588Z",
-      "_readmeHash": "16203",
-      "copies": 0
-    },
-    {
       "repo": "dvilelaf/battlestadium-don",
       "url": "https://github.com/dvilelaf/battlestadium-don",
       "description": "PC port (Linux, Windows) of Battle Stadium D.O.N (PS2) by static recompilation. No game material included: bring your own disc.",
@@ -5297,6 +5412,39 @@
       "copies": 0
     },
     {
+      "repo": "YJuDeAd/gow-ascension-pc-port",
+      "url": "https://github.com/YJuDeAd/gow-ascension-pc-port",
+      "description": "Native Windows static recompilation of God of War: Ascension (PS3) using ps3recomp. Work in progress, no game files included. You must supply your own legally owned copy of the game.",
+      "stars": 15,
+      "forks": 3,
+      "language": "C++",
+      "createdAt": "2026-10-17T14:36:16Z",
+      "pushedAt": "2026-11-03T15:17:14Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 13,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-26T03:33:47.563Z",
+      "_readmeHash": "7853",
+      "copies": 0
+    },
+    {
       "repo": "cxldsakeb/GoW2-nativo-PS2",
       "url": "https://github.com/cxldsakeb/GoW2-nativo-PS2",
       "description": "Port nativo de God of War II (PS2) a PC con PS2Recomp. WIP: ya llega a la primera zona jugable a ~60 FPS. Sin archivos del juego: necesitas tu propia copia.",
@@ -5330,39 +5478,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-27T12:13:35.218Z",
       "_readmeHash": "6645",
-      "copies": 0
-    },
-    {
-      "repo": "YJuDeAd/gow-ascension-pc-port",
-      "url": "https://github.com/YJuDeAd/gow-ascension-pc-port",
-      "description": "Native Windows static recompilation of God of War: Ascension (PS3) using ps3recomp. Work in progress, no game files included. You must supply your own legally owned copy of the game.",
-      "stars": 14,
-      "forks": 3,
-      "language": "C++",
-      "createdAt": "2026-10-17T14:36:16Z",
-      "pushedAt": "2026-11-03T15:17:14Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "port",
-      "score": 13,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 bbport|bloodborne_pc|gow",
-        "+2 bring your own|your own ",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-26T03:33:47.563Z",
-      "_readmeHash": "7853",
       "copies": 0
     },
     {
@@ -5406,7 +5521,7 @@
       "repo": "zonehammer/wet-recomp",
       "url": "https://github.com/zonehammer/wet-recomp",
       "description": "“Native Windows port of WET (Xbox 360) via static recompilation. Requires your own copy of the game.”",
-      "stars": 11,
+      "stars": 12,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-28T23:22:10Z",
@@ -6458,7 +6573,7 @@
       "forks": 0,
       "language": "Rust",
       "createdAt": "2026-10-22T01:02:29Z",
-      "pushedAt": "2026-11-11T03:40:37Z",
+      "pushedAt": "2026-11-11T14:17:37Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -6481,14 +6596,15 @@
       ],
       "fps": [
         "30 FPS",
-        "13–15 FPS",
+        "40 FPS",
         "60 FPS",
         "88 FPS",
-        "17 FPS"
+        "44–56 FPS",
+        "13–15 FPS"
       ],
       "statusHint": "complete",
       "firstSeen": "2026-11-06T19:28:00.546Z",
-      "_readmeHash": "12622",
+      "_readmeHash": "14759",
       "copies": 0
     },
     {
@@ -7540,7 +7656,7 @@
       "repo": "skuza-oss/downhill-revived",
       "url": "https://github.com/skuza-oss/downhill-revived",
       "description": "A PC port of Downhill Domination (PS2), built on a matching decompilation. Bring your own disc.",
-      "stars": 199,
+      "stars": 201,
       "forks": 29,
       "language": "C",
       "createdAt": "2026-10-17T14:50:17Z",
@@ -7892,7 +8008,7 @@
       "repo": "Destinity13/TimeSplitters-2-Native-Linux-Recomp",
       "url": "https://github.com/Destinity13/TimeSplitters-2-Native-Linux-Recomp",
       "description": "TimeSplitters 2 (PS2, NTSC-U) statically recompiled to a native Linux executable – HD remaster: 60 FPS, real 16:9, up to 8x resolution, split-screen co-op, verified against PCSX2",
-      "stars": 24,
+      "stars": 27,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-11-07T07:12:08Z",
@@ -7923,41 +8039,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-11-08T06:02:20.935Z",
       "_readmeHash": "19336",
-      "copies": 0
-    },
-    {
-      "repo": "literalynn/BurnoutDominatorReversed",
-      "url": "https://github.com/literalynn/BurnoutDominatorReversed",
-      "description": "Burnout Dominator (PS2) recompiled into a native PC game. fully playable, WIP",
-      "stars": 24,
-      "forks": 2,
-      "language": "C++",
-      "createdAt": "2026-10-06T22:18:43Z",
-      "pushedAt": "2026-11-10T21:43:17Z",
-      "forkOf": null,
-      "platform": "ps2",
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 \\bvulkan\\b",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [],
-      "statusHint": "complete",
-      "firstSeen": "2026-10-26T03:33:24.104Z",
-      "_readmeHash": "16824",
       "copies": 0
     },
     {
@@ -7996,6 +8077,41 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-26T03:34:33.881Z",
       "_readmeHash": "5692",
+      "copies": 0
+    },
+    {
+      "repo": "literalynn/BurnoutDominatorReversed",
+      "url": "https://github.com/literalynn/BurnoutDominatorReversed",
+      "description": "Burnout Dominator (PS2) recompiled into a native PC game. fully playable, WIP",
+      "stars": 24,
+      "forks": 2,
+      "language": "C++",
+      "createdAt": "2026-10-06T22:18:43Z",
+      "pushedAt": "2026-11-10T21:43:17Z",
+      "forkOf": null,
+      "platform": "ps2",
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-26T03:33:24.104Z",
+      "_readmeHash": "16824",
       "copies": 0
     },
     {
@@ -8071,7 +8187,7 @@
       "url": "https://github.com/rcostanza/Deception-IV-NightmarePrincess-recomp",
       "description": "Deception IV: The Nightmare Princess (PS4) - Recompiled to PC",
       "stars": 17,
-      "forks": 0,
+      "forks": 1,
       "language": "C++",
       "createdAt": "2026-11-09T17:32:11Z",
       "pushedAt": "2026-11-09T21:25:00Z",
@@ -8108,6 +8224,40 @@
       "copies": 0
     },
     {
+      "repo": "gustavomorinaga/project-vekta",
+      "url": "https://github.com/gustavomorinaga/project-vekta",
+      "description": "Killzone HD // Unofficial PC Port (static recompilation). Work in progress, partly playable. Builds on your PC from your own game.",
+      "stars": 16,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-30T04:48:46Z",
+      "pushedAt": "2026-11-11T13:44:41Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": "killzone-2",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-30T05:49:44.217Z",
+      "_readmeHash": "11740",
+      "copies": 0
+    },
+    {
       "repo": "visibou/htrecomp",
       "url": "https://github.com/visibou/htrecomp",
       "description": "A native PC build of the Xbox 360 game Hydro Thunder Hurricane.",
@@ -8138,40 +8288,6 @@
       "statusHint": "early",
       "firstSeen": "2026-10-28T22:38:20.889Z",
       "_readmeHash": "12466",
-      "copies": 0
-    },
-    {
-      "repo": "gustavomorinaga/project-vekta",
-      "url": "https://github.com/gustavomorinaga/project-vekta",
-      "description": "Killzone HD // Unofficial PC Port (static recompilation). Work in progress, partly playable. Builds on your PC from your own game.",
-      "stars": 13,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-30T04:48:46Z",
-      "pushedAt": "2026-11-10T13:30:14Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 \\bvulkan\\b",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": "killzone-2",
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [],
-      "statusHint": "playable",
-      "firstSeen": "2026-10-30T05:49:44.217Z",
-      "_readmeHash": "11740",
       "copies": 0
     },
     {
@@ -8263,7 +8379,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-11-04T00:49:55Z",
-      "pushedAt": "2026-11-10T23:38:53Z",
+      "pushedAt": "2026-11-11T11:08:19Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -8291,7 +8407,47 @@
       ],
       "statusHint": "early",
       "firstSeen": "2026-11-04T06:21:36.584Z",
-      "_readmeHash": "30414",
+      "_readmeHash": "31355",
+      "copies": 0
+    },
+    {
+      "repo": "YodaMMM/NightfirePort",
+      "url": "https://github.com/YodaMMM/NightfirePort",
+      "description": "Nightfire Rust: a native Windows PC port of 007: Nightfire (PS2), written in Rust",
+      "stars": 9,
+      "forks": 0,
+      "language": "Rust",
+      "createdAt": "2026-10-09T20:37:24Z",
+      "pushedAt": "2026-11-11T14:19:31Z",
+      "forkOf": null,
+      "platform": "ps2",
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "240 FPS",
+        "110 FPS",
+        "220 FPS",
+        "60 FPS",
+        "551 FPS",
+        "356 FPS"
+      ],
+      "statusHint": "complete",
+      "firstSeen": "2026-10-26T03:33:37.268Z",
+      "_readmeHash": "15091",
       "copies": 0
     },
     {
@@ -8487,46 +8643,6 @@
       "copies": 0
     },
     {
-      "repo": "YodaMMM/NightfirePort",
-      "url": "https://github.com/YodaMMM/NightfirePort",
-      "description": "Nightfire Rust: a native Windows PC port of 007: Nightfire (PS2), written in Rust",
-      "stars": 8,
-      "forks": 0,
-      "language": "Rust",
-      "createdAt": "2026-10-09T20:37:24Z",
-      "pushedAt": "2026-11-11T06:11:38Z",
-      "forkOf": null,
-      "platform": "ps2",
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "240 FPS",
-        "110 FPS",
-        "220 FPS",
-        "60 FPS",
-        "551 FPS",
-        "356 FPS"
-      ],
-      "statusHint": "complete",
-      "firstSeen": "2026-10-26T03:33:37.268Z",
-      "_readmeHash": "15091",
-      "copies": 0
-    },
-    {
       "repo": "d4rksp4rt4n/SpartanPort",
       "url": "https://github.com/d4rksp4rt4n/SpartanPort",
       "description": "SpartanPort (God of War III PC port) with NVIDIA DLSS - based on FelipePrado0/SpartanPort",
@@ -8571,6 +8687,42 @@
       "copies": 0
     },
     {
+      "repo": "kelvynzucco/majistic-recomp",
+      "url": "https://github.com/kelvynzucco/majistic-recomp",
+      "description": "Native PC port and static recompilation of Majin and the Forsaken Kingdom (Xbox 360) for Windows x64. Direct3D 12, locked 60 FPS, and 4K support.",
+      "stars": 6,
+      "forks": 0,
+      "language": "JavaScript",
+      "createdAt": "2026-11-07T16:19:33Z",
+      "pushedAt": "2026-11-11T14:09:13Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-11-07T21:52:29.163Z",
+      "_readmeHash": "17285",
+      "copies": 0
+    },
+    {
       "repo": "k1gs/Drakengard3Recompile",
       "url": "https://github.com/k1gs/Drakengard3Recompile",
       "description": "Native Windows recompilation of Drakengard 3. Goal: a complete playable port through static recompilation, maximum native execution and minimal PS3 compatibility.",
@@ -8604,42 +8756,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-26T03:33:51.501Z",
       "_readmeHash": "8542",
-      "copies": 0
-    },
-    {
-      "repo": "kelvynzucco/majistic-recomp",
-      "url": "https://github.com/kelvynzucco/majistic-recomp",
-      "description": "Native PC port and static recompilation of Majin and the Forsaken Kingdom (Xbox 360) for Windows x64. Direct3D 12, locked 60 FPS, and 4K support.",
-      "stars": 6,
-      "forks": 0,
-      "language": "JavaScript",
-      "createdAt": "2026-11-07T16:19:33Z",
-      "pushedAt": "2026-11-11T00:18:18Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS",
-        "30 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-11-07T21:52:29.163Z",
-      "_readmeHash": "17285",
       "copies": 0
     },
     {
@@ -8685,7 +8801,7 @@
       "repo": "cischi/gow2-recomp",
       "url": "https://github.com/cischi/gow2-recomp",
       "description": "Unofficial PC port of Gears of War 2 (Xbox 360) via static recompilation",
-      "stars": 4,
+      "stars": 5,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-27T09:14:13Z",
@@ -8716,6 +8832,40 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-27T12:14:08.190Z",
       "_readmeHash": "25326",
+      "copies": 0
+    },
+    {
+      "repo": "Raikaru/Izanagi",
+      "url": "https://github.com/Raikaru/Izanagi",
+      "description": "Native PC port of Persona 4 (PS2) — bring your own ISO. Playable, work in progress.",
+      "stars": 4,
+      "forks": 0,
+      "language": "C",
+      "createdAt": "2026-11-02T15:13:33Z",
+      "pushedAt": "2026-11-11T12:38:18Z",
+      "forkOf": null,
+      "platform": "ps2",
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bring your own|your own ",
+        "+1 (readme) recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [],
+      "statusHint": "playable",
+      "firstSeen": "2026-11-02T15:51:36.350Z",
+      "_readmeHash": "5498",
       "copies": 0
     },
     {
@@ -8927,6 +9077,40 @@
       "copies": 0
     },
     {
+      "repo": "erutoruru/Battlefield-Bad-Company-Recomp-Project",
+      "url": "https://github.com/erutoruru/Battlefield-Bad-Company-Recomp-Project",
+      "description": "This project is a PC port of the game Battlefield: Bad Company, which was released for the Xbox 360.",
+      "stars": 2,
+      "forks": 0,
+      "language": "Go",
+      "createdAt": "2026-11-01T21:06:02Z",
+      "pushedAt": "2026-11-01T21:25:07Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-11-01T22:05:51.247Z",
+      "_readmeHash": "5344",
+      "copies": 0
+    },
+    {
       "repo": "fabegalo/x360-native",
       "url": "https://github.com/fabegalo/x360-native",
       "description": "An open-source Xbox 360 recompilation project bringing original games and the authentic dashboard to modern PCs. Experimental and actively developed.",
@@ -8960,40 +9144,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-26T03:34:09.679Z",
       "_readmeHash": "13369",
-      "copies": 0
-    },
-    {
-      "repo": "erutoruru/Battlefield-Bad-Company-Recomp-Project",
-      "url": "https://github.com/erutoruru/Battlefield-Bad-Company-Recomp-Project",
-      "description": "This project is a PC port of the game Battlefield: Bad Company, which was released for the Xbox 360.",
-      "stars": 2,
-      "forks": 0,
-      "language": "Go",
-      "createdAt": "2026-11-01T21:06:02Z",
-      "pushedAt": "2026-11-01T21:25:07Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-11-01T22:05:51.247Z",
-      "_readmeHash": "5344",
       "copies": 0
     },
     {
@@ -9147,40 +9297,6 @@
       "copies": 0
     },
     {
-      "repo": "Raikaru/Izanagi",
-      "url": "https://github.com/Raikaru/Izanagi",
-      "description": "Native PC port of Persona 4 (PS2) — bring your own ISO. Playable, work in progress.",
-      "stars": 1,
-      "forks": 0,
-      "language": "C",
-      "createdAt": "2026-11-02T15:13:33Z",
-      "pushedAt": "2026-11-11T06:05:41Z",
-      "forkOf": null,
-      "platform": "ps2",
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bring your own|your own ",
-        "+1 (readme) recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [],
-      "statusHint": "playable",
-      "firstSeen": "2026-11-02T15:51:36.350Z",
-      "_readmeHash": "5498",
-      "copies": 0
-    },
-    {
       "repo": "PSam09/okami-recomp",
       "url": "https://github.com/PSam09/okami-recomp",
       "description": "A native PC port of Okami (PS2, NTSC-U SLUS-21115) built by statically recompiling MIPS R5900 code to C++.",
@@ -9281,6 +9397,39 @@
       "copies": 0
     },
     {
+      "repo": "bugcoder00/FarCryInstinctsPredatorRecomp",
+      "url": "https://github.com/bugcoder00/FarCryInstinctsPredatorRecomp",
+      "description": "PC port of Far Cry Instincts Predator (Xbox 360) by static recompilation. Fan project. No game files included.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-11T00:13:15Z",
+      "pushedAt": "2026-11-11T11:45:34Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-11-11T06:17:33.619Z",
+      "_readmeHash": "4400",
+      "copies": 0
+    },
+    {
       "repo": "papand7/Battlefield-Recompilation-Project",
       "url": "https://github.com/papand7/Battlefield-Recompilation-Project",
       "description": "Native PC ports of Battlefield 1943 and Bad Company (Xbox 360) via static recompilation",
@@ -9288,7 +9437,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-11-07T18:42:23Z",
-      "pushedAt": "2026-11-11T05:47:02Z",
+      "pushedAt": "2026-11-11T11:40:53Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -9669,7 +9818,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-11-07T18:02:21Z",
-      "pushedAt": "2026-11-11T02:34:44Z",
+      "pushedAt": "2026-11-11T07:23:38Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -9693,47 +9842,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-11-07T21:52:21.955Z",
       "_readmeHash": "6280",
-      "copies": 0
-    },
-    {
-      "repo": "miroslavdanutalexandru-alt/Resistance3Port",
-      "url": "https://github.com/miroslavdanutalexandru-alt/Resistance3Port",
-      "description": "Native PC static recompilation port of Resistance 3 (PS3)",
-      "stars": 0,
-      "forks": 0,
-      "language": "C",
-      "createdAt": "2026-11-10T02:43:56Z",
-      "pushedAt": "2026-11-10T09:14:33Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS",
-        "30 FPS",
-        "144 FPS",
-        "138 FPS",
-        "44 FPS",
-        "55 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-10T07:19:37.597Z",
-      "_readmeHash": "36721",
       "copies": 0
     },
     {
@@ -9765,43 +9873,6 @@
       "statusHint": "early",
       "firstSeen": "2026-10-26T03:33:59.048Z",
       "_readmeHash": "5429",
-      "copies": 0
-    },
-    {
-      "repo": "trishatiqui1224-ai/fnc-ios",
-      "url": "https://github.com/trishatiqui1224-ai/fnc-ios",
-      "description": "Fight Night Champion (Xbox 360, Title ID: 45410915, Media ID: 2DC50868) - Native Apple Silicon ARM64 Static Recompilation iOS Port",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-11-05T17:10:47Z",
-      "pushedAt": "2026-11-11T06:09:07Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 12,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": "ico",
-      "platforms": [
-        "macos"
-      ],
-      "fps": [
-        "60 FPS",
-        "120 FPS"
-      ],
-      "statusHint": "unknown",
-      "firstSeen": "2026-11-05T20:02:12.439Z",
-      "_readmeHash": "5085",
       "copies": 0
     },
     {
@@ -9838,36 +9909,40 @@
       "copies": 0
     },
     {
-      "repo": "bugcoder00/FarCryInstinctsPredatorRecomp",
-      "url": "https://github.com/bugcoder00/FarCryInstinctsPredatorRecomp",
-      "description": "PC port of Far Cry Instincts Predator (Xbox 360) by static recompilation. Fan project. No game files included.",
+      "repo": "trishatiqui1224-ai/fnc-ios",
+      "url": "https://github.com/trishatiqui1224-ai/fnc-ios",
+      "description": "Fight Night Champion (Xbox 360, Title ID: 45410915, Media ID: 2DC50868) - Native Apple Silicon ARM64 Static Recompilation iOS Port",
       "stars": 0,
       "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-11-11T00:13:15Z",
-      "pushedAt": "2026-11-11T01:03:55Z",
+      "language": "Python",
+      "createdAt": "2026-11-05T17:10:47Z",
+      "pushedAt": "2026-11-11T06:21:12Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
       "score": 12,
       "reasons": [
         "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
         "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bring your own|your own ",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
         "+1 recomp|static recompil|d",
         "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
       ],
       "cusa": [],
-      "game": null,
+      "game": "ico",
       "platforms": [
-        "windows"
+        "macos"
       ],
-      "fps": [],
+      "fps": [
+        "60 FPS",
+        "120 FPS"
+      ],
       "statusHint": "unknown",
-      "firstSeen": "2026-11-11T06:17:33.619Z",
-      "_readmeHash": "4400",
+      "firstSeen": "2026-11-05T20:02:12.439Z",
+      "_readmeHash": "5085",
       "copies": 0
     },
     {
@@ -10007,6 +10082,47 @@
       "statusHint": "playable",
       "firstSeen": "2026-11-05T20:02:45.483Z",
       "_readmeHash": "26727",
+      "copies": 0
+    },
+    {
+      "repo": "miroslavdanutalexandru-alt/Resistance3Port",
+      "url": "https://github.com/miroslavdanutalexandru-alt/Resistance3Port",
+      "description": "Native PC static recompilation port of Resistance 3 (PS3)",
+      "stars": 0,
+      "forks": 0,
+      "language": "C",
+      "createdAt": "2026-11-10T02:43:56Z",
+      "pushedAt": "2026-11-10T09:14:33Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 12,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS",
+        "144 FPS",
+        "138 FPS",
+        "44 FPS",
+        "55 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-10T07:19:37.597Z",
+      "_readmeHash": "36721",
       "copies": 0
     },
     {
@@ -10519,7 +10635,7 @@
       "repo": "LucaPazienza/gravityrush_pc",
       "url": "https://github.com/LucaPazienza/gravityrush_pc",
       "description": "Gravity Rush PC Native Port A community-driven project aiming to bring Gravity Rush to PC as a native port, building upon the technical foundation and approach of the God of War PC port. The goal is to make the game run natively on PC while preserving its original gameplay, unique gravity mechanics, and artistic vision.",
-      "stars": 355,
+      "stars": 357,
       "forks": 21,
       "language": "C++",
       "createdAt": "2026-10-16T08:35:12Z",
@@ -10557,11 +10673,11 @@
       "repo": "andrewnakas/gtav-recomp",
       "url": "https://github.com/andrewnakas/gtav-recomp",
       "description": "GTA V (Xbox 360, TU27) static recompilation with ReXGlue",
-      "stars": 211,
-      "forks": 16,
+      "stars": 218,
+      "forks": 18,
       "language": "C++",
       "createdAt": "2026-11-02T06:05:20Z",
-      "pushedAt": "2026-11-09T04:08:35Z",
+      "pushedAt": "2026-11-11T04:59:02Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -10638,11 +10754,11 @@
       "repo": "exoteric33/ps2-native-recomp",
       "url": "https://github.com/exoteric33/ps2-native-recomp",
       "description": "Turns a PS2 disc image into a native PC program by static recompilation; builds on ps2-web-recomp (MIT). Work in progress. Bring your own disc.",
-      "stars": 185,
+      "stars": 189,
       "forks": 16,
       "language": "C++",
       "createdAt": "2026-10-28T17:55:58Z",
-      "pushedAt": "2026-11-10T09:15:26Z",
+      "pushedAt": "2026-11-11T08:48:20Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -10672,7 +10788,7 @@
       ],
       "statusHint": "complete",
       "firstSeen": "2026-10-28T22:38:07.524Z",
-      "_readmeHash": "39477",
+      "_readmeHash": "40000",
       "copies": 0
     },
     {
@@ -10747,11 +10863,11 @@
       "repo": "jjmhalew/RampageRE",
       "url": "https://github.com/jjmhalew/RampageRE",
       "description": "A native PC / Android / Linux / Switch / Steam Deck port of Rampage: Total Destruction (PS2)",
-      "stars": 64,
+      "stars": 63,
       "forks": 5,
       "language": "C",
       "createdAt": "2026-10-07T21:13:41Z",
-      "pushedAt": "2026-11-08T21:55:35Z",
+      "pushedAt": "2026-11-11T12:09:43Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -10781,7 +10897,7 @@
       "repo": "GTTeancum/OpenJam",
       "url": "https://github.com/GTTeancum/OpenJam",
       "description": "Native PC port of NBA JAM: On Fire Edition (Xbox 360 XBLA) via ReXGlue static recompilation",
-      "stars": 58,
+      "stars": 59,
       "forks": 6,
       "language": "Python",
       "createdAt": "2026-09-18T02:09:01Z",
@@ -10814,7 +10930,7 @@
       "repo": "SuperCatElvis/UntilDawn_PC",
       "url": "https://github.com/SuperCatElvis/UntilDawn_PC",
       "description": "PC recompilation of the original Until Dawn (2015), running natively on Windows with a custom Vulkan renderer.",
-      "stars": 53,
+      "stars": 52,
       "forks": 0,
       "language": "C",
       "createdAt": "2026-10-23T20:27:30Z",
@@ -10923,7 +11039,7 @@
       "repo": "rcostanza/resogun-recomp",
       "url": "https://github.com/rcostanza/resogun-recomp",
       "description": "Resogun (PS4) - Recompiled to PC",
-      "stars": 36,
+      "stars": 39,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-11-08T06:27:30Z",
@@ -11027,6 +11143,40 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-27T05:05:55.370Z",
       "_readmeHash": "12759",
+      "copies": 0
+    },
+    {
+      "repo": "TekRantGaming/Battlefield-1943-Reborn",
+      "url": "https://github.com/TekRantGaming/Battlefield-1943-Reborn",
+      "description": "Battlefield 1943 Reborn: the Xbox 360 game running natively on PC, with its online multiplayer restored. Releases and server packages.",
+      "stars": 31,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-06T13:31:51Z",
+      "pushedAt": "2026-11-11T08:16:45Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 11,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-11-11T06:17:14.770Z",
+      "_readmeHash": "16293",
       "copies": 0
     },
     {
@@ -11206,6 +11356,42 @@
       "copies": 0
     },
     {
+      "repo": "csrpfivem/PS3NHLLegacyRecomp",
+      "url": "https://github.com/csrpfivem/PS3NHLLegacyRecomp",
+      "description": "Native PC port of NHL Legacy Edition via PS3 static recompliation",
+      "stars": 9,
+      "forks": 0,
+      "language": "C",
+      "createdAt": "2026-11-02T00:46:46Z",
+      "pushedAt": "2026-11-11T07:21:02Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 11,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": "nhl-24",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-02T06:03:19.669Z",
+      "_readmeHash": "8945",
+      "copies": 0
+    },
+    {
       "repo": "ITSeniy/pvz-console-edition",
       "url": "https://github.com/ITSeniy/pvz-console-edition",
       "description": "Unofficial Windows port of the Xbox 360 Plants vs. Zombies, statically recompiled with ReXGlue, with full mouse controls. Bring your own game copy.",
@@ -11239,6 +11425,38 @@
       "statusHint": "complete",
       "firstSeen": "2026-10-26T03:33:58.445Z",
       "_readmeHash": "9017",
+      "copies": 0
+    },
+    {
+      "repo": "furqanagwan/007",
+      "url": "https://github.com/furqanagwan/007",
+      "description": "Xbox 360 James Bond games (Quantum of Solace, Blood Stone, 007 Legends) statically recompiled for Windows PC with ReXGlue: Direct3D 12, GDK. Configs and research only, no game files.",
+      "stars": 8,
+      "forks": 0,
+      "language": "PowerShell",
+      "createdAt": "2026-09-23T12:02:44Z",
+      "pushedAt": "2026-11-11T10:19:32Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 11,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "research",
+      "firstSeen": "2026-11-11T14:26:16.606Z",
+      "_readmeHash": "3091",
       "copies": 0
     },
     {
@@ -11278,42 +11496,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-11-02T06:03:20.225Z",
       "_readmeHash": "3347",
-      "copies": 0
-    },
-    {
-      "repo": "csrpfivem/PS3NHLLegacyRecomp",
-      "url": "https://github.com/csrpfivem/PS3NHLLegacyRecomp",
-      "description": "Native PC port of NHL Legacy Edition via PS3 static recompliation",
-      "stars": 7,
-      "forks": 0,
-      "language": "C",
-      "createdAt": "2026-11-02T00:46:46Z",
-      "pushedAt": "2026-11-02T00:53:45Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "port",
-      "score": 11,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": "nhl-24",
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [
-        "60 FPS",
-        "30 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-02T06:03:19.669Z",
-      "_readmeHash": "8276",
       "copies": 0
     },
     {
@@ -11833,7 +12015,7 @@
       "forks": 0,
       "language": "Python",
       "createdAt": "2026-11-07T21:32:27Z",
-      "pushedAt": "2026-11-11T04:30:31Z",
+      "pushedAt": "2026-11-11T09:12:37Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -11857,7 +12039,7 @@
       ],
       "statusHint": "unknown",
       "firstSeen": "2026-11-07T21:52:03.337Z",
-      "_readmeHash": "5906",
+      "_readmeHash": "5977",
       "copies": 0
     },
     {
@@ -11893,6 +12075,78 @@
       "copies": 0
     },
     {
+      "repo": "erikomis/pes2013-recomp",
+      "url": "https://github.com/erikomis/pes2013-recomp",
+      "description": "Recompilação estática do Pro Evolution Soccer 2013 (PS3, BLUS31029 01.04) para macOS nativo com ps3recomp",
+      "stars": 1,
+      "forks": 0,
+      "language": "Rust",
+      "createdAt": "2026-11-05T21:38:34Z",
+      "pushedAt": "2026-11-11T13:39:08Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 11,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS",
+        "18 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-06T19:27:58.763Z",
+      "_readmeHash": "11438",
+      "copies": 0
+    },
+    {
+      "repo": "CaiusCodes/Hexic-HD-XBLA-PC-Recomp",
+      "url": "https://github.com/CaiusCodes/Hexic-HD-XBLA-PC-Recomp",
+      "description": "Native Windows PC recompilation of Hexic HD (Xbox 360 XBLA) using ReXGlue. Requires your own copy.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-06T04:15:12Z",
+      "pushedAt": "2026-11-11T01:48:13Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 11,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "unknown",
+      "firstSeen": "2026-11-11T06:17:19.267Z",
+      "_readmeHash": "6070",
+      "copies": 0
+    },
+    {
       "repo": "lmaogoodcodenotreally/DOA4-recomp",
       "url": "https://github.com/lmaogoodcodenotreally/DOA4-recomp",
       "description": "Dead Or Alive 4 (Xbox360) native recompilation for Win64 targets",
@@ -11923,40 +12177,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-11-10T19:49:23.061Z",
       "_readmeHash": "9349",
-      "copies": 0
-    },
-    {
-      "repo": "TekRantGaming/Battlefield-1943-Reborn",
-      "url": "https://github.com/TekRantGaming/Battlefield-1943-Reborn",
-      "description": "Battlefield 1943 Reborn: the Xbox 360 game running natively on PC, with its online multiplayer restored. Releases and server packages.",
-      "stars": 1,
-      "forks": 0,
-      "language": null,
-      "createdAt": "2026-11-06T13:31:51Z",
-      "pushedAt": "2026-11-11T05:50:06Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 11,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-11-11T06:17:14.770Z",
-      "_readmeHash": "14670",
       "copies": 0
     },
     {
@@ -12152,6 +12372,45 @@
       "copies": 0
     },
     {
+      "repo": "erikomis/resistance2-recomp",
+      "url": "https://github.com/erikomis/resistance2-recomp",
+      "description": "Resistance 2 (PS3, BCUS98120) statically recompiled to native macOS/arm64 with ps3recomp. No game data included.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Rust",
+      "createdAt": "2026-10-29T17:49:49Z",
+      "pushedAt": "2026-11-11T14:03:43Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 11,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "macos"
+      ],
+      "fps": [
+        "30 FPS",
+        "15–19 FPS",
+        "28–30 FPS",
+        "28 FPS",
+        "25 FPS",
+        "11–19 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-06T19:27:58.249Z",
+      "_readmeHash": "24842",
+      "copies": 0
+    },
+    {
       "repo": "erikomis/infamous1-recomp",
       "url": "https://github.com/erikomis/infamous1-recomp",
       "description": "inFAMOUS (PS3, NPUA80480) statically recompiled to native macOS/arm64 with ps3recomp. No game data included.",
@@ -12159,7 +12418,7 @@
       "forks": 0,
       "language": "Rust",
       "createdAt": "2026-11-11T01:02:09Z",
-      "pushedAt": "2026-11-11T01:09:25Z",
+      "pushedAt": "2026-11-11T13:36:45Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -12184,41 +12443,7 @@
       ],
       "statusHint": "early",
       "firstSeen": "2026-11-11T06:17:05.964Z",
-      "_readmeHash": "10659",
-      "copies": 0
-    },
-    {
-      "repo": "CaiusCodes/Hexic-HD-XBLA-PC-Recomp",
-      "url": "https://github.com/CaiusCodes/Hexic-HD-XBLA-PC-Recomp",
-      "description": "Native Windows PC recompilation of Hexic HD (Xbox 360 XBLA) using ReXGlue. Requires your own copy.",
-      "stars": 0,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-11-06T04:15:12Z",
-      "pushedAt": "2026-11-11T01:48:13Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 11,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS"
-      ],
-      "statusHint": "unknown",
-      "firstSeen": "2026-11-11T06:17:19.267Z",
-      "_readmeHash": "6070",
+      "_readmeHash": "13339",
       "copies": 0
     },
     {
@@ -12269,44 +12494,6 @@
       "copies": 0
     },
     {
-      "repo": "erikomis/pes2013-recomp",
-      "url": "https://github.com/erikomis/pes2013-recomp",
-      "description": "Recompilação estática do Pro Evolution Soccer 2013 (PS3, BLUS31029 01.04) para macOS nativo com ps3recomp",
-      "stars": 0,
-      "forks": 0,
-      "language": "Rust",
-      "createdAt": "2026-11-05T21:38:34Z",
-      "pushedAt": "2026-11-08T18:22:04Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "port",
-      "score": 11,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [
-        "60 FPS",
-        "30 FPS",
-        "18 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-06T19:27:58.763Z",
-      "_readmeHash": "11438",
-      "copies": 0
-    },
-    {
       "repo": "machinebreak/mk9-lauta",
       "url": "https://github.com/machinebreak/mk9-lauta",
       "description": "Mortal Kombat Komplete Edition nativo en PC con online con rollback (port de PC de mk9-nx). No incluye archivos del juego.",
@@ -12338,44 +12525,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-11-09T22:24:56.143Z",
       "_readmeHash": "11670",
-      "copies": 0
-    },
-    {
-      "repo": "erikomis/resistance2-recomp",
-      "url": "https://github.com/erikomis/resistance2-recomp",
-      "description": "Resistance 2 (PS3, BCUS98120) statically recompiled to native macOS/arm64 with ps3recomp. No game data included.",
-      "stars": 0,
-      "forks": 0,
-      "language": "Rust",
-      "createdAt": "2026-10-29T17:49:49Z",
-      "pushedAt": "2026-11-06T18:53:19Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "port",
-      "score": 11,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "macos"
-      ],
-      "fps": [
-        "30 FPS",
-        "15–19 FPS",
-        "28–30 FPS",
-        "28 FPS",
-        "11–19 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-06T19:27:58.249Z",
-      "_readmeHash": "23715",
       "copies": 0
     },
     {
@@ -13130,7 +13279,7 @@
       "repo": "Maxilure/MindOver-Recomp",
       "url": "https://github.com/Maxilure/MindOver-Recomp",
       "description": "An unofficial port of Crash Mind Over Mutant (Xbox 360) into a Native PC Game",
-      "stars": 41,
+      "stars": 42,
       "forks": 3,
       "language": "C++",
       "createdAt": "2026-09-30T14:38:39Z",
@@ -13195,6 +13344,40 @@
       "copies": 0
     },
     {
+      "repo": "MaChInEgUn3/God-of-War-Ascension-Recompiled",
+      "url": "https://github.com/MaChInEgUn3/God-of-War-Ascension-Recompiled",
+      "description": "Static recompilation of God of War: Ascension (PS3) on ps3recomp. Research, not playable. Bring your own game.",
+      "stars": 30,
+      "forks": 1,
+      "language": "C",
+      "createdAt": "2026-10-20T13:02:46Z",
+      "pushedAt": "2026-11-10T13:26:39Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+2 bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "research",
+      "firstSeen": "2026-10-26T03:33:43.813Z",
+      "_readmeHash": "4086",
+      "copies": 0
+    },
+    {
       "repo": "MrPowerUp82/superman_returns_recomp",
       "url": "https://github.com/MrPowerUp82/superman_returns_recomp",
       "description": "Projeto experimental de recompilação estática da versão Xbox 360 de Superman Returns para PC com ReXGlue",
@@ -13232,40 +13415,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-27T05:05:52.956Z",
       "_readmeHash": "35170",
-      "copies": 0
-    },
-    {
-      "repo": "MaChInEgUn3/God-of-War-Ascension-Recompiled",
-      "url": "https://github.com/MaChInEgUn3/God-of-War-Ascension-Recompiled",
-      "description": "Static recompilation of God of War: Ascension (PS3) on ps3recomp. Research, not playable. Bring your own game.",
-      "stars": 29,
-      "forks": 1,
-      "language": "C",
-      "createdAt": "2026-10-20T13:02:46Z",
-      "pushedAt": "2026-11-10T13:26:39Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "port",
-      "score": 10,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+2 bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [],
-      "statusHint": "research",
-      "firstSeen": "2026-10-26T03:33:43.813Z",
-      "_readmeHash": "4086",
       "copies": 0
     },
     {
@@ -13560,6 +13709,45 @@
       "copies": 0
     },
     {
+      "repo": "trev82usa/TrialsHD-Recomp",
+      "url": "https://github.com/trev82usa/TrialsHD-Recomp",
+      "description": "Xbox 360 Arcade Game Trials HD 100% AI",
+      "stars": 10,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-01T11:45:58Z",
+      "pushedAt": "2026-11-10T22:28:27Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-01T13:23:59.029Z",
+      "_readmeHash": "9852",
+      "copies": 0
+    },
+    {
       "repo": "k1gs/Drakengard1Recompile",
       "url": "https://github.com/k1gs/Drakengard1Recompile",
       "description": "Drakengard (PS2, Europe/PAL) static recompilation research toward a native PC port. Source-only; no playable build yet.",
@@ -13589,45 +13777,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-26T03:33:33.446Z",
       "_readmeHash": "5694",
-      "copies": 0
-    },
-    {
-      "repo": "trev82usa/TrialsHD-Recomp",
-      "url": "https://github.com/trev82usa/TrialsHD-Recomp",
-      "description": "Xbox 360 Arcade Game Trials HD 100% AI",
-      "stars": 9,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-11-01T11:45:58Z",
-      "pushedAt": "2026-11-09T07:39:58Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 10,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [
-        "60 FPS",
-        "30 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-01T13:23:59.029Z",
-      "_readmeHash": "9852",
       "copies": 0
     },
     {
@@ -13853,6 +14002,38 @@
       "copies": 0
     },
     {
+      "repo": "adanft/TekkenTagDecomp",
+      "url": "https://github.com/adanft/TekkenTagDecomp",
+      "description": "Matching decompilation and native PC port of Tekken Tag Tournament (PS2). Contains no game data.",
+      "stars": 3,
+      "forks": 0,
+      "language": "C",
+      "createdAt": "2026-10-29T14:09:21Z",
+      "pushedAt": "2026-10-29T16:20:44Z",
+      "forkOf": null,
+      "platform": "ps2",
+      "kind": "port",
+      "score": 10,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": "ttt2",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-29T22:48:56.840Z",
+      "_readmeHash": "8541",
+      "copies": 0
+    },
+    {
       "repo": "pablonolascoo/nfs-mw-2005-ps2-port",
       "url": "https://github.com/pablonolascoo/nfs-mw-2005-ps2-port",
       "description": "Native Mac port of Need for Speed: Most Wanted (2005, PS2) built from your own ISO: Swift + Metal engine with the original physics, AI, story and Lua scripts. Open source, no game data included. Port nativo para Mac de NFS Most Wanted.",
@@ -13886,38 +14067,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-10-26T03:33:00.003Z",
       "_readmeHash": "23335",
-      "copies": 0
-    },
-    {
-      "repo": "adanft/TekkenTagDecomp",
-      "url": "https://github.com/adanft/TekkenTagDecomp",
-      "description": "Matching decompilation and native PC port of Tekken Tag Tournament (PS2). Contains no game data.",
-      "stars": 2,
-      "forks": 0,
-      "language": "C",
-      "createdAt": "2026-10-29T14:09:21Z",
-      "pushedAt": "2026-10-29T16:20:44Z",
-      "forkOf": null,
-      "platform": "ps2",
-      "kind": "port",
-      "score": 10,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": "ttt2",
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-29T22:48:56.840Z",
-      "_readmeHash": "8541",
       "copies": 0
     },
     {
@@ -14067,35 +14216,35 @@
       "copies": 0
     },
     {
-      "repo": "Berry-Wilson/Drakengard-PC",
-      "url": "https://github.com/Berry-Wilson/Drakengard-PC",
-      "description": "Static Recompilation of Drakengard (PS2, USA, SLUS-20732)",
+      "repo": "7v0biscuit/OpenKai2",
+      "url": "https://github.com/7v0biscuit/OpenKai2",
+      "description": "A Native Windows Port of Dragon Ball Z: Budokai 2",
       "stars": 1,
       "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-11-02T06:16:05Z",
-      "pushedAt": "2026-11-10T16:45:28Z",
+      "language": "C++",
+      "createdAt": "2026-10-20T08:57:54Z",
+      "pushedAt": "2026-11-11T14:21:48Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
       "score": 10,
       "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
         "+1 recomp|static recompil|d"
       ],
       "cusa": [],
-      "game": "drakengard-3",
+      "game": null,
       "platforms": [
         "windows"
       ],
       "fps": [],
       "statusHint": "unknown",
-      "firstSeen": "2026-11-07T06:00:18.317Z",
-      "_readmeHash": "2306",
+      "firstSeen": "2026-10-28T12:56:24.517Z",
+      "_readmeHash": "5241",
       "copies": 0
     },
     {
@@ -14133,9 +14282,9 @@
       "description": "Afro Samurai (PS3, BLUS30264) static recompilation for macOS/arm64 with Metal, built on ps3recomp. No game data: build it from your own disc.",
       "stars": 1,
       "forks": 0,
-      "language": "C++",
+      "language": "Python",
       "createdAt": "2026-11-06T13:34:19Z",
-      "pushedAt": "2026-11-11T03:22:07Z",
+      "pushedAt": "2026-11-11T14:06:08Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -14154,10 +14303,12 @@
         "windows",
         "macos"
       ],
-      "fps": [],
+      "fps": [
+        "30 FPS"
+      ],
       "statusHint": "playable",
       "firstSeen": "2026-11-06T19:27:59.009Z",
-      "_readmeHash": "21923",
+      "_readmeHash": "25012",
       "copies": 0
     },
     {
@@ -14192,35 +14343,35 @@
       "copies": 0
     },
     {
-      "repo": "7v0biscuit/OpenKai2",
-      "url": "https://github.com/7v0biscuit/OpenKai2",
-      "description": "A Native Windows Port of Dragon Ball Z: Budokai 2",
+      "repo": "Berry-Wilson/Drakengard-PC",
+      "url": "https://github.com/Berry-Wilson/Drakengard-PC",
+      "description": "Static Recompilation of Drakengard (PS2, USA, SLUS-20732)",
       "stars": 1,
       "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-20T08:57:54Z",
-      "pushedAt": "2026-11-10T08:16:32Z",
+      "language": "Python",
+      "createdAt": "2026-11-02T06:16:05Z",
+      "pushedAt": "2026-11-10T16:45:28Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
       "score": 10,
       "reasons": [
-        "+1 (readme) \\bps[234]\\b|playstation ",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+3 \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
         "+1 recomp|static recompil|d"
       ],
       "cusa": [],
-      "game": null,
+      "game": "drakengard-3",
       "platforms": [
         "windows"
       ],
       "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-28T12:56:24.517Z",
-      "_readmeHash": "5011",
+      "statusHint": "unknown",
+      "firstSeen": "2026-11-07T06:00:18.317Z",
+      "_readmeHash": "2306",
       "copies": 0
     },
     {
@@ -14626,7 +14777,7 @@
       "forks": 0,
       "language": "Assembly",
       "createdAt": "2026-11-10T18:53:23Z",
-      "pushedAt": "2026-11-10T18:53:43Z",
+      "pushedAt": "2026-11-11T14:11:56Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -14648,7 +14799,7 @@
       "fps": [],
       "statusHint": "unknown",
       "firstSeen": "2026-11-10T19:49:12.779Z",
-      "_readmeHash": "5652",
+      "_readmeHash": "5709",
       "copies": 0
     },
     {
@@ -15737,11 +15888,11 @@
       "repo": "galarianpikachu2021-hue/Racing-8-DX-Recomp",
       "url": "https://github.com/galarianpikachu2021-hue/Racing-8-DX-Recomp",
       "description": "Mario Kart 8 Deluxe recompiled to run natively on your PC: no JIT, FSR 3.1 + frame generation, experimental DLSS, 720p to 4K output, HDR10. Bring your own game files.",
-      "stars": 66,
+      "stars": 71,
       "forks": 2,
       "language": "C++",
       "createdAt": "2026-10-23T21:03:53Z",
-      "pushedAt": "2026-11-11T03:57:05Z",
+      "pushedAt": "2026-11-11T07:59:43Z",
       "forkOf": null,
       "platform": null,
       "kind": "port",
@@ -15765,7 +15916,7 @@
       ],
       "statusHint": "early",
       "firstSeen": "2026-11-05T06:48:09.310Z",
-      "_readmeHash": "7579",
+      "_readmeHash": "7617",
       "copies": 0
     },
     {
@@ -16723,7 +16874,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-29T11:46:54Z",
-      "pushedAt": "2026-11-09T11:02:00Z",
+      "pushedAt": "2026-11-11T12:47:37Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -18091,11 +18242,11 @@
       "repo": "kuraeow/ultratears",
       "url": "https://github.com/kuraeow/ultratears",
       "description": "Unofficial native PC and Steam Deck port of Tears of the Kingdom 1.4.3 using static recompilation. Builds locally from the player's own extracted game dump; no game files included.",
-      "stars": 835,
-      "forks": 43,
+      "stars": 862,
+      "forks": 46,
       "language": "C",
       "createdAt": "2026-10-25T00:04:08Z",
-      "pushedAt": "2026-11-08T06:56:26Z",
+      "pushedAt": "2026-11-11T08:33:11Z",
       "forkOf": null,
       "platform": null,
       "kind": "port",
@@ -18559,8 +18710,8 @@
       "repo": "gminustwo/minustwo",
       "url": "https://github.com/gminustwo/minustwo",
       "description": "",
-      "stars": 27,
-      "forks": 0,
+      "stars": 30,
+      "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-25T00:09:48Z",
       "pushedAt": "2026-11-09T03:26:21Z",
@@ -18600,7 +18751,7 @@
       "repo": "gustavocanepa/gt4-native",
       "url": "https://github.com/gustavocanepa/gt4-native",
       "description": "Native PC port of Gran Turismo 4 (early planning): no PS2 emulation, no translated game code in the product. Built on gt4-decomp. No playable build yet.",
-      "stars": 27,
+      "stars": 28,
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-15T10:49:30Z",
@@ -18669,7 +18820,7 @@
       "forks": 3,
       "language": "C",
       "createdAt": "2026-10-26T10:22:51Z",
-      "pushedAt": "2026-11-10T18:30:07Z",
+      "pushedAt": "2026-11-11T13:52:30Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -18690,7 +18841,7 @@
       "fps": [],
       "statusHint": "early",
       "firstSeen": "2026-11-09T22:24:58.842Z",
-      "_readmeHash": "11332",
+      "_readmeHash": "11592",
       "copies": 0
     },
     {
@@ -18738,7 +18889,7 @@
       "forks": 12,
       "language": "C++",
       "createdAt": "2026-10-05T12:12:11Z",
-      "pushedAt": "2026-11-11T01:10:07Z",
+      "pushedAt": "2026-11-11T14:13:44Z",
       "forkOf": null,
       "platform": "ps4",
       "kind": "port",
@@ -18913,6 +19064,39 @@
       "copies": 0
     },
     {
+      "repo": "5C8/skate3recomp",
+      "url": "https://github.com/5C8/skate3recomp",
+      "description": "Retail Skate 3 recompilation with native graphics, profiles, online play, split screen and SteamVR integration.",
+      "stars": 16,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-10-29T17:15:38Z",
+      "pushedAt": "2026-11-11T12:29:38Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 8,
+      "reasons": [
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": "skate-2",
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-29T22:49:09.321Z",
+      "_readmeHash": "3833",
+      "copies": 0
+    },
+    {
       "repo": "veneito/engage-pc-recomp",
       "url": "https://github.com/veneito/engage-pc-recomp",
       "description": "Experimental native Windows port of Fire Emblem Engage 2.0.0. Build locally from your own files; no game data included.",
@@ -19082,43 +19266,10 @@
       "copies": 0
     },
     {
-      "repo": "5C8/skate3recomp",
-      "url": "https://github.com/5C8/skate3recomp",
-      "description": "Retail Skate 3 recompilation with native graphics, profiles, online play, split screen and SteamVR integration.",
-      "stars": 9,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-10-29T17:15:38Z",
-      "pushedAt": "2026-11-02T20:07:04Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 8,
-      "reasons": [
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": "skate-2",
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-29T22:49:09.321Z",
-      "_readmeHash": "3833",
-      "copies": 0
-    },
-    {
       "repo": "RedVorteX-TV/Uncharted-arm",
       "url": "https://github.com/RedVorteX-TV/Uncharted-arm",
       "description": "",
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-23T18:04:11Z",
@@ -19381,7 +19532,7 @@
       "forks": 0,
       "language": "Rust",
       "createdAt": "2026-10-27T08:32:38Z",
-      "pushedAt": "2026-11-10T18:59:51Z",
+      "pushedAt": "2026-11-11T08:35:33Z",
       "forkOf": null,
       "platform": "ps3",
       "kind": "port",
@@ -19407,6 +19558,40 @@
       "statusHint": "unknown",
       "firstSeen": "2026-11-07T13:02:02.581Z",
       "_readmeHash": "9269",
+      "copies": 0
+    },
+    {
+      "repo": "vittau/top-gear-2-genesis-pc",
+      "url": "https://github.com/vittau/top-gear-2-genesis-pc",
+      "description": "Native PC port of Top Gear 2 (Sega Genesis) via static recompilation: widescreen, true 60 fps, music+SFX together. Bring your own ROM.",
+      "stars": 3,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-11-05T16:53:08Z",
+      "pushedAt": "2026-11-11T14:09:50Z",
+      "forkOf": null,
+      "platform": null,
+      "kind": "port",
+      "score": 8,
+      "reasons": [
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+3 pc[- ]port|port (nativo ",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "60 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-06T19:28:31.880Z",
+      "_readmeHash": "17364",
       "copies": 0
     },
     {
@@ -19544,40 +19729,6 @@
       "copies": 0
     },
     {
-      "repo": "vittau/top-gear-2-genesis-pc",
-      "url": "https://github.com/vittau/top-gear-2-genesis-pc",
-      "description": "Native PC port of Top Gear 2 (Sega Genesis) via static recompilation: widescreen, true 60 fps, music+SFX together. Bring your own ROM.",
-      "stars": 2,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-11-05T16:53:08Z",
-      "pushedAt": "2026-11-10T19:46:12Z",
-      "forkOf": null,
-      "platform": null,
-      "kind": "port",
-      "score": 8,
-      "reasons": [
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+3 pc[- ]port|port (nativo ",
-        "+2 bring your own|your own ",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [
-        "60 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-06T19:28:31.880Z",
-      "_readmeHash": "17427",
-      "copies": 0
-    },
-    {
       "repo": "HandsomeStrife/dirge-of-cerberus-pc-port",
       "url": "https://github.com/HandsomeStrife/dirge-of-cerberus-pc-port",
       "description": "Attempting a native port of Dirge of Cerberus - Fan Project",
@@ -19703,6 +19854,40 @@
       "statusHint": "complete",
       "firstSeen": "2026-11-01T06:03:30.249Z",
       "_readmeHash": "2780",
+      "copies": 0
+    },
+    {
+      "repo": "5C8/rexglue-skate3",
+      "url": "https://github.com/5C8/rexglue-skate3",
+      "description": "ReXGlue SDK snapshot with the runtime and code-generation fixes used by the Skate 3 projects.",
+      "stars": 1,
+      "forks": 0,
+      "language": "C",
+      "createdAt": "2026-10-29T17:16:34Z",
+      "pushedAt": "2026-11-11T12:51:51Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 8,
+      "reasons": [
+        "+1 (readme) \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": "skate-2",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-29T22:49:11.830Z",
+      "_readmeHash": "3373",
       "copies": 0
     },
     {
@@ -19898,6 +20083,37 @@
       "statusHint": "unknown",
       "firstSeen": "2026-11-05T06:46:59.523Z",
       "_readmeHash": "5969",
+      "copies": 0
+    },
+    {
+      "repo": "erikomis/asuras-wrath-recomp",
+      "url": "https://github.com/erikomis/asuras-wrath-recomp",
+      "description": "Asura's Wrath (PS3) static recompilation for macOS/arm64 — native port, Metal graphics (work in progress)",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-11-11T12:05:03Z",
+      "pushedAt": "2026-11-11T14:06:59Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "port",
+      "score": 8,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "macos"
+      ],
+      "fps": [],
+      "statusHint": "research",
+      "firstSeen": "2026-11-11T14:25:58.755Z",
+      "_readmeHash": "3829",
       "copies": 0
     },
     {
@@ -20432,40 +20648,6 @@
       "copies": 0
     },
     {
-      "repo": "5C8/rexglue-skate3",
-      "url": "https://github.com/5C8/rexglue-skate3",
-      "description": "ReXGlue SDK snapshot with the runtime and code-generation fixes used by the Skate 3 projects.",
-      "stars": 0,
-      "forks": 0,
-      "language": "C",
-      "createdAt": "2026-10-29T17:16:34Z",
-      "pushedAt": "2026-10-29T20:17:59Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 8,
-      "reasons": [
-        "+1 (readme) \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": "skate-2",
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-29T22:49:11.830Z",
-      "_readmeHash": "3373",
-      "copies": 0
-    },
-    {
       "repo": "prcd001/plasticrecomp",
       "url": "https://github.com/prcd001/plasticrecomp",
       "description": "Army Men II (1999), lifted to C with pcrecomp and run natively on Windows (bring your own game copy)",
@@ -20608,10 +20790,10 @@
       "url": "https://github.com/moesuito/gt4-staticrecomp",
       "description": "",
       "stars": 535,
-      "forks": 24,
+      "forks": 25,
       "language": "C++",
       "createdAt": "2026-10-01T23:08:25Z",
-      "pushedAt": "2026-11-11T06:13:58Z",
+      "pushedAt": "2026-11-11T14:18:11Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -20714,14 +20896,51 @@
       "copies": 0
     },
     {
+      "repo": "adrbn/bo2-mac",
+      "url": "https://github.com/adrbn/bo2-mac",
+      "description": "Call of Duty: Black Ops II statically recompiled from 32-bit x86 Windows to native ARM64 macOS: Remill → LLVM IR, a hand-written Win32 runtime, Direct3D 11 drawn by Metal. No Wine, no game files.",
+      "stars": 143,
+      "forks": 10,
+      "language": "C++",
+      "createdAt": "2026-11-03T22:36:56Z",
+      "pushedAt": "2026-11-11T13:35:11Z",
+      "forkOf": null,
+      "platform": null,
+      "kind": "port",
+      "score": 7,
+      "reasons": [
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 bring your own|your own ",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "fps": [
+        "51–60 FPS",
+        "57–60 FPS",
+        "53–60 FPS",
+        "60 FPS",
+        "25 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-11-03T23:26:50.278Z",
+      "_readmeHash": "26179",
+      "copies": 0
+    },
+    {
       "repo": "Awis13/liberty-pro-max",
       "url": "https://github.com/Awis13/liberty-pro-max",
       "description": "GTA IV (PC 1.0.8.0) statically recompiled to run natively on Apple silicon Macs and iPads (Apple TV experimental): Metal renderer, the episodes, ~100 fixes, saves through iCloud. Build it from your own copy with the Builder app; no game data included.",
-      "stars": 119,
+      "stars": 120,
       "forks": 5,
       "language": "C++",
       "createdAt": "2026-11-02T00:23:18Z",
-      "pushedAt": "2026-11-11T03:18:36Z",
+      "pushedAt": "2026-11-11T13:24:50Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -20749,18 +20968,18 @@
       ],
       "statusHint": "unknown",
       "firstSeen": "2026-11-02T06:03:48.402Z",
-      "_readmeHash": "31016",
+      "_readmeHash": "31525",
       "copies": 0
     },
     {
       "repo": "hk21x/pgr2-recomp",
       "url": "https://github.com/hk21x/pgr2-recomp",
       "description": "Project Gotham Racing 2 recompilation for a native PC port.",
-      "stars": 106,
-      "forks": 2,
+      "stars": 110,
+      "forks": 3,
       "language": "C++",
       "createdAt": "2026-10-17T20:26:54Z",
-      "pushedAt": "2026-11-10T01:01:29Z",
+      "pushedAt": "2026-11-11T13:20:16Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -20786,11 +21005,11 @@
       "repo": "hk21x/007eon-recomp",
       "url": "https://github.com/hk21x/007eon-recomp",
       "description": "007 Everything or Nothing recompilation for a native PC port.",
-      "stars": 95,
+      "stars": 97,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-24T09:16:42Z",
-      "pushedAt": "2026-11-10T13:11:58Z",
+      "pushedAt": "2026-11-11T14:07:45Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -20946,51 +21165,14 @@
       "copies": 0
     },
     {
-      "repo": "adrbn/bo2-mac",
-      "url": "https://github.com/adrbn/bo2-mac",
-      "description": "Call of Duty: Black Ops II statically recompiled from 32-bit x86 Windows to native ARM64 macOS: Remill → LLVM IR, a hand-written Win32 runtime, Direct3D 11 drawn by Metal. No Wine, no game files.",
-      "stars": 73,
-      "forks": 6,
-      "language": "C++",
-      "createdAt": "2026-11-03T22:36:56Z",
-      "pushedAt": "2026-11-07T03:26:18Z",
-      "forkOf": null,
-      "platform": null,
-      "kind": "port",
-      "score": 7,
-      "reasons": [
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 bring your own|your own ",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "macos"
-      ],
-      "fps": [
-        "51–60 FPS",
-        "57–60 FPS",
-        "53–60 FPS",
-        "60 FPS",
-        "25 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-11-03T23:26:50.278Z",
-      "_readmeHash": "25248",
-      "copies": 0
-    },
-    {
       "repo": "AlonsoTlol/DS-Kart-Recompiled",
       "url": "https://github.com/AlonsoTlol/DS-Kart-Recompiled",
       "description": "Native PC port of Mario Kart DS by static recompilation. Port nativo para PC de Mario Kart DS.",
-      "stars": 70,
+      "stars": 73,
       "forks": 4,
       "language": "C++",
       "createdAt": "2026-10-28T20:04:08Z",
-      "pushedAt": "2026-11-10T23:45:25Z",
+      "pushedAt": "2026-11-11T09:36:03Z",
       "forkOf": null,
       "platform": "ps4",
       "kind": "port",
@@ -21183,6 +21365,41 @@
       "copies": 0
     },
     {
+      "repo": "thegh0sts/bourne-conspiracy-x360-recomp",
+      "url": "https://github.com/thegh0sts/bourne-conspiracy-x360-recomp",
+      "description": "A Windows compatible recomp of The Robert Ludlam's The Bourne Conspiracy (X360)",
+      "stars": 32,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-11-09T08:01:54Z",
+      "pushedAt": "2026-11-11T07:41:37Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 7,
+      "reasons": [
+        "+1 (readme) \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS",
+        "30 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-11-09T22:24:52.930Z",
+      "_readmeHash": "6933",
+      "copies": 0
+    },
+    {
       "repo": "st4rwhx/Resident-Evil-4-Native-Port",
       "url": "https://github.com/st4rwhx/Resident-Evil-4-Native-Port",
       "description": "",
@@ -21216,49 +21433,14 @@
       "copies": 0
     },
     {
-      "repo": "thegh0sts/bourne-conspiracy-x360-recomp",
-      "url": "https://github.com/thegh0sts/bourne-conspiracy-x360-recomp",
-      "description": "A Windows compatible recomp of The Robert Ludlam's The Bourne Conspiracy (X360)",
-      "stars": 25,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-11-09T08:01:54Z",
-      "pushedAt": "2026-11-09T20:03:52Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "port",
-      "score": 7,
-      "reasons": [
-        "+1 (readme) \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS",
-        "30 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-11-09T22:24:52.930Z",
-      "_readmeHash": "4935",
-      "copies": 0
-    },
-    {
       "repo": "360recomper/UFC3ReX",
       "url": "https://github.com/360recomper/UFC3ReX",
       "description": "ReXGlue recompilation project for UFC Undisputed 3",
-      "stars": 21,
+      "stars": 23,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-20T14:54:49Z",
-      "pushedAt": "2026-11-10T14:03:12Z",
+      "pushedAt": "2026-11-11T13:11:26Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -21359,7 +21541,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-03T12:49:36Z",
-      "pushedAt": "2026-11-10T08:41:02Z",
+      "pushedAt": "2026-11-11T14:09:25Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "port",
@@ -21383,7 +21565,7 @@
       ],
       "statusHint": "playable",
       "firstSeen": "2026-10-26T03:33:18.845Z",
-      "_readmeHash": "9299",
+      "_readmeHash": "9377",
       "copies": 0
     },
     {
@@ -21797,7 +21979,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-23T05:40:15Z",
-      "pushedAt": "2026-11-11T05:12:59Z",
+      "pushedAt": "2026-11-11T12:13:11Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -21831,7 +22013,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-19T18:53:36Z",
-      "pushedAt": "2026-11-11T01:24:38Z",
+      "pushedAt": "2026-11-11T14:19:51Z",
       "forkOf": null,
       "platform": null,
       "kind": "port",
@@ -21901,7 +22083,7 @@
       "forks": 0,
       "language": "C",
       "createdAt": "2026-11-08T20:59:15Z",
-      "pushedAt": "2026-11-11T02:08:34Z",
+      "pushedAt": "2026-11-11T08:54:10Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "port",
@@ -21922,7 +22104,7 @@
       "fps": [],
       "statusHint": "unknown",
       "firstSeen": "2026-11-09T06:27:12.320Z",
-      "_readmeHash": "4960",
+      "_readmeHash": "5727",
       "copies": 0
     },
     {
@@ -22093,6 +22275,35 @@
       "copies": 0
     },
     {
+      "repo": "TefMeister/the-darkness-vr",
+      "url": "https://github.com/TefMeister/the-darkness-vr",
+      "description": "The Darkness (2007, Starbreeze) toward VR on PC: our own Xbox 360 static recompilation runs in 3D, and the two-eye picture is being built. Non-commercial fan project; no game assets.",
+      "stars": 3,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-09-16T12:08:49Z",
+      "pushedAt": "2026-11-11T11:39:37Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "port",
+      "score": 7,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": "the-darkness",
+      "platforms": [],
+      "fps": [],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-26T03:34:08.768Z",
+      "_readmeHash": "4256",
+      "copies": 0
+    },
+    {
       "repo": "codepdbh/maxpayne2pc-androidevolved",
       "url": "https://github.com/codepdbh/maxpayne2pc-androidevolved",
       "description": "Static recompilation of Max Payne 2 (PC, x86) to native Android ARM64 with pcrecomp. No game files included.",
@@ -22126,32 +22337,39 @@
       "copies": 0
     },
     {
-      "repo": "TefMeister/the-darkness-vr",
-      "url": "https://github.com/TefMeister/the-darkness-vr",
-      "description": "The Darkness (2007, Starbreeze) toward VR on PC: our own Xbox 360 static recompilation runs in 3D, and the two-eye picture is being built. Non-commercial fan project; no game assets.",
-      "stars": 3,
+      "repo": "WilkPrintes/spartanport-landing",
+      "url": "https://github.com/WilkPrintes/spartanport-landing",
+      "description": "Landing page de download do port nativo de God of War III Remastered para PC (Next.js 16, Tailwind, shadcn/ui, GSAP)",
+      "stars": 2,
       "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-09-16T12:08:49Z",
-      "pushedAt": "2026-11-10T14:52:42Z",
+      "language": "TypeScript",
+      "createdAt": "2026-10-15T15:51:01Z",
+      "pushedAt": "2026-10-19T02:15:10Z",
       "forkOf": null,
-      "platform": "x360",
+      "platform": null,
       "kind": "port",
       "score": 7,
       "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 recomp|static recompil|d"
+        "+1 (readme) \\bps4\\b|playstation ?4|\\",
+        "+2 \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) \\bCUSA\\d{5}\\b",
+        "+2 bbport|bloodborne_pc|gow"
       ],
-      "cusa": [],
-      "game": "the-darkness",
-      "platforms": [],
-      "fps": [],
-      "statusHint": "playable",
-      "firstSeen": "2026-10-26T03:34:08.768Z",
-      "_readmeHash": "4053",
+      "cusa": [
+        "CUSA01623",
+        "CUSA01715"
+      ],
+      "game": "god-of-war-3",
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [
+        "120 FPS"
+      ],
+      "statusHint": "unknown",
+      "firstSeen": "2026-10-21T23:07:17.608Z",
+      "_readmeHash": "7041",
       "copies": 0
     },
     {
@@ -22285,42 +22503,6 @@
       "statusHint": "early",
       "firstSeen": "2026-10-28T05:42:58.457Z",
       "_readmeHash": "9993",
-      "copies": 0
-    },
-    {
-      "repo": "WilkPrintes/spartanport-landing",
-      "url": "https://github.com/WilkPrintes/spartanport-landing",
-      "description": "Landing page de download do port nativo de God of War III Remastered para PC (Next.js 16, Tailwind, shadcn/ui, GSAP)",
-      "stars": 1,
-      "forks": 0,
-      "language": "TypeScript",
-      "createdAt": "2026-10-15T15:51:01Z",
-      "pushedAt": "2026-10-19T02:15:10Z",
-      "forkOf": null,
-      "platform": null,
-      "kind": "port",
-      "score": 7,
-      "reasons": [
-        "+1 (readme) \\bps4\\b|playstation ?4|\\",
-        "+2 \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) \\bCUSA\\d{5}\\b",
-        "+2 bbport|bloodborne_pc|gow"
-      ],
-      "cusa": [
-        "CUSA01623",
-        "CUSA01715"
-      ],
-      "game": "god-of-war-3",
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [
-        "120 FPS"
-      ],
-      "statusHint": "unknown",
-      "firstSeen": "2026-10-21T23:07:17.608Z",
-      "_readmeHash": "7041",
       "copies": 0
     },
     {
@@ -23325,7 +23507,7 @@
       "repo": "mauricristiano95-hub/F1_CE_PS3",
       "url": "https://github.com/mauricristiano95-hub/F1_CE_PS3",
       "description": "Recompilation for modern system of Formula One Championship Edition (PS3)",
-      "stars": 62,
+      "stars": 63,
       "forks": 6,
       "language": "C++",
       "createdAt": "2026-11-01T23:07:25Z",
@@ -23468,6 +23650,38 @@
       "copies": 0
     },
     {
+      "repo": "zer0ducksgiven/ReGPU",
+      "url": "https://github.com/zer0ducksgiven/ReGPU",
+      "description": "The Xbox 360 GPU (Xenos) on Direct3D 12, for XenonRecomp ports",
+      "stars": 21,
+      "forks": 6,
+      "language": "C++",
+      "createdAt": "2026-10-22T08:09:13Z",
+      "pushedAt": "2026-11-11T11:41:26Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "weak",
+      "score": 6,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-26T03:34:13.173Z",
+      "_readmeHash": "7386",
+      "copies": 0
+    },
+    {
       "repo": "Jauidev/GearsRecomp",
       "url": "https://github.com/Jauidev/GearsRecomp",
       "description": "Port no oficial de Gears of War (Xbox 360) a Android y PC por recompilación estática",
@@ -23532,38 +23746,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-27T18:06:23.260Z",
       "_readmeHash": "6480",
-      "copies": 0
-    },
-    {
-      "repo": "zer0ducksgiven/ReGPU",
-      "url": "https://github.com/zer0ducksgiven/ReGPU",
-      "description": "The Xbox 360 GPU (Xenos) on Direct3D 12, for XenonRecomp ports",
-      "stars": 17,
-      "forks": 4,
-      "language": "C++",
-      "createdAt": "2026-10-22T08:09:13Z",
-      "pushedAt": "2026-11-10T12:02:50Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "weak",
-      "score": 6,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-26T03:34:13.173Z",
-      "_readmeHash": "7386",
       "copies": 0
     },
     {
@@ -24212,6 +24394,39 @@
       "copies": 0
     },
     {
+      "repo": "Rickow/HSFA",
+      "url": "https://github.com/Rickow/HSFA",
+      "description": "Street Fighter Alpha Anthology (PS2) retranslated back to CPS2 68000: build Street Fighter Alpha 3, Street Fighter Alpha 3 Upper and Hyper Street Fighter Alpha from your own ISO, play them in a patched FinalBurn Neo core. No game data included.",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "createdAt": "2026-10-27T20:41:27Z",
+      "pushedAt": "2026-11-11T10:02:22Z",
+      "forkOf": null,
+      "platform": "ps2",
+      "kind": "weak",
+      "score": 6,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [],
+      "statusHint": "playable",
+      "firstSeen": "2026-10-27T22:16:07.351Z",
+      "_readmeHash": "15594",
+      "copies": 0
+    },
+    {
       "repo": "tylerl567/Harry-Potter-legacy-recompiled",
       "url": "https://github.com/tylerl567/Harry-Potter-legacy-recompiled",
       "description": "This is a future recompiled of harry potter gamecube ps1/ps2/ps3 original xbox xbox 360 console games but now as a future pc port with massive improvements and the ability to change the graphic settings everyone it will be able for windows linux mac and a future android port and apple also there will be updates in the future",
@@ -24239,39 +24454,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-26T03:33:42.079Z",
       "_readmeHash": "670",
-      "copies": 0
-    },
-    {
-      "repo": "Rickow/HSFA",
-      "url": "https://github.com/Rickow/HSFA",
-      "description": "Street Fighter Alpha Anthology (PS2) retranslated back to CPS2 68000: build Street Fighter Alpha 3, Street Fighter Alpha 3 Upper and Hyper Street Fighter Alpha from your own ISO, play them in a patched FinalBurn Neo core. No game data included.",
-      "stars": 1,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-10-27T20:41:27Z",
-      "pushedAt": "2026-11-08T20:32:09Z",
-      "forkOf": null,
-      "platform": "ps2",
-      "kind": "weak",
-      "score": 6,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [],
-      "statusHint": "playable",
-      "firstSeen": "2026-10-27T22:16:07.351Z",
-      "_readmeHash": "14843",
       "copies": 0
     },
     {
@@ -24428,6 +24610,43 @@
       "copies": 0
     },
     {
+      "repo": "braaap-stututu/FM3-ReGPU",
+      "url": "https://github.com/braaap-stututu/FM3-ReGPU",
+      "description": "W.I.P. recomp of Forza Motorsport 3 using ReGPU and Xenonrecomp based off of the FM2 and FM4 projects thereof",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-07T14:28:11Z",
+      "pushedAt": "2026-11-11T14:00:34Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "weak",
+      "score": 6,
+      "reasons": [
+        "+1 (readme) \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+2 bbport|bloodborne_pc|gow",
+        "+1 recomp|static recompil|d",
+        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
+      ],
+      "cusa": [],
+      "game": "forza-motorsport-4",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "190–215 FPS",
+        "300 FPS",
+        "70 FPS",
+        "30–36 FPS"
+      ],
+      "statusHint": "playable",
+      "firstSeen": "2026-11-08T13:25:18.290Z",
+      "_readmeHash": "11113",
+      "copies": 0
+    },
+    {
       "repo": "pedrowallybandeira/RDR_recomp",
       "url": "https://github.com/pedrowallybandeira/RDR_recomp",
       "description": "recompilation of RED DEAD REDEMPTION on ps3recomp. Research, not playable. Bring your own game.",
@@ -24534,43 +24753,6 @@
       "statusHint": "playable",
       "firstSeen": "2026-11-10T19:49:15.008Z",
       "_readmeHash": "27249",
-      "copies": 0
-    },
-    {
-      "repo": "braaap-stututu/FM3-ReGPU",
-      "url": "https://github.com/braaap-stututu/FM3-ReGPU",
-      "description": "W.I.P. recomp of Forza Motorsport 3 using ReGPU and Xenonrecomp based off of the FM2 and FM4 projects thereof",
-      "stars": 0,
-      "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-11-07T14:28:11Z",
-      "pushedAt": "2026-11-10T19:01:35Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "weak",
-      "score": 6,
-      "reasons": [
-        "+1 (readme) \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+2 bbport|bloodborne_pc|gow",
-        "+1 recomp|static recompil|d",
-        "+1 (readme) \\beboot\\.(bin|elf)\\b|par"
-      ],
-      "cusa": [],
-      "game": "forza-motorsport-4",
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "190–215 FPS",
-        "300 FPS",
-        "70 FPS",
-        "30–36 FPS"
-      ],
-      "statusHint": "playable",
-      "firstSeen": "2026-11-08T13:25:18.290Z",
-      "_readmeHash": "11113",
       "copies": 0
     },
     {
@@ -25348,11 +25530,11 @@
       "repo": "Crypto137/Rehydrated",
       "url": "https://github.com/Crypto137/Rehydrated",
       "description": "ReXGlue based recompilation project for the vanilla version of Diablo 3",
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-10-09T13:07:21Z",
-      "pushedAt": "2026-11-11T03:42:41Z",
+      "pushedAt": "2026-11-11T10:53:07Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "weak",
@@ -25770,7 +25952,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-06-27T17:08:24Z",
-      "pushedAt": "2026-11-11T05:08:13Z",
+      "pushedAt": "2026-11-11T07:27:19Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "weak",
@@ -26007,6 +26189,35 @@
       "copies": 0
     },
     {
+      "repo": "Joaovitor404silva/bloodborne-pc-path-tracing",
+      "url": "https://github.com/Joaovitor404silva/bloodborne-pc-path-tracing",
+      "description": "Path tracing mod installer for SuperMedo's Bloodborne PC port",
+      "stars": 1,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-10T04:13:53Z",
+      "pushedAt": "2026-11-11T13:33:33Z",
+      "forkOf": null,
+      "platform": "ps4",
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+3 pc[- ]port|port (nativo ",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own "
+      ],
+      "cusa": [],
+      "game": "bloodborne",
+      "platforms": [
+        "windows"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-11-10T19:48:12.308Z",
+      "_readmeHash": "6549",
+      "copies": 0
+    },
+    {
       "repo": "Strawman97/port-watch",
       "url": "https://github.com/Strawman97/port-watch",
       "description": "A website to track PC recompilations/decompilations.",
@@ -26014,7 +26225,7 @@
       "forks": 0,
       "language": "HTML",
       "createdAt": "2026-10-18T05:10:41Z",
-      "pushedAt": "2026-11-11T05:23:29Z",
+      "pushedAt": "2026-11-11T06:57:45Z",
       "forkOf": null,
       "platform": "ps4",
       "kind": "weak",
@@ -26035,7 +26246,7 @@
       "fps": [],
       "statusHint": "complete",
       "firstSeen": "2026-10-26T03:33:31.000Z",
-      "_readmeHash": "23582",
+      "_readmeHash": "23938",
       "copies": 0
     },
     {
@@ -26353,32 +26564,34 @@
       "copies": 0
     },
     {
-      "repo": "Joaovitor404silva/bloodborne-pc-path-tracing",
-      "url": "https://github.com/Joaovitor404silva/bloodborne-pc-path-tracing",
-      "description": "Path tracing mod installer for SuperMedo's Bloodborne PC port",
+      "repo": "Rickyyy9/ufe3-win",
+      "url": "https://github.com/Rickyyy9/ufe3-win",
+      "description": "Windows (MinGW) build path for the Ultraman Fighting Evolution 3 static recompilation",
       "stars": 0,
       "forks": 0,
-      "language": "C++",
-      "createdAt": "2026-11-10T04:13:53Z",
-      "pushedAt": "2026-11-10T16:17:53Z",
+      "language": "PowerShell",
+      "createdAt": "2026-11-11T07:16:50Z",
+      "pushedAt": "2026-11-11T09:14:10Z",
       "forkOf": null,
-      "platform": "ps4",
+      "platform": "ps2",
       "kind": "weak",
       "score": 5,
       "reasons": [
-        "+3 pc[- ]port|port (nativo ",
+        "+1 (readme) \\bps[234]\\b|playstation ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
         "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own "
+        "+1 recomp|static recompil|d"
       ],
       "cusa": [],
-      "game": "bloodborne",
+      "game": null,
       "platforms": [
-        "windows"
+        "windows",
+        "linux"
       ],
       "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-11-10T19:48:12.308Z",
-      "_readmeHash": "5392",
+      "statusHint": "research",
+      "firstSeen": "2026-11-11T14:25:33.170Z",
+      "_readmeHash": "4256",
       "copies": 0
     },
     {
@@ -26527,6 +26740,39 @@
       "copies": 0
     },
     {
+      "repo": "sp00nznet/netlab",
+      "url": "https://github.com/sp00nznet/netlab",
+      "description": "A build farm and test lab on spare Proxmox capacity: build, run, click through, QA and ship any project, from a terminal or an AI agent",
+      "stars": 0,
+      "forks": 0,
+      "language": "Shell",
+      "createdAt": "2026-10-04T10:37:15Z",
+      "pushedAt": "2026-11-11T11:54:36Z",
+      "forkOf": null,
+      "platform": "ps3",
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+1 (readme) \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) bring your own|your own ",
+        "+1 (readme) recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux"
+      ],
+      "fps": [],
+      "statusHint": "early",
+      "firstSeen": "2026-10-26T03:33:49.294Z",
+      "_readmeHash": "15764",
+      "copies": 0
+    },
+    {
       "repo": "almost-drowned-rat/xboxrecomp-option-c",
       "url": "https://github.com/almost-drowned-rat/xboxrecomp-option-c",
       "description": "Fork of sp00nznet/xboxrecomp, branch option-c: per-thread __restrict register model in the lifter, Vulkan NV2A renderer, SDL3 - the toolkit of Orta-Recompiled. AI assistance yes (Claude Code by Anthropic).",
@@ -26563,44 +26809,6 @@
       "copies": 0
     },
     {
-      "repo": "Mhd-tz/anvilmac-runtime",
-      "url": "https://github.com/Mhd-tz/anvilmac-runtime",
-      "description": "Reproducible Wine runtime for AnvilMac: Wine 11.19 + DXMT, built from pinned sources",
-      "stars": 0,
-      "forks": 0,
-      "language": "Shell",
-      "createdAt": "2026-10-16T19:25:24Z",
-      "pushedAt": "2026-11-11T06:12:37Z",
-      "forkOf": null,
-      "platform": "x360",
-      "kind": "weak",
-      "score": 5,
-      "reasons": [
-        "+1 (readme) \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) \\bvulkan\\b",
-        "+1 (readme) recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux",
-        "macos"
-      ],
-      "fps": [
-        "120 FPS",
-        "35–120 FPS",
-        "118–120 FPS"
-      ],
-      "statusHint": "unknown",
-      "firstSeen": "2026-11-05T06:47:50.348Z",
-      "_readmeHash": "18771",
-      "copies": 0
-    },
-    {
       "repo": "papand7/XboxXBERecomp",
       "url": "https://github.com/papand7/XboxXBERecomp",
       "description": "Fork of hk21x/XboxXBERecomp (TGP482/XboxXBE-Recomp): Vulkan renderer with ray tracing, graphics styles",
@@ -26608,7 +26816,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-11-06T13:51:29Z",
-      "pushedAt": "2026-11-11T05:59:14Z",
+      "pushedAt": "2026-11-11T12:53:03Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "weak",
@@ -26693,6 +26901,44 @@
       "copies": 0
     },
     {
+      "repo": "Mhd-tz/anvilmac-runtime",
+      "url": "https://github.com/Mhd-tz/anvilmac-runtime",
+      "description": "Reproducible Wine runtime for AnvilMac: Wine 11.19 + DXMT, built from pinned sources",
+      "stars": 0,
+      "forks": 0,
+      "language": "Shell",
+      "createdAt": "2026-10-16T19:25:24Z",
+      "pushedAt": "2026-11-11T06:12:37Z",
+      "forkOf": null,
+      "platform": "x360",
+      "kind": "weak",
+      "score": 5,
+      "reasons": [
+        "+1 (readme) \\bps[234]\\b|playstation ",
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+2 (readme) pc[- ]port|port (nativo ",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 (readme) \\bvulkan\\b",
+        "+1 (readme) recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [
+        "120 FPS",
+        "35–120 FPS",
+        "118–120 FPS"
+      ],
+      "statusHint": "unknown",
+      "firstSeen": "2026-11-05T06:47:50.348Z",
+      "_readmeHash": "18771",
+      "copies": 0
+    },
+    {
       "repo": "BadVibrati0ns/recomp-achievements",
       "url": "https://github.com/BadVibrati0ns/recomp-achievements",
       "description": "Achievements, trophies and popups for static recompilations: Xbox 360 / PS3 / RetroAchievements lists, JSON custom sets, themed popups and sounds.",
@@ -26752,39 +26998,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-11-03T23:25:35.805Z",
       "_readmeHash": "1885",
-      "copies": 0
-    },
-    {
-      "repo": "sp00nznet/netlab",
-      "url": "https://github.com/sp00nznet/netlab",
-      "description": "A build farm and test lab on spare Proxmox capacity: build, run, click through, QA and ship any project, from a terminal or an AI agent",
-      "stars": 0,
-      "forks": 0,
-      "language": "Shell",
-      "createdAt": "2026-10-04T10:37:15Z",
-      "pushedAt": "2026-11-07T11:14:31Z",
-      "forkOf": null,
-      "platform": "ps3",
-      "kind": "weak",
-      "score": 5,
-      "reasons": [
-        "+1 (readme) \\bps[234]\\b|playstation ",
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+2 (readme) pc[- ]port|port (nativo ",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 (readme) bring your own|your own ",
-        "+1 (readme) recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [],
-      "statusHint": "early",
-      "firstSeen": "2026-10-26T03:33:49.294Z",
-      "_readmeHash": "15629",
       "copies": 0
     },
     {
@@ -27529,11 +27742,11 @@
       "repo": "Carter54git/Greates-Games-Decompilations-List",
       "url": "https://github.com/Carter54git/Greates-Games-Decompilations-List",
       "description": "Greates Games Decompilations List",
-      "stars": 565,
-      "forks": 19,
+      "stars": 573,
+      "forks": 20,
       "language": null,
       "createdAt": "2026-10-09T07:01:57Z",
-      "pushedAt": "2026-11-10T08:35:03Z",
+      "pushedAt": "2026-11-11T10:23:17Z",
       "forkOf": null,
       "platform": "ps4",
       "kind": "weak",
@@ -27557,6 +27770,40 @@
       "copies": 0
     },
     {
+      "repo": "Alano6678/hwaoi-recomp",
+      "url": "https://github.com/Alano6678/hwaoi-recomp",
+      "description": "Experimental Hyrule Warriors: Age of Imprisonment recompilation for Windows, with a local NUP compiler. Non-60 FPS modes accelerate gameplay; higher resolutions are unstable.",
+      "stars": 54,
+      "forks": 1,
+      "language": "C",
+      "createdAt": "2026-11-05T14:45:05Z",
+      "pushedAt": "2026-11-11T10:39:54Z",
+      "forkOf": null,
+      "platform": null,
+      "kind": "weak",
+      "score": 4,
+      "reasons": [
+        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
+        "+1 (readme) bring your own|your own ",
+        "+1 \\bvulkan\\b",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows"
+      ],
+      "fps": [
+        "60 FPS",
+        "45 FPS",
+        "120 FPS"
+      ],
+      "statusHint": "early",
+      "firstSeen": "2026-11-06T19:28:32.262Z",
+      "_readmeHash": "9531",
+      "copies": 0
+    },
+    {
       "repo": "Jstackzz/MK-3D-rollback",
       "url": "https://github.com/Jstackzz/MK-3D-rollback",
       "description": "3d mk games with roll back ",
@@ -27564,7 +27811,7 @@
       "forks": 1,
       "language": "C++",
       "createdAt": "2026-10-25T18:10:05Z",
-      "pushedAt": "2026-11-11T02:55:29Z",
+      "pushedAt": "2026-11-11T07:35:54Z",
       "forkOf": null,
       "platform": "x360",
       "kind": "weak",
@@ -27679,40 +27926,6 @@
       "statusHint": "unknown",
       "firstSeen": "2026-10-27T18:06:23.906Z",
       "_readmeHash": "8068",
-      "copies": 0
-    },
-    {
-      "repo": "Alano6678/hwaoi-recomp",
-      "url": "https://github.com/Alano6678/hwaoi-recomp",
-      "description": "Experimental Hyrule Warriors: Age of Imprisonment recompilation for Windows, with a local NUP compiler. Non-60 FPS modes accelerate gameplay; higher resolutions are unstable.",
-      "stars": 38,
-      "forks": 1,
-      "language": "C",
-      "createdAt": "2026-11-05T14:45:05Z",
-      "pushedAt": "2026-11-10T17:54:33Z",
-      "forkOf": null,
-      "platform": null,
-      "kind": "weak",
-      "score": 4,
-      "reasons": [
-        "+1 (readme) \\bnative(ly)?\\b|\\bnativo",
-        "+1 (readme) bring your own|your own ",
-        "+1 \\bvulkan\\b",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows"
-      ],
-      "fps": [
-        "60 FPS",
-        "45 FPS",
-        "120 FPS"
-      ],
-      "statusHint": "early",
-      "firstSeen": "2026-11-06T19:28:32.262Z",
-      "_readmeHash": "8828",
       "copies": 0
     },
     {
@@ -27848,10 +28061,10 @@
       "url": "https://github.com/tmcleroy/recomp-common",
       "description": "Code shared between recomp ports (native ports made by static recompilation): an in-game overlay menu with no dependencies",
       "stars": 4,
-      "forks": 3,
+      "forks": 5,
       "language": "C++",
       "createdAt": "2026-10-12T15:37:04Z",
-      "pushedAt": "2026-11-08T20:55:23Z",
+      "pushedAt": "2026-11-11T13:14:43Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "weak",
@@ -28149,6 +28362,38 @@
       "copies": 0
     },
     {
+      "repo": "Xive080/project-stake-recomp",
+      "url": "https://github.com/Xive080/project-stake-recomp",
+      "description": "Vampire Night (PS2 PAL) - recompilacion estatica",
+      "stars": 0,
+      "forks": 0,
+      "language": "C++",
+      "createdAt": "2026-11-10T09:42:58Z",
+      "pushedAt": "2026-11-11T10:21:30Z",
+      "forkOf": null,
+      "platform": "ps2",
+      "kind": "weak",
+      "score": 4,
+      "reasons": [
+        "+2 \\bps[234]\\b|playstation ",
+        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
+        "+1 (readme) bbport|bloodborne_pc|gow",
+        "+1 recomp|static recompil|d"
+      ],
+      "cusa": [],
+      "game": null,
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "fps": [],
+      "statusHint": "unknown",
+      "firstSeen": "2026-11-10T19:48:44.383Z",
+      "_readmeHash": "5670",
+      "copies": 0
+    },
+    {
       "repo": "Xive080/project-blade-recomp",
       "url": "https://github.com/Xive080/project-blade-recomp",
       "description": "AirBlade (PS2 PAL) - recompilacion estatica",
@@ -28156,7 +28401,7 @@
       "forks": 0,
       "language": "C++",
       "createdAt": "2026-11-10T14:42:25Z",
-      "pushedAt": "2026-11-11T00:28:37Z",
+      "pushedAt": "2026-11-11T08:43:06Z",
       "forkOf": null,
       "platform": "ps2",
       "kind": "weak",
@@ -28177,38 +28422,7 @@
       "fps": [],
       "statusHint": "unknown",
       "firstSeen": "2026-11-10T19:48:38.942Z",
-      "_readmeHash": "24566",
-      "copies": 0
-    },
-    {
-      "repo": "Xive080/project-stake-recomp",
-      "url": "https://github.com/Xive080/project-stake-recomp",
-      "description": "Vampire Night (PS2 PAL) - recompilacion estatica",
-      "stars": 0,
-      "forks": 0,
-      "language": "Python",
-      "createdAt": "2026-11-10T09:42:58Z",
-      "pushedAt": "2026-11-10T10:43:25Z",
-      "forkOf": null,
-      "platform": "ps2",
-      "kind": "weak",
-      "score": 4,
-      "reasons": [
-        "+2 \\bps[234]\\b|playstation ",
-        "+2 (readme) \\bCUSA\\d{5}\\b|\\b(slus|sc",
-        "+1 (readme) bbport|bloodborne_pc|gow",
-        "+1 recomp|static recompil|d"
-      ],
-      "cusa": [],
-      "game": null,
-      "platforms": [
-        "windows",
-        "linux"
-      ],
-      "fps": [],
-      "statusHint": "unknown",
-      "firstSeen": "2026-11-10T19:48:44.383Z",
-      "_readmeHash": "2727",
+      "_readmeHash": "40000",
       "copies": 0
     },
     {

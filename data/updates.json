@@ -1,6 +1,150 @@
 {
-  "generatedAt": "2026-11-11T06:13:57.022Z",
+  "generatedAt": "2026-11-11T14:21:54.871Z",
   "items": [
+    {
+      "id": "mateussmeneses/theorder1886-port:release:windows-v0.8.3",
+      "repo": "mateussmeneses/theorder1886-port",
+      "game": "the-order-1886",
+      "gameTitle": "The Order: 1886",
+      "port": "theorder1886-port",
+      "date": "2026-11-11T13:55:38Z",
+      "type": "release",
+      "tag": "windows-v0.8.3",
+      "level": "normal",
+      "title": "theorder1886-port windows-v0.8.3",
+      "highlights": [
+        "A one-fix release on top of v0.8.2 for the stutters that come back every time the game is"
+      ],
+      "tags": [
+        "rendimiento",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/mateussmeneses/theorder1886-port/releases/tag/windows-v0.8.3"
+    },
+    {
+      "id": "AsobiCodes/rac-rs:release:v0.5.1",
+      "repo": "AsobiCodes/rac-rs",
+      "game": "ratchet-clank-ps2",
+      "gameTitle": "Ratchet & Clank (PS2)",
+      "port": "rac-rs",
+      "date": "2026-11-11T13:41:31Z",
+      "type": "release",
+      "tag": "v0.5.1",
+      "level": "big",
+      "title": "rac-rs v0.5.1",
+      "highlights": [
+        "Faster: MSAA is now automatic: off while DLSS or FSR runs (they smooth edges themselves; about 5 to 10 % more frames at DLSS native), 4x …",
+        "Keyboard and mouse rebuilt as their own system: two keys or mouse buttons per action, side buttons and the wheel included, and a mouse in…",
+        "Controller remapping: every action on any of the 16 buttons, with the button pictures in the game's texts following your remap."
+      ],
+      "tags": [
+        "fps",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "DLSS",
+        "Frame generation"
+      ],
+      "url": "https://github.com/AsobiCodes/rac-rs/releases/tag/v0.5.1"
+    },
+    {
+      "id": "YuutaTsubasa/Free-Riders-Recompiled:release:v0.10.55",
+      "repo": "YuutaTsubasa/Free-Riders-Recompiled",
+      "game": "sonic-free-riders",
+      "gameTitle": "Sonic Free Riders",
+      "port": "Free Riders Recompiled",
+      "date": "2026-11-11T12:42:40Z",
+      "type": "release",
+      "tag": "v0.10.55",
+      "level": "normal",
+      "title": "Free Riders Recompiled v0.10.55",
+      "highlights": [
+        "v0.10.55 — Native Wayland windows on Linux"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Linux / Steam Deck"
+      ],
+      "url": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled/releases/tag/v0.10.55"
+    },
+    {
+      "id": "zer0ducksgiven/Forza-Motorsport-2-ReGPU:release:v0.11.0",
+      "repo": "zer0ducksgiven/Forza-Motorsport-2-ReGPU",
+      "game": "forza-motorsport-2",
+      "gameTitle": "Forza Motorsport 2",
+      "port": "FM2 ReGPU",
+      "date": "2026-11-11T11:08:17Z",
+      "type": "release",
+      "tag": "v0.11.0",
+      "level": "big",
+      "title": "FM2 ReGPU v0.11.0",
+      "highlights": [
+        "On our test PCs neither made the game faster. They may suit a slower graphics card paired with a fast processor.",
+        "FSR 3 upscaling. Pick it in the launcher (Graphics > Upscaling) or in the game (Options > Graphics > Upscaling), with a render scale. It …",
+        "Frame generation (AMD FSR 3). A made-up frame between each two real ones in races. Launcher: Graphics > Frame generation. Game: Options >…"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones"
+      ],
+      "features": [
+        "FSR 4",
+        "FSR 3",
+        "Frame generation",
+        "Launcher"
+      ],
+      "url": "https://github.com/zer0ducksgiven/Forza-Motorsport-2-ReGPU/releases/tag/v0.11.0"
+    },
+    {
+      "id": "KaikoClanworth1/wwe-svr2011-pc:release:v2.2.3",
+      "repo": "KaikoClanworth1/wwe-svr2011-pc",
+      "game": "wwe-svr-2011",
+      "gameTitle": "WWE SmackDown vs. Raw 2011",
+      "port": "WWE SvR 2011 PC Port",
+      "date": "2026-11-11T10:49:46Z",
+      "type": "release",
+      "tag": "v2.2.3",
+      "level": "normal",
+      "title": "WWE SvR 2011 PC Port v2.2.3",
+      "highlights": [
+        "Android: wrong textures in big modded arenas, and the stutter then close after the match there - fixed / potential fix.",
+        "Tap the tag team and 6-man selects on phones (and click them with the PC mouse): your slot, every wrestler's pick, and CONTROL PARTNERS Y…",
+        "Check entrance numbers in Mods (PC launcher and Android app): mods installed before 2.2.2 that share an entrance number with a different …"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/KaikoClanworth1/wwe-svr2011-pc/releases/tag/v2.2.3"
+    },
+    {
+      "id": "droogie/bbhost:release:v0.2.32",
+      "repo": "droogie/bbhost",
+      "game": "bloodborne",
+      "gameTitle": "Bloodborne",
+      "port": "bbhost",
+      "date": "2026-11-11T08:01:55Z",
+      "type": "release",
+      "tag": "v0.2.32",
+      "level": "normal",
+      "title": "bbhost v0.2.32",
+      "highlights": [
+        "Character motion: Precise or Off. Graphics > Character motion offers Precise (the default) or Off. Off - \"Velocity map\" before - is a lit…"
+      ],
+      "tags": [
+        "rendimiento",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/droogie/bbhost/releases/tag/v0.2.32"
+    },
     {
       "id": "nathanialf/ico-pc:release:v0.11.4",
       "repo": "nathanialf/ico-pc",
@@ -6624,156 +6768,6 @@
       ],
       "features": [],
       "url": "https://github.com/fladnaG86/Driveclub-Port-AppleSilicon/releases/tag/v0.2.15-apple-silicon"
-    },
-    {
-      "id": "bloodborne-native/bloodborne-mac:release:v0.9.3",
-      "repo": "bloodborne-native/bloodborne-mac",
-      "game": "bloodborne",
-      "gameTitle": "Bloodborne",
-      "port": "bloodborne-mac",
-      "date": "2026-10-30T04:29:14Z",
-      "type": "release",
-      "tag": "v0.9.3",
-      "level": "normal",
-      "title": "bloodborne-mac v0.9.3",
-      "highlights": [
-        "A third faster on the default renderer, less processor time, and the recompiled code no longer has"
-      ],
-      "tags": [
-        "rendimiento",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/bloodborne-native/bloodborne-mac/releases/tag/v0.9.3"
-    },
-    {
-      "id": "AsobiCodes/rac-rs:release:v0.4.2",
-      "repo": "AsobiCodes/rac-rs",
-      "game": "ratchet-clank-ps2",
-      "gameTitle": "Ratchet & Clank (PS2)",
-      "port": "rac-rs",
-      "date": "2026-10-30T04:22:55Z",
-      "type": "release",
-      "tag": "v0.4.2",
-      "level": "big",
-      "title": "rac-rs v0.4.2",
-      "highlights": [
-        "Updating from v0.4.1 keeps your saves and settings.",
-        "Speed: on our test laptop (Core i5-11400H, RTX 3060 Laptop GPU, 1920x1080, every graphics option at its highest) the same scripted run on…"
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Teclado y mouse"
-      ],
-      "url": "https://github.com/AsobiCodes/rac-rs/releases/tag/v0.4.2"
-    },
-    {
-      "id": "OverkillLabs3/driveclub-recomp:release:v0.4.0",
-      "repo": "OverkillLabs3/driveclub-recomp",
-      "game": "driveclub",
-      "gameTitle": "Driveclub",
-      "port": "DriveClub Recomp",
-      "date": "2026-10-30T02:57:28Z",
-      "type": "release",
-      "tag": "v0.4.0",
-      "level": "big",
-      "title": "DriveClub Recomp v0.4.0",
-      "highlights": [
-        "About 11% faster",
-        "Changed: faster. The release is built with link-time optimization and a recorded profile, about +11% average FPS and +13% in the 1% lows …",
-        "New: faster frames (#220, #221). Per-draw work on the command thread, memory copies, readbacks, barriers and the GPU command thread's cor…",
-        "The launcher has a new look, with grouped settings, a mod manager, a startup splash, an exit confirmation and a PS4 compatibility preset.…",
-        "Which one do I run? Always `DriveClub.exe`. It opens the new launcher, which needs the free .NET 8 Desktop Runtime (the launcher offers t…"
-      ],
-      "tags": [
-        "fps",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Online",
-        "Logros"
-      ],
-      "url": "https://github.com/OverkillLabs3/driveclub-recomp/releases/tag/v0.4.0"
-    },
-    {
-      "id": "nathanialf/ico-pc:release:v0.9.5",
-      "repo": "nathanialf/ico-pc",
-      "game": "ico",
-      "gameTitle": "ICO",
-      "port": "ico-pc",
-      "date": "2026-10-30T02:47:28Z",
-      "type": "release",
-      "tag": "v0.9.5",
-      "level": "normal",
-      "title": "ico-pc v0.9.5",
-      "highlights": [
-        "v0.9.5"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/nathanialf/ico-pc/releases/tag/v0.9.5"
-    },
-    {
-      "id": "ayozetr/bloodborne_linux:release:0.51-linux.19",
-      "repo": "ayozetr/bloodborne_linux",
-      "game": "bloodborne",
-      "gameTitle": "Bloodborne",
-      "port": "bloodborne_linux",
-      "date": "2026-10-30T02:15:38Z",
-      "type": "release",
-      "tag": "0.51-linux.19",
-      "level": "big",
-      "title": "bloodborne_linux 0.51-linux.19",
-      "highlights": [
-        "Local co-op runs a whole game per player: on a mid-range GPU at 1440p, two players get about 30 to 40 FPS each. It has been tested with t…",
-        "Mouse pointer in the game's menus (on by default): the item under the mouse gets the game's cursor, a left click confirms (or presses a s…",
-        "The log's first line says which version and build ran, and the launcher's About page shows the build too, so a log tells which build it c…"
-      ],
-      "tags": [
-        "milestone",
-        "fps",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Teclado y mouse",
-        "Launcher",
-        "Linux / Steam Deck"
-      ],
-      "url": "https://github.com/ayozetr/bloodborne_linux/releases/tag/0.51-linux.19"
-    },
-    {
-      "id": "Ryu7w7/OCTR-NitroFueled-PC:release:v0.7.2",
-      "repo": "Ryu7w7/OCTR-NitroFueled-PC",
-      "game": "ctr-nitro-fueled",
-      "gameTitle": "Crash Team Racing Nitro-Fueled",
-      "port": "OCTR (online)",
-      "date": "2026-10-30T02:15:11Z",
-      "type": "release",
-      "tag": "v0.7.2",
-      "level": "big",
-      "title": "OCTR (online) v0.7.2",
-      "highlights": [
-        "the faster loading screens now work on the EU edition too.",
-        "Aspect Ratio in the in-game Graphics menu: choose 16:9, 21:9 or 32:9 from the game (it applies after a restart). Thanks to immaculatevibe…",
-        "EU edition (CUSA14876 1.21):"
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Ultrawide",
-        "Nueva región / versión"
-      ],
-      "url": "https://github.com/Ryu7w7/OCTR-NitroFueled-PC/releases/tag/v0.7.2"
     }
   ]
 }
