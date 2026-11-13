@@ -1,6 +1,84 @@
 {
-  "generatedAt": "2026-11-12T23:39:14.592Z",
+  "generatedAt": "2026-11-13T06:44:09.834Z",
   "items": [
+    {
+      "id": "Dyotson/ForzaHorizon1-ReImagined:release:v0.3.6",
+      "repo": "Dyotson/ForzaHorizon1-ReImagined",
+      "game": "forza-horizon",
+      "gameTitle": "Forza Horizon",
+      "port": "Forza Horizon 1: ReImagined",
+      "date": "2026-11-13T03:07:37Z",
+      "type": "release",
+      "tag": "v0.3.6",
+      "level": "normal",
+      "title": "Forza Horizon 1: ReImagined v0.3.6",
+      "highlights": [
+        "v0.3.6: missing car parts no longer hang loading, faster start, Linux sign-in fix"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Linux / Steam Deck"
+      ],
+      "url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.3.6"
+    },
+    {
+      "id": "Supermedo/bloodborne_pc:release:windows-v1.9.8.6",
+      "repo": "Supermedo/bloodborne_pc",
+      "game": "bloodborne",
+      "gameTitle": "Bloodborne",
+      "port": "Bloodborne para Windows (SuperMedo)",
+      "date": "2026-11-13T01:38:33Z",
+      "type": "release",
+      "tag": "windows-v1.9.8.6",
+      "level": "big",
+      "title": "Bloodborne para Windows (SuperMedo) windows-v1.9.8.6",
+      "highlights": [
+        "or more CPU threads: the GPU thread runs small copies itself instead of waiting for them (up to 20% more FPS on 6-core CPUs in our tests).",
+        "New in 1.9.8.6, button icons: the Seamless co-op screens (team screen, party HUD, revive and map hints) show your controller's own button…",
+        "New in 1.9.8.6, party HUD placeholders: some players saw four rows of icons with \"99 99\", a \"test\" prompt and \"999\" in a corner of the sc…"
+      ],
+      "tags": [
+        "fps",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Co-op",
+        "Teclado y mouse",
+        "Launcher"
+      ],
+      "url": "https://github.com/Supermedo/bloodborne_pc/releases/tag/windows-v1.9.8.6"
+    },
+    {
+      "id": "nathanialf/ico-pc:release:v0.11.5",
+      "repo": "nathanialf/ico-pc",
+      "game": "ico",
+      "gameTitle": "ICO",
+      "port": "ico-pc",
+      "date": "2026-11-12T23:47:16Z",
+      "type": "release",
+      "tag": "v0.11.5",
+      "level": "big",
+      "title": "ico-pc v0.11.5",
+      "highlights": [
+        "Faster on phones. Measured on a Pixel 10 Pro Fold (Enhanced, the phone's own resolution, no frame rate limit): the cage room went from ab…",
+        "Other phones and PCs get the changes that apply to them, but nothing was measured on Mali or Adreno phones, or on Windows, Linux or macOS."
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Linux / Steam Deck",
+        "macOS"
+      ],
+      "url": "https://github.com/nathanialf/ico-pc/releases/tag/v0.11.5"
+    },
     {
       "id": "daino-selvatico/rac1-native-game:release:v0.8.1",
       "repo": "daino-selvatico/rac1-native-game",
@@ -6714,77 +6792,6 @@
       "tags": [],
       "features": [],
       "url": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled/releases/tag/v0.10.40"
-    },
-    {
-      "id": "iMrBurn/wwe12-pc:release:android-alpha8",
-      "repo": "iMrBurn/wwe12-pc",
-      "game": "wwe-12",
-      "gameTitle": "WWE '12",
-      "port": "WWE '12 PC",
-      "date": "2026-10-31T08:16:58Z",
-      "type": "release",
-      "tag": "android-alpha8",
-      "level": "big",
-      "title": "WWE '12 PC android-alpha8",
-      "highlights": [
-        "The phone gets warm: the whole game runs at 60 fps. Lower the internal resolution, or turn off",
-        "blur off). Change them any time under PERFORMANCE PRESETS. Existing installs keep their settings.",
-        "Clear messages instead of a black screen (issues #41, #30, #42)",
-        "If the game's files are incomplete (for example a game folder with `default.xex` but without the"
-      ],
-      "tags": [
-        "milestone",
-        "rendimiento",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Launcher"
-      ],
-      "url": "https://github.com/iMrBurn/wwe12-pc/releases/tag/android-alpha8"
-    },
-    {
-      "id": "nathanialf/ico-pc:release:v0.9.6",
-      "repo": "nathanialf/ico-pc",
-      "game": "ico",
-      "gameTitle": "ICO",
-      "port": "ico-pc",
-      "date": "2026-10-31T07:40:27Z",
-      "type": "release",
-      "tag": "v0.9.6",
-      "level": "big",
-      "title": "ico-pc v0.9.6",
-      "highlights": [
-        "Options > Gameplay > Shadow speed: shadows walk, run and fly slower or faster than on the PlayStation 2 (Slower, Original, Faster, Fastest).",
-        "Save states: the pause menu's Save states page keeps four snapshots of the game per disc with a picture, area and play time; load them fr…"
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/nathanialf/ico-pc/releases/tag/v0.9.6"
-    },
-    {
-      "id": "Dyotson/ForzaHorizon1-ReImagined:release:v0.2.3",
-      "repo": "Dyotson/ForzaHorizon1-ReImagined",
-      "game": "forza-horizon",
-      "gameTitle": "Forza Horizon",
-      "port": "Forza Horizon 1: ReImagined",
-      "date": "2026-10-31T06:47:39Z",
-      "type": "release",
-      "tag": "v0.2.3",
-      "level": "normal",
-      "title": "Forza Horizon 1: ReImagined v0.2.3",
-      "highlights": [
-        "v0.2.3: share your designs, and Big Shots that come out right"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.2.3"
     }
   ]
 }
