@@ -1,6 +1,203 @@
 {
-  "generatedAt": "2026-11-13T19:42:24.508Z",
+  "generatedAt": "2026-11-14T06:19:28.718Z",
   "items": [
+    {
+      "id": "nathanialf/ico-pc:release:v0.11.6",
+      "repo": "nathanialf/ico-pc",
+      "game": "ico",
+      "gameTitle": "ICO",
+      "port": "ico-pc",
+      "date": "2026-11-14T05:55:51Z",
+      "type": "release",
+      "tag": "v0.11.6",
+      "level": "big",
+      "title": "ico-pc v0.11.6",
+      "highlights": [
+        "The log says more about slow phones: what each picture costs, what a stutter happened alongside, how the game's memory is held, and which…",
+        "On every device but the Adreno 740, the 3D scenery asks the graphics chip for less work, with the picture unchanged.",
+        "Shadows take less graphics work, phones most: the three layers that soften a shadow share one check of the picture instead of three (not …"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/nathanialf/ico-pc/releases/tag/v0.11.6"
+    },
+    {
+      "id": "YesterMester/TheSimpsonsGameRecomp:release:v0.0.7.0",
+      "repo": "YesterMester/TheSimpsonsGameRecomp",
+      "game": "simpsons-game",
+      "gameTitle": "The Simpsons Game",
+      "port": "The Simpsons Game Recompiled",
+      "date": "2026-11-14T05:27:23Z",
+      "type": "release",
+      "tag": "v0.0.7.0",
+      "level": "big",
+      "title": "The Simpsons Game Recompiled v0.0.7.0",
+      "highlights": [
+        "A game-wide library lists the characters, props and effects of the whole game by category and spawns the ones the current level can load.…",
+        "Level loading decompresses faster: the same 175 MiB of boot and checkpoint data takes 342 ms instead of 595 ms on a Steam Deck.",
+        "Settings, players and button prompts inside the game. The game's own Options menu now has the recomp's settings, a Players screen for ass…",
+        "Two players in Springfield. A second player can join free roam in split screen."
+      ],
+      "tags": [
+        "milestone",
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Teclado y mouse",
+        "Mods",
+        "Launcher",
+        "Linux / Steam Deck"
+      ],
+      "url": "https://github.com/YesterMester/TheSimpsonsGameRecomp/releases/tag/v0.0.7.0"
+    },
+    {
+      "id": "AbdelmoumenDeghbouche/wipeout_pc:release:windows-v0.2.76",
+      "repo": "AbdelmoumenDeghbouche/wipeout_pc",
+      "game": "wipeout-omega",
+      "gameTitle": "WipEout Omega Collection",
+      "port": "wipeout_pc",
+      "date": "2026-11-14T04:14:45Z",
+      "type": "release",
+      "tag": "windows-v0.2.76",
+      "level": "big",
+      "title": "wipeout_pc windows-v0.2.76",
+      "highlights": [
+        "From v0.2.75: Zone at any frame rate with the original scoring, menu songs stay in the menus, steadier ship reflections and more FPS (Per…",
+        "Upscaling: the race drawn at a lower resolution and scaled up by FSR 3.1 or DLSS (Quality, Balanced, Performance), for more FPS, also at …",
+        "New here? This is everything the port can do, from every version so far."
+      ],
+      "tags": [
+        "fps",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/AbdelmoumenDeghbouche/wipeout_pc/releases/tag/windows-v0.2.76"
+    },
+    {
+      "id": "bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port:release:v0.8.5",
+      "repo": "bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port",
+      "game": "uncharted-ndc",
+      "gameTitle": "Uncharted: The Nathan Drake Collection",
+      "port": "Uncharted NDC PC port (bc160201983)",
+      "date": "2026-11-14T03:48:23Z",
+      "type": "release",
+      "tag": "v0.8.5",
+      "level": "big",
+      "title": "Uncharted NDC PC port (bc160201983) v0.8.5",
+      "highlights": [
+        "Performance",
+        "Uncharted 2 HUD on ultrawide screens (#191, by Ferosnow95): Launcher -> Display -> HUD.",
+        ":9 keeps the HUD and menus in the middle 16:9 area; Wide puts the HUD at the screen's"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Ultrawide",
+        "Launcher"
+      ],
+      "url": "https://github.com/bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port/releases/tag/v0.8.5"
+    },
+    {
+      "id": "PromethenDev/wwe2k14-recomp:release:v1.6.0",
+      "repo": "PromethenDev/wwe2k14-recomp",
+      "game": "wwe-2k14",
+      "gameTitle": "WWE 2K14",
+      "port": "WWE 2K14 Recomp",
+      "date": "2026-11-14T02:25:30Z",
+      "type": "release",
+      "tag": "v1.6.0",
+      "level": "normal",
+      "title": "WWE 2K14 Recomp v1.6.0",
+      "highlights": [
+        "New in v1.6.0: import wrestlers from WWE 2K15, WWE '13 arenas, and a Borderless display option. It also includes every fix from v1.5.3, v…"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/PromethenDev/wwe2k14-recomp/releases/tag/v1.6.0"
+    },
+    {
+      "id": "saulob/dragons-crown-pro-pc:release:v1.2.0",
+      "repo": "saulob/dragons-crown-pro-pc",
+      "game": "dragons-crown-pro",
+      "gameTitle": "Dragon's Crown Pro",
+      "port": "Dragon's Crown Pro PC Port",
+      "date": "2026-11-13T23:59:21Z",
+      "type": "release",
+      "tag": "v1.2.0",
+      "level": "normal",
+      "title": "Dragon's Crown Pro PC Port v1.2.0",
+      "highlights": [
+        "Dragon's Crown Pro PC v1.2.0"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/saulob/dragons-crown-pro-pc/releases/tag/v1.2.0"
+    },
+    {
+      "id": "KaikoClanworth1/wwe-svr2011-pc:release:v2.2.4",
+      "repo": "KaikoClanworth1/wwe-svr2011-pc",
+      "game": "wwe-svr-2011",
+      "gameTitle": "WWE SmackDown vs. Raw 2011",
+      "port": "WWE SvR 2011 PC Port",
+      "date": "2026-11-13T20:52:06Z",
+      "type": "release",
+      "tag": "v2.2.4",
+      "level": "big",
+      "title": "WWE SvR 2011 PC Port v2.2.4",
+      "highlights": [
+        "A faster build of the game (link-time and profile-guided optimisation).",
+        "SHADOW QUALITY in Settings: OFF / LOW / MED / HIGH. OFF and LOW help slower PCs and phones.",
+        "Online feels quicker: on a good connection your button presses show up about twice as fast (LAN: 40 ms -> 20 ms). When one player has a s…"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Online"
+      ],
+      "url": "https://github.com/KaikoClanworth1/wwe-svr2011-pc/releases/tag/v2.2.4"
+    },
+    {
+      "id": "Ryu7w7/OCTR-NitroFueled-PC:release:v0.8.7",
+      "repo": "Ryu7w7/OCTR-NitroFueled-PC",
+      "game": "ctr-nitro-fueled",
+      "gameTitle": "Crash Team Racing Nitro-Fueled",
+      "port": "OCTR (online)",
+      "date": "2026-11-13T20:33:34Z",
+      "type": "release",
+      "tag": "v0.8.7",
+      "level": "normal",
+      "title": "OCTR (online) v0.8.7",
+      "highlights": [
+        "ONLINE CTR v0.8.7 - Hotfix: Linux crash at the main menu, 60 FPS limit"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "60+ FPS",
+        "Linux / Steam Deck"
+      ],
+      "url": "https://github.com/Ryu7w7/OCTR-NitroFueled-PC/releases/tag/v0.8.7"
+    },
     {
       "id": "Ryu7w7/OCTR-NitroFueled-PC:release:v0.8.6",
       "repo": "Ryu7w7/OCTR-NitroFueled-PC",
@@ -6613,189 +6810,6 @@
       ],
       "features": [],
       "url": "https://github.com/soyjxck/dod3-recomp/releases/tag/v0.4.1-alpha"
-    },
-    {
-      "id": "eandis/SDOJ-Recomp:release:v1.51.4",
-      "repo": "eandis/SDOJ-Recomp",
-      "game": "dodonpachi-sdoj",
-      "gameTitle": "DoDonPachi SaiDaiOuJou",
-      "port": "SDOJ-Recomp",
-      "date": "2026-10-31T16:52:46Z",
-      "type": "release",
-      "tag": "v1.51.4",
-      "level": "normal",
-      "title": "SDOJ-Recomp v1.51.4",
-      "highlights": [
-        "1.51.4"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/eandis/SDOJ-Recomp/releases/tag/v1.51.4"
-    },
-    {
-      "id": "FelipePrado0/SpartanPort:release:windows-v2.8.0-issue1131-test2",
-      "repo": "FelipePrado0/SpartanPort",
-      "game": "god-of-war-3",
-      "gameTitle": "God of War III Remastered",
-      "port": "SpartanPort (antes gow3_pc)",
-      "date": "2026-10-31T14:45:24Z",
-      "type": "release",
-      "tag": "windows-v2.8.0-issue1131-test2",
-      "level": "normal",
-      "title": "SpartanPort (antes gow3_pc) windows-v2.8.0-issue1131-test2",
-      "highlights": [
-        "New in test 2: on Windows the watchdog now also records where in the game code each thread is stopped, and the functions it came from. Th…"
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v2.8.0-issue1131-test2"
-    },
-    {
-      "id": "Mava-b/folklore-decomp:release:v0.33",
-      "repo": "Mava-b/folklore-decomp",
-      "game": "folklore",
-      "gameTitle": "Folklore",
-      "port": "folklore-decomp",
-      "date": "2026-10-31T14:06:22Z",
-      "type": "release",
-      "tag": "v0.33",
-      "level": "big",
-      "title": "folklore-decomp v0.33",
-      "highlights": [
-        "Everything from [v0.32](https://github.com/Mava-b/folklore-decomp/releases/tag/v0.32) is included: smooth depth of field and bloom, unlim…",
-        "The game decrypts its own EBOOT.BIN. You no longer need RPCS3's *Utilities → Decrypt PS3 Binaries*. Just point the game at your disc dump…",
-        "Works for both discs and both 1.10 updates. The European update needs nothing extra. The North American update needs its licence, `UP9000…"
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones"
-      ],
-      "features": [],
-      "url": "https://github.com/Mava-b/folklore-decomp/releases/tag/v0.33"
-    },
-    {
-      "id": "masterspike52/reNut:release:renut",
-      "repo": "masterspike52/reNut",
-      "game": "banjo-nuts-bolts",
-      "gameTitle": "Banjo-Kazooie: Nuts & Bolts",
-      "port": "reNut",
-      "date": "2026-10-31T14:01:04Z",
-      "type": "release",
-      "tag": "renut",
-      "level": "normal",
-      "title": "reNut renut",
-      "highlights": [
-        "reNut: Now more user friendly"
-      ],
-      "tags": [],
-      "features": [],
-      "url": "https://github.com/masterspike52/reNut/releases/tag/renut"
-    },
-    {
-      "id": "PaulCombal/mw2-recompiled:release:v0.8.3",
-      "repo": "PaulCombal/mw2-recompiled",
-      "game": "mw2-x360",
-      "gameTitle": "Call of Duty: Modern Warfare 2",
-      "port": "MW2 Recompiled",
-      "date": "2026-10-31T13:02:08Z",
-      "type": "release",
-      "tag": "v0.8.3",
-      "level": "big",
-      "title": "MW2 Recompiled v0.8.3",
-      "highlights": [
-        "Perfomance optimizations",
-        "NEW: Relays allow for LIVE matchmaking",
-        "NEW: In-game guide: invite friends and quit game"
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones"
-      ],
-      "features": [
-        "Launcher"
-      ],
-      "url": "https://github.com/PaulCombal/mw2-recompiled/releases/tag/v0.8.3"
-    },
-    {
-      "id": "birabittoh/NocturneRecomp:release:v1.5.0",
-      "repo": "birabittoh/NocturneRecomp",
-      "game": "castlevania-sotn-xbla",
-      "gameTitle": "Castlevania: Symphony of the Night (XBLA)",
-      "port": "NocturneRecomp",
-      "date": "2026-10-31T12:26:44Z",
-      "type": "release",
-      "tag": "v1.5.0",
-      "level": "big",
-      "title": "NocturneRecomp v1.5.0",
-      "highlights": [
-        "The game is now being rendered completely natively.",
-        "Thanks to the new native renderer, the game should now perform much better, especially on legacy devices, hitting 60 fps compared to the …"
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "60+ FPS",
-        "Teclado y mouse",
-        "Mods",
-        "Launcher",
-        "macOS"
-      ],
-      "url": "https://github.com/birabittoh/NocturneRecomp/releases/tag/v1.5.0"
-    },
-    {
-      "id": "aikatore/recvx-enhanced-port:release:v0.7.1",
-      "repo": "aikatore/recvx-enhanced-port",
-      "game": "re-code-veronica",
-      "gameTitle": "Resident Evil – Code: Veronica X",
-      "port": "recvx-enhanced-port",
-      "date": "2026-10-31T12:16:24Z",
-      "type": "release",
-      "tag": "v0.7.1",
-      "level": "big",
-      "title": "recvx-enhanced-port v0.7.1",
-      "highlights": [
-        "Turkish and Brazilian Portuguese: import them from their fan-translated discs; our menus are translated too.",
-        "Weapon shortcuts: swap weapons without opening the inventory."
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Teclado y mouse"
-      ],
-      "url": "https://github.com/aikatore/recvx-enhanced-port/releases/tag/v0.7.1"
-    },
-    {
-      "id": "AsobiCodes/rac-rs:release:v0.4.3",
-      "repo": "AsobiCodes/rac-rs",
-      "game": "ratchet-clank-ps2",
-      "gameTitle": "Ratchet & Clank (PS2)",
-      "port": "rac-rs",
-      "date": "2026-10-31T10:59:57Z",
-      "type": "release",
-      "tag": "v0.4.3",
-      "level": "big",
-      "title": "rac-rs v0.4.3",
-      "highlights": [
-        "Updating from v0.4.2 keeps your saves and settings.",
-        "Speed: the title screen, the Options pages and the Gadgetron vendors need much less processor time, for weak PCs such as the Steam Deck (…"
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Linux / Steam Deck"
-      ],
-      "url": "https://github.com/AsobiCodes/rac-rs/releases/tag/v0.4.3"
     }
   ]
 }
