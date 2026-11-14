@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PORTal — Ports nativos de consolas a PC</title>
+  <meta name="description" content="Directorio actualizado de ports nativos no oficiales a PC de juegos de PS4, PS2, PS3 y Xbox 360: estado, rendimiento, fallos conocidos y nuevos proyectos detectados automáticamente.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f6bff'/%3E%3Cpath d='M9 23V9h8a5 5 0 0 1 0 10h-4v4z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="alternate" type="application/atom+xml" title="PORTal: actualizaciones importantes" href="data/feed.xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span><strong>PORT</strong>al<small>Ports nativos de consolas a PC</small></span>
+      </a>
+      <div class="header-right">
+        <a href="#novedades" class="bell" id="bell" hidden>🔔 <span></span></a>
+        <div class="stats" id="stats" aria-live="polite"></div>
+      </div>
+    </div>
+    <div class="wrap"><div class="cats" id="cats" role="group" aria-label="Consola"></div></div>
+    <nav class="wrap tabs" role="tablist">
+      <a href="#juegos" data-tab="juegos" role="tab">Juegos</a>
+      <a href="#novedades" data-tab="novedades" role="tab">Novedades</a>
+      <a href="#radar" data-tab="radar" role="tab">Radar <span class="pill" id="radar-count"></span></a>
+      <a href="#como-funciona" data-tab="como-funciona" role="tab">Cómo funciona</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="tab-juegos" class="tab-panel">
+      <div class="toolbar">
+        <input id="q" type="search" placeholder="Buscar juego, port, CUSA…" aria-label="Buscar" autocomplete="off">
+        <select id="sort" aria-label="Ordenar">
+          <option value="status">Mejor estado</option>
+          <option value="stars">Más estrellas</option>
+          <option value="activity">Actividad reciente</option>
+          <option value="newest">Más nuevos</option>
+          <option value="ports">Más ports</option>
+          <option value="az">A–Z</option>
+        </select>
+      </div>
+      <div class="filters">
+        <div class="chip-group" id="f-fav" aria-label="Favoritos"></div>
+        <div class="chip-group" id="f-console" aria-label="Consola" hidden></div>
+        <div class="chip-group" id="f-status" aria-label="Estado"></div>
+        <div class="chip-group" id="f-platform" aria-label="Plataforma"></div>
+        <div class="chip-group" id="f-type" aria-label="Tipo"></div>
+      </div>
+      <p class="result-line" id="result-line"></p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="tab-novedades" class="tab-panel" hidden>
+      <div class="updates-head">
+        <h2>Actualizaciones importantes</h2>
+        <div class="chip-group" id="upd-filters"></div>
+      </div>
+      <p class="muted">Releases con más FPS, funciones nuevas o hitos ("jugable de principio a fin"), y repos eliminados.
+        Se detectan solas cada 6 horas leyendo las notas de cada release.</p>
+      <div class="notify-box" id="notify-box"></div>
+      <ol class="updates" id="updates"></ol>
+      <div class="two-col">
+        <div>
+          <h2>Ports más recientes</h2>
+          <p class="muted">Por fecha de creación del repositorio.</p>
+          <ol class="timeline" id="new-ports"></ol>
+        </div>
+        <div>
+          <h2>Últimas releases</h2>
+          <p class="muted">Versiones publicadas en GitHub Releases.</p>
+          <ol class="timeline" id="new-releases"></ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-radar" class="tab-panel" hidden>
+      <div class="callout">
+        <strong>Detectados automáticamente, sin verificar.</strong>
+        Cada 6 horas un script busca en GitHub repos nuevos que parezcan ports a PC de juegos de PS4, PS2, PS3 o Xbox 360,
+        detecta la consola de origen, descarta spam, homebrew <em>hacia</em> consolas, ports a celulares y herramientas, y lista acá el resto.
+        Cuando alguien confirma uno, pasa al catálogo.
+      </div>
+      <p class="result-line" id="radar-line"></p>
+      <div class="grid" id="radar"></div>
+    </section>
+
+    <section id="tab-como-funciona" class="tab-panel prose" hidden>
+      <h2>¿Qué es un “port nativo” de PS4?</h2>
+      <p>La PS4 usa una CPU x86-64 (AMD Jaguar), la misma arquitectura que una PC. Por eso estos proyectos <strong>no emulan la CPU</strong>:
+        cargan el ejecutable original del juego (<code>eboot.bin</code>) y lo corren directamente en tu procesador. Lo que sí hay que reemplazar es todo lo que
+        es exclusivo de la consola:</p>
+      <ul>
+        <li><strong>Runtime / HLE:</strong> reimplementaciones de las librerías del sistema de PS4 (memoria, hilos, archivos, audio, mando, partidas guardadas).</li>
+        <li><strong>GPU:</strong> los comandos de la GPU (Gnm/PM4) y los shaders GCN se traducen a Vulkan (o Metal/D3D11). Casi todos reutilizan el <em>video core</em> de shadPS4.</li>
+        <li><strong>Parches:</strong> en memoria, para 60+ FPS, resoluciones, ultrawide, etc.</li>
+      </ul>
+      <p>El resultado se parece a “Wine + DXVK para un solo juego”. Es distinto de:</p>
+      <ul>
+        <li><strong>Recompilación estática</strong>: el código del juego se traduce a C/C++ y se compila (ej. <code>bloodborne-recomp</code>, útil para ARM/Apple Silicon).</li>
+        <li><strong>Decompilación</strong>: reescribir el código a fuente legible y verificada (ej. <code>Paleblood</code>). Mucho más lento, pero permite un source port total.</li>
+        <li><strong>Motor reescrito</strong>: la lógica se rehace y solo se leen los assets (ej. <code>pt-pc</code>).</li>
+        <li><strong>Fork de emulador</strong>: shadPS4 ajustado para un juego. No es nativo, pero lo listamos porque a veces rinde mejor.</li>
+      </ul>
+      <h2>¿Y PS2, PS3 y Xbox 360?</h2>
+      <p>Esas consolas no usan procesadores x86, así que el truco de PS4 no sirve: el código hay que <strong>traducirlo</strong>.
+        La técnica dominante es la <strong>recompilación estática</strong>: una herramienta lee el ejecutable original y genera código C/C++
+        equivalente que se compila para PC, junto con un runtime que reemplaza el hardware de la consola.</p>
+      <ul>
+        <li><strong>PS2</strong> (CPU MIPS R5900 + Graphics Synthesizer): <code>PS2Recomp</code> traduce el MIPS a C++. También hay
+          decompilaciones completas que terminan en ports, como <code>OpenGOAL</code> (Jak and Daxter) o Sly Cooper, y motores reescritos.</li>
+        <li><strong>PS3</strong> (Cell: PPU PowerPC + SPUs, GPU RSX): <code>ps3recomp</code> aporta el runtime para recompilar PPU y SPU.
+          Es la escena más nueva y la mayoría de los ports todavía son tempranos.</li>
+        <li><strong>Xbox 360</strong> (Xenon PowerPC, GPU Xenos): <code>XenonRecomp</code> + <code>XenosRecomp</code> nacieron con
+          Unleashed Recompiled, y el <code>ReXGlue SDK</code> hizo explotar la cantidad de ports en 2026.</li>
+      </ul>
+      <h3>Proyectos base del ecosistema</h3>
+      <ul class="bases" id="bases"></ul>
+      <h3>Qué significa cada estado</h3>
+      <dl class="legend" id="legend"></dl>
+      <h3>Cómo se mantiene este sitio</h3>
+      <ul>
+        <li><strong>Catálogo curado</strong> (<code>data/catalog.json</code>): estado, rendimiento y fallos tomados de cada README y de los reportes de la comunidad.</li>
+        <li><strong>Métricas automáticas</strong>: estrellas, commits de la semana, última release y si el repo fue borrado (por ejemplo por DMCA), refrescadas por GitHub Actions.</li>
+        <li><strong>Radar</strong>: búsqueda periódica en GitHub + forks de los proyectos base, con un clasificador que puntúa cada repo.</li>
+        <li><strong>Reportes de rendimiento</strong>: cualquiera puede contar cómo le anda un port en su PC con un formulario; aparecen en la ficha del juego.</li>
+        <li><strong>Actualizaciones importantes</strong>: cada release nueva se analiza (más FPS, funciones nuevas, hitos como "de principio a fin") y,
+          si es grande, avisa por GitHub (mail + app) a quien siga ese port, al feed RSS y en el sitio a quien lo tenga en favoritos.</li>
+      </ul>
+      <p><a class="btn" id="btn-new-port" target="_blank" rel="noopener">Sugerir un port</a>
+         <a class="btn ghost" id="btn-report" target="_blank" rel="noopener">Reportar rendimiento</a></p>
+      <h3>Aviso legal</h3>
+      <p class="muted">PORTal solo enlaza a repositorios de código fuente. Ningún proyecto listado incluye archivos de juego ni de firmware: todos requieren
+        un dump de tu propia copia y consola. No se enlazan ni toleran descargas de juegos. Los ports son no oficiales y no están afiliados a Sony ni a los estudios.</p>
+      <p class="muted">Otros directorios útiles: <a href="https://decomps.net/?platform=ps4" target="_blank" rel="noopener">decomps.net</a> ·
+        <a href="https://portedgames.com/recompiled-games/ps4/" target="_blank" rel="noopener">portedgames.com</a></p>
+    </section>
+  </main>
+
+  <dialog id="game-dialog" aria-labelledby="dlg-title">
+    <div class="dlg-inner" id="dlg-body"></div>
+  </dialog>
+
+  <footer class="site-footer wrap">
+    <span id="updated"></span>
+    <span>Hecho con datos públicos de GitHub · <a href="https://github.com/IsidroPenh/PORTal" target="_blank" rel="noopener">código del sitio</a></span>
+  </footer>
+
+  <script src="assets/app.js" type="module"></script>
+</body>
+</html>
