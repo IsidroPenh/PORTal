@@ -1,6 +1,153 @@
 {
-  "generatedAt": "2026-11-15T18:51:50.985Z",
+  "generatedAt": "2026-11-16T06:26:15.632Z",
   "items": [
+    {
+      "id": "FelipePrado0/SpartanPort:release:windows-v3.2.1",
+      "repo": "FelipePrado0/SpartanPort",
+      "game": "god-of-war-3",
+      "gameTitle": "God of War III Remastered",
+      "port": "SpartanPort (antes gow3_pc)",
+      "date": "2026-11-16T02:41:14Z",
+      "type": "release",
+      "tag": "windows-v3.2.1",
+      "level": "normal",
+      "title": "SpartanPort (antes gow3_pc) windows-v3.2.1",
+      "highlights": [
+        "NVIDIA players who unticked \"Use pipeline binary cache (A/B test)\" to start 3.2.0 can tick it again in Launcher > Performance > Shaders. …"
+      ],
+      "tags": [
+        "rendimiento",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v3.2.1"
+    },
+    {
+      "id": "YuutaTsubasa/Free-Riders-Recompiled:release:v0.10.64",
+      "repo": "YuutaTsubasa/Free-Riders-Recompiled",
+      "game": "sonic-free-riders",
+      "gameTitle": "Sonic Free Riders",
+      "port": "Free Riders Recompiled",
+      "date": "2026-11-16T02:09:15Z",
+      "type": "release",
+      "tag": "v0.10.64",
+      "level": "normal",
+      "title": "Free Riders Recompiled v0.10.64",
+      "highlights": [
+        "v0.10.64 — Expert courses above 60 Hz: the Final Factory skydive and the Metropolis Speedway launch"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled/releases/tag/v0.10.64"
+    },
+    {
+      "id": "vascon-es/lego-dimensions-pc:release:v4.4.1",
+      "repo": "vascon-es/lego-dimensions-pc",
+      "game": "lego-dimensions",
+      "gameTitle": "LEGO Dimensions",
+      "port": "lego-dimensions-pc",
+      "date": "2026-11-16T00:41:46Z",
+      "type": "release",
+      "tag": "v4.4.1",
+      "level": "big",
+      "title": "lego-dimensions-pc v4.4.1",
+      "highlights": [
+        "Fewer hitches (fix for everyone, multiplayer on or off). In about 1 of every 3 game starts, the GPU got stuck waiting for a signal from t…",
+        "LegoToypad auto-close & launcher persistence: The Lego Toypad picker now automatically closes when exiting the game so it does not linger…",
+        "Network panel in the style of Radmin VPN (F4):"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Launcher"
+      ],
+      "url": "https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v4.4.1"
+    },
+    {
+      "id": "PromethenDev/wwe2k14-recomp:release:v1.6.1-test1",
+      "repo": "PromethenDev/wwe2k14-recomp",
+      "game": "wwe-2k14",
+      "gameTitle": "WWE 2K14",
+      "port": "WWE 2K14 Recomp",
+      "date": "2026-11-15T23:54:41Z",
+      "type": "release",
+      "tag": "v1.6.1-test1",
+      "level": "normal",
+      "title": "WWE 2K14 Recomp v1.6.1-test1",
+      "highlights": [
+        "WWE 2K14 Recomp v1.6.1-test1 (test build)"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/PromethenDev/wwe2k14-recomp/releases/tag/v1.6.1-test1"
+    },
+    {
+      "id": "hachi23/unicorn_overlord_pc:release:v1.6.2",
+      "repo": "hachi23/unicorn_overlord_pc",
+      "game": "unicorn-overlord",
+      "gameTitle": "Unicorn Overlord",
+      "port": "Unicorn Overlord PC (vwport)",
+      "date": "2026-11-15T20:52:45Z",
+      "type": "release",
+      "tag": "v1.6.2",
+      "level": "normal",
+      "title": "Unicorn Overlord PC (vwport) v1.6.2",
+      "highlights": [
+        "v1.6.2"
+      ],
+      "tags": [],
+      "features": [],
+      "url": "https://github.com/hachi23/unicorn_overlord_pc/releases/tag/v1.6.2"
+    },
+    {
+      "id": "spacepepperoni/uncharted_Linux:release:v0.3.11-linux.184",
+      "repo": "spacepepperoni/uncharted_Linux",
+      "game": "uncharted-ndc",
+      "gameTitle": "Uncharted: The Nathan Drake Collection",
+      "port": "uncharted_Linux",
+      "date": "2026-11-15T20:44:14Z",
+      "type": "release",
+      "tag": "v0.3.11-linux.184",
+      "level": "normal",
+      "title": "uncharted_Linux v0.3.11-linux.184",
+      "highlights": [
+        "Performance is still being targeted for Steam Deck, which currently dips to 25fps in demanding segments",
+        "New save folder option on the Files page: \"Same as the Windows version\" keeps all saves in savedata/1/<title ID>, like the Windows port, …"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones"
+      ],
+      "features": [],
+      "url": "https://github.com/spacepepperoni/uncharted_Linux/releases/tag/v0.3.11-linux.184"
+    },
+    {
+      "id": "himdo/Fable-2-Recomp:release:1.6.1",
+      "repo": "himdo/Fable-2-Recomp",
+      "game": "fable-2",
+      "gameTitle": "Fable II",
+      "port": "Fable 2 ReXGlue Recompiled",
+      "date": "2026-11-15T20:38:46Z",
+      "type": "release",
+      "tag": "1.6.1",
+      "level": "normal",
+      "title": "Fable 2 ReXGlue Recompiled 1.6.1",
+      "highlights": [
+        "1.6.1 Hotfix 1"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/himdo/Fable-2-Recomp/releases/tag/1.6.1"
+    },
     {
       "id": "vascon-es/lego-dimensions-pc:release:v4.3",
       "repo": "vascon-es/lego-dimensions-pc",
@@ -6607,165 +6754,6 @@
       ],
       "features": [],
       "url": "https://github.com/GenissonEmilio/ShadowOfTheColossusPC/releases/tag/linux-v0.3.0"
-    },
-    {
-      "id": "OverkillLabs3/driveclub-recomp:release:v0.4.1",
-      "repo": "OverkillLabs3/driveclub-recomp",
-      "game": "driveclub",
-      "gameTitle": "Driveclub",
-      "port": "DriveClub Recomp",
-      "date": "2026-11-02T06:22:17Z",
-      "type": "release",
-      "tag": "v0.4.1",
-      "level": "big",
-      "title": "DriveClub Recomp v0.4.1",
-      "highlights": [
-        "New: button prompts that match your input (PlayStation 4/5 or Xbox 360/One style, key caps on the keyboard). Contributed by @HELLBOY017 (…",
-        "New: more resolutions and aspect ratios (#307) by @HELLBOY017. The aspect picker replaces the widescreen row."
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "FSR 4",
-        "Linux / Steam Deck"
-      ],
-      "url": "https://github.com/OverkillLabs3/driveclub-recomp/releases/tag/v0.4.1"
-    },
-    {
-      "id": "droogie/bbhost:release:v0.2.24",
-      "repo": "droogie/bbhost",
-      "game": "bloodborne",
-      "gameTitle": "Bloodborne",
-      "port": "bbhost",
-      "date": "2026-11-02T05:06:15Z",
-      "type": "release",
-      "tag": "v0.2.24",
-      "level": "normal",
-      "title": "bbhost v0.2.24",
-      "highlights": [
-        "bbhost v0.2.24"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/droogie/bbhost/releases/tag/v0.2.24"
-    },
-    {
-      "id": "TekRantGaming/king-kong-recompiled:release:v2.0.11",
-      "repo": "TekRantGaming/king-kong-recompiled",
-      "game": "king-kong",
-      "gameTitle": "Peter Jackson's King Kong",
-      "port": "King Kong Recompiled",
-      "date": "2026-11-02T04:45:55Z",
-      "type": "release",
-      "tag": "v2.0.11",
-      "level": "normal",
-      "title": "King Kong Recompiled v2.0.11",
-      "highlights": [
-        "v2.0.11"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/TekRantGaming/king-kong-recompiled/releases/tag/v2.0.11"
-    },
-    {
-      "id": "bloodborne-native/bloodborne-mac:release:v0.9.4",
-      "repo": "bloodborne-native/bloodborne-mac",
-      "game": "bloodborne",
-      "gameTitle": "Bloodborne",
-      "port": "bloodborne-mac",
-      "date": "2026-11-02T01:51:45Z",
-      "type": "release",
-      "tag": "v0.9.4",
-      "level": "normal",
-      "title": "bloodborne-mac v0.9.4",
-      "highlights": [
-        "bloodborne-mac v0.9.4"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/bloodborne-native/bloodborne-mac/releases/tag/v0.9.4"
-    },
-    {
-      "id": "novapowers0/DBZ-Budokai-3-HD-Collection:release:v1.5.6",
-      "repo": "novapowers0/DBZ-Budokai-3-HD-Collection",
-      "game": "dbz-budokai-3-hd",
-      "gameTitle": "Dragon Ball Z: Budokai 3 HD Collection",
-      "port": "Budokai 3 HD (NovaPowers)",
-      "date": "2026-11-02T01:31:55Z",
-      "type": "release",
-      "tag": "v1.5.6",
-      "level": "big",
-      "title": "Budokai 3 HD (NovaPowers) v1.5.6",
-      "highlights": [
-        "♟️ Dragon Tactics (experimental): modo nuevo de combates automáticos en el Dragon HUB. Torneo contra 7 rivales, 34 luchadores de Budokai …",
-        "🦸 Modo Héroe (beta): un botón Exportar convierte a tu héroe en un personaje aparte para la rueda, con su aspecto, formas, moveset y defi…"
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Ultrawide",
-        "Online",
-        "Co-op",
-        "Teclado y mouse",
-        "Mods"
-      ],
-      "url": "https://github.com/novapowers0/DBZ-Budokai-3-HD-Collection/releases/tag/v1.5.6"
-    },
-    {
-      "id": "PromethenDev/wwe2k14-recomp:release:v1.4.7",
-      "repo": "PromethenDev/wwe2k14-recomp",
-      "game": "wwe-2k14",
-      "gameTitle": "WWE 2K14",
-      "port": "WWE 2K14 Recomp",
-      "date": "2026-11-02T00:36:48Z",
-      "type": "release",
-      "tag": "v1.4.7",
-      "level": "normal",
-      "title": "WWE 2K14 Recomp v1.4.7",
-      "highlights": [
-        "WWE 2K14 Recomp v1.4.7"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/PromethenDev/wwe2k14-recomp/releases/tag/v1.4.7"
-    },
-    {
-      "id": "z3xox/Tenkaichi3Decomp:release:v0.1.39.4",
-      "repo": "z3xox/Tenkaichi3Decomp",
-      "game": "dbz-bt3",
-      "gameTitle": "Dragon Ball Z: Budokai Tenkaichi 3",
-      "port": "Tenkaichi3Decomp",
-      "date": "2026-11-02T00:32:24Z",
-      "type": "release",
-      "tag": "v0.1.39.4",
-      "level": "big",
-      "title": "Tenkaichi3Decomp v0.1.39.4",
-      "highlights": [
-        "Modern look's Energy light costs a lot of performance on slower machines, so it starts at 0.",
-        "For mod authors: `cam.zoom` and `cam.collide` (a moved camera kept out of walls and the ground), and each fighter's moves, charging and c…"
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Online",
-        "Mods"
-      ],
-      "url": "https://github.com/z3xox/Tenkaichi3Decomp/releases/tag/v0.1.39.4"
     }
   ]
 }
