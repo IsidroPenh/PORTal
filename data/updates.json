@@ -1,6 +1,95 @@
 {
-  "generatedAt": "2026-11-17T20:55:31.201Z",
+  "generatedAt": "2026-11-18T07:26:02.821Z",
   "items": [
+    {
+      "id": "vascon-es/lego-dimensions-pc:release:v4.4.23",
+      "repo": "vascon-es/lego-dimensions-pc",
+      "game": "lego-dimensions",
+      "gameTitle": "LEGO Dimensions",
+      "port": "lego-dimensions-pc",
+      "date": "2026-11-18T04:36:03Z",
+      "type": "release",
+      "tag": "v4.4.23",
+      "level": "normal",
+      "title": "lego-dimensions-pc v4.4.23",
+      "highlights": [
+        "Downloads: `LEGO_Dimensions_PC_Setup.exe` (installer) or `LEGO_Dimensions_PC_Portable.zip` (portable). `LEGO_Dimensions_PC_portatil.zip` …",
+        "Downloads: `LEGO_Dimensions_PC_Setup.exe` (instalador) ou `LEGO_Dimensions_PC_Portable.zip` (portátil). O `LEGO_Dimensions_PC_portatil.zi…"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v4.4.23"
+    },
+    {
+      "id": "nathanialf/ico-pc:release:v0.11.9",
+      "repo": "nathanialf/ico-pc",
+      "game": "ico",
+      "gameTitle": "ICO",
+      "port": "ico-pc",
+      "date": "2026-11-18T02:12:25Z",
+      "type": "release",
+      "tag": "v0.11.9",
+      "level": "normal",
+      "title": "ico-pc v0.11.9",
+      "highlights": [
+        "v0.11.9"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/nathanialf/ico-pc/releases/tag/v0.11.9"
+    },
+    {
+      "id": "GenissonEmilio/ShadowOfTheColossusPC:release:v0.8.0",
+      "repo": "GenissonEmilio/ShadowOfTheColossusPC",
+      "game": "sotc-ps2",
+      "gameTitle": "Shadow of the Colossus (PS2)",
+      "port": "ShadowOfTheColossusPC",
+      "date": "2026-11-18T00:27:40Z",
+      "type": "release",
+      "tag": "v0.8.0",
+      "level": "big",
+      "title": "ShadowOfTheColossusPC v0.8.0",
+      "highlights": [
+        "0.8.0 — Rotinas nativas do Celosia e mouse corrigido"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Teclado y mouse"
+      ],
+      "url": "https://github.com/GenissonEmilio/ShadowOfTheColossusPC/releases/tag/v0.8.0"
+    },
+    {
+      "id": "ayozetr/bloodborne_linux:release:0.70-linux.8",
+      "repo": "ayozetr/bloodborne_linux",
+      "game": "bloodborne",
+      "gameTitle": "Bloodborne",
+      "port": "bloodborne_linux",
+      "date": "2026-11-17T23:05:48Z",
+      "type": "release",
+      "tag": "0.70-linux.8",
+      "level": "big",
+      "title": "bloodborne_linux 0.70-linux.8",
+      "highlights": [
+        "Local co-op runs a whole game per player: on a mid-range GPU at 1440p, two players get about 30 to 40 FPS each.",
+        "None."
+      ],
+      "tags": [
+        "milestone",
+        "fps",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/ayozetr/bloodborne_linux/releases/tag/0.70-linux.8"
+    },
     {
       "id": "vascon-es/lego-dimensions-pc:release:v4.4.12",
       "repo": "vascon-es/lego-dimensions-pc",
@@ -6661,106 +6750,6 @@
       ],
       "features": [],
       "url": "https://github.com/aikatore/recvx-enhanced-port/releases/tag/v0.7.3"
-    },
-    {
-      "id": "ItalianKuze/port-ga-gotoku:release:v0.1.3-alpha",
-      "repo": "ItalianKuze/port-ga-gotoku",
-      "game": "fist-of-the-north-star",
-      "gameTitle": "Fist of the North Star: Lost Paradise",
-      "port": "port-ga-gotoku",
-      "date": "2026-11-03T16:00:15Z",
-      "type": "release",
-      "tag": "v0.1.3-alpha",
-      "level": "big",
-      "title": "port-ga-gotoku v0.1.3-alpha",
-      "highlights": [
-        "First-run stutter while shaders compile (the cache keeps them for the next runs).",
-        "No more grain around characters on AMD Radeon RX 9000 cards. Forced 16x anisotropic filtering",
-        "is now off by default on every GPU, so textures are filtered as on the PS4; it is an option in the"
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Teclado y mouse",
-        "Launcher",
-        "Linux / Steam Deck"
-      ],
-      "url": "https://github.com/ItalianKuze/port-ga-gotoku/releases/tag/v0.1.3-alpha"
-    },
-    {
-      "id": "nathanialf/ico-pc:release:v0.10.0",
-      "repo": "nathanialf/ico-pc",
-      "game": "ico",
-      "gameTitle": "ICO",
-      "port": "ico-pc",
-      "date": "2026-11-03T15:32:35Z",
-      "type": "release",
-      "tag": "v0.10.0",
-      "level": "big",
-      "title": "ico-pc v0.10.0",
-      "highlights": [
-        "On phones with a lot of memory, preparing the graphics at the first start stopped early, and the game then stuttered during play while it…",
-        "Options > Gameplay > Yorda trips: running hand in hand for three seconds makes Yorda fall, as she does after the main gate opens. Off unl…",
-        "Options > Gameplay > Second memory card: ten more save slots on a second card; the game's own save and load screens offer both cards."
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Teclado y mouse"
-      ],
-      "url": "https://github.com/nathanialf/ico-pc/releases/tag/v0.10.0"
-    },
-    {
-      "id": "SpeedBreakerProject/speedbreaker:release:v0.2.1-windows-beta.4",
-      "repo": "SpeedBreakerProject/speedbreaker",
-      "game": "nfs-most-wanted-x360",
-      "gameTitle": "Need for Speed: Most Wanted (2005)",
-      "port": "SpeedBreaker",
-      "date": "2026-11-03T14:55:13Z",
-      "type": "release",
-      "tag": "v0.2.1-windows-beta.4",
-      "level": "big",
-      "title": "SpeedBreaker v0.2.1-windows-beta.4",
-      "highlights": [
-        "refresh rate, and whether either run felt different (smoother, choppier, hotter, louder). If you can, also",
-        "Cheaper sun shadows. Every frame the game draws the sun's shadow map and then copies it, twice, into a",
-        "texture the scene reads. That copying was a big share of each frame's work on the graphics card. Now the scene"
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "60+ FPS"
-      ],
-      "url": "https://github.com/SpeedBreakerProject/speedbreaker/releases/tag/v0.2.1-windows-beta.4"
-    },
-    {
-      "id": "zer0ducksgiven/Forza-Motorsport-2-ReGPU:release:v0.10.7",
-      "repo": "zer0ducksgiven/Forza-Motorsport-2-ReGPU",
-      "game": "forza-motorsport-2",
-      "gameTitle": "Forza Motorsport 2",
-      "port": "FM2 ReGPU",
-      "date": "2026-11-03T14:18:13Z",
-      "type": "release",
-      "tag": "v0.10.7",
-      "level": "normal",
-      "title": "FM2 ReGPU v0.10.7",
-      "highlights": [
-        "0.10.7: leaderboard order"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/zer0ducksgiven/Forza-Motorsport-2-ReGPU/releases/tag/v0.10.7"
     }
   ]
 }
