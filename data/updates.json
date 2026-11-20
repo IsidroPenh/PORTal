@@ -1,6 +1,95 @@
 {
-  "generatedAt": "2026-11-19T20:35:45.315Z",
+  "generatedAt": "2026-11-20T07:13:46.707Z",
   "items": [
+    {
+      "id": "saulob/dragons-crown-pro-pc:release:v1.4.0",
+      "repo": "saulob/dragons-crown-pro-pc",
+      "game": "dragons-crown-pro",
+      "gameTitle": "Dragon's Crown Pro",
+      "port": "Dragon's Crown Pro PC Port",
+      "date": "2026-11-20T06:00:23Z",
+      "type": "release",
+      "tag": "v1.4.0",
+      "level": "normal",
+      "title": "Dragon's Crown Pro PC Port v1.4.0",
+      "highlights": [
+        "v1.4.0 adds the new Editor page and fixes a major launcher performance regression",
+        "New controllers are assigned deterministically"
+      ],
+      "tags": [
+        "rendimiento",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/saulob/dragons-crown-pro-pc/releases/tag/v1.4.0"
+    },
+    {
+      "id": "GenissonEmilio/ShadowOfTheColossusPC:release:v0.9.7",
+      "repo": "GenissonEmilio/ShadowOfTheColossusPC",
+      "game": "sotc-ps2",
+      "gameTitle": "Shadow of the Colossus (PS2)",
+      "port": "ShadowOfTheColossusPC",
+      "date": "2026-11-20T03:34:45Z",
+      "type": "release",
+      "tag": "v0.9.7",
+      "level": "normal",
+      "title": "ShadowOfTheColossusPC v0.9.7",
+      "highlights": [
+        "v0.9.7 — Widescreen, texturas e controles"
+      ],
+      "tags": [],
+      "features": [],
+      "url": "https://github.com/GenissonEmilio/ShadowOfTheColossusPC/releases/tag/v0.9.7"
+    },
+    {
+      "id": "arcanite24/pinyon-shift:release:v0.9.5",
+      "repo": "arcanite24/pinyon-shift",
+      "game": "forza-horizon",
+      "gameTitle": "Forza Horizon",
+      "port": "Pinyon Shift",
+      "date": "2026-11-20T02:38:00Z",
+      "type": "release",
+      "tag": "v0.9.5",
+      "level": "big",
+      "title": "Pinyon Shift v0.9.5",
+      "highlights": [
+        "Direct3D 11 fallback (experimental). On Windows, when no GPU has a",
+        "Vulkan 1.3 driver but one supports Direct3D feature level 11_0 (for"
+      ],
+      "tags": [
+        "funciones"
+      ],
+      "features": [
+        "Launcher"
+      ],
+      "url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.9.5"
+    },
+    {
+      "id": "HekamiAeon/valkyria-revolution-ps4rt:release:v1.3",
+      "repo": "HekamiAeon/valkyria-revolution-ps4rt",
+      "game": "valkyria-revolution",
+      "gameTitle": "Valkyria Revolution",
+      "port": "PS4RT: Valkyria Revolution",
+      "date": "2026-11-19T22:58:37Z",
+      "type": "release",
+      "tag": "v1.3",
+      "level": "big",
+      "title": "PS4RT: Valkyria Revolution v1.3",
+      "highlights": [
+        "Achievements: Game-triggered trophies are now tracked locally and shown in the overlay's Achievements tab, with icons, progress, hidden e…",
+        "FPS (experimental): An Engine frame rate option runs the game at 30 (original) or 60 and switches live. Game speed stays normal. Some ani…"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Ultrawide",
+        "Logros"
+      ],
+      "url": "https://github.com/HekamiAeon/valkyria-revolution-ps4rt/releases/tag/v1.3"
+    },
     {
       "id": "YuutaTsubasa/Free-Riders-Recompiled:release:v0.10.69",
       "repo": "YuutaTsubasa/Free-Riders-Recompiled",
@@ -6623,98 +6712,6 @@
         "Ultrawide"
       ],
       "url": "https://github.com/zer0ducksgiven/Forza-Motorsport-2-ReGPU/releases/tag/v0.10.9"
-    },
-    {
-      "id": "AbdelmoumenDeghbouche/wipeout_pc:release:windows-v0.2.59",
-      "repo": "AbdelmoumenDeghbouche/wipeout_pc",
-      "game": "wipeout-omega",
-      "gameTitle": "WipEout Omega Collection",
-      "port": "wipeout_pc",
-      "date": "2026-11-04T08:45:14Z",
-      "type": "release",
-      "tag": "windows-v0.2.59",
-      "level": "big",
-      "title": "wipeout_pc windows-v0.2.59",
-      "highlights": [
-        "Upscaling: the race drawn at a lower resolution and scaled up by FSR 3.1 or DLSS (Quality, Balanced, Performance), for more FPS. The HUD …",
-        "New here? This is everything the port can do, from every version so far.",
-        "New here: download `wipeout-windows.zip`, extract it and open `WipEout.exe`. On Linux, download `wipeout-x86_64.AppImage`, make it execut…"
-      ],
-      "tags": [
-        "fps",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/AbdelmoumenDeghbouche/wipeout_pc/releases/tag/windows-v0.2.59"
-    },
-    {
-      "id": "YuutaTsubasa/Free-Riders-Recompiled:release:v0.10.45",
-      "repo": "YuutaTsubasa/Free-Riders-Recompiled",
-      "game": "sonic-free-riders",
-      "gameTitle": "Sonic Free Riders",
-      "port": "Free Riders Recompiled",
-      "date": "2026-11-04T06:33:49Z",
-      "type": "release",
-      "tag": "v0.10.45",
-      "level": "normal",
-      "title": "Free Riders Recompiled v0.10.45",
-      "highlights": [
-        "v0.10.45 — A Kinect on a Mac, tuned against a real recording"
-      ],
-      "tags": [],
-      "features": [],
-      "url": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled/releases/tag/v0.10.45"
-    },
-    {
-      "id": "nathanialf/ico-pc:release:v0.10.1",
-      "repo": "nathanialf/ico-pc",
-      "game": "ico",
-      "gameTitle": "ICO",
-      "port": "ico-pc",
-      "date": "2026-11-04T06:28:12Z",
-      "type": "release",
-      "tag": "v0.10.1",
-      "level": "big",
-      "title": "ico-pc v0.10.1",
-      "highlights": [
-        "Scenery that lies wholly outside the picture, or wholly behind what was already drawn in front of it, is no longer sent to the graphics c…",
-        "The glow around bright light is drawn with one full-screen step less, so it takes less of the graphics chip's time, most of all on phones…"
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/nathanialf/ico-pc/releases/tag/v0.10.1"
-    },
-    {
-      "id": "KaikoClanworth1/wwe-svr2011-pc:release:v2.1.9",
-      "repo": "KaikoClanworth1/wwe-svr2011-pc",
-      "game": "wwe-svr-2011",
-      "gameTitle": "WWE SmackDown vs. Raw 2011",
-      "port": "WWE SvR 2011 PC Port",
-      "date": "2026-11-04T06:18:27Z",
-      "type": "release",
-      "tag": "v2.1.9",
-      "level": "big",
-      "title": "WWE SvR 2011 PC Port v2.1.9",
-      "highlights": [
-        "Faster loading screens (launcher Play tab / Android Game settings, off by default): the start-up loading screens play about 4x faster - r…",
-        "Report a Problem inside the game: MY WWE > OPTIONS > REPORT A PROBLEM, or REPORT A PROBLEM in the pause menu during a match (not online).…",
-        "Android can send reports straight to us now. Reports are sent only (no more saving or copying the report file)."
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Online",
-        "Teclado y mouse",
-        "Launcher"
-      ],
-      "url": "https://github.com/KaikoClanworth1/wwe-svr2011-pc/releases/tag/v2.1.9"
     }
   ]
 }
