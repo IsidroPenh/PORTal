@@ -1,6 +1,118 @@
 {
-  "generatedAt": "2026-11-20T07:13:46.707Z",
+  "generatedAt": "2026-11-20T20:14:45.475Z",
   "items": [
+    {
+      "id": "vascon-es/lego-dimensions-pc:release:v4.4.30",
+      "repo": "vascon-es/lego-dimensions-pc",
+      "game": "lego-dimensions",
+      "gameTitle": "LEGO Dimensions",
+      "port": "lego-dimensions-pc",
+      "date": "2026-11-20T19:04:55Z",
+      "type": "release",
+      "tag": "v4.4.30",
+      "level": "big",
+      "title": "lego-dimensions-pc v4.4.30",
+      "highlights": [
+        "Reported: while one player was still on the title screen loading a save, the other entered a level and the first one was pulled into the …",
+        "Cause / Causa: the `L|<level>` event and the room-owner follower called the level loader immediately, without checking that this game was…"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [
+        "Online",
+        "Launcher"
+      ],
+      "url": "https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v4.4.30"
+    },
+    {
+      "id": "GenissonEmilio/ShadowOfTheColossusPC:release:v0.9.9",
+      "repo": "GenissonEmilio/ShadowOfTheColossusPC",
+      "game": "sotc-ps2",
+      "gameTitle": "Shadow of the Colossus (PS2)",
+      "port": "ShadowOfTheColossusPC",
+      "date": "2026-11-20T16:51:33Z",
+      "type": "release",
+      "tag": "v0.9.9",
+      "level": "normal",
+      "title": "ShadowOfTheColossusPC v0.9.9",
+      "highlights": [
+        "v0.9.9 — Integração com o RecompLauncher"
+      ],
+      "tags": [
+        "funciones"
+      ],
+      "features": [
+        "Launcher"
+      ],
+      "url": "https://github.com/GenissonEmilio/ShadowOfTheColossusPC/releases/tag/v0.9.9"
+    },
+    {
+      "id": "Wooloomooloo2/bloodborne_mac_port:release:mac-v0.5.18-test1",
+      "repo": "Wooloomooloo2/bloodborne_mac_port",
+      "game": "bloodborne",
+      "gameTitle": "Bloodborne",
+      "port": "Bloodborne para Mac (Rosetta 2)",
+      "date": "2026-11-20T15:57:30Z",
+      "type": "release",
+      "tag": "mac-v0.5.18-test1",
+      "level": "normal",
+      "title": "Bloodborne para Mac (Rosetta 2) mac-v0.5.18-test1",
+      "highlights": [
+        "A test build of 0.5.18 with two performance fixes. It replaces nothing: your regular app keeps updating from full releases unless you've …"
+      ],
+      "tags": [
+        "rendimiento",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/Wooloomooloo2/bloodborne_mac_port/releases/tag/mac-v0.5.18-test1"
+    },
+    {
+      "id": "YuutaTsubasa/Free-Riders-Recompiled:release:v0.10.70",
+      "repo": "YuutaTsubasa/Free-Riders-Recompiled",
+      "game": "sonic-free-riders",
+      "gameTitle": "Sonic Free Riders",
+      "port": "Free Riders Recompiled",
+      "date": "2026-11-20T15:35:56Z",
+      "type": "release",
+      "tag": "v0.10.70",
+      "level": "normal",
+      "title": "Free Riders Recompiled v0.10.70",
+      "highlights": [
+        "v0.10.70 — Update notice, and the Linux application menu"
+      ],
+      "tags": [
+        "funciones"
+      ],
+      "features": [
+        "Linux / Steam Deck"
+      ],
+      "url": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled/releases/tag/v0.10.70"
+    },
+    {
+      "id": "KaikoClanworth1/wwe-svr2011-pc:release:v2.2.6",
+      "repo": "KaikoClanworth1/wwe-svr2011-pc",
+      "game": "wwe-svr-2011",
+      "gameTitle": "WWE SmackDown vs. Raw 2011",
+      "port": "WWE SvR 2011 PC Port",
+      "date": "2026-11-20T14:34:52Z",
+      "type": "release",
+      "tag": "v2.2.6",
+      "level": "big",
+      "title": "WWE SvR 2011 PC Port v2.2.6",
+      "highlights": [
+        "Blood on every superstar: mods without their own blood now get it, made from their skin (Gameplay setting, on by default). Superstars onl…",
+        "Mod Maker: titantron maker - make a superstar mod's titantron from a video (big screen + minitron strip), or use one of the game's own en…"
+      ],
+      "tags": [
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/KaikoClanworth1/wwe-svr2011-pc/releases/tag/v2.2.6"
+    },
     {
       "id": "saulob/dragons-crown-pro-pc:release:v1.4.0",
       "repo": "saulob/dragons-crown-pro-pc",
@@ -6600,118 +6712,6 @@
       "tags": [],
       "features": [],
       "url": "https://github.com/bloodborne-native/bloodborne-mac/releases/tag/v0.9.6"
-    },
-    {
-      "id": "saulob/dragons-crown-pro-pc:release:v0.9.2",
-      "repo": "saulob/dragons-crown-pro-pc",
-      "game": "dragons-crown-pro",
-      "gameTitle": "Dragon's Crown Pro",
-      "port": "Dragon's Crown Pro PC Port",
-      "date": "2026-11-04T13:16:34Z",
-      "type": "release",
-      "tag": "v0.9.2",
-      "level": "big",
-      "title": "Dragon's Crown Pro PC Port v0.9.2",
-      "highlights": [
-        "Native Exit Game on the final four-row title menu: Start Game, Options, Gallery and Exit Game",
-        "Native Skip Intro option that skips the startup logo and goes straight to the title screen"
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [
-        "Logros"
-      ],
-      "url": "https://github.com/saulob/dragons-crown-pro-pc/releases/tag/v0.9.2"
-    },
-    {
-      "id": "ayozetr/bloodborne_linux:release:0.70-linux.2",
-      "repo": "ayozetr/bloodborne_linux",
-      "game": "bloodborne",
-      "gameTitle": "Bloodborne",
-      "port": "bloodborne_linux",
-      "date": "2026-11-04T11:41:02Z",
-      "type": "release",
-      "tag": "0.70-linux.2",
-      "level": "big",
-      "title": "bloodborne_linux 0.70-linux.2",
-      "highlights": [
-        "Local co-op runs a whole game per player: on a mid-range GPU at 1440p, two players get about 30 to 40 FPS each.",
-        "None."
-      ],
-      "tags": [
-        "milestone",
-        "fps",
-        "funciones",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/ayozetr/bloodborne_linux/releases/tag/0.70-linux.2"
-    },
-    {
-      "id": "Supermedo/uncharted_pc:release:v0.3.13",
-      "repo": "Supermedo/uncharted_pc",
-      "game": "uncharted-ndc",
-      "gameTitle": "Uncharted: The Nathan Drake Collection",
-      "port": "uncharted_pc (SuperMedo)",
-      "date": "2026-11-04T11:37:05Z",
-      "type": "release",
-      "tag": "v0.3.13",
-      "level": "big",
-      "title": "uncharted_pc (SuperMedo) v0.3.13",
-      "highlights": [
-        "If characters still sink for you, set Fixes > Sinking characters fix to On in the launcher. That's the full fix, which players confirmed …"
-      ],
-      "tags": [
-        "fps",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/Supermedo/uncharted_pc/releases/tag/v0.3.13"
-    },
-    {
-      "id": "SulphurS16/ACFA-Port:release:v0.7.5",
-      "repo": "SulphurS16/ACFA-Port",
-      "game": "ac-for-answer",
-      "gameTitle": "Armored Core: For Answer",
-      "port": "ACFA-Port (Project Glintburn)",
-      "date": "2026-11-04T09:48:06Z",
-      "type": "release",
-      "tag": "v0.7.5",
-      "level": "big",
-      "title": "ACFA-Port (Project Glintburn) v0.7.5",
-      "highlights": [
-        "Updates are faster: from now on, Set up rebuilds only what changed in a new version, instead of the whole game."
-      ],
-      "tags": [
-        "milestone",
-        "rendimiento"
-      ],
-      "features": [],
-      "url": "https://github.com/SulphurS16/ACFA-Port/releases/tag/v0.7.5"
-    },
-    {
-      "id": "zer0ducksgiven/Forza-Motorsport-2-ReGPU:release:v0.10.9",
-      "repo": "zer0ducksgiven/Forza-Motorsport-2-ReGPU",
-      "game": "forza-motorsport-2",
-      "gameTitle": "Forza Motorsport 2",
-      "port": "FM2 ReGPU",
-      "date": "2026-11-04T09:28:33Z",
-      "type": "release",
-      "tag": "v0.10.9",
-      "level": "normal",
-      "title": "FM2 ReGPU v0.10.9",
-      "highlights": [
-        "0.10.9: DLC, ultrawide diagram, right stick keys"
-      ],
-      "tags": [
-        "funciones"
-      ],
-      "features": [
-        "Ultrawide"
-      ],
-      "url": "https://github.com/zer0ducksgiven/Forza-Motorsport-2-ReGPU/releases/tag/v0.10.9"
     }
   ]
 }
