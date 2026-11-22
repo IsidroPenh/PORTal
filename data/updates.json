@@ -1,6 +1,110 @@
 {
-  "generatedAt": "2026-11-22T06:45:20.947Z",
+  "generatedAt": "2026-11-22T19:36:14.191Z",
   "items": [
+    {
+      "id": "LoreanXavier/pt-pc:release:v1.1.1",
+      "repo": "LoreanXavier/pt-pc",
+      "game": "pt",
+      "gameTitle": "P.T.",
+      "port": "pt-pc (Hallway Engine)",
+      "date": "2026-11-22T18:53:46Z",
+      "type": "release",
+      "tag": "v1.1.1",
+      "level": "big",
+      "title": "pt-pc (Hallway Engine) v1.1.1",
+      "highlights": [
+        "Restores +20% to +45% FPS in Path Tracing across SDR and HDR (bringing 1440p HDR + Path Tracing average GPU time back down to 1.0.8 levels).",
+        "`Game+` and the updated finish count are now persisted immediately to `PT_Save_Data` when the ending completes (`FinishEnding` and `Finis…",
+        "Added automatic one-time recovery on load for profiles already affected in 1.1.0 (`pt.ini` marked `game_finished = 1` with `PT_Save_Data`…"
+      ],
+      "tags": [
+        "fps",
+        "funciones",
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/LoreanXavier/pt-pc/releases/tag/v1.1.1"
+    },
+    {
+      "id": "zer0ducksgiven/Forza-Motorsport-2-ReGPU:release:v0.14.1",
+      "repo": "zer0ducksgiven/Forza-Motorsport-2-ReGPU",
+      "game": "forza-motorsport-2",
+      "gameTitle": "Forza Motorsport 2",
+      "port": "FM2 ReGPU",
+      "date": "2026-11-22T18:42:49Z",
+      "type": "release",
+      "tag": "v0.14.1",
+      "level": "normal",
+      "title": "FM2 ReGPU v0.14.1",
+      "highlights": [
+        "0.14.1: AI and sun glare fixes"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/zer0ducksgiven/Forza-Motorsport-2-ReGPU/releases/tag/v0.14.1"
+    },
+    {
+      "id": "zolaware/reblue:release:nightly-v1.4.0-d187173d8-s44b7fdc5",
+      "repo": "zolaware/reblue",
+      "game": "blue-dragon",
+      "gameTitle": "Blue Dragon",
+      "port": "reblue",
+      "date": "2026-11-22T17:51:20Z",
+      "type": "release",
+      "tag": "nightly-v1.4.0-d187173d8-s44b7fdc5",
+      "level": "normal",
+      "title": "reblue nightly-v1.4.0-d187173d8-s44b7fdc5",
+      "highlights": [
+        "reblue v1.4.0.153 dev nightly"
+      ],
+      "tags": [
+        "arreglos"
+      ],
+      "features": [],
+      "url": "https://github.com/zolaware/reblue/releases/tag/nightly-v1.4.0-d187173d8-s44b7fdc5"
+    },
+    {
+      "id": "vascon-es/lego-dimensions-pc:release:v4.4.34",
+      "repo": "vascon-es/lego-dimensions-pc",
+      "game": "lego-dimensions",
+      "gameTitle": "LEGO Dimensions",
+      "port": "lego-dimensions-pc",
+      "date": "2026-11-22T16:20:17Z",
+      "type": "release",
+      "tag": "v4.4.34",
+      "level": "normal",
+      "title": "lego-dimensions-pc v4.4.34",
+      "highlights": [
+        "LEGO Dimensions PC 4.4.34 alpha"
+      ],
+      "tags": [],
+      "features": [],
+      "url": "https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v4.4.34"
+    },
+    {
+      "id": "braito4/sotc-mac:release:metal-arm64-2026-11-22",
+      "repo": "braito4/sotc-mac",
+      "game": "shadow-of-the-colossus",
+      "gameTitle": "Shadow of the Colossus (remake)",
+      "port": "sotc-mac",
+      "date": "2026-11-22T10:41:05Z",
+      "type": "release",
+      "tag": "metal-arm64-2026-11-22",
+      "level": "big",
+      "title": "sotc-mac metal-arm64-2026-11-22: primera release",
+      "highlights": [
+        "SotC para Mac · Apple Silicon · 22 de noviembre de 2026"
+      ],
+      "tags": [
+        "funciones"
+      ],
+      "features": [
+        "macOS"
+      ],
+      "url": "https://github.com/braito4/sotc-mac/releases/tag/metal-arm64-2026-11-22"
+    },
     {
       "id": "saulob/dragons-crown-pro-pc:release:v1.4.1",
       "repo": "saulob/dragons-crown-pro-pc",
@@ -6581,109 +6685,6 @@
         "Linux / Steam Deck"
       ],
       "url": "https://github.com/TheWishin/T5DROnline/releases/tag/v1.2.1"
-    },
-    {
-      "id": "vascon-es/lego-dimensions-pc:release:v1.8.9",
-      "repo": "vascon-es/lego-dimensions-pc",
-      "game": "lego-dimensions",
-      "gameTitle": "LEGO Dimensions",
-      "port": "lego-dimensions-pc",
-      "date": "2026-11-05T15:30:28Z",
-      "type": "release",
-      "tag": "v1.8.9",
-      "level": "big",
-      "title": "lego-dimensions-pc v1.8.9",
-      "highlights": [
-        "Preparar now really builds every known pipeline (shader + draw state) into the video driver's cache, about 16,000 in under a minute. Befo…",
-        "After a video driver update, the game notices and rebuilds all pipelines once on the loading screen. The launcher Tools menu also has \"Re…"
-      ],
-      "tags": [
-        "rendimiento",
-        "funciones"
-      ],
-      "features": [],
-      "url": "https://github.com/vascon-es/lego-dimensions-pc/releases/tag/v1.8.9"
-    },
-    {
-      "id": "nathanialf/ico-pc:release:v0.10.3",
-      "repo": "nathanialf/ico-pc",
-      "game": "ico",
-      "gameTitle": "ICO",
-      "port": "ico-pc",
-      "date": "2026-11-05T14:40:53Z",
-      "type": "release",
-      "tag": "v0.10.3",
-      "level": "big",
-      "title": "ico-pc v0.10.3",
-      "highlights": [
-        "Options > Picture has four new rows: Gamma, Picture brightness, Contrast and Saturation. 50 is the game's own picture; they also work wit…",
-        "Options > Extras has an Unused content page: two rooms the makers used for testing, the European disc's second attract film, and title-sc…"
-      ],
-      "tags": [
-        "funciones",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/nathanialf/ico-pc/releases/tag/v0.10.3"
-    },
-    {
-      "id": "Dyotson/ForzaHorizon1-ReImagined:release:v0.2.7",
-      "repo": "Dyotson/ForzaHorizon1-ReImagined",
-      "game": "forza-horizon",
-      "gameTitle": "Forza Horizon",
-      "port": "Forza Horizon 1: ReImagined",
-      "date": "2026-11-05T13:22:03Z",
-      "type": "release",
-      "tag": "v0.2.7",
-      "level": "big",
-      "title": "Forza Horizon 1: ReImagined v0.2.7",
-      "highlights": [
-        "On Windows, the render thread now sleeps while it waits for the GPU instead of using a whole CPU core (#640): about 10% more fps in the b…"
-      ],
-      "tags": [
-        "fps",
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/FH1-ReImagined/ForzaHorizon1-ReImagined/releases/tag/v0.2.7"
-    },
-    {
-      "id": "YuutaTsubasa/Free-Riders-Recompiled:release:v0.10.46",
-      "repo": "YuutaTsubasa/Free-Riders-Recompiled",
-      "game": "sonic-free-riders",
-      "gameTitle": "Sonic Free Riders",
-      "port": "Free Riders Recompiled",
-      "date": "2026-11-05T05:17:24Z",
-      "type": "release",
-      "tag": "v0.10.46",
-      "level": "normal",
-      "title": "Free Riders Recompiled v0.10.46",
-      "highlights": [
-        "v0.10.46 — A Test option to capture a race frame draw by draw"
-      ],
-      "tags": [],
-      "features": [],
-      "url": "https://github.com/YuutaTsubasa/Free-Riders-Recompiled/releases/tag/v0.10.46"
-    },
-    {
-      "id": "arcanite24/pinyon-shift:release:v0.8.1",
-      "repo": "arcanite24/pinyon-shift",
-      "game": "forza-horizon",
-      "gameTitle": "Forza Horizon",
-      "port": "Pinyon Shift",
-      "date": "2026-11-05T02:48:39Z",
-      "type": "release",
-      "tag": "v0.8.1",
-      "level": "normal",
-      "title": "Pinyon Shift v0.8.1",
-      "highlights": [
-        "Pinyon Shift 0.8.1"
-      ],
-      "tags": [
-        "arreglos"
-      ],
-      "features": [],
-      "url": "https://github.com/arcanite24/pinyon-shift/releases/tag/v0.8.1"
     }
   ]
 }

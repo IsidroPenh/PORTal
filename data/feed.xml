@@ -4,7 +4,21 @@
   <link href="https://isidropenh.github.io/PORTal/"/>
   <link rel="self" href="https://isidropenh.github.io/PORTal/data/feed.xml"/>
   <id>https://isidropenh.github.io/PORTal/</id>
-  <updated>2026-11-22T01:26:58Z</updated>
+  <updated>2026-11-22T18:53:46Z</updated>
+  <entry>
+    <title>pt-pc (Hallway Engine) v1.1.1</title>
+    <link href="https://github.com/LoreanXavier/pt-pc/releases/tag/v1.1.1"/>
+    <id>https://isidropenh.github.io/PORTal/#LoreanXavier/pt-pc:release:v1.1.1</id>
+    <updated>2026-11-22T18:53:46Z</updated>
+    <summary>P.T. · Restores +20% to +45% FPS in Path Tracing across SDR and HDR (bringing 1440p HDR + Path Tracing average GPU time back down to 1.0.8 levels). · `Game+` and the updated finish count are now persisted immediately to `PT_Save_Data` when the ending completes (`FinishEnding` and `Finis… · Added automatic one-time recovery on load for profiles already affected in 1.1.0 (`pt.ini` marked `game_finished = 1` with `PT_Save_Data`…</summary>
+  </entry>
+  <entry>
+    <title>sotc-mac metal-arm64-2026-11-22: primera release</title>
+    <link href="https://github.com/braito4/sotc-mac/releases/tag/metal-arm64-2026-11-22"/>
+    <id>https://isidropenh.github.io/PORTal/#braito4/sotc-mac:release:metal-arm64-2026-11-22</id>
+    <updated>2026-11-22T10:41:05Z</updated>
+    <summary>Shadow of the Colossus (remake) · SotC para Mac · Apple Silicon · 22 de noviembre de 2026</summary>
+  </entry>
   <entry>
     <title>Fable2Recomp nightly: primera release</title>
     <link href="https://github.com/Fable2Recomp/Fable-Return-to-Albion/releases/tag/nightly"/>
@@ -340,19 +354,5 @@
     <id>https://isidropenh.github.io/PORTal/#Wooloomooloo2/bloodborne_mac_port:release:mac-v0.7.0-test1</id>
     <updated>2026-11-13T15:17:27Z</updated>
     <summary>Bloodborne · 0.7.0 test 1: online play (co-op)</summary>
-  </entry>
-  <entry>
-    <title>Bloodborne para Windows (SuperMedo) windows-v1.9.8.6</title>
-    <link href="https://github.com/Supermedo/bloodborne_pc/releases/tag/windows-v1.9.8.6"/>
-    <id>https://isidropenh.github.io/PORTal/#Supermedo/bloodborne_pc:release:windows-v1.9.8.6</id>
-    <updated>2026-11-13T01:38:33Z</updated>
-    <summary>Bloodborne · or more CPU threads: the GPU thread runs small copies itself instead of waiting for them (up to 20% more FPS on 6-core CPUs in our tests). · New in 1.9.8.6, button icons: the Seamless co-op screens (team screen, party HUD, revive and map hints) show your controller&apos;s own button… · New in 1.9.8.6, party HUD placeholders: some players saw four rows of icons with &quot;99 99&quot;, a &quot;test&quot; prompt and &quot;999&quot; in a corner of the sc…</summary>
-  </entry>
-  <entry>
-    <title>ico-pc v0.11.5</title>
-    <link href="https://github.com/nathanialf/ico-pc/releases/tag/v0.11.5"/>
-    <id>https://isidropenh.github.io/PORTal/#nathanialf/ico-pc:release:v0.11.5</id>
-    <updated>2026-11-12T23:47:16Z</updated>
-    <summary>ICO · Faster on phones. Measured on a Pixel 10 Pro Fold (Enhanced, the phone&apos;s own resolution, no frame rate limit): the cage room went from ab… · Other phones and PCs get the changes that apply to them, but nothing was measured on Mali or Adreno phones, or on Windows, Linux or macOS.</summary>
   </entry>
 </feed>
