@@ -1,0 +1,5632 @@
+{
+  "updated": "2026-10-22",
+  "games": [
+    {
+      "id": "bloodborne",
+      "title": "Bloodborne",
+      "developer": "FromSoftware",
+      "year": 2015,
+      "cusa": [
+        "CUSA03173",
+        "CUSA00900",
+        "CUSA03023"
+      ],
+      "ports": [
+        {
+          "repo": "deadinside28/bloodborne_pc",
+          "name": "bbport",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA03173 v1.09 (la 1.00 crashea al iniciar)",
+          "base": [
+            "shadPS4 (video core)"
+          ],
+          "summary": "El port que originó la escena. Ejecuta el código x86-64 del juego directamente en la CPU, con un runtime propio que reemplaza las librerías de PS4 y traducción de GPU a Vulkan. AppImage para Steam Deck.",
+          "performance": [
+            "~90 FPS a 4K con FSR 4 Balanced (RX 7800 XT)",
+            "~150 FPS a 1440p con FSR 4 Quality (RX 7800 XT)",
+            "Pipeline de GPU multihilo: 90–150 FPS según escena (antes ~26 FPS en un solo hilo)"
+          ],
+          "issues": [
+            "No se verificó una partida completa",
+            "Ventana negra con FSR 4 en algunas NVIDIA (GTX 1060, driver 580); FSR 3 funciona",
+            "Dumps con parche de 60 FPS crashean al abrir el menú de gestos",
+            "Frame generation oculto por artefactos",
+            "FSR 4.1.1 con condiciones de carrera en anchos no múltiplos de 64"
+          ],
+          "features": [
+            "FPS desbloqueados",
+            "Cualquier relación de aspecto",
+            "Teclado y mouse",
+            "Online (Seamless Hunt / Hunter's Dream)",
+            "FSR 3.1 / FSR 4 / DLSS",
+            "Launcher GTK4",
+            "Mods y DLC"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "Supermedo/bloodborne_pc",
+          "name": "Bloodborne para Windows (SuperMedo)",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA03173 v1.09 (otras versiones a 30 FPS)",
+          "base": [
+            "bbport",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Fork de bbport para Windows 10/11. Es la base de la que salieron muchos otros ports (Uncharted, God of War III, CTR, The Order…).",
+          "performance": [
+            "Modos: Smooth (hasta 120 FPS), Balanced (60) y Quiet (60, menos carga de GPU)",
+            "Salida de 720p a 4K; límite de FPS de 30/60/90/120"
+          ],
+          "issues": [
+            "Algunas AMD crashean al cargar el mundo (RDNA2)",
+            "Online en beta",
+            "Más de 120 FPS no está verificado",
+            "Intel de 2.ª/3.ª gen. solo con traducción de instrucciones"
+          ],
+          "features": [
+            "Launcher en 13 idiomas",
+            "DLSS / FSR 3.1 / FSR 4",
+            "AMD ML-FG en RX 9000",
+            "Cheats y mods",
+            "FOV",
+            "Online (beta)",
+            "Actualizaciones con un clic"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "bloodborne-native/bloodborne-recomp",
+          "name": "bloodborne-recomp",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "CUSA03173 v1.09",
+          "base": [
+            "bbcpu (intérprete x86-64 + traductor a arm64)"
+          ],
+          "summary": "Recompilador estático real: convierte el ejecutable del juego en código C nativo. Pensado para arm64 (Apple Silicon). De 241.821 funciones genera 241.031 y el juego corre sobre 240.994.",
+          "performance": [
+            "El código recompilado usa ~20–30% más CPU que el traductor; la velocidad es el foco actual"
+          ],
+          "issues": [
+            "Rendimiento todavía inferior al traductor",
+            "Sin release publicada"
+          ],
+          "features": [
+            "Herramienta de grabación/repetición para validar funciones"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "Yharnam-Hunters/Paleblood",
+          "name": "Paleblood",
+          "type": "decomp",
+          "status": "research",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA03173 v1.09",
+          "base": [
+            "bbport (andamiaje temporal)"
+          ],
+          "summary": "Decompilación funcional a C++ legible, verificando cada función contra el original. Objetivo: un source port completo.",
+          "performance": [],
+          "issues": [
+            "El juego todavía no corre sobre su runtime",
+            "21 de 157.757 funciones verificadas (0,01%)"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "droogie/bbhost",
+          "name": "bbhost",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "CUSA03173 v1.09 (eboot desencriptado)",
+          "base": [
+            "Capa de traducción propia",
+            "Vulkan"
+          ],
+          "summary": "Capa de traducción para Windows y Linux que corre el ejecutable 1.09 sin modificar. Mundo, jefes y online funcionan.",
+          "performance": [
+            "Objetivo: 60 FPS estables en hardware de gama media (en el roadmap); sin benchmarks publicados"
+          ],
+          "issues": [
+            "~1 de cada 4 primeras invocaciones online falla",
+            "Tirones al compilar pipelines en zonas nuevas",
+            "El veneno lento corre al doble a 60 FPS",
+            "Cuelgue de GPU en RX 580 con Windows"
+          ],
+          "features": [
+            "Ultrawide",
+            "FSR 1",
+            "Teclado y mouse",
+            "Servidor privado online",
+            "Mods: randomizer y boss rush"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "Mrsuss60/bloodborne_pc_windows_port",
+          "name": "Bloodborne Windows loader (Mrsuss60)",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA03173 v1.09",
+          "base": [
+            "bbport",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Port de bbport a Windows de 64 bits. Arranca, carga partidas y tiene audio y mando.",
+          "performance": [
+            "Sin cifras publicadas"
+          ],
+          "issues": [
+            "Rutas de compilación muy largas pueden superar el límite de Windows"
+          ],
+          "features": [
+            "FSR 3.1 / FSR 4",
+            "Mouse 360°",
+            "Launcher gráfico"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "ayozetr/bloodborne_linux",
+          "name": "bloodborne_linux",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA03173 v1.09",
+          "base": [
+            "bbport"
+          ],
+          "summary": "Fork de bbport para Linux y Steam Deck con extras: online, co-op Seamless experimental y pantalla dividida local.",
+          "performance": [
+            "Sin cifras; pide ~6 GB de RAM libres (10 GB para 1440p/4K)"
+          ],
+          "issues": [
+            "Co-op Seamless y co-op local experimentales"
+          ],
+          "features": [
+            "Online",
+            "Co-op en pantalla dividida",
+            "FPS libres",
+            "Ultrawide",
+            "FSR / DLSS",
+            "Trofeos",
+            "Agregar a Steam",
+            "AppImage autoactualizable"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "Wooloomooloo2/bloodborne_mac_port",
+          "name": "Bloodborne para Mac (Rosetta 2)",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "CUSA03173 v1.09",
+          "base": [
+            "bbport",
+            "Metal nativo"
+          ],
+          "summary": "Corre el código x86-64 con Rosetta 2 y traduce la GPU a Metal nativo (antes MoltenVK).",
+          "performance": [
+            "60 FPS fijos a 1080p y 1440p; ~70 FPS a 4K nativo en Hemwick (M4 Max)"
+          ],
+          "issues": [
+            "Glitches de render ocasionales",
+            "Judder",
+            "Iconos del HUD faltantes por encima de 1080p"
+          ],
+          "features": [
+            "Metal nativo"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "bloodborne-native/bloodborne-mac",
+          "name": "bloodborne-mac",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "CUSA03173 v1.09",
+          "base": [
+            "bbport",
+            "shadPS4",
+            "bbcpu (x86-64 → arm64)"
+          ],
+          "summary": "App para Apple Silicon que traduce x86-64 a arm64 al vuelo (sin Rosetta). Del mismo equipo que bloodborne-recomp.",
+          "performance": [
+            "~60 FPS en el Sueño del Cazador y ~44 en la clínica a 1080p con FSR 3.1 (M3 Pro)"
+          ],
+          "issues": [
+            "Personajes negros si el render supera ~3,5 millones de píxeles (usar un preset más bajo)",
+            "Probado en una sola Mac"
+          ],
+          "features": [
+            "MoltenVK o Metal experimental"
+          ],
+          "aiAssisted": true
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "god-of-war-3",
+      "title": "God of War III Remastered",
+      "developer": "Santa Monica Studio / Wholesale Algorithms",
+      "year": 2015,
+      "cusa": [
+        "CUSA01623",
+        "CUSA01715"
+      ],
+      "ports": [
+        {
+          "repo": "FelipePrado0/SpartanPort",
+          "name": "SpartanPort (antes gow3_pc)",
+          "type": "native",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "CUSA01623 / CUSA01715, v01.00 o v01.02",
+          "base": [
+            "Supermedo/bloodborne_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Uno de los ports más populares. Probado y jugable de principio a fin a 1080p con el motor a 240 FPS. Su runtime (gow3_pc) es base de MediEvil, Uncharted (bc160201983), Killzone y The Order.",
+          "performance": [
+            "144 FPS promedio (55–240) a 1080p, motor a 240 FPS (RX 6700 XT + Ryzen 5 5600X)",
+            "Resolución de 480p a 4K; motor a 100/120/144/240 FPS"
+          ],
+          "issues": [
+            "Texturas amarillas/naranjas/blancas o iluminación incorrecta (desactivar Deferred GPU readbacks, puede dar stutter)",
+            "Stutter por compilación de shaders",
+            "Corrupción gráfica en Steam Deck/RADV con el AppImage 2.2.0",
+            "Crashes y bloqueos de progreso en algunas GPU"
+          ],
+          "features": [
+            "Launcher multi-idioma",
+            "Menú in-game con cheats",
+            "Ultrawide (beta)",
+            "Mods",
+            "Importa partidas de shadPS4",
+            "Discord Rich Presence"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "maulanaikya99/gow3-mac",
+          "name": "gow3-mac",
+          "type": "wrapper",
+          "status": "playable",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "CUSA01623 v01.00",
+          "base": [
+            "SpartanPort",
+            "Wine",
+            "KosmicKrisp (Vulkan)"
+          ],
+          "summary": "Instalador para Mac con Apple Silicon: baja SpartanPort, Wine y el driver Vulkan KosmicKrisp, y aplica 4 arreglos para macOS. Jugable.",
+          "performance": [
+            "Probado en M4 con 16 GB (macOS 27); stutter los primeros minutos mientras compila shaders"
+          ],
+          "issues": [
+            "Multisampling desactivado",
+            "No usar \"Buscar actualizaciones\" del launcher: pisa un parche necesario"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "pt",
+      "title": "P.T.",
+      "developer": "Kojima Productions",
+      "year": 2014,
+      "cusa": [
+        "CUSA01127"
+      ],
+      "ports": [
+        {
+          "repo": "LoreanXavier/pt-pc",
+          "name": "pt-pc (Hallway Engine)",
+          "type": "reimpl",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "CUSA01127 (EE. UU.); EU/JP sin probar",
+          "base": [
+            "Motor propio en C++ (Vulkan / DirectX 12)"
+          ],
+          "summary": "No ejecuta el binario original: la lógica se reescribió en C++ y lee niveles, modelos, audio y scripts desde tu copia de PS4. Se juega el teaser completo, incluida la parte del micrófono.",
+          "performance": [
+            "No publica cifras de FPS; soporta FSR 3.1/4, DLSS, XeSS y frame generation"
+          ],
+          "issues": [
+            "Issues de GitHub cerrados por spam (reportes por Discord)",
+            "VR y tercera persona experimentales",
+            "App para Mac Intel sin probar en hardware real"
+          ],
+          "features": [
+            "Ray tracing (sombras, AO, reflejos)",
+            "Modo foto",
+            "Speedrun timer con LiveSplit",
+            "Mods en Lua",
+            "Subtítulos en varios idiomas"
+          ],
+          "aiAssisted": true
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "uncharted-ndc",
+      "title": "Uncharted: The Nathan Drake Collection",
+      "developer": "Bluepoint Games / Naughty Dog",
+      "year": 2015,
+      "cusa": [
+        "CUSA02343",
+        "CUSA02320",
+        "CUSA02344"
+      ],
+      "ports": [
+        {
+          "repo": "Supermedo/uncharted_pc",
+          "name": "uncharted_pc (SuperMedo)",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio de la colección (EU 1.00 / 1.02 probados)",
+          "base": [
+            "Supermedo/bloodborne_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Los tres juegos (UC1, UC2 y UC3) son jugables en Windows. Muy activo, con correcciones de crashes en cada versión.",
+          "performance": [
+            "60 FPS (como PS4) o 120 FPS; más de 120 experimental",
+            "TAA, FSR 3.1, FSR 4, DLSS/DLAA",
+            "Frame generation FSR 3 o DLSS (RTX 40: 2x, RTX 50: hasta 4x)"
+          ],
+          "issues": [
+            "UC3: destellos verdes/negros en algunos personajes (sin corregir)",
+            "Intel HD/UHD antiguas pueden crashear",
+            "CPUs Intel de 3.ª gen. o anteriores no soportadas",
+            "Tarjetas de 4 GB de VRAM pueden crashear"
+          ],
+          "features": [
+            "DLSS / FSR 4",
+            "Frame generation",
+            "Launcher"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "bc160201983/Uncharted-The-Nathan-Drake-Collection-PC-port",
+          "name": "Uncharted NDC PC port (bc160201983)",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA02344 + update 1.02 recomendada",
+          "base": [
+            "gow3_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Port alternativo sobre el runtime de gow3_pc. Los tres juegos se pueden jugar; Drake's Deception tuvo menos pruebas.",
+          "performance": [
+            "UC2 a 4K: escena más pesada a 99 FPS (RTX 5080)",
+            "UC3 a 4K: multitud de Cartagena a 90 FPS (RTX 5080)",
+            "iGPU Radeon (Ryzen 7000/9000) a 720p: 24–39 FPS"
+          ],
+          "issues": [
+            "UC1: el lanzagranadas puede matar al jugador (#6)",
+            "Render multihilo experimental",
+            "\"Frames queued 2\" provoca NPCs flotando",
+            "Más de 120 FPS rompe el movimiento"
+          ],
+          "features": [
+            "Presets Low–Ultra por juego",
+            "FSR 1 / 3.1 / 4, DLSS",
+            "Teclado y mouse remapeable",
+            "Desbloquear todos los capítulos",
+            "Actualizador con SHA-256"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "spacepepperoni/uncharted_Linux",
+          "name": "uncharted_Linux",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "Dump propio de la colección",
+          "base": [
+            "Supermedo/uncharted_pc"
+          ],
+          "summary": "Fork de uncharted_pc para Linux y Steam Deck. UC1 y UC2 confirmados jugables completos con algunos glitches; UC3 sin confirmar.",
+          "performance": [
+            "Steam Deck: ~25–30 FPS con bajadas; se recomienda límite de 30"
+          ],
+          "issues": [
+            "Glitches visuales en UC1 y UC2",
+            "Tarjetas de 4 GB pueden crashear",
+            "Ubuntu 22.04 o anterior no soportado"
+          ],
+          "features": [
+            "Modo Steam Deck",
+            "Actualizaciones automáticas"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "shadow-of-the-colossus",
+      "title": "Shadow of the Colossus (remake)",
+      "developer": "Bluepoint Games",
+      "year": 2018,
+      "cusa": [
+        "CUSA08809"
+      ],
+      "ports": [
+        {
+          "repo": "AjncSystem/ShadowOfTheColossus-PC",
+          "name": "ShadowOfTheColossus-PC",
+          "type": "native",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA08809 EU 1.01 (60 FPS solo en esta versión) + libSceNgs2/libSceUlt para audio",
+          "base": [
+            "estilo bloodborne_pc",
+            "Vulkan"
+          ],
+          "summary": "Se puede terminar de principio a fin desde la v0.60.3 (incluye final y créditos).",
+          "performance": [
+            "Render a 1080p + FSR 1/RCAS a salida de 720p–4K",
+            "Modo 60 FPS: ~67 FPS en la demo del título, bajadas a 29–34 en la sección más pesada (RTX 2060 SUPER)",
+            "Modo PS4 Pro, 21:9 y 32:9"
+          ],
+          "issues": [
+            "Primer arranque tras actualizar recompila shaders",
+            "Texturas HQ pueden crashear en vistas muy anchas (#186)",
+            "AMD GCN: personajes blancos brillantes (#152, #158, #187)",
+            "Física a 60 FPS todavía en pruebas",
+            "Con 8 GB de VRAM o menos puede requerir bajar memoria de video"
+          ],
+          "features": [
+            "Frame generation experimental (FSR 3 / DLSS-G)",
+            "Importa partidas de shadPS4",
+            "Mouse para la cámara",
+            "Launcher multi-idioma"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "nakaionyt/ShadowOfTheColossus-PC-FrameGen",
+          "name": "SotC PC FrameGen",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA08809",
+          "base": [
+            "AjncSystem/ShadowOfTheColossus-PC"
+          ],
+          "summary": "Variante centrada en frame generation: juego bloqueado a 30 FPS y 60 mostrados con DLSS-G / FSR 3. F7 desbloquea en vivo.",
+          "performance": [
+            "30 FPS reales → 60 mostrados con DLSS-G / FSR 3"
+          ],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [
+            "DLSS-G",
+            "FSR 3 FG",
+            "Desbloqueo de FPS en vivo"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "luizgustavs/Pink-shadPS4",
+          "name": "Pink-shadPS4",
+          "type": "wrapper",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [
+            "shadPS4 (emulador)"
+          ],
+          "summary": "No es un port nativo: es un fork del emulador shadPS4 optimizado para SotC (afinado para NVIDIA).",
+          "performance": [
+            "0.5.0 más rápido que 0.4.0"
+          ],
+          "issues": [
+            "0.5.0 tiene más parpadeos que 0.4.0"
+          ],
+          "features": [
+            "Launcher Qt"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "braito4/sotc-mac",
+          "name": "sotc-mac",
+          "type": "native",
+          "status": "research",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "CUSA08809",
+          "base": [
+            "bloodborne-native",
+            "bbport",
+            "shadPS4"
+          ],
+          "summary": "Port experimental a macOS ARM64. Solo diagnósticos de CPU por ahora.",
+          "performance": [],
+          "issues": [
+            "Todavía no jugable"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "infamous-second-son",
+      "title": "inFAMOUS Second Son",
+      "developer": "Sucker Punch Productions",
+      "year": 2014,
+      "cusa": [
+        "CUSA00223",
+        "CUSA00004"
+      ],
+      "ports": [
+        {
+          "repo": "HayatoG/iss_pc",
+          "name": "iss_pc",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "CUSA00223 (EE. UU.) 1.00 + update 1.07",
+          "base": [
+            "tlg_pc / gr2_pc (mismo núcleo)",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Jugable y en desarrollo activo; probado hasta la misión \"Go to Longhouse\". Muchísimos issues abiertos = mucha comunidad probando.",
+          "performance": [
+            "~20–30 FPS típicos en RTX 2060, inestable (mediana 27 FPS) a 1080p"
+          ],
+          "issues": [
+            "Crashes en AMD RX 580/Polaris en Windows",
+            "FPS bajos con 4 GB de VRAM",
+            "Pantalla negra en algunas Quadro/Maxwell",
+            "Parpadeo en niebla, agua y fuego",
+            "Parpadeo de luces en RTX 30 (Windows)"
+          ],
+          "features": [
+            "Emulación de sensor de movimiento",
+            "Teclado",
+            "Backups automáticos de partidas",
+            "Emulación de instrucciones faltantes en Intel"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "Castlesea/infamous-second-son-pc-port",
+          "name": "inFAMOUS Second Son PC Port (Castlesea)",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA00004 (eboot 1.07)",
+          "base": [
+            "shadPS4 (video core) con pases nativos"
+          ],
+          "summary": "Port alternativo con rendimiento mucho más alto: historia, mundo abierto, menús y guardado funcionan. Por ahora hay que compilarlo.",
+          "performance": [
+            "Bosque: 123 FPS · calle de Seattle: 91 FPS · ciudad abierta: 80–95 FPS · vistas densas: 60–70 FPS (Ryzen 7 7800X3D + RX 9070 XT)"
+          ],
+          "issues": [
+            "Pop-in tardío de edificios",
+            "Stutter por shaders en zonas no cacheadas",
+            "Bajadas en vistas más densas"
+          ],
+          "features": [
+            "Hasta 4K y ultrawide",
+            "FOV 90–130%",
+            "14 idiomas",
+            "Modo grafiti con mouse"
+          ],
+          "aiAssisted": true
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "infamous-first-light",
+      "title": "inFAMOUS First Light",
+      "developer": "Sucker Punch Productions",
+      "year": 2014,
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "VantageEX/infamous-first-light-pc",
+          "name": "infamous-first-light-pc",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [
+            "shadPS4 (video core)"
+          ],
+          "summary": "Recién creado (21/10/2026). Estado sin verificar.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "driveclub",
+      "title": "Driveclub",
+      "developer": "Evolution Studios",
+      "year": 2014,
+      "cusa": [
+        "CUSA00093",
+        "CUSA00003"
+      ],
+      "ports": [
+        {
+          "repo": "OverkillLabs3/driveclub-recomp",
+          "name": "DriveClub Recomp",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA00093 v1.28 (EU CUSA00003 menos probado)",
+          "base": [
+            "Runtime propio + Vulkan"
+          ],
+          "summary": "Pese al nombre, no es recompilación estática: corre el código original sin emulación de CPU. Menús, carreras, modo foto y guardado funcionan; sin online.",
+          "performance": [
+            "~60 FPS a 4K en las escenas más pesadas (RTX 5070 Ti + 5800X3D)",
+            "5120x1440 (RTX 4070 Ti): DLAA 48 · DLSS Q 80 · DLSS P 104 · FSR 3.1 Q 103 FPS",
+            "Limitado por CPU con muchos autos y lluvia"
+          ],
+          "issues": [
+            "Algunos reflejos demasiado brillantes",
+            "Estela de AA en autos rápidos",
+            "Stutter por shaders los primeros minutos",
+            "Solo probado en NVIDIA"
+          ],
+          "features": [
+            "Volantes con force feedback, pedales y palanca H",
+            "DLAA / DLSS / FSR 3.1",
+            "Benchmark integrado",
+            "DLC desbloqueable desde tus archivos",
+            "Mods"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "BlackLineInteractive/Driveclub-Port",
+          "name": "Driveclub Native / DCport",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "gameVersion": "v1.28 en Windows · v1.05 en macOS (CUSA00003)",
+          "base": [
+            "bloodborne_pc (Windows)",
+            "Renderer Metal 3 propio (Mac Intel)"
+          ],
+          "summary": "Único port con renderer Metal propio para Mac Intel (GCN → MSL directo). En Windows usa runtime de bloodborne_pc + Vulkan.",
+          "performance": [
+            "Sin cifras publicadas"
+          ],
+          "issues": [
+            "Estado en macOS no declarado"
+          ],
+          "features": [
+            "FSR 4.1.1 + FSR 3 frame generation (Windows)",
+            "Selección de GPU discreta en MacBooks"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "ondrejeder/Driveclub-pc-wrapper",
+          "name": "Driveclub-PC (wrapper)",
+          "type": "wrapper",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA00093 v1.28 + sys_modules del firmware",
+          "base": [
+            "shadPS4 / GR2fork (emulador)"
+          ],
+          "summary": "No es nativo: fork de shadPS4 con launcher y ajustes para Driveclub. Muy buen frame pacing a 60 FPS.",
+          "performance": [
+            "Objetivo 60: ~59,6 FPS promedio y pacing estable (Core Ultra 9 + RTX 5070 Ti Laptop)",
+            "Objetivo 120: 75–90 FPS; 2560x1440 a 65–80",
+            "Ultrawide: 84 FPS 2560x1080 · 70 FPS 3440x1440"
+          ],
+          "issues": [
+            "Readbacks en Relaxed rompen sombras y vegetación",
+            "120 FPS experimental",
+            "2160p muy exigente"
+          ],
+          "features": [
+            "30/60/120 FPS",
+            "Ultrawide",
+            "FSR 1, SMAA/FXAA"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "fladnaG86/Driveclub-Port-AppleSilicon",
+          "name": "Driveclub Port (Apple Silicon)",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [
+            "BlackLineInteractive/Driveclub-Port",
+            "Rosetta 2"
+          ],
+          "summary": "Fork de Driveclub Native para Macs con Apple Silicon vía Rosetta 2, con arreglos de GPU.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "gran-turismo-sport",
+      "title": "Gran Turismo Sport",
+      "developer": "Polyphony Digital",
+      "year": 2017,
+      "cusa": [
+        "CUSA03220"
+      ],
+      "ports": [
+        {
+          "repo": "mlgprorektm8/RyGT",
+          "name": "RyGT",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA03220 update 1.69 + módulos y fuentes del firmware",
+          "base": [
+            "Ryty",
+            "shadGT (renderer Vulkan)"
+          ],
+          "summary": "Convierte el ejecutable en GTSport.exe nativo. Arranque, menús, selección de auto/pista, carreras y resultados funcionan. Sin online.",
+          "performance": [
+            "~42–60 FPS en carrera según cantidad de autos (RTX 4070 Ti / RTX 3060)"
+          ],
+          "issues": [
+            "Stutter los primeros 30 s de carrera por compilación de pipelines",
+            "Algunos draws del resumen se saltean",
+            "Sin online"
+          ],
+          "features": [
+            "FSR 3.1 / FSR 1",
+            "Plugin DLSS opcional",
+            "Contador de FPS"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "the-last-guardian",
+      "title": "The Last Guardian",
+      "developer": "genDESIGN / Japan Studio",
+      "year": 2016,
+      "cusa": [
+        "CUSA03627",
+        "CUSA03745"
+      ],
+      "ports": [
+        {
+          "repo": "HayatoG/tlg_pc",
+          "name": "tlg_pc",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "gameVersion": "CUSA03627 / CUSA03745 con update 01.03",
+          "base": [
+            "gow3_pc",
+            "bloodborne_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Arranque, menú, intro y gameplay funcionan; sesiones de más de 10 minutos sin fallos. Windows compila pero no se probó en juego.",
+          "performance": [
+            "30 FPS por defecto (como PS4); 60 FPS y FPS libres experimentales",
+            "1920×1080 nativo (RTX 2060, Linux)"
+          ],
+          "issues": [
+            "Windows sin probar en juego",
+            "El audio requiere un archivo del firmware de la consola (#11)",
+            "Sin FSR/DLSS ni resolución interna todavía"
+          ],
+          "features": [
+            "Mouse y teclado",
+            "SMAA, CAS/RCAS",
+            "Mods/cheats formato shadPS4/GoldHEN"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "gravity-rush-2",
+      "title": "Gravity Rush 2",
+      "developer": "Japan Studio",
+      "year": 2017,
+      "cusa": [
+        "CUSA03694",
+        "CUSA00547",
+        "CUSA04934",
+        "CUSA04943"
+      ],
+      "ports": [
+        {
+          "repo": "HayatoG/gr2_pc",
+          "name": "gr2_pc",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "linux",
+            "windows"
+          ],
+          "gameVersion": "CUSA03694 (EE. UU.) update 01.11",
+          "base": [
+            "tlg_pc",
+            "gow3_pc",
+            "bloodborne_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Título, menús y gameplay funcionan a 30 FPS. Partidas guardadas y mundo abierto todavía en pruebas.",
+          "performance": [
+            "30 FPS estables a 1920×1080 (RTX 2060, Linux)",
+            "60 FPS es objetivo futuro (#2)"
+          ],
+          "issues": [
+            "Rayas negras cerca de personajes (outline desactivado por defecto)",
+            "\"Device lost\" (código 23) por loops de shaders",
+            "Sin audio sin el archivo del firmware (#8)",
+            "Windows sin probar en juego (#5)"
+          ],
+          "features": [
+            "Mouse para cambiar gravedad",
+            "Giroscopio real o simulado",
+            "Launcher bilingüe ES/PT"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "Prathewsh/gravityrush_pc",
+          "name": "gravityrush_pc",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Bundled patches para update 01.11",
+          "base": [
+            "Supermedo/bloodborne_pc",
+            "shadPS4"
+          ],
+          "summary": "Runtime experimental para Gravity Rush Remastered y Gravity Rush 2. Ninguno de los dos verificado como jugable.",
+          "performance": [],
+          "issues": [
+            "Jugabilidad sin verificar",
+            "Audio requiere libSceNgs2.sprx"
+          ],
+          "features": [
+            "Partidas y cachés separadas por juego",
+            "Giroscopio nativo"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "gravity-rush-remastered",
+      "title": "Gravity Rush Remastered",
+      "developer": "Japan Studio / Bluepoint",
+      "year": 2015,
+      "cusa": [
+        "CUSA01113",
+        "CUSA01130"
+      ],
+      "ports": [
+        {
+          "repo": "FrancescoGrazioso/gr-port",
+          "name": "gr-port",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA01113",
+          "base": [
+            "HLE Orbis propio",
+            "GCN → SPIR-V / Vulkan"
+          ],
+          "summary": "Temprano pero jugable en partes: llega al gameplay en Hekseville con música, efectos y videos.",
+          "performance": [
+            "60 FPS estables en la primera zona (RX 7800 XT)"
+          ],
+          "issues": [
+            "Algunos materiales y texturas macro-tiled",
+            "Bajadas en zonas concurridas",
+            "Detalles de audio",
+            "Sin releases: hay que compilarlo"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "Prathewsh/gravityrush_pc",
+          "name": "gravityrush_pc",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA01113 / CUSA01130",
+          "base": [
+            "Supermedo/bloodborne_pc",
+            "shadPS4"
+          ],
+          "summary": "Mismo runtime que el de Gravity Rush 2. Corre sin parches de ejecutable; jugabilidad sin verificar.",
+          "performance": [],
+          "issues": [
+            "Jugabilidad sin verificar"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "the-order-1886",
+      "title": "The Order: 1886",
+      "developer": "Ready at Dawn",
+      "year": 2015,
+      "cusa": [
+        "CUSA00035",
+        "CUSA00785",
+        "CUSA00070",
+        "CUSA00076",
+        "CUSA00100",
+        "CUSA00670"
+      ],
+      "ports": [
+        {
+          "repo": "IgorAugustoHH/The-Order-1886-PC-Port",
+          "name": "TOport",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA00785 v01.02",
+          "base": [
+            "bbport (Windows)",
+            "shadPS4"
+          ],
+          "summary": "Pre-release v0.1.3. Todos los capítulos se están probando; cada versión trae correcciones.",
+          "performance": [
+            "Escenas pesadas (i5-10400F + RTX 2060): TAA ~45–50 FPS · DLSS Quality ~40–45 · DLSS Performance hasta ~80"
+          ],
+          "issues": [
+            "Parpadeo de iluminación en algunas zonas",
+            "Manchas negras en caras de algunos personajes",
+            "Una cinemática desincronizada",
+            "Sin soporte 1440p/4K"
+          ],
+          "features": [
+            "Modo original 2.40:1 o 16:9",
+            "DLSS",
+            "30/60/90/120 FPS",
+            "Cámara libre en cinemáticas",
+            "23 idiomas"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "mateussmeneses/theorder1886-port",
+          "name": "theorder1886-port",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA00035 v01.02",
+          "base": [
+            "gow3_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Jugable solo hasta el prólogo, pero con mucha estabilidad medida (20+ ejecuciones automáticas sin crashes).",
+          "performance": [
+            "30 FPS sostenidos en el prólogo (RTX 5060 Laptop)",
+            "Parche 60 FPS: ~57 promedio, bajadas a 41"
+          ],
+          "issues": [
+            "Gameplay más allá del prólogo, sonido y guardado sin verificar",
+            "Teclado sin botón Options"
+          ],
+          "features": [
+            "Parches 60 FPS y widescreen",
+            "FOV en vivo",
+            "Mouse y teclado",
+            "273 tests"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "lxnis/Order1886-PC",
+          "name": "Order1886-PC",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA00035 v01.02",
+          "base": [],
+          "summary": "Port experimental para Windows.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "killzone-shadow-fall",
+      "title": "Killzone Shadow Fall",
+      "developer": "Guerrilla Games",
+      "year": 2013,
+      "cusa": [
+        "CUSA00190",
+        "CUSA00191",
+        "CUSA00002",
+        "CUSA00085"
+      ],
+      "ports": [
+        {
+          "repo": "lesca-191204/killzone-shadowfall-pc",
+          "name": "Killzone Shadow Fall for PC",
+          "type": "native",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "v01.81 (CUSA00190 EE. UU. es la referencia)",
+          "base": [
+            "gow3_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Beta pública: toda la campaña es jugable. Multijugador solo offline (Botzone).",
+          "performance": [
+            "Opciones de la 0.2.5: +40–50% FPS en escenas pesadas (Ryzen 7 5700 + RTX 2060 Super)",
+            "Render 1080p + FSR 3.1 / DLSS; VRAM 4–6 GB para 1080p–1440p"
+          ],
+          "issues": [
+            "Efectos que aparecen tarde mientras compilan shaders",
+            "La caché de shaders puede ocupar varios GB",
+            "Las nuevas opciones de rendimiento pueden causar crashes"
+          ],
+          "features": [
+            "Launcher en inglés y español",
+            "Apuntado con mouse",
+            "Frame generation",
+            "Actualizaciones automáticas"
+          ],
+          "aiAssisted": true
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "dragons-crown-pro",
+      "title": "Dragon's Crown Pro",
+      "developer": "Vanillaware",
+      "year": 2018,
+      "cusa": [
+        "CUSA10454",
+        "CUSA07001",
+        "CUSA10209"
+      ],
+      "ports": [
+        {
+          "repo": "saulob/dragons-crown-pro-pc",
+          "name": "Dragon's Crown Pro PC Port",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "US CUSA10454 (1.00/1.01), JP CUSA07001, Asia CUSA10209",
+          "base": [
+            "shadPS4 (video core)",
+            "launcher TRG"
+          ],
+          "summary": "Jugable en Windows; Linux/Steam Deck experimental. Instala directo desde PKG de PS4.",
+          "performance": [
+            "60 FPS nativos; render de 480p a 4K"
+          ],
+          "issues": [
+            "Ultrawide estira la imagen (#1)",
+            "Coreano sin probar",
+            "Sin online",
+            "Release sin firmar (SmartScreen)"
+          ],
+          "features": [
+            "Co-op local hasta 4",
+            "SMAA, FSR 1, RCAS",
+            "Trofeos offline",
+            "Cheats (F10)"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "ufc-3",
+      "title": "EA SPORTS UFC 3",
+      "developer": "EA Vancouver",
+      "year": 2018,
+      "cusa": [
+        "CUSA06534"
+      ],
+      "ports": [
+        {
+          "repo": "GNSB/UFC-3-PS4-PORT-LINUX-WINDOWS",
+          "name": "UFC 3 native port",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "CUSA06534 update 1.14",
+          "base": [
+            "SacredFire",
+            "bbport",
+            "shadPS4"
+          ],
+          "summary": "Menús, peleas, sonido, control y guardado funcionan. El modo Carrera guarda y carga. Online privado experimental.",
+          "performance": [
+            "Linux (Ryzen 5 5600 + RTX 4070): peleas 137–196 FPS sin límite",
+            "Windows (RTX 3060 Laptop): peleas 60–70 FPS"
+          ],
+          "issues": [
+            "Windows rinde menos que Linux",
+            "2K/4K pueden crashear",
+            "Mover la ventana de monitor al iniciar puede tumbar el driver NVIDIA"
+          ],
+          "features": [
+            "Modo PS4 Pro",
+            "Opción 90 FPS",
+            "Online entre amigos (experimental)",
+            "FSR 1"
+          ],
+          "aiAssisted": true
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "ufc-4",
+      "title": "EA SPORTS UFC 4",
+      "developer": "EA Vancouver",
+      "year": 2020,
+      "cusa": [
+        "CUSA14209"
+      ],
+      "ports": [
+        {
+          "repo": "schans-arg/UFC4-PC-Port",
+          "name": "UFC4-PC-Port",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA14209 v28.00",
+          "base": [
+            "Runtime del port de UFC 3"
+          ],
+          "summary": "Fight Now llega a KO; en Carrera se crea personaje, se pelea, se guarda y se continúa.",
+          "performance": [
+            "Sin cifras; límite de 100 FPS sin validar"
+          ],
+          "issues": [
+            "Carrera completa, todos los luchadores/arenas y DLC sin validar"
+          ],
+          "features": [
+            "Backups automáticos de partidas"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "ClaudioGodoi/UFC-4-PS4-PORT-LINUX",
+          "name": "UFC 4 port (Linux)",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [
+            "Port de UFC 3 (GNSB)"
+          ],
+          "summary": "Versión para Linux basada en el port de UFC 3. Experimental.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "medievil",
+      "title": "MediEvil (2019)",
+      "developer": "Other Ocean",
+      "year": 2019,
+      "cusa": [
+        "CUSA11227",
+        "CUSA12982"
+      ],
+      "ports": [
+        {
+          "repo": "bc160201983/medievil_2019_pc_port",
+          "name": "MediEvil PC port",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA11227 / CUSA12982, v01.00 o v01.02",
+          "base": [
+            "gow3_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Arranque, menús, gameplay y guardado funcionan. Instala desde PKG desde el launcher.",
+          "performance": [
+            "60 FPS por defecto; 120/240 experimentales",
+            "RTX 5080: menús a 120 FPS, niveles 90–120",
+            "Preset Low para iGPU (Radeon 780M)"
+          ],
+          "issues": [
+            "Por encima de 60 FPS limita la traducción de comandos en un solo hilo",
+            "Con salida >1080p el mando no llega a algunos menús",
+            "Modo PS4 Pro experimental se cuelga"
+          ],
+          "features": [
+            "Hasta 4K",
+            "Escalado temporal",
+            "Cheats y mods",
+            "Todos los idiomas"
+          ],
+          "aiAssisted": true
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "unicorn-overlord",
+      "title": "Unicorn Overlord",
+      "developer": "Vanillaware",
+      "year": 2024,
+      "cusa": [
+        "CUSA36381"
+      ],
+      "ports": [
+        {
+          "repo": "hachi23/unicorn_overlord_pc",
+          "name": "Unicorn Overlord PC (vwport)",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "CUSA36381 (Asia) 01.04",
+          "base": [
+            "shadPS4 (capa de GPU)",
+            "~700 funciones de PS4 propias"
+          ],
+          "summary": "Prólogo, capítulo 1 y su primera batalla jugables; guardar/cargar funciona. No se terminó el juego.",
+          "performance": [
+            "~50–60 FPS en laptop de gama media a 1080p"
+          ],
+          "issues": [
+            "Solo capítulo 1 probado",
+            "Solo soporta el dump asiático 1.04"
+          ],
+          "features": [
+            "FSR 1 + RCAS",
+            "Iconos PlayStation/Xbox/Nintendo",
+            "Exporta diagnósticos al crashear"
+          ],
+          "aiAssisted": true
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "wipeout-omega",
+      "title": "WipEout Omega Collection",
+      "developer": "Clever Beans / XDev",
+      "year": 2017,
+      "cusa": [
+        "CUSA07671",
+        "CUSA05670"
+      ],
+      "ports": [
+        {
+          "repo": "AbdelmoumenDeghbouche/wipeout_pc",
+          "name": "wipeout_pc",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA07671 01.00 + update 01.07",
+          "base": [
+            "gow3_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Desarrollo temprano, pero menús, guardado, música y carreras de HD y 2048 ya funcionan. Sin release: hay que compilarlo.",
+          "performance": [
+            "Carreras de 2048: ~90–120 FPS (RTX 4070 Laptop); límite hasta 240"
+          ],
+          "issues": [
+            "Modo PS4 Pro (4K) bloqueado",
+            "Sin binarios publicados",
+            "No todos los modos probados"
+          ],
+          "features": [
+            "HDR",
+            "Mod ultrawide",
+            "Velocidad independiente de FPS"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "shipa-2/Wipeport",
+          "name": "Wipeport (con VR)",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA05670 + update 1.07",
+          "base": [
+            "bloodborne_pc",
+            "shadPS4"
+          ],
+          "summary": "Experimental: arranca y se juegan carreras con sonido y mando. Lo destacado es el soporte de realidad virtual vía OpenXR/SteamVR.",
+          "performance": [
+            "VR hasta 120 FPS con head tracking (Quest 2); en pantalla FPS sin límite (RX 6800 XT, RADV)"
+          ],
+          "issues": [
+            "Sin 4K nativo",
+            "Modo PS4 Pro distorsionado",
+            "Sin online",
+            "Upscalers sin adaptar"
+          ],
+          "features": [
+            "Realidad virtual (OpenXR)"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "ctr-nitro-fueled",
+      "title": "Crash Team Racing Nitro-Fueled",
+      "developer": "Beenox",
+      "year": 2019,
+      "cusa": [
+        "CUSA13795",
+        "CUSA14876"
+      ],
+      "ports": [
+        {
+          "repo": "guzuold/CTRNativePorted",
+          "name": "CTRNativePorted",
+          "type": "native",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA14876 (EU) v01.00 + update 01.21",
+          "base": [
+            "shadPS4 (renderer como librería)"
+          ],
+          "summary": "Se puede jugar y terminar de principio a fin. Trabaja en online entre PCs sin servidor central (DHT de BitTorrent); carreras de 2 PCs por internet ya funcionan.",
+          "performance": [
+            "60 FPS con el parche de la comunidad; render de 720p a 4K"
+          ],
+          "issues": [
+            "Más de 2 jugadores online sin verificar",
+            "NAT estricto/CGNAT puede impedir conectar",
+            "Wumpa Challenges y Grand Prix no implementados"
+          ],
+          "features": [
+            "Online P2P",
+            "FSR 1 / FSR 3.1 / DLSS (exp.)",
+            "Mods formato shadPS4/GoldHEN"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "GetLostIn/CTR-NitroFueled-PC",
+          "name": "CTR-NitroFueled-PC",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA13795 / CUSA14876, v01.00 + update 1.21",
+          "base": [
+            "SacredFire",
+            "bbport",
+            "shadPS4"
+          ],
+          "summary": "Fork para Windows de SacredFire. Aventura, Arcade, carreras, sonido, cinemáticas y guardado funcionan. Offline.",
+          "performance": [
+            "110–130 FPS sin límite en carreras con parche 60 FPS (RTX 3070 + i5-9500)",
+            "Resolución interna de 480p a 4K"
+          ],
+          "issues": [
+            "Tirones cortos la primera vez que compila shaders",
+            "FSR 4/DLSS y frame gen experimentales",
+            "Ultrawide desactiva el escalado",
+            "Online desactivado"
+          ],
+          "features": [
+            "Launcher con parches, backups y DLC",
+            "Logros",
+            "21:9 / 32:9",
+            "Menú in-game en español"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "FrankHUN88453/CTR-NitroFueled-PC",
+          "name": "CTR runner (D3D11)",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [
+            "Renderer D3D11 propio (GCN → HLSL)"
+          ],
+          "summary": "Enfoque distinto: renderer Direct3D 11 propio en vez de Vulkan/shadPS4.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "Ryu7w7/OCTR-NitroFueled-PC",
+          "name": "OCTR (online)",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA13795 + update 1.21 (EU CUSA14876 desde v0.5.3)",
+          "base": [
+            "CTR-NitroFueled-PC",
+            "SacredFire",
+            "bbport",
+            "shadPS4"
+          ],
+          "summary": "Fork de CTR-NitroFueled-PC con online real a través del servidor comunitario RyuNET: carreras públicas y privadas, amigos y Pit Stop.",
+          "performance": [
+            "110–130 FPS sin límite en carreras con parche 60 FPS (RTX 3070 + i5-9500)"
+          ],
+          "issues": [
+            "Cuelgue de GPU \"code 23\" sin corregir",
+            "Algunos NAT estrictos no conectan"
+          ],
+          "features": [
+            "Online (RyuNET)",
+            "Amigos",
+            "Pit Stop"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "dvilelaf/SacredFire",
+          "name": "SacredFire (Linux)",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA13795 + update 1.21",
+          "base": [
+            "SacredFire",
+            "CTR-NitroFueled-PC"
+          ],
+          "summary": "Versión para Linux/Steam Deck del runtime SacredFire. Jugable, partida completa sin verificar.",
+          "performance": [
+            "30 FPS por defecto; con parche 60 FPS: 37–45 FPS en carreras (Steam Deck)"
+          ],
+          "issues": [
+            "Online desactivado",
+            "Algunos crashes por un bug del command buffer (#2)"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "star-ocean-5",
+      "title": "Star Ocean: Integrity and Faithlessness",
+      "developer": "tri-Ace",
+      "year": 2016,
+      "cusa": [
+        "CUSA03219"
+      ],
+      "ports": [
+        {
+          "repo": "HekamiAeon/Star-Ocean-Integrity-and-Faithlessness-PS4RT",
+          "name": "PS4RT: Star Ocean 5",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA03219",
+          "base": [
+            "PS4RT",
+            "shadPS4 (renderer)"
+          ],
+          "summary": "Jugable y verificado hasta el capítulo 4.",
+          "performance": [
+            "Mantiene el framerate original; salida 1080p/1440p/4K con FSR 3.1 o FSR 4"
+          ],
+          "issues": [
+            "Stutter ocasional con compilación síncrona de shaders",
+            "Salir del juego no guarda"
+          ],
+          "features": [
+            "FSR 3.1 / FSR 4"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "valkyria-revolution",
+      "title": "Valkyria Revolution",
+      "developer": "Media.Vision / SEGA",
+      "year": 2017,
+      "cusa": [
+        "CUSA06810"
+      ],
+      "ports": [
+        {
+          "repo": "HekamiAeon/valkyria-revolution-ps4rt",
+          "name": "PS4RT: Valkyria Revolution",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA06810",
+          "base": [
+            "PS4RT",
+            "gow3_pc",
+            "bloodborne_pc",
+            "shadPS4"
+          ],
+          "summary": "Jugable en las secciones iniciales: intro, cinemáticas, combate temprano y primer jefe.",
+          "performance": [
+            "Render interno 1080p; salida reconstruida con FSR 3.1/FSR 4 hasta 4K"
+          ],
+          "issues": [
+            "Solo probado en Fedora 44",
+            "Salir del juego no guarda",
+            "Sin editor de controles in-game"
+          ],
+          "features": [
+            "FSR 3.1 / FSR 4"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "prototype",
+      "title": "PROTOTYPE / PROTOTYPE 2 (Biohazard Bundle)",
+      "developer": "Radical Entertainment",
+      "year": 2016,
+      "cusa": [
+        "CUSA06545"
+      ],
+      "ports": [
+        {
+          "repo": "petrishevgeorgii-debug/prototype-pc-slop",
+          "name": "prototype-pc-slop",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA06545 v01.00",
+          "base": [
+            "Port de The Order: 1886",
+            "shadPS4 (video core)"
+          ],
+          "summary": "PROTOTYPE jugable (probado en las primeras misiones). PROTOTYPE 2 arranca y se juega a 30/60 FPS, pero es experimental.",
+          "performance": [
+            "60 FPS opcionales; render de 720p a 4K (>1080p experimental)"
+          ],
+          "issues": [
+            "Pantalla de carga se puede colgar al abrir pausa (raro)",
+            "P2: sin iconos de teclado ni FSR",
+            "Sombras que parpadean"
+          ],
+          "features": [
+            "FSR 3.1 / FSR 4",
+            "Mods de shaders",
+            "Sombras extendidas (exp.)"
+          ],
+          "aiAssisted": true
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "fist-of-the-north-star",
+      "title": "Fist of the North Star: Lost Paradise",
+      "developer": "Ryu Ga Gotoku Studio",
+      "year": 2018,
+      "cusa": [
+        "CUSA12781"
+      ],
+      "ports": [
+        {
+          "repo": "ItalianKuze/port-ga-gotoku",
+          "name": "port-ga-gotoku",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA12781 v01.00",
+          "base": [
+            "bbport",
+            "shadPS4"
+          ],
+          "summary": "Alpha temprana: menús, exploración, combate, audio y guardado funcionan. Probado en una sola máquina.",
+          "performance": [
+            "~60 FPS caminando, con bajadas ocasionales (RTX 5070)"
+          ],
+          "issues": [
+            "Probado en una sola PC"
+          ],
+          "features": [
+            "Launcher",
+            "Menú in-game",
+            "HUD de estadísticas"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "lego-dimensions",
+      "title": "LEGO Dimensions",
+      "developer": "Traveller's Tales",
+      "year": 2015,
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "vascon-es/lego-dimensions-pc",
+          "name": "lego-dimensions-pc",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [
+            "Vulkan"
+          ],
+          "summary": "Port nativo no oficial a Windows.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "virtual-on",
+      "title": "Cyber Troopers Virtual-On Masterpiece 1995–2001",
+      "developer": "SEGA",
+      "year": 2018,
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "drakenabarion/virtualon_pc",
+          "name": "virtualon_pc",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [
+            "Ports de Uncharted y Bloodborne",
+            "shadPS4"
+          ],
+          "summary": "Corre nativamente en Linux según su descripción.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "littlebigplanet-3",
+      "title": "LittleBigPlanet 3",
+      "developer": "Sumo Digital",
+      "year": 2014,
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "btsouth/lbp3-pc",
+          "name": "lbp3-pc",
+          "type": "native",
+          "status": "partial",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA00063 (EU) v01.00 sin updates",
+          "base": [
+            "bbport",
+            "shadPS4"
+          ],
+          "summary": "Preview 0.1: jugable hasta Needlepoint Peaks.",
+          "performance": [
+            "Objetivo 30 FPS (RTX 4070 SUPER); 15–20 FPS unos 30 s en la primera visita a cada nivel"
+          ],
+          "issues": [
+            "Stutter por shaders",
+            "Sin online",
+            "Muchas funciones stub",
+            "Sonido sin revisar"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "TheNIKITO/LittleBigPlanet-3---PC",
+          "name": "LittleBigPlanet 3 PC",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [],
+          "summary": "Port nativo en progreso.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "MafraLP/lbp3-native-windows",
+          "name": "lbp3-native-windows",
+          "type": "native",
+          "status": "research",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [],
+          "summary": "Investigación hacia un port nativo. No jugable.",
+          "performance": [],
+          "issues": [
+            "No jugable"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "nhl-24",
+      "title": "NHL 24",
+      "developer": "EA Vancouver",
+      "year": 2023,
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "HajDEO/nhl24pc",
+          "name": "nhl24pc",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA37933 v01.00 (la update 1.6 congela el juego)",
+          "base": [
+            "shadPS4 (fork)"
+          ],
+          "summary": "Ejecuta el código del juego directamente en la CPU con las librerías de PS4 reimplementadas para Windows.",
+          "performance": [
+            "51 FPS jugando (Ryzen 5 4500 + RTX 5060)"
+          ],
+          "issues": [
+            "Glitches de tiles en cinemáticas",
+            "Crashes \"device lost\" raros"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "schans-arg/NHL24-PC-Port",
+          "name": "NHL24-PC-Port",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio",
+          "base": [],
+          "summary": "Port experimental de PS4 a PC.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "ratchet-and-clank",
+      "title": "Ratchet & Clank (2016)",
+      "developer": "Insomniac Games",
+      "year": 2016,
+      "cusa": [
+        "CUSA01073",
+        "CUSA01047"
+      ],
+      "ports": [
+        {
+          "repo": "btsouth/ratchet-clank-pc",
+          "name": "ratchet-clank-pc",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "CUSA01073 (EU) v01.00, sin updates",
+          "base": [
+            "bbport",
+            "shadPS4"
+          ],
+          "summary": "Preview 0.1: arranca, cinemáticas, guardado, sonido y mando. Todos los planetas cargan a 60 FPS, pero nadie lo terminó todavía.",
+          "performance": [
+            "60 FPS recomendado; 120 FPS inestable en escenas cargadas (i7-14700F + RTX 4070 SUPER)"
+          ],
+          "issues": [
+            "Parpadeo de sombras",
+            "Stutter de shaders en la primera visita",
+            "Congelamientos a 480 Hz"
+          ],
+          "features": [
+            "DLSS / FSR 3.1",
+            "Presets de FPS",
+            "AppImage"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "shehab4546/RatchetPort",
+          "name": "RatchetPort",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA01047 (EE. UU.) v1.00",
+          "base": [
+            "SpartanPort",
+            "shadPS4"
+          ],
+          "summary": "Pre-alpha para Windows: llega al menú, dificultad, carga y video inicial; se congela al saltar.",
+          "performance": [
+            "Sin 30 FPS sostenidos medidos (i5-12400 + UHD 730, 720p)"
+          ],
+          "issues": [
+            "VK_ERROR_DEVICE_LOST en UHD 730",
+            "Pantalla negra con deferred readbacks",
+            "Error 1450 por límite de memoria"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "dmc-definitive",
+      "title": "DmC Devil May Cry: Definitive Edition",
+      "developer": "Ninja Theory",
+      "year": 2015,
+      "cusa": [
+        "CUSA01022"
+      ],
+      "ports": [
+        {
+          "repo": "lxnis/DmC-PC",
+          "name": "DmC-PC",
+          "type": "native",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA01022 update 01.03",
+          "base": [
+            "CTR-NitroFueled-PC (capa de Windows)",
+            "Vulkan"
+          ],
+          "summary": "Arranca; menús, gameplay y cinemáticas Bink funcionan. 60 FPS por defecto.",
+          "performance": [
+            "60 FPS por defecto; más alto experimental (probado en RTX 3080 Ti)"
+          ],
+          "issues": [
+            "Algunas sombras incorrectas",
+            "Stutter de shaders en las primeras cargas",
+            "Sin online"
+          ],
+          "features": [
+            "ZIP portable"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "persona-4-dancing",
+      "title": "Persona 4: Dancing All Night",
+      "developer": "Atlus",
+      "year": 2018,
+      "cusa": [
+        "CUSA12112"
+      ],
+      "ports": [
+        {
+          "repo": "Piscacho/Persona-4-Dancing-All-Night-PC",
+          "name": "Persona 4 Dancing All Night PC",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA12112",
+          "base": [
+            "gow3_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Port para Windows basado en gow3_pc. El README no declara estado de jugabilidad.",
+          "performance": [],
+          "issues": [
+            "Estado de jugabilidad no declarado"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "j-stars-victory-vs",
+      "title": "J-Stars Victory VS+",
+      "developer": "Spike Chunsoft",
+      "year": 2015,
+      "cusa": [
+        "CUSA01887",
+        "CUSA01593"
+      ],
+      "ports": [
+        {
+          "repo": "krixsan/J-Stars-Victory-VS-PC",
+          "name": "J-Stars Victory VS PC",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA01887 / CUSA01593",
+          "base": [
+            "Loader propio",
+            "SDL3",
+            "Vulkan 1.3"
+          ],
+          "summary": "Loader nativo con parche de 60 FPS y versus local para 2. Publica v1.0.0 portable, pero no declara cuánto se puede jugar.",
+          "performance": [
+            "Parche de 60 FPS; sin benchmarks"
+          ],
+          "issues": [
+            "Estado de jugabilidad no declarado"
+          ],
+          "features": [
+            "60 FPS",
+            "Versus local 2 jugadores"
+          ],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "persona-3-dancing",
+      "title": "Persona 3: Dancing in Moonlight",
+      "developer": "Atlus",
+      "year": 2018,
+      "cusa": [
+        "CUSA12636"
+      ],
+      "ports": [
+        {
+          "repo": "Piscacho/Persona-3-Dancing-in-Moonlight-Pc",
+          "name": "Persona 3 Dancing in Moonlight PC",
+          "type": "native",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "CUSA12636",
+          "base": [
+            "gow3_pc",
+            "shadPS4 (video core)"
+          ],
+          "summary": "Port experimental para Windows del mismo autor que el de Persona 4 Dancing. No declara si es jugable.",
+          "performance": [],
+          "issues": [
+            "Estado de jugabilidad no declarado"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ],
+      "platform": "ps4"
+    },
+    {
+      "id": "jak-1",
+      "title": "Jak and Daxter: The Precursor Legacy",
+      "developer": "Naughty Dog",
+      "year": 2001,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "open-goal/jak-project",
+          "name": "OpenGOAL",
+          "type": "decomp",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "PS2 PAL, NTSC, NTSC-J o Greatest Hits (no versiones de PS3/PS4/PS5)",
+          "base": [
+            "OpenGOAL (compilador propio)"
+          ],
+          "summary": "El referente de la escena: decompilaron el lenguaje GOAL de Naughty Dog y el juego corre como aplicación nativa. Jak 1 está completo y pulido.",
+          "performance": [
+            "Nativo, sin emulación; resolución y FPS libres"
+          ],
+          "issues": [
+            "macOS solo vía Rosetta"
+          ],
+          "features": [
+            "Alta resolución",
+            "FPS altos",
+            "Mods"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "jak-2",
+      "title": "Jak II",
+      "developer": "Naughty Dog",
+      "year": 2003,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "open-goal/jak-project",
+          "name": "OpenGOAL",
+          "type": "decomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "Copia propia de PS2",
+          "base": [
+            "OpenGOAL"
+          ],
+          "summary": "En beta: esencialmente completo para jugar, con algunos problemas conocidos. Jak 3 todavía tiene mucho trabajo pendiente.",
+          "performance": [],
+          "issues": [
+            "Beta con problemas conocidos"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "dbz-bt3",
+      "title": "Dragon Ball Z: Budokai Tenkaichi 3",
+      "developer": "Spike",
+      "year": 2007,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "z3xox/Tenkaichi3Decomp",
+          "name": "Tenkaichi3Decomp",
+          "type": "decomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "USA SLUS-21678",
+          "base": [
+            "BT3-Decompiled"
+          ],
+          "summary": "Port nativo basado en la decompilación: el bucle completo del juego funciona; online experimental.",
+          "performance": [],
+          "issues": [
+            "El modo de movimiento suave saltea cuadros en cortes de cámara",
+            "Online en macOS sin probar"
+          ],
+          "features": [
+            "Online (experimental)"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "ico",
+      "title": "ICO",
+      "developer": "Team Ico",
+      "year": 2001,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "nathanialf/ico-pc",
+          "name": "ico-pc",
+          "type": "decomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "Una de 7 versiones, p. ej. SCES-50760 (EU) o SCPS-11003 (JP)",
+          "base": [
+            "Decompilación de ICO"
+          ],
+          "summary": "Corre el propio código del juego desde la decompilación. Windows es la plataforma principal; también hay builds para Android e iOS.",
+          "performance": [],
+          "issues": [
+            "El visor de modelos muestra modelos incorrectos en el disco norteamericano"
+          ],
+          "features": [
+            "Android / iOS"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "sly-cooper-1",
+      "title": "Sly Cooper and the Thievius Raccoonus",
+      "developer": "Sucker Punch",
+      "year": 2002,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "theclub654/ProjectCane",
+          "name": "ProjectCane",
+          "type": "decomp",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "ISO propia (extractor incluido)",
+          "base": [
+            "Ingeniería inversa / decompilación"
+          ],
+          "summary": "Port nativo por ingeniería inversa: el juego completo se puede jugar.",
+          "performance": [],
+          "issues": [
+            "17 issues abiertos"
+          ],
+          "features": [
+            "AppImage para Linux"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "god-of-war-ps2",
+      "title": "God of War",
+      "developer": "Santa Monica Studio",
+      "year": 2005,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "YYOzcan/Tobiichi-Port",
+          "name": "Tobiichi Port",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "USA SCUS-97399",
+          "base": [
+            "PS2Recomp"
+          ],
+          "summary": "Recompilación de MIPS a C++. Jugable con muchas funciones; partida completa no declarada.",
+          "performance": [
+            "60 FPS a 2–3× resolución en GPU dedicada; 1–2× en integrada"
+          ],
+          "issues": [
+            "Lento en hardware débil",
+            "Pantalla negra en GPUs sin OpenGL 4.3"
+          ],
+          "features": [],
+          "aiAssisted": true
+        },
+        {
+          "repo": "Waffle565/God-Of-War-Native-Port",
+          "name": "God-Of-War-Native-Port",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "NTSC-U SCUS-97399",
+          "base": [
+            "PS2Recomp"
+          ],
+          "summary": "Experimental: arranque, menús, guardado, gameplay y videos funcionan en las zonas probadas.",
+          "performance": [
+            "60 FPS en zonas probadas, velocidad exacta"
+          ],
+          "issues": [
+            "Solo zonas probadas"
+          ],
+          "features": [],
+          "aiAssisted": true
+        },
+        {
+          "repo": "KIexster/god-of-war-recomp",
+          "name": "god-of-war-recomp",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "NTSC-U SCUS-97399",
+          "base": [
+            "PS2Recomp"
+          ],
+          "summary": "Llega a los menús y a la pelea en el barco con HUD; la partida completa está pendiente.",
+          "performance": [
+            "Mediana ~53–56 FPS en el barco (Ryzen 7 5800XT + RX 5700 XT)"
+          ],
+          "issues": [
+            "Escenas pesadas no llegan a 60",
+            "Cuelgue intermitente del hilo de ventana"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "burnout-3",
+      "title": "Burnout 3: Takedown",
+      "developer": "Criterion Games",
+      "year": 2004,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "danielgomesvieira2000/burnout3-pc",
+          "name": "burnout3-pc",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "NTSC-U SLUS-21050",
+          "base": [
+            "MIPS → C++"
+          ],
+          "summary": "Alpha: el programa de PS2 traducido a C++ y compilado nativo, con Vulkan.",
+          "performance": [
+            "60, 120 FPS o la frecuencia del monitor"
+          ],
+          "issues": [
+            "Caídas de FPS en Crash Breakers a 144 FPS",
+            "Ambiente en cámara lenta que se saltea (#20)"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "re-code-veronica",
+      "title": "Resident Evil – Code: Veronica X",
+      "developer": "Capcom",
+      "year": 2001,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "aikatore/recvx-enhanced-port",
+          "name": "recvx-enhanced-port",
+          "type": "decomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "NTSC-U SLUS-20184",
+          "base": [
+            "recvx-decomp (decompilación completa)"
+          ],
+          "summary": "Port nativo construido sobre la decompilación completa del juego, con co-op online y render mejorado. Proyecto temprano: esperar bugs.",
+          "performance": [],
+          "issues": [
+            "Proyecto temprano"
+          ],
+          "features": [
+            "Co-op online",
+            "Render mejorado"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "ratchet-clank-ps2",
+      "title": "Ratchet & Clank (PS2)",
+      "developer": "Insomniac Games",
+      "year": 2002,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "AsobiCodes/rac-rs",
+          "name": "rac-rs",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "PAL v1.00 SCES-50916 o USA v1.00 SCUS-97199",
+          "base": [
+            "MIPS → Rust"
+          ],
+          "summary": "Recompilado a Rust con gráficos, sonido y control nativos. Jugable hasta los créditos, incluido New Game+.",
+          "performance": [],
+          "issues": [
+            "Falta la estela del Thruster-Pack",
+            "Algunos vidrios parpadean"
+          ],
+          "features": [
+            "New Game+"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "daino-selvatico/rac1-native-game",
+          "name": "rac1-native-game",
+          "type": "decomp",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "SCUS-97199 (NA) o SCES-50916 (PAL)",
+          "base": [
+            "Port función por función verificado contra el original"
+          ],
+          "summary": "Todos los planetas portados; el juego completo se terminó en la 0.4.0.",
+          "performance": [],
+          "issues": [
+            "Zonas muy oscuras en Nebula G34 con la iluminación experimental"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "re-rac/rerac",
+          "name": "rerac",
+          "type": "reimpl",
+          "status": "early",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "Una versión de disco soportada",
+          "base": [
+            "Rust + Bevy"
+          ],
+          "summary": "Reimplementación en Rust: todos los niveles cargan y se ven, pero todavía no se juega de principio a fin.",
+          "performance": [],
+          "issues": [
+            "Solo probado en Mac con Apple Silicon"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "fatal-frame",
+      "title": "Fatal Frame",
+      "developer": "Tecmo",
+      "year": 2001,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Mikompilation/MikuPan",
+          "name": "MikuPan",
+          "type": "decomp",
+          "status": "early",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "NTSC-U (PAL/EU con presets -eu); NTSC-J no",
+          "base": [
+            "Himuro (decompilación)"
+          ],
+          "summary": "Port nativo basado en la decompilación Himuro. \"Todavía muy temprano\".",
+          "performance": [],
+          "issues": [
+            "Las builds release tienen problemas; se recomienda debug"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "killzone-ps2",
+      "title": "Killzone",
+      "developer": "Guerrilla Games",
+      "year": 2004,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "drakolordx7/KillzoneRecomp",
+          "name": "KillzoneRecomp",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "US SCUS-97402 o EU SCES-52893",
+          "base": [
+            "PS2Recomp"
+          ],
+          "summary": "Recompilación estática a C++. Anuncia 120+ FPS, pero no declara cuánto se puede jugar.",
+          "performance": [
+            "Anuncia 120+ FPS"
+          ],
+          "issues": [
+            "Estado de jugabilidad no declarado"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "ace-combat-5",
+      "title": "Ace Combat 5: The Unsung War",
+      "developer": "Namco",
+      "year": 2004,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "sal063/Ace-Combat-5-Static-recompilation",
+          "name": "AC5 Static Recompilation",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "US SLUS-20851",
+          "base": [
+            "MIPS → C + renderer nativo"
+          ],
+          "summary": "\"El juego es completamente jugable.\" Menús, hangar y algunos efectos todavía usan el GS emulado.",
+          "performance": [
+            "~20 s de pantalla negra antes del primer cuadro"
+          ],
+          "issues": [
+            "Watchdog cierra el juego si pasan 10 s sin cuadros (--watchdog 0)"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "dragon-quest-8",
+      "title": "Dragon Quest VIII",
+      "developer": "Level-5",
+      "year": 2004,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Sinan-Karakaya/DQ8-Recompiled",
+          "name": "DQ8-Recompiled",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows",
+            "macos",
+            "linux"
+          ],
+          "gameVersion": "NTSC-U SLUS-21207",
+          "base": [
+            "MIPS → C++ + runtime de servicios de PS2"
+          ],
+          "summary": "Experimental: arranca, carga partidas y llega al gameplay en el campo con sonido. PAL incompleto.",
+          "performance": [],
+          "issues": [
+            "Rendimiento y compatibilidad en progreso"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "ridge-racer-v",
+      "title": "Ridge Racer V",
+      "developer": "Namco",
+      "year": 2000,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "danisandoval/fukami",
+          "name": "fukami",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "macos",
+            "linux"
+          ],
+          "gameVersion": "USA SLUS-20002",
+          "base": [
+            "MIPS → C++ (AOT)"
+          ],
+          "summary": "Recompilación anticipada a C++, no emulador. Pensado para macOS y Steam Deck.",
+          "performance": [
+            "60 FPS nativos; bajadas en Steam Deck al largar"
+          ],
+          "issues": [
+            "Freno inexplicable en sesiones largas con muchos autos"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "urban-reign",
+      "title": "Urban Reign",
+      "developer": "Namco",
+      "year": 2005,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "thiagordsfx/urban-reign-recomp",
+          "name": "urban-reign-recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "USA SLUS-21209",
+          "base": [
+            "Recompilación estática + renderer de PCSX2"
+          ],
+          "summary": "Beta: 60 FPS y hasta 8 jugadores.",
+          "performance": [
+            "Objetivo 60 FPS, resolución interna 1×–8×"
+          ],
+          "issues": [
+            "7 issues abiertos"
+          ],
+          "features": [
+            "Hasta 8 jugadores"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "sotc-ps2",
+      "title": "Shadow of the Colossus (PS2)",
+      "developer": "Team Ico",
+      "year": 2005,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "HenryKun55/celosia",
+          "name": "Celosia",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "USA SCUS-97472",
+          "base": [
+            "PS2Recomp",
+            "Renderer Metal/OpenGL"
+          ],
+          "summary": "Del arranque al gameplay en Mac con Apple Silicon (también PS Vita). La decompilación va 4,7%.",
+          "performance": [
+            "60 FPS a 1536×1344 (M4 Pro)"
+          ],
+          "issues": [
+            "Sin build para Windows"
+          ],
+          "features": [
+            "PS Vita"
+          ],
+          "aiAssisted": true
+        },
+        {
+          "repo": "GenissonEmilio/ShadowOfTheColossusPC",
+          "name": "ShadowOfTheColossusPC",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Celosia"
+          ],
+          "summary": "Port nativo para Linux basado en Celosia.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "the-warriors",
+      "title": "The Warriors",
+      "developer": "Rockstar Toronto",
+      "year": 2005,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Ryubara/coney",
+          "name": "coney",
+          "type": "reimpl",
+          "status": "partial",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "Disco propio",
+          "base": [
+            "Reimplementación en C++"
+          ],
+          "summary": "En desarrollo: videos de inicio, menús y los niveles registrados en su página de misiones.",
+          "performance": [],
+          "issues": [
+            "328 issues abiertos"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "socom-2",
+      "title": "SOCOM II: U.S. Navy SEALs",
+      "developer": "Zipper Interactive",
+      "year": 2003,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Scotho/socom-unzipped",
+          "name": "socom-unzipped",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "US NTSC SCUS-97275",
+          "base": [
+            "Recompilación estática a C++"
+          ],
+          "summary": "Arranca desde tu disco y llega a las misiones. El online funciona solo contra el servidor de prueba, no entre personas todavía.",
+          "performance": [
+            "~25 FPS en misiones (objetivo 30)"
+          ],
+          "issues": [
+            "Audio 7–10 dB más bajo"
+          ],
+          "features": [
+            "Online propio (en desarrollo)"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "dothack-infection",
+      "title": ".hack//Infection (y la saga)",
+      "developer": "CyberConnect2",
+      "year": 2002,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Toyz/piney_apples",
+          "name": "piney_apples",
+          "type": "reimpl",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "Tus discos de .hack",
+          "base": [
+            "Motor de .hack reescrito en Rust"
+          ],
+          "summary": "Infection se juega hasta el final; Mutation y Outbreak se completaron en piloto automático; Quarantine arranca.",
+          "performance": [],
+          "issues": [
+            "Ver GAPS.md y BUGS.md del repo"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "war-of-the-monsters",
+      "title": "War of the Monsters",
+      "developer": "Incognito",
+      "year": 2003,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "yanm1103/War_of_the_Monsters_recomp",
+          "name": "War of the Monsters recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "NTSC-U SCUS-97197",
+          "base": [
+            "PS2Recomp",
+            "Renderer raylib"
+          ],
+          "summary": "Las peleas se juegan con teclado o mando; sonido, videos, HUD y widescreen Hor+ nativos.",
+          "performance": [
+            "60 FPS"
+          ],
+          "issues": [
+            "MSVC 14.32 da errores internos del compilador"
+          ],
+          "features": [
+            "Widescreen"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "star-wars-battlefront",
+      "title": "Star Wars: Battlefront",
+      "developer": "Pandemic Studios",
+      "year": 2004,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "sprucey149/openbf",
+          "name": "openbf",
+          "type": "reimpl",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Motor en Rust"
+          ],
+          "summary": "Motor reescrito en Rust, en progreso.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "wwe-hctp",
+      "title": "WWE SmackDown! Here Comes the Pain",
+      "developer": "Yuke's",
+      "year": 2003,
+      "platform": "ps2",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "BigDaddyJRich/hctp-recomp",
+          "name": "hctp-recomp",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Recompilación estática"
+          ],
+          "summary": "Recompilación para PC en progreso.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "infamous-ps3",
+      "title": "inFAMOUS",
+      "developer": "Sucker Punch",
+      "year": 2009,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "whompay/inFAMOUSreborn",
+          "name": "inFAMOUSreborn",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "EU BCES00220",
+          "base": [
+            "ps3recomp",
+            "Direct3D 12"
+          ],
+          "summary": "Recompilación estática a C/C++ de x86-64. Pide GPU D3D12, CPU SSE4.1 y 16 GB de RAM. No declara cuánto se puede jugar.",
+          "performance": [],
+          "issues": [
+            "Estado de jugabilidad no declarado"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "infamous-2",
+      "title": "inFAMOUS 2",
+      "developer": "Sucker Punch",
+      "year": 2011,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "juans-collab/infamous-2-recomp",
+          "name": "infamous-2-recomp",
+          "type": "recomp",
+          "status": "research",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ps3recomp"
+          ],
+          "summary": "Investigación para un port nativo a Windows. No jugable.",
+          "performance": [],
+          "issues": [
+            "No jugable"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "gow-ascension",
+      "title": "God of War: Ascension",
+      "developer": "Santa Monica Studio",
+      "year": 2013,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "arnaldolima1/gow-ascension-pc",
+          "name": "gow-ascension-pc",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "EU BCES-01741 (1.00)",
+          "base": [
+            "ps3recomp"
+          ],
+          "summary": "Experimental: llega a la primera pelea con jefe pero todavía no se puede terminar.",
+          "performance": [
+            "~50–55 FPS en menús, 22–27 en el primer nivel, 13–21 en el jefe"
+          ],
+          "issues": [
+            "Copias duplicadas de objetos cerca de un brazo gigante",
+            "Cuelgue ocasional de trabajos SPU"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "gow2-hd",
+      "title": "God of War II HD",
+      "developer": "Santa Monica Studio / Bluepoint",
+      "year": 2009,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "andrebrumdev/gow2-recomp",
+          "name": "gow2-recomp",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "macos"
+          ],
+          "gameVersion": "PS3 NPUA80491 v01.00",
+          "base": [
+            "ps3recomp"
+          ],
+          "summary": "Recompilación de la versión HD de PS3 para Mac con Apple Silicon. Arranque, menús, guardado y el gameplay de Rodas funcionan.",
+          "performance": [
+            "~44–52 FPS en Mac; Android ~12 FPS"
+          ],
+          "issues": [
+            "Matriz de skinning deformada en el hombro del Coloso"
+          ],
+          "features": [
+            "iOS / Android experimentales"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "drakengard-3",
+      "title": "Drakengard 3",
+      "developer": "Access Games",
+      "year": 2013,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "soyjxck/dod3-recomp",
+          "name": "dod3-recomp",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows",
+            "macos"
+          ],
+          "gameVersion": "US BLUS31197 o NPUB31251 + update 1.01",
+          "base": [
+            "ps3recomp"
+          ],
+          "summary": "Recompilación anticipada a C++. D3D12 en Windows y Metal en Mac son jugables; el capítulo 1 se reporta jugable a 60 FPS.",
+          "performance": [
+            "60 FPS a 4K (RTX 4090 + i9-13900K)",
+            "60 FPS a 1080p en batalla (M1 Pro)"
+          ],
+          "issues": [
+            "Probado en pocas máquinas",
+            "HUD mal ubicado en 16:10, 21:9 y 32:9"
+          ],
+          "features": [
+            "Vulkan experimental"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "tekken-5-dr",
+      "title": "Tekken 5: Dark Resurrection",
+      "developer": "Namco",
+      "year": 2007,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "TheWishin/T5DROnline",
+          "name": "T5DROnline",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "US PSN NPUB30009 v01.00 (.pkg + .rap)",
+          "base": [
+            "Recompilación"
+          ],
+          "summary": "Arcade, Versus y Practice funcionan, y el online va por el lobby del launcher (probado entre dos PCs).",
+          "performance": [
+            "60 FPS en la PC del autor; 45–55 en PCs más lentas"
+          ],
+          "issues": [
+            "El menú Online original del juego no funciona"
+          ],
+          "features": [
+            "Online por lobby propio"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "killzone-2",
+      "title": "Killzone 2",
+      "developer": "Guerrilla Games",
+      "year": 2009,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "YYOzcan/tokisaki-port",
+          "name": "Tokisaki Port",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "linux"
+          ],
+          "gameVersion": "EBOOT.ELF desencriptado propio",
+          "base": [
+            "ps3recomp",
+            "Vulkan"
+          ],
+          "summary": "Pre-alpha: la campaña abre y el primer nivel se juega con sonido.",
+          "performance": [
+            "~13–14 FPS (Radeon 680M en ahorro de energía)"
+          ],
+          "issues": [
+            "El video de intro se traba (se saltea por script)",
+            "La carga del nivel a veces se detiene"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "ac-for-answer",
+      "title": "Armored Core: For Answer",
+      "developer": "FromSoftware",
+      "year": 2008,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "SulphurS16/ACFA-Port",
+          "name": "ACFA-Port (Project Glintburn)",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "US BLUS30187 + firmware 4.93",
+          "base": [
+            "Recompilación estática a C++"
+          ],
+          "summary": "Jugable desde su launcher; partida completa no declarada.",
+          "performance": [
+            "30–144 FPS o sin límite; escala de render 50–200% con velocidad de juego constante"
+          ],
+          "issues": [
+            "Sin vibración del mando"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "ac4",
+      "title": "Armored Core 4",
+      "developer": "FromSoftware",
+      "year": 2006,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "SulphurS16/AC4-Port",
+          "name": "AC4-Port (Project Glintburn)",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Runtime de ACFA-Port"
+          ],
+          "summary": "Comparte el runtime con el port de For Answer.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "demons-souls",
+      "title": "Demon's Souls",
+      "developer": "FromSoftware",
+      "year": 2009,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "JonathanDC64/DemonsSoulsRecomp",
+          "name": "DemonsSoulsRecomp",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "US BLUS30443",
+          "base": [
+            "Recompilación desde código de PS3"
+          ],
+          "summary": "Temprano: jugable desde el comienzo hasta el Palacio de Boletaria 1-1. Sin release: hay que compilarlo.",
+          "performance": [],
+          "issues": [
+            "Linux más nuevo y menos probado"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "guitar-hero-3",
+      "title": "Guitar Hero III: Legends of Rock",
+      "developer": "Neversoft",
+      "year": 2007,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "sp00nznet/gh3",
+          "name": "gh3",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ps3recomp"
+          ],
+          "summary": "Beta: las canciones se juegan.",
+          "performance": [
+            "30–40 FPS en canciones"
+          ],
+          "issues": [
+            "Sin soporte de guitarra todavía",
+            "Solo código fuente"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "simpsons-arcade",
+      "title": "The Simpsons Arcade Game",
+      "developer": "Konami / Backbone",
+      "year": 2012,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "sp00nznet/simpsonsarcade-ps3",
+          "name": "simpsonsarcade-ps3",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ps3recomp"
+          ],
+          "summary": "Beta; el co-op online usa un reemplazo de PSN.",
+          "performance": [
+            "35–57 FPS en gameplay"
+          ],
+          "issues": [
+            "Solo código fuente"
+          ],
+          "features": [
+            "Co-op online"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "flow",
+      "title": "flOw",
+      "developer": "thatgamecompany",
+      "year": 2007,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "sp00nznet/flow",
+          "name": "flow",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ps3recomp"
+          ],
+          "summary": "El loop del motor y el render de niveles en D3D12 funcionan; todavía no es una build jugable normal.",
+          "performance": [],
+          "issues": [
+            "Linux planeado"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "yakuza-dead-souls",
+      "title": "Yakuza: Dead Souls",
+      "developer": "Ryu Ga Gotoku Studio",
+      "year": 2011,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "canersaka/Yakuza-Dead-Souls-Recompiled",
+          "name": "Yakuza-Dead-Souls-Recompiled",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Recompilación"
+          ],
+          "summary": "Esfuerzo de recompilación en curso.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "soulcalibur-2-hd",
+      "title": "Soulcalibur II HD Online",
+      "developer": "Namco Bandai",
+      "year": 2013,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "n0madic/Soulcalibur2HD-recomp",
+          "name": "Soulcalibur2HD-recomp",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Recompilación"
+          ],
+          "summary": "Recompilación nativa de Soulcalibur II HD.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "folklore",
+      "title": "Folklore",
+      "developer": "Game Republic",
+      "year": 2007,
+      "platform": "ps3",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Mava-b/folklore-decomp",
+          "name": "folklore-decomp",
+          "type": "decomp",
+          "status": "research",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Decompilación asistida por IA"
+          ],
+          "summary": "Proyecto de decompilación.",
+          "performance": [],
+          "issues": [
+            "No jugable"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "sonic-unleashed",
+      "title": "Sonic Unleashed",
+      "developer": "Sonic Team",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "hedge-dev/UnleashedRecomp",
+          "name": "Unleashed Recompiled",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Copia US o EU + title update (DLC opcional)",
+          "base": [
+            "XenonRecomp",
+            "XenosRecomp"
+          ],
+          "summary": "El proyecto que inició la ola de recompilaciones de Xbox 360. Estable (1.0.x), con mejoras de resolución y FPS.",
+          "performance": [
+            "60 FPS por defecto, más alto o sin límite; ultrawide"
+          ],
+          "issues": [
+            "Algunos tirones",
+            "Glitches a FPS muy altos",
+            "Conserva bugs originales"
+          ],
+          "features": [
+            "Mod loader",
+            "Ultrawide"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "sonic-06",
+      "title": "Sonic the Hedgehog (2006)",
+      "developer": "Sonic Team",
+      "year": 2006,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "sonicnext-dev/MarathonRecomp",
+          "name": "Marathon Recompiled",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "XenonRecomp",
+            "XenosRecomp"
+          ],
+          "summary": "Sin releases: el README pide no usarlo hasta la versión oficial.",
+          "performance": [],
+          "issues": [
+            "Sin release pública"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "skate-3",
+      "title": "Skate 3",
+      "developer": "EA Black Box",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "mchughalex/skate3recomp",
+          "name": "skate3recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "Title Update 3",
+          "base": [
+            "Renderer nativo D3D12/Vulkan"
+          ],
+          "summary": "Desde la v2.0 tiene renderer propio que reemplaza la emulación de GPU.",
+          "performance": [
+            "Más del doble de FPS que el renderer emulado con ~1/4 del consumo de GPU; ~10× en Apple Silicon"
+          ],
+          "issues": [
+            "Pop-in de texturas al cargar",
+            "Render en la personalización del skater"
+          ],
+          "features": [
+            "macOS ARM (experimental)"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "skate-2",
+      "title": "Skate 2",
+      "developer": "EA Black Box",
+      "year": 2009,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "christianortel/skate2-recompile-pc",
+          "name": "Skate 2 PC",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Una sola revisión del juego",
+          "base": [],
+          "summary": "Free Skate, carrera y FPS desbloqueados.",
+          "performance": [],
+          "issues": [
+            "Solo una revisión del juego"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "mw2-x360",
+      "title": "Call of Duty: Modern Warfare 2",
+      "developer": "Infinity Ward",
+      "year": 2009,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "PaulCombal/mw2-recompiled",
+          "name": "MW2 Recompiled",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Disco v1.0.557",
+          "base": [],
+          "summary": "Campaña, multijugador y pantalla dividida funcionan. Estado según portedgames.com (25/10/2026).",
+          "performance": [],
+          "issues": [
+            "Sin matchmaking público"
+          ],
+          "features": [
+            "Pantalla dividida"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "cod3",
+      "title": "Call of Duty 3",
+      "developer": "Treyarch",
+      "year": 2006,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "FrankHUN88453/CoD3Recomp",
+          "name": "CoD3Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Los 15 niveles de la campaña se juegan, con FPS libres y mouse/teclado. Pre-release.",
+          "performance": [],
+          "issues": [
+            "Pre-release"
+          ],
+          "features": [
+            "Mouse y teclado"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "zenit2893-cmyk/project-1944",
+          "name": "Project 1944",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "La v2.0 agrega multijugador recompilado; solo la primera misión está verificada.",
+          "performance": [],
+          "issues": [
+            "Solo la primera misión verificada"
+          ],
+          "features": [
+            "Multijugador"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "castlevania-sotn-xbla",
+      "title": "Castlevania: Symphony of the Night (XBLA)",
+      "developer": "Konami",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "birabittoh/NocturneRecomp",
+          "name": "NocturneRecomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Paquete XBLA propio",
+          "base": [],
+          "summary": "Recompila la versión de Xbox Live Arcade de 2007. Estado según portedgames.com (25/10/2026) (Working).",
+          "performance": [],
+          "issues": [],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "dead-rising-2-case-west",
+      "title": "Dead Rising 2: Case West",
+      "developer": "Capcom / Blue Castle",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "wivi514/Dead_Rising_2_Case_West_Xenon_Recomp",
+          "name": "Case West Native PC Port",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Vulkan"
+          ],
+          "summary": "Jugable de principio a fin con co-op online. La v1.1.2 es la versión final.",
+          "performance": [],
+          "issues": [
+            "Desarrollo terminado"
+          ],
+          "features": [
+            "Co-op online"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "dead-rising-2-case-zero",
+      "title": "Dead Rising 2: Case Zero",
+      "developer": "Capcom / Blue Castle",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "wivi514/Dead_Rising_2_Case_Zero_Xenon_Recomp",
+          "name": "Case Zero Recomp",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Vulkan"
+          ],
+          "summary": "Completado de principio a fin; la v1.1.3 es final y el desarrollo terminó.",
+          "performance": [],
+          "issues": [
+            "Desarrollo terminado"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "dodonpachi-sdoj",
+      "title": "DoDonPachi SaiDaiOuJou",
+      "developer": "Cave",
+      "year": 2012,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "eandis/SDOJ-Recomp",
+          "name": "SDOJ-Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Con Title Update 1",
+          "base": [],
+          "summary": "Parches de input lag, ralentización estilo arcade y entrenamiento de jefes. Estado según portedgames.com (25/10/2026) (Working).",
+          "performance": [],
+          "issues": [],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "dbz-budokai-3-hd",
+      "title": "Dragon Ball Z: Budokai 3 HD Collection",
+      "developer": "Dimps",
+      "year": 2012,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "novapowers0/DBZ-Budokai-3-HD-Collection",
+          "name": "Budokai 3 HD (NovaPowers)",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Launcher y kit de mods propios; versus online y modos nuevos en beta.",
+          "performance": [],
+          "issues": [
+            "Online en beta"
+          ],
+          "features": [
+            "Online versus",
+            "Mods"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "spiderman-edge-of-time",
+      "title": "Spider-Man: Edge of Time",
+      "developer": "Beenox",
+      "year": 2011,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "goliathret/EdgeOfTimeRecomp",
+          "name": "EdgeOfTimeRecompiled",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "La v1.0.0 agrega apuntado nativo con mouse y teclado y soporte amplio de mandos.",
+          "performance": [],
+          "issues": [],
+          "features": [
+            "Mouse y teclado"
+          ],
+          "aiAssisted": false
+        },
+        {
+          "repo": "GenryTheFox0/Project-2099",
+          "name": "Project 2099",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Port para Windows con soporte de mods.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [
+            "Mods"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "tekken-6",
+      "title": "Tekken 6",
+      "developer": "Namco",
+      "year": 2009,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "mahmoud-mess/tekken6-recomp",
+          "name": "tekken6-recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Recompilación base de la que derivan otros proyectos. portedgames lista una variante con online (rollback GGPO, lobbies ranked) como Working.",
+          "performance": [],
+          "issues": [
+            "Solo modos versus"
+          ],
+          "features": [
+            "Online con rollback (variante)"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "wwe-svr-2011",
+      "title": "WWE SmackDown vs. Raw 2011",
+      "developer": "Yuke's",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "KaikoClanworth1/wwe-svr2011-pc",
+          "name": "WWE SvR 2011 PC Port",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Port nativo con música de entrada personalizada y build para Android.",
+          "performance": [
+            "Hasta 4K/60 con ultrawide"
+          ],
+          "issues": [],
+          "features": [
+            "Ultrawide",
+            "Música de entrada personalizada"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "burnout-revenge",
+      "title": "Burnout Revenge",
+      "developer": "Criterion Games",
+      "year": 2006,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "shipa-2/Xerenge",
+          "name": "Xerenge",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Imagen de disco EU o US",
+          "base": [
+            "ReXGlue SDK",
+            "Renderer Plume"
+          ],
+          "summary": "Carreras, modo Crash, audio, video y online funcionan.",
+          "performance": [],
+          "issues": [],
+          "features": [
+            "Online"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "ace-combat-6",
+      "title": "Ace Combat 6: Fires of Liberation",
+      "developer": "Namco",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "sal063/AC6_recomp",
+          "name": "AC6Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Solo versión US",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Jugable, pero el README advierte bugs y crashes.",
+          "performance": [
+            "60 FPS y ultrawide"
+          ],
+          "issues": [
+            "Bugs y crashes"
+          ],
+          "features": [
+            "Ultrawide"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "banjo-nuts-bolts",
+      "title": "Banjo-Kazooie: Nuts & Bolts",
+      "developer": "Rare",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "masterspike52/reNut",
+          "name": "reNut",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Renderer nativo y online vía EOS.",
+          "performance": [],
+          "issues": [
+            "Leaderboards rotos",
+            "Linux sin probar"
+          ],
+          "features": [
+            "Online (EOS)"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "condemned-2",
+      "title": "Condemned 2: Bloodshot",
+      "developer": "Monolith",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "psxrestore/Condemned2Recomp",
+          "name": "Condemned2Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Jugable pero en progreso: esperar bugs y crashes.",
+          "performance": [],
+          "issues": [
+            "Bugs y crashes"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "dantes-inferno",
+      "title": "Dante's Inferno",
+      "developer": "Visceral Games",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "florinp93/hells-gate-recomp",
+          "name": "Hell's Gate",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ReXGlue SDK",
+            "Renderer Vulkan propio"
+          ],
+          "summary": "Según su README, completamente jugable con DLC.",
+          "performance": [
+            "Hasta 240 FPS"
+          ],
+          "issues": [],
+          "features": [
+            "DLC"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "dbz-burst-limit",
+      "title": "Dragon Ball Z: Burst Limit",
+      "developer": "Dimps",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "iExplosiveRage/DBZ-Burst-Limit-Recompiled",
+          "name": "Burst Limit Recompiled",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Solo NTSC-U",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Port nativo; en Linux corre vía Wine.",
+          "performance": [
+            "FPS desbloqueados, DLSS/FSR"
+          ],
+          "issues": [],
+          "features": [
+            "Ultrawide",
+            "DLSS / FSR"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "earthworm-jim-hd",
+      "title": "Earthworm Jim HD",
+      "developer": "Gameloft",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "TekRantGaming/earthworm-jim-hd-recompiled",
+          "name": "Earthworm Jim HD: PC Port",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "xex 1.0.0.11 exacto",
+          "base": [],
+          "summary": "El launcher TRG maneja gráficos y logros.",
+          "performance": [],
+          "issues": [
+            "Requiere una versión exacta del xex"
+          ],
+          "features": [
+            "Logros"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "eternal-sonata",
+      "title": "Eternal Sonata",
+      "developer": "tri-Crescendo",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "birabittoh/EternalSonataReprise",
+          "name": "Eternal Sonata Reprise",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Releases para cualquier región; compilar pide PAL",
+          "base": [],
+          "summary": "Recompilado para PC.",
+          "performance": [],
+          "issues": [],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "fable-2",
+      "title": "Fable II",
+      "developer": "Lionhead",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "himdo/Fable-2-Recomp",
+          "name": "Fable 2 ReXGlue Recompiled",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Jugable hasta el final con FPS sin límite.",
+          "performance": [],
+          "issues": [
+            "Vulkan y Linux todavía planeados"
+          ],
+          "features": [],
+          "aiAssisted": true
+        },
+        {
+          "repo": "Fable2Recomp/Fable2Recomp",
+          "name": "Fable2Recomp",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Grupo separado; el README lista objetivos, no un estado jugable.",
+          "performance": [],
+          "issues": [
+            "Solo código fuente"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "fifa-street-2012",
+      "title": "FIFA Street (2012)",
+      "developer": "EA Canada",
+      "year": 2012,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "samuelit0davila/fifa-street-pc-port",
+          "name": "ReStreet",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Renderer D3D12/Vulkan 2.0"
+          ],
+          "summary": "Port con online beta gratis en servidores comunitarios.",
+          "performance": [],
+          "issues": [],
+          "features": [
+            "Online"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "forza-horizon",
+      "title": "Forza Horizon",
+      "developer": "Playground Games",
+      "year": 2012,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "arcanite24/pinyon-shift",
+          "name": "Pinyon Shift",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Solo versión US",
+          "base": [],
+          "summary": "Preview jugable con bugs de render.",
+          "performance": [],
+          "issues": [
+            "GPUs AMD e Intel sin calificar",
+            "Bugs de render"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "Dyotson/ForzaHorizon1-ReImagined",
+          "name": "Forza Horizon 1: ReImagined",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Un jugador jugable y servidor online propio.",
+          "performance": [],
+          "issues": [
+            "Build de Windows probada solo bajo Proton"
+          ],
+          "features": [
+            "Servidor online propio"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "forza-motorsport-2",
+      "title": "Forza Motorsport 2",
+      "developer": "Turn 10",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "0herculabs/hl360-Forza2",
+          "name": "hl360-Forza2",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Carreras a 60 FPS (120 opcional) y System Link; carrera y pantalla dividida sin probar.",
+          "performance": [
+            "60 FPS en carrera, 120 opcional"
+          ],
+          "issues": [
+            "Carrera sin probar"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "zer0ducksgiven/Forza-Motorsport-2-ReGPU",
+          "name": "FM2 ReGPU",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "Renderer D3D12"
+          ],
+          "summary": "Recompilación de CPU + renderer D3D12.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "forza-motorsport-3",
+      "title": "Forza Motorsport 3",
+      "developer": "Turn 10",
+      "year": 2009,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "0herculabs/hl360-forza3",
+          "name": "hl360-forza3",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Menús, Free Play y carreras a 60 FPS; carrera sin probar, sin Xbox Live.",
+          "performance": [
+            "60 FPS"
+          ],
+          "issues": [
+            "Modo carrera sin probar"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "forza-motorsport-4",
+      "title": "Forza Motorsport 4",
+      "developer": "Turn 10",
+      "year": 2011,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "0herculabs/hl360-forza4",
+          "name": "hl360-forza4",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Menús y carreras funcionan; carrera sin probar.",
+          "performance": [],
+          "issues": [
+            "Force feedback de volante experimental"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "Alexbeav/fm4-recomp",
+          "name": "FM4-Recomp",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Alpha experimental: partidas y comienzo de la carrera funcionan.",
+          "performance": [],
+          "issues": [
+            "Stutter",
+            "Problemas de render"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "geometry-wars-2",
+      "title": "Geometry Wars: Retro Evolved 2",
+      "developer": "Bizarre Creations",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "saulob/geometry-wars-retro-evolved-2-recompiled",
+          "name": "Geometry Wars RE2 Recompiled",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "FPS altos y leaderboards offline; Linux/Steam Deck experimental.",
+          "performance": [],
+          "issues": [],
+          "features": [
+            "Leaderboards"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "gta-4-x360",
+      "title": "Grand Theft Auto IV",
+      "developer": "Rockstar North",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "OZORDI/LibertyRecomp",
+          "name": "LibertyRecomp",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Desarrollo temprano; el README dice que no es para uso público.",
+          "performance": [],
+          "issues": [
+            "No pensado para uso público todavía"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "lego-dimensions-x360",
+      "title": "LEGO Dimensions (Xbox 360)",
+      "developer": "Traveller's Tales",
+      "year": 2015,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "NeverCookFirst/DimensionsRecomp",
+          "name": "Dimensions Recompiled",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "TU23",
+          "base": [
+            "D3D12"
+          ],
+          "summary": "Beta pública con soporte de Toy Pad.",
+          "performance": [],
+          "issues": [
+            "Solo D3D12"
+          ],
+          "features": [
+            "Toy Pad"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "lost-odyssey",
+      "title": "Lost Odyssey",
+      "developer": "Mistwalker / feelplus",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "freefrank/LostOdysseyRecomp",
+          "name": "Lost Odyssey Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Los 4 discos propios",
+          "base": [],
+          "summary": "Experimental: importa los cuatro discos; agrega HDR y upscalers.",
+          "performance": [],
+          "issues": [
+            "Experimental"
+          ],
+          "features": [
+            "HDR",
+            "Upscalers"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "midnight-club-la",
+      "title": "Midnight Club: Los Angeles",
+      "developer": "Rockstar San Diego",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "holdmysocks/mcla-recomp",
+          "name": "mcla-recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Solo Complete Edition",
+          "base": [
+            "D3D12"
+          ],
+          "summary": "Carrera y carreras en D3D12.",
+          "performance": [],
+          "issues": [
+            "Vulkan casi sin probar"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "mzzvxm/LARecomp",
+          "name": "LARecomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Complete Edition",
+          "base": [],
+          "summary": "Menús, mundo libre y carreras funcionan; sin releases.",
+          "performance": [],
+          "issues": [
+            "Hay que compilarlo"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "naruto-storm-gen",
+      "title": "Naruto Shippuden: Ultimate Ninja Storm Generations",
+      "developer": "CyberConnect2",
+      "year": 2012,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Masterllgod/naruto-storm-generations-port-nativo",
+          "name": "Storm Generations Port Nativo",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Código cerrado; pensado para celulares, también con build de Windows.",
+          "performance": [
+            "Peleas a 30 FPS"
+          ],
+          "issues": [
+            "Código cerrado"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "naruto-storm-3-fb",
+      "title": "Naruto Shippuden: Ultimate Ninja Storm 3 Full Burst",
+      "developer": "CyberConnect2",
+      "year": 2013,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Masterllgod/naruto-storm-3-full-burst-port-nativo",
+          "name": "Storm 3 Full Burst Port Nativo",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Código cerrado; builds de Android y Windows.",
+          "performance": [
+            "Peleas a 30 FPS"
+          ],
+          "issues": [
+            "Código cerrado"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "naruto-rise-of-a-ninja",
+      "title": "Naruto: Rise of a Ninja",
+      "developer": "Ubisoft Montreal",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "jorjbarbosa/naruto-rise-recomp",
+          "name": "Naruto: Rise of a Ninja Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "D3D12"
+          ],
+          "summary": "D3D12 nativo con soporte de DLC; en progreso.",
+          "performance": [
+            "60/120 FPS"
+          ],
+          "issues": [
+            "Crashes esperables"
+          ],
+          "features": [
+            "DLC"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "nfs-most-wanted-x360",
+      "title": "Need for Speed: Most Wanted (2005)",
+      "developer": "EA Canada",
+      "year": 2005,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "madelrandel-blip/NFSMW-Recompiled",
+          "name": "NFSMW Recompiled",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Jugable con asperezas; incluye APK de Android.",
+          "performance": [],
+          "issues": [
+            "Multijugador roto"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "SpeedBreakerProject/speedbreaker",
+          "name": "SpeedBreaker",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "Disco US de Xbox 360",
+          "base": [],
+          "summary": "Hasta 4K y ultrawide; build de Windows \"próximamente\".",
+          "performance": [],
+          "issues": [
+            "Todavía sin build de Windows"
+          ],
+          "features": [
+            "4K",
+            "Ultrawide"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "king-kong",
+      "title": "Peter Jackson's King Kong",
+      "developer": "Ubisoft Montpellier",
+      "year": 2005,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "TekRantGaming/king-kong-recompiled",
+          "name": "King Kong Recompiled",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Pasa el congelamiento de VENTURE; Linux solo vía Proton.",
+          "performance": [
+            "Hasta 8K y 240 FPS"
+          ],
+          "issues": [],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "pgr4",
+      "title": "Project Gotham Racing 4",
+      "developer": "Bizarre Creations",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "beatrixzy/PGR4-Recomp",
+          "name": "PGR4-Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Carreras, IA y gráficos funcionan.",
+          "performance": [],
+          "issues": [
+            "Un auto congela el juego",
+            "Geometry Wars integrado crashea"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "ridge-racer-6",
+      "title": "Ridge Racer 6",
+      "developer": "Namco",
+      "year": 2005,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Sirhalo23/RidgeRacer6-Recompilation",
+          "name": "Ridge Racer 6 Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Hasta 4× resolución y ultrawide; probado en una PC.",
+          "performance": [],
+          "issues": [
+            "Linux experimental"
+          ],
+          "features": [
+            "Ultrawide"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "sonic-free-riders",
+      "title": "Sonic Free Riders",
+      "developer": "Sonic Team",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "YuutaTsubasa/Free-Riders-Recompiled",
+          "name": "Free Riders Recompiled",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Kinect emulado para jugar con mando; menús y carreras se juegan, mucho sin probar.",
+          "performance": [],
+          "issues": [
+            "Mucho sin probar"
+          ],
+          "features": [
+            "Kinect emulado"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "ttt2",
+      "title": "Tekken Tag Tournament 2",
+      "developer": "Namco",
+      "year": 2012,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "shihabal3amri/tekken-tag-tournament-2-pc",
+          "name": "TTT2 PC",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Title Update 3",
+          "base": [],
+          "summary": "Rollback y ranked en servidores comunitarios.",
+          "performance": [
+            "Hasta 4K/60"
+          ],
+          "issues": [],
+          "features": [
+            "Online con rollback"
+          ],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "the-darkness",
+      "title": "The Darkness",
+      "developer": "Starbreeze",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "invinceble55-wq/Estacado-The-Darkness-Recomp",
+          "name": "Estacado",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Pre-release 0.9.8; según el README la campaña entera es jugable.",
+          "performance": [],
+          "issues": [],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "portingpete/The-Darkness-Recomp",
+          "name": "The Darkness Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "D3D11"
+          ],
+          "summary": "x64 nativo con D3D11; el README reporta gameplay completo. Pre-releases 0.1.x.",
+          "performance": [],
+          "issues": [],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "simpsons-game",
+      "title": "The Simpsons Game",
+      "developer": "EA Redwood Shores",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "YesterMester/TheSimpsonsGameRecomp",
+          "name": "The Simpsons Game Recompiled",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Corre en Linux, Steam Deck y Windows; releases 0.0.x con problemas conocidos.",
+          "performance": [],
+          "issues": [
+            "Problemas conocidos en 0.0.x"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "wwe-12",
+      "title": "WWE '12",
+      "developer": "Yuke's",
+      "year": 2011,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "iMrBurn/wwe12-pc",
+          "name": "WWE '12 PC",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Luchas y entradas a 60 FPS.",
+          "performance": [
+            "60 FPS"
+          ],
+          "issues": [
+            "Glitches según GPU"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "wwe-2k14",
+      "title": "WWE 2K14",
+      "developer": "Yuke's",
+      "year": 2013,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "PromethenDev/wwe2k14-recomp",
+          "name": "WWE 2K14 Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Title Update 1.0.3",
+          "base": [],
+          "summary": "v1.0.0 recién salida.",
+          "performance": [],
+          "issues": [
+            "Problemas de iluminación y FPS"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "crackdown",
+      "title": "Crackdown",
+      "developer": "Realtime Worlds",
+      "year": 2007,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Unowa001/crackdown-recomp",
+          "name": "Crackdown Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Dump propio del disco",
+          "base": [],
+          "summary": "Launcher que instala desde tu disco; soporte de Crackdown 2 en beta. portedgames lo marca como Offline.",
+          "performance": [
+            "60 FPS y hasta 4K"
+          ],
+          "issues": [],
+          "features": [],
+          "aiAssisted": true
+        },
+        {
+          "repo": "saulob/crackdown-xbox360-recompiled",
+          "name": "Crackdown Recompiled",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Port nativo con FPS altos.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "crackdown-2",
+      "title": "Crackdown 2",
+      "developer": "Ruffian Games",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "matty45/Crackdown2-Recomp",
+          "name": "Crackdown2-Recomp",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Llega al juego pero todavía no es jugable; solo código fuente.",
+          "performance": [],
+          "issues": [
+            "No jugable todavía"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "crazy-taxi-xbla",
+      "title": "Crazy Taxi (XBLA)",
+      "developer": "Sega",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "sp00nznet/ctxbla",
+          "name": "ctxbla",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Versión XBLA",
+          "base": [],
+          "summary": "Arranca y se maneja, pero sin audio en el juego; sin release.",
+          "performance": [],
+          "issues": [
+            "Sin audio in-game"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "mk-vs-dc",
+      "title": "Mortal Kombat vs. DC Universe",
+      "developer": "Midway",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "KawaiiBunga/MKVDCU-Recomp",
+          "name": "MKVDCU-Recomp",
+          "type": "recomp",
+          "status": "partial",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Build temprana jugable; modo arcade probado a 60 FPS en una PC (v0.2.1).",
+          "performance": [
+            "60 FPS en arcade"
+          ],
+          "issues": [
+            "Probado en una sola PC"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "ninja-gaiden-2",
+      "title": "Ninja Gaiden II",
+      "developer": "Team Ninja",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "TheSaltTrader/Ninja-s-Dawn---A-Ninja-Gaiden-2-Recompilation-Project",
+          "name": "Ninja's Dawn",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "Salió en septiembre de 2026; el repo original desapareció y los forks no tienen builds.",
+          "performance": [],
+          "issues": [
+            "Repo original eliminado"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "blue-dragon",
+      "title": "Blue Dragon",
+      "developer": "Mistwalker / Artoon",
+      "year": 2006,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "zolaware/reblue",
+          "name": "reblue",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux",
+            "macos"
+          ],
+          "gameVersion": "Tus tres discos",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Releases descargables con asistente de instalación.",
+          "performance": [
+            "FPS desbloqueados con límites opcionales"
+          ],
+          "issues": [],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "silent-hill-downpour",
+      "title": "Silent Hill: Downpour",
+      "developer": "Vatra Games",
+      "year": 2012,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "LittleBitUA/DownpourRecomp",
+          "name": "DownpourRecomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [],
+          "summary": "v1.0 estable; la última es v1.1.8 (hotfix).",
+          "performance": [
+            "1080p a 60 FPS desbloqueado; recomienda RTX serie 30"
+          ],
+          "issues": [
+            "Ultrawide estirado (16:9)",
+            "El ambiente en loop pierde sus últimas muestras"
+          ],
+          "features": [],
+          "aiAssisted": true
+        }
+      ]
+    },
+    {
+      "id": "viva-pinata-tip",
+      "title": "Viva Piñata: Trouble in Paradise",
+      "developer": "Rare",
+      "year": 2008,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "SolarCookies/TiP-Recomp",
+          "name": "TiP-Recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows",
+            "linux"
+          ],
+          "gameVersion": "Disco retail",
+          "base": [],
+          "summary": "Recompilación jugable con navegador de mods; política sin IA.",
+          "performance": [
+            "El renderer nativo (desde 1.13.0) rinde más que Xenia"
+          ],
+          "issues": [],
+          "features": [
+            "Navegador de mods"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "saints-row",
+      "title": "Saints Row",
+      "developer": "Volition",
+      "year": 2006,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "whompay/SaintsReborn",
+          "name": "SaintsReborn",
+          "type": "recomp",
+          "status": "complete",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Disco que coincida con el default.xex soportado",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Completamente jugable, incluido el co-op.",
+          "performance": [
+            "60+ FPS con el mod incluido; 2× resolución por defecto"
+          ],
+          "issues": [
+            "Parpadeo de texturas en el creador de personajes"
+          ],
+          "features": [
+            "Co-op"
+          ],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "gears-judgment",
+      "title": "Gears of War: Judgment",
+      "developer": "People Can Fly / Epic",
+      "year": 2013,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "OverkillLabs3/gears-judgement-recomp",
+          "name": "gears-judgement-recomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Retail (title ID 4D530A26)",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Release temprana: la campaña se juega; sin multijugador.",
+          "performance": [
+            "~90–110 FPS sin límite, limitado por CPU (Ryzen 7 5800X3D)"
+          ],
+          "issues": [
+            "Probado en una sola PC",
+            "Stutter de shaders al entrar a zonas"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "deadly-premonition",
+      "title": "Deadly Premonition",
+      "developer": "Access Games",
+      "year": 2010,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "LittleBitUA/DPRecomp",
+          "name": "DPRecomp",
+          "type": "recomp",
+          "status": "playable",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Disco propio",
+          "base": [
+            "D3D12"
+          ],
+          "summary": "v2.0.14: el renderer nativo D3D12 está \"listo para probar\"; el emulado sigue por defecto.",
+          "performance": [
+            "60 FPS; RTX 5070 a 2× sostuvo 60"
+          ],
+          "issues": [
+            "Bordes duros en mezcla de terreno",
+            "Espejos con imagen duplicada (render nativo)"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    },
+    {
+      "id": "wet",
+      "title": "WET",
+      "developer": "Artificial Mind and Movement",
+      "year": 2009,
+      "platform": "x360",
+      "cusa": [],
+      "ports": [
+        {
+          "repo": "Supermedo/wet-recomp",
+          "name": "wet-recomp (SuperMedo)",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Port de fans vía ReXGlue.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        },
+        {
+          "repo": "nikolaygorb/WetRecomp",
+          "name": "WetRecomp",
+          "type": "recomp",
+          "status": "early",
+          "platforms": [
+            "windows"
+          ],
+          "gameVersion": "Copia propia",
+          "base": [
+            "ReXGlue SDK"
+          ],
+          "summary": "Recompilación basada en ReXGlue.",
+          "performance": [],
+          "issues": [
+            "Estado tomado de la descripción del repositorio"
+          ],
+          "features": [],
+          "aiAssisted": false
+        }
+      ]
+    }
+  ],
+  "bases": [
+    {
+      "name": "shadPS4",
+      "repo": "shadps4-emu/shadPS4",
+      "role": "Emulador de PS4. Casi todos los ports reutilizan su \"video core\": el traductor de comandos de GPU y shaders GCN a Vulkan/SPIR-V.",
+      "platform": "ps4"
+    },
+    {
+      "name": "bbport (bloodborne_pc)",
+      "repo": "deadinside28/bloodborne_pc",
+      "role": "Primer port nativo (Linux). Definió el método: ejecutar el x86-64 original + runtime que reemplaza las librerías de PS4.",
+      "platform": "ps4"
+    },
+    {
+      "name": "bloodborne_pc para Windows",
+      "repo": "Supermedo/bloodborne_pc",
+      "role": "Capa de Windows (loader, memoria, TLS, excepciones) que heredan la mayoría de los ports para Windows.",
+      "platform": "ps4"
+    },
+    {
+      "name": "gow3_pc / SpartanPort",
+      "repo": "FelipePrado0/SpartanPort",
+      "role": "Runtime reutilizado por MediEvil, Uncharted (bc160201983), Killzone, The Order, WipEout y otros.",
+      "platform": "ps4"
+    },
+    {
+      "name": "SacredFire",
+      "repo": null,
+      "role": "Port original de CTR Nitro-Fueled; base de los ports de CTR para Windows y de UFC 3/4.",
+      "platform": "ps4"
+    },
+    {
+      "name": "PS4RT",
+      "repo": null,
+      "role": "Runtime de compatibilidad para Linux usado por los ports de Star Ocean 5 y Valkyria Revolution.",
+      "platform": "ps4"
+    },
+    {
+      "name": "Ryty / shadGT",
+      "repo": null,
+      "role": "Conversor de ejecutable y renderer usados por RyGT (Gran Turismo Sport).",
+      "platform": "ps4"
+    },
+    {
+      "name": "PS4Recomp",
+      "repo": "wie-project/PS4Recomp",
+      "role": "Recompilador experimental de programas de PS4 orientado a macOS Apple Silicon (Metal).",
+      "platform": "ps4"
+    },
+    {
+      "name": "PS2Recomp",
+      "repo": "ran-j/PS2Recomp",
+      "platform": "ps2",
+      "role": "Recompilador estático de PS2: traduce el código MIPS R5900 a C++ y aporta un runtime. Base de la mayoría de los ports de PS2."
+    },
+    {
+      "name": "OpenGOAL",
+      "repo": "open-goal/jak-project",
+      "platform": "ps2",
+      "role": "Decompilación del lenguaje GOAL de Naughty Dog; hace correr Jak and Daxter nativo."
+    },
+    {
+      "name": "ps3recomp",
+      "repo": "sp00nznet/ps3recomp",
+      "platform": "ps3",
+      "role": "Librerías de runtime para recompilar estáticamente juegos de PS3 (PPU/SPU del Cell)."
+    },
+    {
+      "name": "XenonRecomp",
+      "repo": "hedge-dev/XenonRecomp",
+      "platform": "x360",
+      "role": "Recompila ejecutables PowerPC de Xbox 360 a C++ nativo. Nació con Unleashed Recompiled."
+    },
+    {
+      "name": "XenosRecomp",
+      "repo": "hedge-dev/XenosRecomp",
+      "platform": "x360",
+      "role": "Convierte los shaders de la GPU Xenos a HLSL."
+    },
+    {
+      "name": "ReXGlue SDK",
+      "repo": "rexglue/rexglue-sdk",
+      "platform": "x360",
+      "role": "Runtime y kit de recompilación de Xbox 360; la base de la mayoría de los ports recientes."
+    }
+  ]
+}
